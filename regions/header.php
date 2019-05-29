@@ -8,7 +8,7 @@
 
 	</div>
 
-	<div class="event-info"><p class="enhanced">Thank you for attending! &ndash; 1.11.2017 <a href="https://www.google.com/maps/place/Helsingin+yliopisto/@60.1694958,24.9493822,18z/data=!4m5!3m4!1s0x0:0x128a5cf5b52ff135!8m2!3d60.169454!4d24.9499478" target="_blank" class="icon location"></a> Helsinki, Finland</p></div>
+	<div class="event-info"><p class="enhanced">Save the date! &ndash; 13.9.2019 <a href="https://www.google.com/maps/place/Helsingin+yliopisto/@60.1694958,24.9493822,18z/data=!4m5!3m4!1s0x0:0x128a5cf5b52ff135!8m2!3d60.169454!4d24.9499478" target="_blank" class="icon location"></a> Helsinki, Finland</p></div>
 
 	<?php if ($is_home): ?>
 
