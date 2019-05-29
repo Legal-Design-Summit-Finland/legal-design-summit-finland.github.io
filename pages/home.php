@@ -74,12 +74,12 @@
 				
 				<h3 class="plain justify-center">The Legal Design Summit <span class="enhanced grey">brings together</span> international experts in the fields of law, design, and digital services.</h3>
 				
-				<div class="row no-gutters">
+<!--				<div class="row no-gutters">
 					<div class="col-sm-4 justify-center"><img src="images/events/event-2.png"></div>
 					<div class="col-sm-4 justify-center"><a href="/side-events"><img src="images/events/event-3.png"></a></div>
 					<div class="col-sm-4 justify-center"><a href="/brainfactory"><img src="images/events/event-4.png"></a></div>
 				</div>
-           		
+-->       		
 			</div>
             
             <!-- Content Main Section Ends -->
