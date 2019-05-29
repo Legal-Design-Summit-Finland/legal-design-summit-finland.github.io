@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^legaldesignsummit.com [NC]
+RewriteRule ^(.*)$ http://www.legaldesignsummit.com/$1 [L,R=301,NC]
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?page=$1 [NC,L]

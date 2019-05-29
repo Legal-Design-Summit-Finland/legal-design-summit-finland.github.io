@@ -1,0 +1,137 @@
+/* -------------------------------------------------- */
+/* Variables
+/* -------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Backgrounds
+/* -------------------------------------------------- */
+
+$background-color-primary: #fff;
+$background-color-secondary: #f2f2f2;
+$background-color-tertiary: #7ddad0;
+$background-color-quaternary: #b1e9e3;
+$background-color-quinary: #d8f4f1;
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Borders
+/* -------------------------------------------------- */
+
+$border-color-primary: #7ddad0;
+$border-color-secondary: #333;
+$border-color-tertiary: #999;
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Fonts
+/* -------------------------------------------------- */
+
+
+
+/* ---------- General ---------- */
+
+$font-family-primary: 'RobotoCondensed-Light', Arial;
+$font-family-primary-italic: 'RobotoCondensed-LightItalic';
+$font-family-primary-bold: 'RobotoCondensed-Regular';
+$font-family-secondary: 'Oswald-Medium';
+$font-family-secondary-italic: 'Oswald-MediumItalic';
+$font-family-secondary-bold: 'Oswald-Heavy';
+$font-family-heading-primary: 'Oswald-Heavy';
+$font-family-heading-primary-italic: 'Oswald-HeavyItalic';
+$font-family-heading-primary-bold: 'Oswald-Heavy';
+$font-family-heading-secondary: 'Oswald-Regular';
+$font-family-heading-secondary-italic: 'Oswald-Demi-BoldItalic';
+$font-family-heading-secondary-bold: 'Oswald-Heavy';
+
+$font-family-enhanced: 'Oswald-Regular';
+
+$font-size-primary: 18px;
+$font-size-heading-primary: 80px;
+$font-size-heading-primary-sm: 40px;
+$font-size-heading-secondary: 40px;
+$font-size-heading-secondary-sm: 32px;
+$font-size-heading-secondary-larger: 44px;
+$font-size-heading-secondary-larger-sm: 36px;
+$font-size-heading-tertiary: 32px;
+$font-size-heading-tertiary-sm: 24px;
+$font-size-heading-quaternary: 20px;
+$font-size-sm: 12px;
+$font-size-lg: 24px;
+$font-size-ingress: $font-size-lg;
+
+$font-weight-primary: normal;
+	
+$line-height-primary: 22px;
+$line-height-heading-primary: 96px;
+$line-height-heading-primary-sm: 48px;
+$line-height-heading-secondary: 48px;
+$line-height-heading-secondary-sm: 40px;
+$line-height-heading-secondary-larger: 52px;
+$line-height-heading-secondary-larger-sm: 44px;
+$line-height-heading-tertiary: 40px;
+$line-height-heading-tertiary-sm: 32px;
+$line-height-heading-quaternary: 28px;
+$line-height-sm: 16px;
+$line-height-lg: 28px;
+$line-height-ingress: $line-height-lg;
+
+$letter-spacing-primary: 0.1em;
+
+$text-color-primary: #333;
+$text-color-secondary: #fff;
+
+
+
+/* ---------- Links ---------- */
+
+$text-color-link-primary: #aaa;
+$text-color-link-primary-hover: $text-color-primary;
+$text-color-link-secondary: #fff;
+$text-color-link-secondary-hover: $text-color-primary;
+
+
+
+/* ---------- Special ---------- */
+
+$text-color-enhanced-primary: #7ddad0;
+$text-color-enhanced-secondary: #333;
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Buttons
+/* -------------------------------------------------- */
+
+$font-family-button-primary: 'Oswald-Medium';
+$font-family-button-secondary: 'Oswald-Regular';
+$background-color-button-primary: #fff;
+$background-color-button-secondary: #fff;
+$background-color-button-primary-hover: #7ddad0;
+$background-color-button-secondary-hover: #999;
+$text-color-button-primary: #333;
+$text-color-button-primary-hover: #fff;
+
+$line-height-button-primary: 60px;
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Menu
+/* -------------------------------------------------- */
+
+$font-size-menu: 14px;
+$font-size-menu-sm: 12px;

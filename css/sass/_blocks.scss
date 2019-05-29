@@ -1,0 +1,872 @@
+/* -------------------------------------------------- */
+/* Special Blocks
+/* -------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Menu
+/* -------------------------------------------------- */
+
+
+
+#menu {
+
+	.block.menu-main {
+
+		.menu-toggler {
+
+			position: relative;
+			font-family: $font-family-primary;
+			line-height: 60px;
+			color: $text-color-secondary;
+			text-transform: uppercase;
+
+			@media (min-width: $screen-md) {
+
+				display: none;
+
+			}
+
+			.icon {
+
+				display: block;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 25px;
+				height: 60px;
+				z-index: 10;
+
+				&:before {
+
+					content: ' ';
+					display: block;
+					height: 100%;
+					background-image: url('../images/icons/menu-toggler.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+
+					@include background-size(25px auto);
+
+					@include transition(all 0.2s ease-out);
+
+				}
+
+			}
+
+		}
+
+		&.open .menu-toggler .icon {
+
+			&:before {
+
+				@include rotate(180);
+
+			}
+
+		}
+
+		.menu-container {
+
+			display: none;
+
+			@media (min-width: $screen-md) {
+
+				display: block !important;
+				text-align: center;
+
+			}
+
+			ul.menu {
+
+				margin: 0px;
+				list-style: none;
+
+				@media (max-width: $screen-sm-max) {
+
+					padding: 10px 0px;
+
+				}
+
+				@media (min-width: $screen-md) {
+
+					display: inline-block;
+					vertical-align: top;
+
+				}
+
+				li {
+
+					position: relative;
+					line-height: 40px;
+
+					@media (min-width: $screen-md) {
+
+						margin: 0px;
+						padding: 0px 10px;
+						float: left;
+						width: auto;
+
+						&.first {
+							margin-left: 0px;
+						}
+
+						&.last {
+							margin-right: 0px;
+						}
+
+					}
+
+					@media (min-width: $screen-lg) {
+
+						padding: 0px 20px;
+
+					}
+
+					a {
+
+						display: block;
+						font-family: $font-family-primary;
+						font-size: $font-size-menu;
+						color: $text-color-link-secondary;
+						text-transform: uppercase;
+						text-align: center;
+
+						@media (max-width: $screen-md-max) {
+
+							font-size: $font-size-menu-sm;
+
+						}
+
+					}
+
+					&.get-tickets a {
+						color: $text-color-primary;
+					}
+
+					&:hover:after,
+					&.active:after {
+						display: block;
+						content: ' ';
+						position: absolute;
+						bottom: 0px;
+						left: 0px;
+						right: 0px;
+						border-top: 2px solid $text-color-link-secondary;
+						width: 100%;
+					}
+
+					&.get-tickets:hover:after {
+						border-top: 2px solid $text-color-primary;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+/* ---------- Header ---------- */
+
+.wrapper.header {
+
+	position: relative;
+
+	#header {
+
+		.home & {
+
+			@media (min-height: 700px) {
+
+				position: absolute;
+				top: 50%;
+				left: 0px;
+				padding: 40px;
+				right: 0px;
+				width: 100%;
+
+				@include transform(translateY(-50%));
+
+			}
+
+		}
+
+		.event-info {
+
+			margin: 80px 0px 0px 0px;
+
+			@media (min-width: $screen-md) {
+
+				font-size: 26px;
+				line-height: 32px;
+
+			}
+
+			p {
+				margin: 0px;
+			}
+
+		}
+
+		.actions {
+
+			margin: 80px 0px 0px 0px;
+
+			.btn {
+				margin: 0px;
+			}
+
+		}
+
+	}
+
+	.scroll-down {
+
+		display: none;
+
+		@media (min-width: 500px) and (min-height: 650px) {
+
+			display: block;
+			position: absolute;
+			bottom: 30px;
+			left: 0px;
+			right: 0px;
+			margin: 0px auto;
+			width: 25px;
+			height: 25px;
+			background: url('../images/icons/scroll-down.png') center center no-repeat;
+
+			@include background-size(100% auto);
+
+			&:hover {
+
+				@include opacity(0.5);
+			}
+
+		}
+
+	}
+
+}
+
+
+
+/* ---------- Footer ---------- */
+
+.wrapper.footer {
+
+	&:before {
+
+		display: block;
+		content: ' ';
+		margin: 0px 40px;
+		height: 1px;
+		background: $border-color-secondary;
+
+		@media (min-width: $screen-md) {
+			margin: 0px auto;
+			width: 500px;
+		}
+
+	}
+
+	#footer {
+
+		.content-main {
+			margin: 80px 0px;
+		}
+
+	}
+
+	.scroll-up {
+
+		display: inline-block;
+		margin: 0px auto 30px auto;
+		width: 25px;
+		height: 25px;
+		vertical-align: top;
+		background: url('../images/icons/scroll-up.png') center center no-repeat;
+
+		@include background-size(100% auto);
+
+		&:hover img {
+			@include opacity(0.5);
+		}
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Forewords ---------- */
+
+.wrapper.forewords {
+
+	.col-first {
+
+		min-height: 200px;
+		background-image: url('../images/backgrounds/legal-design-summit.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@include background-size(contain);
+
+	}
+
+	@media (min-width: $screen-md) {
+
+		.col-second {
+
+			> #content-forewords {
+
+				padding: 140px 40px;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+/* ---------- Content Welcome ---------- */
+
+.wrapper.welcome {
+
+	@media (min-width: $screen-md) {
+
+		.col-first {
+
+			> #content-welcome {
+
+				padding: 140px 40px;
+
+			}
+
+		}
+
+	}
+
+	.col-second {
+
+		min-height: 200px;
+		background-image: url('../images/backgrounds/map-graphics.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@include background-size(contain);
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Twitter ---------- */
+
+.wrapper.twitter {
+
+	#content-twitter {
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Program ---------- */
+
+#program {
+
+	@media (min-width: $screen-lg) {
+
+		padding: 0px 200px;
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Program – Speakers ---------- */
+
+.program #section-speakers {
+
+	text-align: center;
+
+	.speakers {
+
+		[class^="col-"] {
+
+			.image {
+
+				position: relative;
+				z-index: 0;
+
+				.bio {
+
+					visibility: hidden;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					padding: 10px;
+					width: 100%;
+					height: 100%;
+					background: rgba($background-color-primary, 0.9);
+					overflow: auto;
+					z-index: 10;
+
+					@include transition(all 0.15s ease-in-out);
+
+					@include opacity(0);
+
+					> :first-child {
+						margin-top: 0px;
+					}
+
+					> :last-child {
+						margin-bottom: 0px;
+					}
+
+					@media (min-width: $screen-md) {
+
+						padding: 30px;
+
+					}
+
+				}
+
+			}
+
+			&:hover .bio {
+
+				visibility: visible;
+
+				@include opacity(1);
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Brainfactory Program ---------- */
+
+#brainfactory-program {
+
+	[class*="col"] {
+
+		padding: 40px;
+
+		@media (max-width: $screen-sm-max) {
+			height: auto !important;
+		}
+
+	}
+
+	.col-first {
+		background: $background-color-quinary;
+	}
+
+	.col-second {
+		background: $background-color-quaternary;
+	}
+
+	.col-third {
+		background: $background-color-tertiary;
+	}
+
+}
+
+
+
+/* ---------- Content Brainfactory Co-Operation ---------- */
+
+#brainfactory-co-operation {
+
+	.logos {
+
+		.logo {
+
+			position: relative;
+			padding: 20px;
+			text-align: center;
+
+			@media (min-width: $screen-md) {
+
+				height: 180px;
+
+			}
+
+			a {
+
+				display: block;
+				margin: auto;
+				max-width: 180px;
+
+				@media (min-width: $screen-md) {
+
+					position: relative;
+					top: 50%;
+
+					@include transform(translateY(-50%));
+
+				}
+
+				img {
+
+					@include transition(all 0.15s ease-in-out);
+
+				}
+
+				&:hover img {
+
+					@include transform(scale(1.1));
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Why Attend ---------- */
+
+#content-why-attend {
+
+	.bullets {
+
+		margin: auto;
+
+		@media (min-width: $screen-md) {
+			width: 500px;
+		}
+
+		table {
+
+			margin: auto;
+			width: 100%;
+			text-align: left;
+
+			td.icon {
+				width: 100px;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Content Video ---------- */
+
+#content-video {
+
+	text-align: center;
+
+}
+
+
+
+/* ---------- Content Speakers ---------- */
+
+#content-speakers {
+
+	text-align: center;
+
+	.speakers {
+
+		[class^="col-"] {
+
+			.image {
+
+				padding: 15px;
+
+				img {
+
+					@extend .rounded;
+
+				}
+
+			}
+
+
+		}
+
+	}
+
+}
+
+
+
+/* ---------- Content Team ---------- */
+
+#content-team {
+
+	text-align: center;
+
+	.team {
+
+		margin: 80px 0px 0px 0px;
+
+		.image {
+
+			padding: 15px;
+
+			img {
+
+				@extend .rounded;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+/* ---------- Content Schedule ---------- */
+
+#content-schedule {
+
+	.time {
+		font-family: $font-family-primary;
+	}
+
+}
+
+
+
+/* ---------- Content Propositions ---------- */
+
+#content-propositions {
+
+	position: relative;
+	padding: 20px 0px;
+
+	@media (min-width: $screen-md) {
+
+		padding: 50px 50px 50px 0px;
+
+	}
+
+	.content-main {
+
+		padding: 40px;
+		background: $background-color-primary;
+
+		@media (min-width: $screen-md) {
+
+			padding: 80px;
+
+		}
+
+	}
+
+	&:after {
+
+		display: block;
+		content: ' ';
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 8px;
+		height: 100%;
+		background: $border-color-primary;
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Logos ---------- */
+
+#content-logos {
+
+	.logos {
+
+		.logo {
+
+			position: relative;
+			padding: 20px;
+			text-align: center;
+
+			@media (min-width: $screen-md) {
+
+				height: 180px;
+
+			}
+
+			a {
+
+				display: block;
+				margin: auto;
+				max-width: 180px;
+
+				@media (min-width: $screen-md) {
+
+					position: relative;
+					top: 50%;
+
+					@include transform(translateY(-50%));
+
+				}
+
+				img {
+
+					@include transition(all 0.15s ease-in-out);
+
+				}
+
+				&:hover img {
+
+					@include transform(scale(1.1));
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+/* ---------- Logos ---------- */
+
+#content-actions {
+
+	.btn {
+		margin: 0px;
+	}
+
+}
+
+
+
+
+
+/* ---------- Icons ---------- */
+
+a.icon.location {
+
+	display: inline-block;
+	margin: 0px 5px;
+	width: 21px;
+	height: 32px;
+	background-image: url('../images/icons/location.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	vertical-align: top;
+
+	@include background-size(cover);
+
+}
+
+a.icon.linkedin,
+a.icon.twitter,
+a.icon.facebook,
+a.icon.instagram,
+a.icon.website {
+
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	vertical-align: top;
+
+	@include text-hide();
+
+	@include background-size(100% 100%);
+
+	&:hover {
+
+		@include transform(scale(1.1));
+
+	}
+
+	.social-media & {
+		width: 60px;
+		height: 60px;
+	}
+
+}
+
+a.icon.linkedin {
+	background-image: url('../images/icons/linkedin.png');
+}
+
+a.icon.twitter {
+	background-image: url('../images/icons/twitter.png');
+}
+
+a.icon.facebook {
+	background-image: url('../images/icons/facebook.png');
+}
+
+a.icon.instagram {
+	background-image: url('../images/icons/instagram.png');
+}
+
+a.icon.website {
+	background-image: url('../images/icons/website.png');
+}
+
+
+
+
+
+/* ---------- TypeForm ---------- */
+
+.typeform-widget {
+	border: 1px solid $border-color-primary;
+}

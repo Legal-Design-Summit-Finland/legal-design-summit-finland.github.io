@@ -1,0 +1,168 @@
+/* -------------------------------------------------- */
+/* Structure
+/* -------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Body
+/* -------------------------------------------------- */
+
+html {
+    margin: 0px;
+    padding: 0px;
+	min-height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+	height: 100%;
+	font-family: $font-family-primary;
+    font-size: $font-size-primary;
+	color: $text-color-primary;
+	line-height: $line-height-primary;
+	font-weight: $font-weight-primary;
+	font-style: normal;
+	background: $background-color-primary;
+}
+
+
+
+
+
+/* -------------------------------------------------- */
+/* Wrapper
+/* -------------------------------------------------- */
+
+.wrapper {
+	
+	padding: 80px 40px;
+	text-align: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	@include background-size(cover);
+	
+	@media (min-width: $screen-md) {
+		
+		background-attachment: fixed;
+		
+	}
+	
+	> .container {
+		
+		margin: 0px auto;
+		padding: 0px;
+		min-width: 240px;
+		width: auto !important;
+		width: 240px;
+		text-align: left;
+		
+		@media (min-width: $screen-md) {
+			
+			width: 800px !important;
+			
+		}
+		
+		@media (min-width: $screen-lg) {
+			
+			width: 1200px !important;
+			
+		}
+		
+	}
+	
+	&.fluid {
+		
+		> .container {
+			width: auto !important;
+		}
+		
+		&.fill {
+			padding: 0px;
+		}
+		
+	}
+	
+	&.divided {
+		
+		> .container {
+			width: auto !important;
+		}
+		
+	}
+	
+	&.spacer {
+		padding: 0px;
+		height: 50vh;
+		min-height: 300px;
+		background-image: url('../images/backgrounds/papers.jpg');
+		background-position: center center;
+	}
+	
+	&.menu {
+		
+		padding: 0px 40px;
+		background-color: rgba(125, 218, 208, 0.9);
+		
+		@media (min-width: $screen-md) {
+			
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			padding: 10px 0px;
+			width: 100%;
+			z-index: 10;
+			
+		}
+		
+	}
+	
+	&.header {
+		
+		padding: 0px;
+		background-image: url('../images/backgrounds/papers.jpg');
+		background-position: center center;
+		
+		> .container {
+
+			padding: 40px;
+
+			@media (min-width: $screen-md) {
+
+				padding-top: 100px;
+
+			}
+
+			.home & {
+				min-height: 100vh;
+			}
+
+		}
+		
+	}
+	
+	&.footer {
+		border-bottom: 40px solid $border-color-primary;
+	}
+		
+	&.color-secondary {
+		background: $background-color-secondary;
+	}
+
+	&.propositions {
+		background-image: url('../images/backgrounds/papers.jpg');
+		background-position: center center;
+	}
+	
+	&.logos {
+		
+		padding-top: 160px;
+		
+	}
+	
+}
