@@ -11,7 +11,7 @@
 			
 			<h3>Would you like to experience legal design in action?</h3>
 			
-			<p class="bullet large">An interdisciplinary legal design workshop that takes place over the weekend preceding the summit.</p>
+			<p class="bullet large">An interdisciplinary legal design workshop that takes place preceding the summit.</p>
 			<p class="bullet large">Attendees obtain hands-on experience in combining law and design, mentored by legal design professionals.</p>
 			<p class="bullet large">Furthermore, the teams will have the opportunity to receive feedback from the Brainfactory Board.</p>
 			
