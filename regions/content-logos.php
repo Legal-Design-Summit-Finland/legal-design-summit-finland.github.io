@@ -12,6 +12,7 @@
 			<div class="col-md-2 justify-center"><div class="logo"><a href="http://www.ulapland.fi" target="_blank"><img src="images/logos/logo_lapin-yliopisto.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="http://www.utu.fi" target="_blank"><img src="images/logos/logo_turun-yliopisto.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="http://www.uef.fi" target="_blank"><img src="images/logos/logo_ita-suomen-yliopisto.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.laurea.fi/koulutus/liiketalous-ja-tietojenkasittely/oikeudellinen-erityisosaaminen-ja-oikeusmuotoilu/" target="_blank"><img src="images/logos/logo_laurea.png?<?php print time(); ?>"></a></div></div>
 		</div>
 
 	</div>
