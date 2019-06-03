@@ -26,13 +26,14 @@ $is_home = ($page == 'home') ? true : false;
 
 $pages = array(
 	'Home',
-    'Gallery',
+	'Gallery',
 	'Program',
 	'Speakers',
 	'Brainfactory',
 	'Side Events',
 	'About Us',
 	'2016',
+	'2017',
 	'Why attend?',
 	'Delegations'
 );
