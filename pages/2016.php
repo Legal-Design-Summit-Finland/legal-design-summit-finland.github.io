@@ -42,7 +42,7 @@
 
 <!-- Wrapper // Content Speakers Section Begins -->
 
-<div class="wrapper color-secondary speakers">
+<div class="wrapper color-secondary speakers" id="section-speakers">
     
     <!-- Container Section Begins -->
     
@@ -134,7 +134,7 @@
 
 <!-- Wrapper // Content Schedule Section Begins -->
 
-<div class="wrapper schedule">
+<div class="wrapper schedule" id="section-program">
     
 	<!-- Container Section Begins -->
 	
@@ -148,7 +148,7 @@
 			
 			<div class="content-main">
 				
-				<h2 class="justify-center">Themes and topics from last year</h2>
+				<h2 class="justify-center">Themes and topics from 2016</h2>
 				
 				<p class="justify-center">Place: University of Helsinki, small hall (pieni juhlasali) of main building, Fabianinkatu 33, Helsinki</p>
 				
