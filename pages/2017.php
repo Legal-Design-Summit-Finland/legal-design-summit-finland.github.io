@@ -146,7 +146,7 @@
 
 			<div class="speakers">
 
-				<h2>Speakers</h2>
+				<h2>Speakers 2017</h2>
 
 				<div class="row equalize">
 
@@ -499,7 +499,7 @@
 
 				</div>
 
-				<h2>Host</h2>
+				<h2>Host 2017</h2>
 
 				<div class="row equalize">
 
@@ -534,7 +534,7 @@
 
 		<div class="justify-center">
 
-			<h2>Brainfactory Coaches</h2>
+			<h2>Brainfactory Coaches 2017</h2>
 
 			<div class="coaches">
 
@@ -703,7 +703,7 @@
 
 		<div class="justify-center">
 
-			<h2>Brainfactory Board</h2>
+			<h2>Brainfactory Board 2017</h2>
 
 			<div class="board">
 
@@ -798,7 +798,7 @@
 
 		<div id="content-delegations" class="justify-center">
 			
-			<h2>Delegations</h2>
+			<h2>Delegations 2017</h2>
 			
 			<div class="row">
 				

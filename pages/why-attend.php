@@ -8,30 +8,7 @@
 
 			<h2>What is legal design summit?</h2>
 
-			<p>Legal Design Summit is the world's largest legal design event held in Helsinki on the 1st of November 2017. Our mission is to create a forum for forward-thinking professionals to exchange knowledge and expertise on law, design and digital services through interdisciplinary collaboration.</p>
-
-			<div class="bullets">
-
-				<table>
-
-					<tr>
-						<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-4.png"></td>
-						<td valign="middle"><p class="large">Legal Design Beyond Visualization</p></td>
-					</tr>
-
-					<tr>
-						<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-4.png"></td>
-						<td valign="middle"><p class="large">Legal Innovations</p></td>
-					</tr>
-
-					<tr>
-						<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-4.png"></td>
-						<td valign="middle"><p class="large">Privacy by (Legal) Design</p></td>
-					</tr>
-
-				</table>
-
-			</div>
+			<p>Legal Design Summit is the world's largest legal design event held in Helsinki on the 13th of September 2019. Our mission is to create a forum for forward-thinking professionals to exchange knowledge and expertise on law, design and digital services through interdisciplinary collaboration.</p>
 
 			<div class="margin-top-40"></div>
 
