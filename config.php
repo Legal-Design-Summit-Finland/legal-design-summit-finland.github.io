@@ -34,8 +34,7 @@ $pages = array(
 	'About Us',
 	'2016',
 	'2017',
-	'Why attend?',
-	'Delegations'
+	'Why attend?'
 );
 
 $urls = array(
