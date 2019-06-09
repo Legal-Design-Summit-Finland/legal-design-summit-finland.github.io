@@ -1,5 +1,6 @@
 <div class="row">
-	<div class="justify-center"><a href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
+	<div class="col-sm-6 justify-center-xs justify-right"><a href="http://tickets.legaldesignsummit.com" target="_blank" class="btn">Get tickets</a></div>
+	<div class="col-sm-6 justify-center-xs justify-left padding-top-xs-30"><a href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
 </div>
 
 <div class="padding-top-40"></div>
