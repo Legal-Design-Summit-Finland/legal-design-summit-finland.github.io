@@ -42,28 +42,64 @@
 
 						<div class="col-xs-6 col-md-3">
 							<div class="image"><img src="images/team/pilvi-alopaeus.png"></div>
-							<p>Pilvi Alopaeus<br><span class="small">Main Organizer / CEO<br><?php print encode_email('pilvi.alopaeus@legaldesignsummit.com', true); ?></p>
+							<p>Pilvi Alopaeus<br><span class="small">CEO<br><?php print encode_email('pilvi.alopaeus@legaldesignsummit.com', true); ?></p>
 							<p class="margin-bottom-0"><a href="https://www.linkedin.com/in/pilvialopaeus/" class="icon linkedin">LinkedIn</a></span></p>
 						</div>
 
 						<div class="col-xs-6 col-md-3">
                                                         <div class="image"><img src="images/team/eero-talvela.png"></div>
-                                                        <p>Eero Talvela<br><span class="small">Head of Sales<br><?php print encode_email('eero.talvela@legaldesignsummit.com', true); ?></p>
+                                                        <p>Eero Talvela<br><span class="small">Sales<br><?php print encode_email('eero.talvela@legaldesignsummit.com', true); ?></p>
                                                         <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/talvela/" class="icon linkedin">LinkedIn</a></span></p>
 						</div>
 						<div class="col-xs-6 col-md-3">
                                                         <div class="image"><img src="images/backgrounds/legal-design-summit.png"></div>
-                                                        <p>Nina Toivonen<br><span class="small">Co-Producer<br><?php print encode_email('nina.toivonen@legaldesignsummit.com', true); ?></p>
-                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/ninan/" class="icon linkedin">LinkedIn</a></span></p>
+                                                        <p>Nina Toivonen<br><span class="small">Producer<br><?php print encode_email('nina.toivonen@legaldesignsummit.com', true); ?></p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/nina-toivonen-85300b20/" class="icon linkedin">LinkedIn</a></span></p>
 						</div>
 						<div class="col-xs-6 col-md-3">
-                                                        <div class="image"><img src="images/backgrounds/legal-design-summit.png"></div>
-                                                        <p>Henna Tolvanen<br><span class="small">Co-Producer<br><?php print encode_email('henna.tolvanen@legaldesignsummit.com', true); ?></p>
+                                                        <div class="image"><img src="images/team/henna-tolvanen.jpg"></div>
+                                                        <p>Henna Tolvanen<br><span class="small">Producer<br><?php print encode_email('henna.tolvanen@legaldesignsummit.com', true); ?></p>
                                                         <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/hennatolvanen/" class="icon linkedin">LinkedIn</a></span></p>
                                                 </div>
 
 					</div>
-
+					<div class="row equalize">
+                                                <div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/jukka-linna.jpg"></div>
+                                                        <p>Jukka Linna<br><span class="small">Back Office</p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/jukkalinna/" class="icon linkedin">LinkedIn</a></span></p>
+						</div>
+                                                <div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/eerika-tirkkonen.jpg"></div>
+                                                        <p>Eerika Tirkkonen<br><span class="small">Partnerships<br><?php print encode_email('partnerships@legaldesignsummit.com', true); ?></p>
+						</div>
+						<div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/peppiina-huhtala.jpg"></div>
+                                                        <p>Peppiina Huhtala<br><span class="small">Partnerships<br><?php print encode_email('partnerships@legaldesignsummit.com', true); ?></p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/peppiina-huhtala-b869bb105/" class="icon linkedin">LinkedIn</a></span></p>
+						</div>
+						<div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/susanna-aarnivuo.jpg"></div>
+							<p>Susanna Aarnivuo<br><span class="small">Partnerships<br><?php print encode_email('partnerships@legaldesignsummit.com', true); ?></p>
+							<p class="margin-bottom-0"><a href="https://www.linkedin.com/in/aarnivuo/" class="icon linkedin">LinkedIn</a></span></p>
+                                                </div>
+					</div>
+					<div class="row equalize">
+                                                <div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/jenni-nevala.jpg"></div>
+                                                        <p>Jenni Nevala<br><span class="small">Speakers<br><?php print encode_email('speakers@legaldesignsummit.com', true); ?></p>
+						</div>
+						<div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/sanna-niinikoski.jpg"></div>
+                                                        <p>Sanna Niinikoski<br><span class="small">Speakers<br><?php print encode_email('speakers@legaldesignsummit.com', true); ?></p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/sannaniinikoski/" class="icon linkedin">LinkedIn</a></span></p>
+						</div>
+						<div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/maria-ahmas.png"></div>
+                                                        <p>Maria Ahmas<br><span class="small">HR</p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/mariaahmas/" class="icon linkedin">LinkedIn</a></span></p>
+                                                </div>
+					</div>
 				</div>
 				
 				<div class="small padding-top-30">
