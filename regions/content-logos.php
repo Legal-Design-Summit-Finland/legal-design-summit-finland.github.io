@@ -4,9 +4,9 @@
                <h3>Made possible by</h3>
 
                <div class="row padding-top-20">
-			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://www.hel.fi" target="_blank"><img src="images/logos/logo_helsinki.jpg?<?php print time(); ?>"></a></div></div>
-			<div class="col-md-2 justify-center"><div class="logo"><a href="http://jandersdean.com/" target="_blank"><img src="images/logos/logo_janders_dean.png?<?php print time(); ?>"></a></div></div>
-			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.merilampi.com/" target="_blank"><img src="images/logos/logo_merilampi.jpg?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.hel.fi" target="_blank"><img src="images/logos/logo_helsinki.jpg?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="http://jandersdean.com/" target="_blank"><img src="images/logos/logo_janders_dean.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.merilampi.com/" target="_blank"><img src="images/logos/logo_merilampi.jpg?<?php print time(); ?>"></a></div></div>
                </div>
 
        </div>
