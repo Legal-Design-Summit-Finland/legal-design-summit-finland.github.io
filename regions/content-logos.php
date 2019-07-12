@@ -34,11 +34,17 @@
                         <div class="col-md-2 justify-center"><div class="logo"><a href="https://www.laurea.fi/koulutus/liiketalous-ja-tietojenkasittely/oikeudellinen-erityisosaaminen-ja-oikeusmuotoilu/" target="_blank"><img src="images/logos/logo_laurea.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.ml-tech.org" target="_blank"><img src="images/logos/logo_mltech.jpg?<?php print time(); ?>"></a></div></div>
 		</div>
-                <div class="row">
+		
+		<div class="row">
 			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://europe-legaltech.org" target="_blank"><img src="images/logos/logo_elta.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://legalhackers.org/" target="_blank"><img src="images/logos/logo_legal_hackers.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.service-design-network.org/chapters/finland" target="_blank"><img src="images/logos/logo_sdn.png?<?php print time(); ?>"></a></div></div>
-                </div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.helsinkidesignweek.com/" target="_blank"><img src="images/logos/logo_hdw.jpg?<?php print time(); ?>"></a></div></div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="http://legaltech.fi/" target="_blank"><img src="images/logos/logo_legal_tech_forum.png?<?php print time(); ?>"></a></div></div>
+		</div>
 
 	</div>
 	
