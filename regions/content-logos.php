@@ -13,7 +13,9 @@
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.ilvessolutions.fi/en/index.html" target="_blank"><img src="images/logos/logo_ilves.jpg?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://fondia.com/en" target="_blank"><img src="images/logos/logo_fondia.png?<?php print time(); ?>"></a></div></div>
                </div>
-
+               <div class="row padding-top-20">
+                        <div class="col-md-4 col-md-offset-4 justify-center"><div class="logo"><a href="https://www.castren.fi/" target="_blank"><img src="images/logos/logo_castrensnellman.png?<?php print time(); ?>"></a></div></div>
+               </div>
        </div>
 
 	<div class="padding-top-40"></div>
@@ -45,6 +47,8 @@
 		
 		<div class="row">
 			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="http://legaltech.fi/" target="_blank"><img src="images/logos/logo_legal_tech_forum.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.innovatethelaw.com/" target="_blank"><img src="images/logos/logo_poli.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.lakimiesliitto.fi/in-english/" target="_blank"><img src="images/logos/logo_lakimiesliitto.png?<?php print time(); ?>"></a></div></div>
 		</div>
 
 	</div>
