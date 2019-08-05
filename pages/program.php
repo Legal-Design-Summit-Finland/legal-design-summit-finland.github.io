@@ -18,20 +18,20 @@
 
 				<h4>1. Legal Design from thinking to doing</h4>
 				<blockquote>
-					<p>10:10 – 10:40 <strong>What is Legal Design?</strong><br><span class="small"><strong>Dan Jackson</strong> (Executive Director, NuLawLab, Northwestern University School of Law)</span></p>
+					<p>10:10 – 10:40 <strong>What is Legal Design?</strong><br><span class="small"><strong>Dan Jackson</strong> (Executive Director, NuLawLab, Northeastern University School of Law)</span></p>
                                         <p>10:40 – 11:00 <strong>10 Reasons Why NOT to do Legal Design</strong><br><span class="small"><strong>Marco Imperiale</strong> (Lawyer and Innovation Officer at LCA, Teacher at Harward Law)</span></p>
                                         <p>11:00 – 11:30  <strong>Strategic Blueprints for Legal Design and Access to Justice</strong><br><span class="small"><strong>Margaret Hagan</strong> (Director, Legal Design Lab, Stanford Law)</span></p>
-                                        <p>11:30 – 12:00 <strong>Experiences from Legal Design in Courts and Dispute Resolution</strong><br><span class="small"><strong>Stacy Butler</strong> (Director, Innovation for Justice, University of Arizona)</span><br><span class="small"><strong>Andrea Lindblom</strong> (Administrative Chief, Helsingborgs Tingsrätt)</span><br><span class="small"><strong>Ylva Norling Jönsson</strong> (Chief Judge, Helsingborg Tingsrätt)</span><br><span class="small"><strong>Santiago Pardo Rodriguez</strong> (Professor of the Legal Design Lab of the University of Andes & Law Clerk at the Colombian Peace Tribunal)</span></p>
+                                        <p>11:30 – 12:00 <strong>Experiences from Legal Design in Courts and Dispute Resolution</strong><br><span class="small"><strong>Stacy Butler</strong> (Director, Innovation for Justice, University of Arizona)</span><br><span class="small"><strong>Andrea Lindblom</strong> (Administrative Chief, Helsingborg District Court)</span><br><span class="small"><strong>Ylva Norling Jönsson</strong> (Chief Judge, Helsingborg District Court)</span><br><span class="small"><strong>Santiago Pardo Rodriguez</strong> (Professor of the Legal Design Lab of the University of Andes & Law Clerk at the Colombian Peace Tribunal)</span></p>
 				</blockquote>
-				<h4>12:00 – 13:00  Lunch</h4>
+				<h4>12:00 – 13:00  Lunch Break</h4>
 				<h4>2. Transforming Strategies (into a culture)</h4>
 				<blockquote>
 					<p>13:00 – 13:20 <strong>What Does Transforming Strategies into a Culture Mean?</strong><br><span class="small"><strong>Esko Kilpi</strong> (Researcher, Author and Lecturer on post-industrial work)</span></p>
-					<p>13:20 – 13:40 <strong>Interaction Between Legal and Design Cultures and Mindsets</strong><br><span class="small"><strong>Michael Doherty</strong> (Principal Law Lecturer at University of Central Lancashire)</span></p>
+					<p>13:20 – 13:40 <strong>Legal Culture vs Design Culture: Tensions and Opportunities</strong><br><span class="small"><strong>Michael Doherty</strong> (Principal Law Lecturer at University of Central Lancashire)</span></p>
 					<p>13:40 – 14:10 <strong>Transforming Strategies and Culture in Law Firms</strong><br><span class="small"><strong>Alex Smith</strong> (Global Product Lead, iManage)</span><br><span class="small"><strong>Laura Fauqueur</strong> (Marketing and BD Manager, Adarve Abogados)</span><br><span class="small"><strong>Tom Connor</strong> (Innovation Manager, Matheson)</span></p>
 					<p>14:10 – 14:30 <strong>Case: Legal Design in the Finance Sector</strong><br><span class="small"><strong>Marie Potel-Saville</strong> (Founder and CEO, Amurabi)</span><br><span class="small"><strong>Elisabeth Talbourdet</strong> (Project Manager, Amurabi)</span></p>
 					<p>14:30 – 15:00  <strong>Strategic Implementation of Legal Technology</strong><br><span class="small"><strong>Jack Pineda Dale</strong> (Legal Director, Microsoft Central and EasternEurope)</span><br><span class="small"><strong>Matthias Strand</strong> (Head of Legal, Microsoft Western Europe)</span></p>
-<p>15:00 – 15:20 <strong>World News of Legal Design</strong><br><span class="small"><strong>Meera Klemola</strong> (Founder and Director of Strategy, Observ)</span><br><span class="small"><strong>Emma Hertzberg</strong> (Founder and Creative Director, Observ)</span></p>
+<p>15:00 – 15:20 <strong>World News of Legal Design</strong><br><span class="small"><strong>Meera Klemola</strong> (Founder & Director of Strategy, Observ)</span><br><span class="small"><strong>Emma Hertzberg</strong> (Founder & Creative Director, Observ)</span></p>
 				</blockquote>
 				<h4>15:20 – 16:00 Coffee Break</h4>
 				<h4>3. Legal Design Impact - What's Next?</h4>
