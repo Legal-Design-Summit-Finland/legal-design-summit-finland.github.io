@@ -49,6 +49,7 @@
 			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="http://legaltech.fi/" target="_blank"><img src="images/logos/logo_legal_tech_forum.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.innovatethelaw.com/" target="_blank"><img src="images/logos/logo_poli.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.lakimiesliitto.fi/in-english/" target="_blank"><img src="images/logos/logo_lakimiesliitto.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://sisventures.org/" target="_blank"><img src="images/logos/logo_sisventures.jpg?<?php print time(); ?>"></a></div></div>
 		</div>
 
 	</div>
