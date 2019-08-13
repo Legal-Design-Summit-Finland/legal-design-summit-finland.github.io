@@ -15,7 +15,8 @@
 				<h3>SIDE EVENT BY Castrén & Snellman:<br><span class="small">Session on regulation & ethics of AI</span></h3>
 					<img src="images/logos/logo_castrensnellman.png">
 					<div class="justify-left">
-                                                <p><strong>DATE AND TIME:</strong> Thursday 12.9.2019 at 16:00 - 18:00</p>
+						<p></p>
+						<p><strong>DATE AND TIME:</strong> Thursday 12.9.2019 at 16:00 - 18:00</p>
                                                 <p><strong>LOCATION:</strong> <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8314524442026!2d24.94507115194563!3d60.16696908187111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcecb53b045%3A0xd80411aa06b8ccbe!2sEtel%C3%A4esplanadi+14%2C+00130+Helsinki!5e0!3m2!1sen!2sfi!4v1565639501999!5m2!1sen!2sfi" class="lightbox">Eteläesplanadi 14, 6th Floor</a></p>
                                                 <p><strong>SIGN UP:</strong> <a href="http://email.castren.fi/public/event/RegistrationForm/424058417444465D4A7840">http://email.castren.fi/public/event/RegistrationForm/424058417444465D4A7840</a></p>
                                         </div>
