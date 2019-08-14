@@ -51,7 +51,9 @@
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.lakimiesliitto.fi/in-english/" target="_blank"><img src="images/logos/logo_lakimiesliitto.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://sisventures.org/" target="_blank"><img src="images/logos/logo_sisventures.jpg?<?php print time(); ?>"></a></div></div>
 		</div>
-
+		<div class="row">
+                        <div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://gofore.com/en/home/" target="_blank"><img src="images/logos/logo_gofore.png?<?php print time(); ?>"></a></div></div>
+                </div>
 	</div>
 	
 </div>

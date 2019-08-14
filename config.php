@@ -34,6 +34,7 @@ $pages = array(
 	'About Us',
 	'2016',
 	'2017',
+	'Delegations',
 	'Why attend?'
 );
 
