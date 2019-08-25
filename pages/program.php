@@ -26,12 +26,12 @@
 				<h4>12:00 – 13:00  Lunch Break</h4>
 				<h4>2. Transforming Strategies (into a culture)</h4>
 				<blockquote>
-					<p>13:00 – 13:20 <strong>What Does Transforming Strategies into a Culture Mean?</strong><br><span class="small"><strong>Esko Kilpi</strong> (Researcher, Author and Lecturer on post-industrial work)</span></p>
+					<p>13:00 – 13:20 <strong>What Does Transforming Strategies into a Culture Mean?</strong><br><span class="small"><strong><a href="#esko-kilpi" class="scroll-to">Esko Kilpi</a></strong> (Researcher, Author and Lecturer on post-industrial work)</span></p>
 					<p>13:20 – 13:40 <strong>Legal Culture vs Design Culture: Tensions and Opportunities</strong><br><span class="small"><strong><a href="#michael-doherty" class="scroll-to">Michael Doherty</a></strong> (Principal Law Lecturer at University of Central Lancashire)</span></p>
 					<p>13:40 – 14:10 <strong>Transforming Strategies and Culture in Law Firms</strong><br><span class="small"><strong>Alex Smith</strong> (Global Product Lead, iManage)</span><br><span class="small"><strong>Laura Fauqueur</strong> (Marketing and BD Manager, Adarve Abogados)</span><br><span class="small"><strong><a href="#tom-connor" class="scroll-to">Tom Connor</a></strong> (Innovation Project Manager, Matheson)</span></p>
 					<p>14:10 – 14:30 <strong>Legal Design for Real-Life Compliance: Anti-Money Laundering, Anti-Financing of Terrorism and Anti-Corruption</strong><br><span class="small"><strong><a href="#marie-potel-saville" class="scroll-to">Marie Potel-Saville</a></strong> (Founder and CEO, Amurabi)</span><br><span class="small"><strong><a href="#elisabeth-talbourdet" class="scroll-to">Elisabeth Talbourdet</a></strong> (Project Manager, Amurabi)</span></p>
 					<p>14:30 – 15:00  <strong>Strategic Implementation of Legal Technology</strong><br><span class="small"><strong>Jack Pineda Dale</strong> (Legal Director, Microsoft Central and EasternEurope)</span><br><span class="small"><strong><a href="#mathias-strand" class="scroll-to">Mathias Strand</a></strong> (Head of Legal, Microsoft Western Europe)</span></p>
-<p>15:00 – 15:20 <strong>World News of Legal Design</strong><br><span class="small"><strong>Meera Klemola</strong> (Founder & Director of Strategy, Observ)</span><br><span class="small"><strong>Emma Hertzberg</strong> (Founder & Creative Director, Observ)</span></p>
+<p>15:00 – 15:20 <strong>World News of Legal Design</strong><br><span class="small"><strong><a href="#meera-klemola" class="scroll-to">Meera Klemola</a></strong> (Founder & Director of Strategy, Observ)</span><br><span class="small"><strong><a href="#emma-hertzberg" class="scroll-to">Emma Hertzberg</a></strong> (Founder & Creative Director, Observ)</span></p>
 				</blockquote>
 				<h4>15:20 – 16:00 Coffee Break</h4>
 				<h4>3. Legal Design Impact - What's Next?</h4>
@@ -42,7 +42,7 @@
 					<p>17:00 – 17:20 <strong>Future of Legal Tech Startups</strong><br><span class="small"><strong>Maya Markovich</strong> (Head of Product, Nextlaw Labs)</span></p>
 					<p>17:20 – 17:40 <strong>Visualizing Social Justice: How Legal Design Can Build Community Power</strong><br><span class="small"><strong><a href="#hallie-jay-pope" class="scroll-to">Hallie Jay Pope</a></strong> (President, Graphic Advocacy Project)</span></p>
 					<p>17:40 – 18:10  <strong>Designing Privacy in the Digital Age: Gaming, Social Media and Children</strong><br><span class="small"><strong>Leena Kuusniemi</strong> (Legal Advisor, Leegal Oy)</span><br><span class="small"><strong>Cosimo Monda</strong> (Director, European Centre on Data Privacy and Cybersecurity)</span><br><span class="small"><strong>Heikki Tolvanen</strong> (Co-Founder & Chief Legal Engineer, PrivacyAnt)</span></p>
-					<p>18:10 – 18:30 <strong>Final Keynote: We Need to Break Out of the Echo Box – So What’s Next?</strong><br><span class="small"><strong>Matthias Dobbelaere-Welvaert</strong> (Chief Creative, Ethel)</span></p>
+					<p>18:10 – 18:30 <strong>Final Keynote: We Need to Break Out of the Echo Box – So What’s Next?</strong><br><span class="small"><strong><a href="#matthias-dobbelaere-welvaert" class="scroll-to">Matthias Dobbelaere-Welvaert</a></strong> (Chief Creative, Ethel)</span></p>
 				</blockquote>
 
 			</div>
@@ -118,7 +118,7 @@
                                                         <a href="https://www.linkedin.com/in/andrea-lindblom" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
                                                         <a href="https://twitter.com/andrea_lindblom" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
                                                         <a href="https://legaltechdesign.wordpress.com/" class="icon website margin-left-5" target="_blank">Website</a>
-                                                <div class="bio"><p class="small">I graduated from Lund University in 2009. I started working at a law firm and then as a legal clerk. I have worked at Helsingborg District Court since 2011. I became interested in Legal Design when I found one of Margaret Hagans drawings from a Courts Technology Conference in September 2017 on how courts could become more innovative. When I´m not working I hang out with my family and friends or read books/articles that inspire me. Like most people I also spend too much time on social media.</p></div>
+                                                <div class="bio"><p class="small">Andrea graduated from Lund University (law) in 2009. She has been working at Helsingborg District Court since 2011. During the lasts few years she has focused on issues relating to the presence of the courts and judges on social media. Together with her colleagues she runs a podcast about different legal issues from a courts’ perspective. Andrea discovered Legal Design when she stumbled across one of Margaret Hagans sketches from a Courts Technology Conference in September 2017 on How courts could become more innovative. In March 2019 Helsingborg District Court arranged Sweden’s first legal design workshop in the public sector with representatives from the Swedish Enforcement Authority, the Swedish Prosecution Authority, the Swedish Police, members of the Swedish Bar Association, the City of Helsingborg, the Swedish Agency for Participation and the Swedish Prison and Probation Service.</p></div>
                                                 </div>
 					</div>
 					<div class="col-xs-6 col-md-3" id="ylva-norling">
@@ -128,19 +128,28 @@
                                                         <a href="https://www.linkedin.com/in/ylva-norling-jönsson-aa043b5a" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
                                                         <a href="https://twitter.com/YlvaNorling" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
                                                         <a href="https://legaltechdesign.wordpress.com/" class="icon website margin-left-5" target="_blank">Website</a>
-                                                <div class="bio"><p class="small">I have worked as a judge for more than twenty years. For the last ten years I have had the privilege of being Chief Judge at the District Court of Helsingborg. It´s really a benefit since the court is both modern and efficient. I have also taken part in several law-making processes as head of or expert in many State Inquiries on different legal subjects. Courts are very important in democratic legal systems. The courts and the judges should therefore take part in the public debate and the society. Of course, Justice must not only be done, it must also be seen to be done. To me, this means that the courts and the judges must always stay unbiased but it does not prevent the courts and the judges from explaining the legislation or a sentence and it does not prevent the courts and the judges to stand up for
-human rights. To me it´s natural that courts and judges engage in social media and why not in a Pride parade?</p></div>
+						<div class="bio"><p class="small">Ylva Norling Jönsson has worked as a judge for more than twenty years. For the last ten years she has worked as the Chief Judge at the District Court of Helsingborg, a court that is both modern and efficient. Ylva has taken part in several law-making processes as the head of or the expert in many State Inquiries on different legal subjects. Ylva thinks that courts and the judges should take part in the public debate and the society, as they play an important role in the legal system. Justice must not only be done, it must also be seen to be done. To Ylva this means that the courts and the judges must always stay unbiased but it does not prevent the courts and the judges from explaining the legislation or a sentence and it does not prevent the courts and the judges to stand up for human rights. Ylva finds it natural that courts and judges engage in social media - and why not in a Pride parade too?</p></div>
                                                 </div>
 					</div>
 					<div class="col-xs-6 col-md-3" id="santiago-pardo-rodriguez">
                                                 <div class="image"><img src="images/speakers/santiago-pardo-rodriguez.png"></div>
-                                                <p class="margin-bottom-10">Santiago Pardo Rodriguez<br><span class="small">Head of the Legal Innovation Program and the Access to Justice Design Lab of the Universidad de los Andes, </span></p>
+                                                <p class="margin-bottom-10">Santiago Pardo Rodriguez<br><span class="small">Head of the Legal Innovation Program and the Access to Justice Design Lab of the Universidad de los Andes</span></p>
                                                 <div class="margin-bottom-30">
                                                         <a href="https://www.linkedin.com/in/santiago-pardo-rodriguez/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
                                                         <a href="https://twitter.com/A2JLabColombia" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
                                                 <div class="bio"><p class="small">Colombian lawyer, with an LLM from the Universidad de los Andes, an MSc in Law, Anthropology & Society from the London School of Economics and a Master of the Science of Law (JSM) from Stanford University. Former clerk at the Colombian Constitutional Court and the Peace Tribunal with ample experience in Constitutional Law, Public Law, Transitional Justice, and Empirical Legal Research. A true believer in the power of innovation to promote a new generation of legal and judicial services through Legal Design, Design Thinking, Tech Law and Legal Tech. Founder and head of the first Legal Innovation Program and the Access to Justice Lab in the country, created as a joint venture between the Universidad de los Andes' Architecture & Design School and Law School. Searching for the designer every lawyer should be.</p></div>
                                                 </div>
 					</div>
+					<div class="col-xs-6 col-md-3" id="esko-kilpi">
+                                                <div class="image"><img src="images/speakers/esko-kilpi.png"></div>
+                                                <p class="margin-bottom-10">Esko Kilpi<br><span class="small">Researcher, Author and Lecturer, Esko Kilpi Company</span></p>
+                                                <div class="margin-bottom-30">
+                                                        <a href="https://www.linkedin.com/in/esko-kilpi-0916/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
+							<a href="https://twitter.com/EskoKilpi" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
+							<a href="http://www.kilpi.fi" class="icon website margin-left-5" target="_blank">Website</a>
+                                                <div class="bio"><p class="small">Esko is the founder of Esko Kilpi Company, a group of researchers and strategists laying the intellectual foundations for Post-Industrial Work. We are early champions and pilots for the new disciplines of post-fossil value creation.</p></div>
+                                                </div>
+                                        </div>
 					<div class="col-xs-6 col-md-3" id="michael-doherty">
                                                 <div class="image"><img src="images/speakers/michael-doherty.png"></div>
                                                 <p class="margin-bottom-10">Michael Doherty<br><span class="small">Principal Lecturer in Law, Lancashire Law School, UCLan, UK</span></p>
@@ -196,6 +205,26 @@ human rights. To me it´s natural that courts and judges engage in social media 
                                                 <div class="bio"><p class="small">Mathias Strand is Assistant General Counsel and Head of Legal for Microsoft in Western Europe. He leads a team of lawyers who supports the commercial activities in the Nordics, the Benelux, the Alp countries, Italy, Spain and Portugal. He is a frequent speaker and panelist on topics relating to cloud computing, privacy and security, IT law, AI and ethics, compliance, accessibility, corporate social responsibility and the role of the corporate lawyer. He is a guest lecturer at law schools in Sweden and a member of the New York Bar. Mathias has a background from law firms in Stockholm and New York and a Masters of Law from Uppsala University and a Masters of Law from Georgetown University Law Center.</p></div>
                                                 </div>
 					</div>
+                                        <div class="col-xs-6 col-md-3" id="meera-klemola">
+                                                <div class="image"><img src="images/speakers/meera-klemola.png"></div>
+                                                <p class="margin-bottom-10">Meera Klemola<br><span class="small">Founder & Director of Strategy at Observ, Observ Agency</span></p>
+                                                <div class="margin-bottom-30">
+                                                        <a href="https://www.linkedin.com/in/meera-klemola/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
+							<a href="https://twitter.com/observagency" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
+							<a href="https://www.observ.agency" class="icon website margin-left-5" target="_blank">Website</a>
+                                                <div class="bio"><p class="small">Meera Klemola is a Founder at Observ, the leading global legal design agency. She is a trusted advisor in transforming legal practices for iconic global brands, multinational organisations, law firms, governments and academic institutions. Meera’s philosophy is to enable courageous change with design. With the team at Observ, she is constantly exploring the ways design can advance businesses and legal systems. Meera is particularly inspired by the use and scaling of design to shift existing thought patterns and to create more meaningful experiences for all. Both a strategic designer and lawyer, Meera holds a unique combination of qualifications in Law, Commerce and Design Management. Through her recognised work in the industry, Meera is also a frequently-invited keynote speaker at conferences across Europe, South America, Middle East, Asia & Australia.</p></div>
+                                                </div>
+					</div>
+					<div class="col-xs-6 col-md-3" id="emma-hertzberg">
+                                                <div class="image"><img src="images/speakers/emma-hertzberg.png"></div>
+                                                <p class="margin-bottom-10">Emma Hertzberg<br><span class="small">Founder & Creative Director, Observ Agency</span></p>
+                                                <div class="margin-bottom-30">
+                                                        <a href="https://www.linkedin.com/in/emma-hertzberg-260765111/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
+                                                        <a href="https://twitter.com/observagency" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
+                                                        <a href="https://www.observ.agency" class="icon website margin-left-5" target="_blank">Website</a>
+                                                <div class="bio"><p class="small">Emma Hertzberg is a Founder at Observ the leading global legal design agency on a mission to bring clarity to complexity. With Observ she is a trusted advisor in transforming legal practices for iconic global brands, multinational organizations, law firms, governments, and academic institutions. She is a strategic powerhouse intensively working with clients to empower them, question common beliefs, and challenge processes with design thinking. Making our society and organizations work more effectively, yet sustainably drives Emma forward. As an award-winning designer, with over a decade of experience in design, business and law Emma is frequently invited to keynote around the world on both law and design. She is also one of a handful of people to have authored and published academic literature on legal design + technology. Emma likes to challenge herself, truffle ice cream and she would die happy tomorrow if she could make fantasy role play cool again.</p></div>
+                                                </div>
+                                        </div>
 					<div class="col-xs-6 col-md-3" id="caitlin-moon">
                                                 <div class="image"><img src="images/speakers/caitlin-moon.png"></div>
                                                 <p class="margin-bottom-10">Caitlin Moon<br><span class="small">Director of Innovation Design, Vanderbilt Law School</span></p>
@@ -232,6 +261,16 @@ human rights. To me it´s natural that courts and judges engage in social media 
                                                         <a href="https://twitter.com/halliejaypope" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
                                                         <a href="http://graphicadvocacy.org" class="icon website margin-left-5" target="_blank">Website</a>
                                                 <div class="bio"><p class="small">Hallie Jay Pope is a lawyer by training and a cartoonist/graphic designer/animator by trial and error. She is the founder and president of the Graphic Advocacy Project, a nonprofit that uses visual communication tools to explain the law. Hallie's work seeks to redistribute legal knowledge to communities who are systemically excluded from and targeted by the legal system.</p></div>
+                                                </div>
+					</div>
+					<div class="col-xs-6 col-md-3" id="matthias-dobbelaere-welvaert">
+                                                <div class="image"><img src="images/speakers/matthias-dobbelaere.png"></div>
+                                                <p class="margin-bottom-10">Matthias Dobbelaere-Welvaert<br><span class="small">Chief Creative, Ethel</span></p>
+                                                <div class="margin-bottom-30">
+                                                        <a href="https://www.linkedin.com/in/matthiasdobbelaere/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
+                                                        <a href="https://twitter.com/deJuristen" class="icon twitter margin-left-5 margin-right-5" target="_blank">Twitter</a>
+                                                        <a href="https://ethel.eu" class="icon website margin-left-5" target="_blank">Website</a>
+                                                <div class="bio"><p class="small">Matthias Dobbelaere-Welvaert is the co-founder & Chief Creative of Ethel, a brand new legal tech & design agency. Together with co-founders Pieter-Jan Franssen en Daan Vansimpsen, the aim of Ethel (also check out the brand story which refers to Ethel Rebecca Benjamin, one of the world very first female lawyers) is to innovate law, make it more attractive, and kickstart the next revolution in the legal landscape. Matthias founded the legal consultancy firm “theJurists” (deJuristen) in 2010. In 2017 he created Europe’s first b2b legal chatbot. After managing the firm for almost 10 years, he sold his shares to an investor, and now he’s fully committed to Ethel. Aside from legal tech & design, Matthias is a privacy activist and director of the Ministry of Privacy, which combats privacy invasions committed by our governments (the famous ‘fingerprint on the eID’-case in Belgium), a legal storyteller at DOBBELAERE-WELVAERT, and - as an avid fan of motorcycles - the official Triumph Motorcycles Mobility Ambassador.</p></div>
                                                 </div>
                                         </div>
 				</div>	
