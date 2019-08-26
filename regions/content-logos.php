@@ -14,7 +14,8 @@
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://fondia.com/en" target="_blank"><img src="images/logos/logo_fondia.png?<?php print time(); ?>"></a></div></div>
                </div>
                <div class="row padding-top-20">
-                        <div class="col-md-4 col-md-offset-4 justify-center"><div class="logo"><a href="https://www.castren.fi/" target="_blank"><img src="images/logos/logo_castrensnellman.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.castren.fi/" target="_blank"><img src="images/logos/logo_castrensnellman.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="http://www.dottir.fi/" target="_blank"><img src="images/logos/logo_dottir.png?<?php print time(); ?>"></a></div></div>
                </div>
        </div>
 
