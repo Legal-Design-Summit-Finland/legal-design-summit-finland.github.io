@@ -16,6 +16,7 @@
                <div class="row padding-top-20">
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.castren.fi/" target="_blank"><img src="images/logos/logo_castrensnellman.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-4 justify-center"><div class="logo"><a href="http://www.dottirlaw.com/" target="_blank"><img src="images/logos/logo_dottir.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://hansenlaw.se/" target="_blank"><img src="images/logos/logo_hansen.jpg?<?php print time(); ?>"></a></div></div>
                </div>
        </div>
 
