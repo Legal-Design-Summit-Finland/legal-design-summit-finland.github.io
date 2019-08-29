@@ -17,7 +17,10 @@
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.castren.fi/" target="_blank"><img src="images/logos/logo_castrensnellman.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-4 justify-center"><div class="logo"><a href="http://www.dottirlaw.com/" target="_blank"><img src="images/logos/logo_dottir.png?<?php print time(); ?>"></a></div></div>
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://hansenlaw.se/" target="_blank"><img src="images/logos/logo_hansen.jpg?<?php print time(); ?>"></a></div></div>
-               </div>
+	       </div>
+               <div class="row padding-top-20">
+			<div class="col-md-4 col-md-offset-4 justify-center"><div class="logo"><a href="https://greip.com/" target="_blank"><img src="images/logos/logo_greip.png?<?php print time(); ?>"></a></div></div>
+		</div>
        </div>
 
 	<div class="padding-top-40"></div>
@@ -54,7 +57,8 @@
 			<div class="col-md-2 justify-center"><div class="logo"><a href="https://sisventures.org/" target="_blank"><img src="images/logos/logo_sisventures.jpg?<?php print time(); ?>"></a></div></div>
 		</div>
 		<div class="row">
-                        <div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://gofore.com/en/home/" target="_blank"><img src="images/logos/logo_gofore.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://gofore.com/en/home/" target="_blank"><img src="images/logos/logo_gofore.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.ym.fi/en-US" target="_blank"><img src="images/logos/logo_ymparistoministerio.png?<?php print time(); ?>"></a></div></div>
                 </div>
 	</div>
 	
