@@ -8,7 +8,7 @@
 
 	</div>
 
-	<div class="event-info"><p class="enhanced">13.9.2019 <a href="https://www.google.com/maps/place/Helsingin+yliopisto/@60.1694958,24.9493822,18z/data=!4m5!3m4!1s0x0:0x128a5cf5b52ff135!8m2!3d60.169454!4d24.9499478" target="_blank" class="icon location"></a> Helsinki, Finland</p></div>
+	<div class="event-info"><p class="enhanced">13.9.2019 <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7466792716189!2d24.950566716371622!3d60.168372431960286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcf052f978b%3A0xda23a21022a81997!2sHelsinki%20City%20Hall!5e0!3m2!1sen!2sus!4v1567379709436!5m2!1sen!2sus" target="_blank" class="icon location"></a> Helsinki City Hall, Pohjoisesplanadi 11-13, Helsinki, Finland</p></div>
 	<?php if ($is_home): ?>
 
 	<div class="actions">
