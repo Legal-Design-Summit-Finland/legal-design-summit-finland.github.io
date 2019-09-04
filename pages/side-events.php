@@ -86,6 +86,41 @@
                         	</div>
 			</div>
 		</div>
+		<div class="row">
+
+                        <div class="col-md-6">
+
+                                <h3>SIDE EVENT BY Edita Publishing Ltd<br><span class="small"></span></h3>
+                                <img src="images/logos/logo_edita.png">
+                                <div class="justify-left">
+                                        <p>Edita Publishing Ltd is a knowledge company that provides Smart Learning and Smart Legal solutions. We help organizations and individuals in their aim to prosper and serve their stakeholders better by combining capabilities within content curation, learning and legal design and technology. Our Smart Legal offering is designed to help individuals and organizations to be on top of the legal requirements and to utilize the knowledge successfully. We are part of the Nordic Morning Group.</p>
+					<p>You are warmly welcome to our side event where we will hear about Design Thinking and Blockchain.</p>
+					<p>Agenda:<br>
+					Dinko Kortzanov, Client Service Director at Nordic Morning Finland:<br>
+					Quick intro to design thinking - how anyone can become more customer centric without being a designer<br>
+					Mari Tomunen, Blockchain and Fintech Associate at Sullivan & Worcester LLP:<br>
+					Blockchain explained: What do you need to know about blockchain<br></p>
+                                        <p><strong>DATE AND TIME:</strong> Thursday 12.9.2019 at 17:00 - 19:00</p>
+                                        <p><strong>LOCATION:</strong> <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4208035896183!2d24.975648551706588!3d60.19031864864401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692097abdc7f523%3A0x1c47ca308ce6dca9!2sVerkkosaarenkatu%205%2C%2000580%20Helsinki%2C%20Finland!5e0!3m2!1sen!2sus!4v1567629725865!5m2!1sen!2sus" class="lightbox">Edita Publishing’s office, Verkkosaarenkatu 5, 2nd floor, Helsinki</a></p>
+                                        <p><strong>SIGN UP:</strong> <a href="http://edita.editapublishing.fi/legal-design-summit" class="lightbox">http://edita.editapublishing.fi/legal-design-summit</a></p>
+                                </div>
+                        </div>
+
+                        <div class="col-md-6">
+                                <div class="padding-top-sm-40"></div>
+
+                                <h3>SIDE EVENT BY Dottir:<br><span class="small">The Afterparty</span></h3>
+                                <img src="images/logos/logo_dottir.png">
+                                <div class="justify-left">
+                                        <p>The afterparty is hosted by Dottir. Their office is located in central Helsinki, a very short walk from the event venue, in Pohjoisesplanadi 35 AA.</p>
+					<p>The legendary New York-born soul singer/producer Nicole Willis will perform together with the drum-machine wizard Kalifornia-Keke.</p>
+					<p>It is going to be epic – if you have ever been to a party organized by Dottir, you already know what to expect.</p>
+                                        <p><strong>DATE AND TIME:</strong> Friday 13.9.2019 at 19:00</p>
+                                        <p><strong>LOCATION:</strong> <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7795442304414!2d24.94297651637162!3d60.16782838196005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a33b7075f41%3A0x62f216f0d7efb964!2sDottir!5e0!3m2!1sen!2sus!4v1567378393876!5m2!1sen!2sus" class="lightbox">Dottir's office, Pohjoisesplanadi 35 Aa, Helsinki</a></p>
+                                        <p><strong>SIGN UP:</strong> <a href="https://forms.gle/9bcMpeJfRbPRbpLW7" class="lightbox">https://forms.gle/9bcMpeJfRbPRbpLW7</a></p>
+                                </div>
+                        </div>
+                </div>
 		<!-- Content Main Section Ends -->
 		
 	</div>
