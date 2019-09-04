@@ -19,7 +19,9 @@
 			<div class="col-md-4 justify-center"><div class="logo"><a href="https://hansenlaw.se/" target="_blank"><img src="images/logos/logo_hansen.jpg?<?php print time(); ?>"></a></div></div>
 	       </div>
                <div class="row padding-top-20">
-			<div class="col-md-4 col-md-offset-4 justify-center"><div class="logo"><a href="https://greip.com/" target="_blank"><img src="images/logos/logo_greip.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://greip.com/" target="_blank"><img src="images/logos/logo_greip.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://ethel.eu/" target="_blank"><img src="images/logos/logo_ethel.png?<?php print time(); ?>"></a></div></div>
+			<div class="col-md-4 justify-center"><div class="logo"><a href="https://www.baerkarrer.ch/" target="_blank"><img src="images/logos/logo_bk.jpg?<?php print time(); ?>"></a></div></div>
 		</div>
        </div>
 
