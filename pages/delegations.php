@@ -44,9 +44,11 @@
 					<li>Avokaado.com OÜ</li>
 					<li>Axis Legal Ghana</li>
 					<li>Basware Oyj</li>
+					<li>Bird & Bird</li>
 					<li>BIOCAD</li>
 					<li>Blueprint Genetics</li>
 					<li>Bonfide Oy</li>
+					<li>Borenius Attorneys Ltd</li>
 					<li>Bot&Partners</li>
 					<li>Business College Helsinki</li>
 					<li>CAPSTAN LMS</li>
@@ -85,6 +87,7 @@
 					<li>European Chemicals Agency</li>
 					<li>European Legal Tech Association - ELTA</li>
 					<li>EY</li>
+					<li>Finnish Bar Association</li>
 					<li>Finnish Commerce Federation / Kaupan liitto ry</li>
 					<li>Finnish Education Employers /  Sivista</li>
 					<li>Finnish Government</li>
@@ -108,9 +111,11 @@
 				<div class="col-md-4">
 					<ul class="list justify-left">
 						<li>Graphic Advocacy Project</li>
+						<li>Greip</li>
 						<li>Haaga Helia UAS</li>
 						<li>Haglex Oy</li>
 						<li>Hannes Snellman</li>
+						<li>Hansen Law</li>
 						<li>Háptica - Diseño de Servicios y Estrategias</li>
 						<li>Harvard University</li>
 						<li>Hellon</li>
@@ -159,6 +164,7 @@
 						<li>Legal Design Lab of the University of Andes</li>
 						<li>Legal Design Lab, Stanford Law </li>
 						<li>Legal Design Studio</li>
+						<li>Legal Design Summit Alumni</li>
 						<li>Legal Hackers</li>
 						<li>Legal Tech Lab</li>
 						<li>Legalcomplex</li>
@@ -182,19 +188,23 @@
 						<li>Microsoft</li>
 						<li>Miller & Company</li>
 						<li>Miltton</li>
+						<li>Ministry of Environment</li>
 						<li>Ministry of Justice</li>
 						<li>MLTech</li>
 						<li>Moscow State University</li>
 						<li>Nathalie Bowman Legal</li>
 						<li>National Police Board of Finland</li>
 						<li>Nauta Dutilh</li>
+						<li>New York University</li>
 						<li>Nextlaw Labs</li>
 						<li>Nike Inc.</li>
 						<li>Nixu Oyj</li>
+						<li>Nordea Bank Oyj</li>
 						<li>Nordea Finance</li>
 						<li>Nordia Law</li>
 						<li>Nordx Legal</li>
 						<li>Northeastern University School of Law</li>
+						<li>Nottingham Law School</li>
 						<li>Observ</li>
 						<li>OlarteMoure</li>					
 					</ul>
@@ -202,6 +212,7 @@
 				
 				<div class="col-md-4">
 					<ul class="list justify-left">
+						<li>OP</li>
 						<li>Open State Foundation</li>
 						<li>OriginalMy Blockchain</li>
 						<li>Ornamo Art and Design Finland</li>
@@ -223,6 +234,7 @@
 						<li>Riscography solutions GmbH</li>
 						<li>SAGAN Avocats</li>
 						<li>Saint Petersburg State University</li>
+						<li>SAP SuccessFactors</li>
 						<li>Sarastia Oy</li>
 						<li>Savvy</li>
 						<li>Secrays</li>
@@ -230,6 +242,7 @@
 						<li>Silo.AI</li>
 						<li>Sis Ventures Ltd.</li>
 						<li>Sitra</li>
+						<li>Skanska Oy</li>
 						<li>Société québécoise d’information juridique</li>
 						<li>Sorainen</li>
 						<li>SPX FLOW</li>
@@ -243,10 +256,12 @@
 						<li>Supreme Administrative Court of Finland</li>
 						<li>Swisscom switzerland ltd</li>
 						<li>Taaleri</li>
+						<li>Tallin University</li>
 						<li>Taylor Wessing LLP</li>
 						<li>Technology Industries of Finland</li>
 						<li>Telia Company</li>
 						<li>The Association of Finnish Lawyers</li>
+						<li>The Chancellor of Justice</li>
 						<li>The City of Helsinki</li>
 						<li>The City of Kerava</li>
 						<li>The Finnish Musicians’ Union</li>
@@ -277,6 +292,7 @@
 						<li>University of Vaasa</li>
 						<li>University of Vienna</li>
 						<li>UWE</li>
+						<li>Value Group Oy</li>
 						<li>Vanderbilt Law School </li>
 						<li>Waselius & Wist</li>
 						<li>Wavelength.law</li>
