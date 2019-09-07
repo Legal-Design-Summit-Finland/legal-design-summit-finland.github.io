@@ -90,7 +90,7 @@
 
                         <div class="col-md-6">
 
-                                <h3>SIDE EVENT BY Edita Publishing Ltd<br><span class="small"></span></h3>
+                                <h3>SIDE EVENT BY Edita Publishing Ltd:<br><span class="small"></span></h3>
                                 <img src="images/logos/logo_edita.png">
                                 <div class="justify-left">
                                         <p>Edita Publishing Ltd is a knowledge company that provides Smart Learning and Smart Legal solutions. We help organizations and individuals in their aim to prosper and serve their stakeholders better by combining capabilities within content curation, learning and legal design and technology. Our Smart Legal offering is designed to help individuals and organizations to be on top of the legal requirements and to utilize the knowledge successfully. We are part of the Nordic Morning Group.</p>
@@ -106,10 +106,10 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="afterparty">
                                 <div class="padding-top-sm-40"></div>
 
-                                <h3>SIDE EVENT BY Dottir:<br><span class="small">The Afterparty</span></h3>
+                                <h3>Afterparty By Dottir!</h3>
                                 <img src="images/logos/logo_dottir.png">
                                 <div class="justify-left">
                                         <p>The afterparty is hosted by Dottir. Their office is located in central Helsinki, a very short walk from the event venue, in Pohjoisesplanadi 35 AA.</p>
