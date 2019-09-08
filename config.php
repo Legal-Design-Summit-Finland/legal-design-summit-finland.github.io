@@ -31,6 +31,7 @@ $pages = array(
 	'Speakers',
 	'Brainfactory',
 	'Side Events',
+	'Our Story',
 	'About Us',
 	'2016',
 	'2017',
