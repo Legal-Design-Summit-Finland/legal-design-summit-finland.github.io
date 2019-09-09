@@ -541,7 +541,7 @@
 				<div class="row equalize">
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/laura-sivula.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/laura-sivula.png" class="bordered"></div>
 						<p class="margin-bottom-10">Laura Sivula<br><span class="small">Program Manager at Aalto ITP</span></p>
 						<div class="margin-bottom-30">
 							<a href="http://www.linkedin.com/in/laurasivula" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -552,7 +552,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/jameson-dempsey.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/jameson-dempsey.png" class="bordered"></div>
 						<p class="margin-bottom-10">Jameson Dempsey<br><span class="small">Director, Legal Hackers; Associate, Kelley Drye & Warren LLP</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/jamesondempsey/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -562,7 +562,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/hanna-pakaslahti.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/hanna-pakaslahti.png" class="bordered"></div>
 						<p class="margin-bottom-10">Hanna Pakaslahti<br><span class="small">Coordinator at University of Helsinki Legal Tech Lab</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/hannapakaslahti" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -572,7 +572,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/antti-innanen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/antti-innanen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Antti Innanen<br><span class="small">Partner at Dottir Attorneys</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://fi.linkedin.com/in/anttiinnanen" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -582,7 +582,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/juha-matti-santala.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/juha-matti-santala.png" class="bordered"></div>
 						<p class="margin-bottom-10">Juha-Matti Santala<br><span class="small">Brand Hacker at Sofokus</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/juhamattisantala" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -592,7 +592,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/riikka-koulu.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/riikka-koulu.png" class="bordered"></div>
 						<p class="margin-bottom-10">Riikka Koulu<br><span class="small">Director of the University of Helsinki Legal Tech Lab</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/riikka-koulu-ba237358/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -602,7 +602,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/cat-moon.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/cat-moon.png" class="bordered"></div>
 						<p class="margin-bottom-10">Cat Moon<br><span class="small">Professor of Legal Design at Vanderbilt Law School<br>Co-Founder and Legal Designer at Start Here HQ<br>Chief Design Officer at Legal Alignment<br>Legal Hackers Chapter Co-Organizer</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/caitlinmoon" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -612,7 +612,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/risto-hubner.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/risto-hubner.png" class="bordered"></div>
 						<p class="margin-bottom-10">Risto Hübner<br><span class="small">Chief Legal Officer at Nortal, Founder of Estonian Legal Hackers</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/ristohubner" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -622,7 +622,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/sarah-van-hecke.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/sarah-van-hecke.png" class="bordered"></div>
 						<p class="margin-bottom-10">Sarah Van Hecke<br><span class="small">Legal Design Consultant at Houthoff Buruma</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/sarah-van-hecke-7a20177" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -632,7 +632,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/sebastian-nemeth.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/sebastian-nemeth.png" class="bordered"></div>
 						<p class="margin-bottom-10">Sebastian Nemeth<br><span class="small">Co-founder / CEO at Portyr</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/sebastiannemeth/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -642,7 +642,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/otto-markkanen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/otto-markkanen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Otto Markkanen<br><span class="small">Co-founder / Legal & Privacy at Portyr</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/otto-markkanen-90306912/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -652,7 +652,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/anna-ronkainen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/anna-ronkainen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Anna Ronkainen<br><span class="small">Chief Scientist at TrademarkNow</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/anna-ronkainen-2347884a" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -662,7 +662,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/scott-allan.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/scott-allan.png" class="bordered"></div>
 						<p class="margin-bottom-10">Scott Allan<br><span class="small">Serial Entrepreneur and start-up advisor</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/sallan/" class="icon linkedin" target="_blank">LinkedIn</a>
@@ -671,7 +671,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/coaches/laura-lerkkanen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/coaches/laura-lerkkanen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Laura Lerkkanen<br><span class="small">Service Designer at Hellon</span></p>
 						<div class="margin-bottom-30">
 							<a href="http://hellon.com" class="icon website" target="_blank">Website</a>
@@ -710,7 +710,7 @@
 				<div class="row equalize">
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/jose-torres.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/jose-torres.png" class="bordered"></div>
 						<p class="margin-bottom-10">Jose F. Torres<br><span class="small">Director of the Center for Innovation in Law at the University Sergio Arboleda</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/jose-fernando-torres-varela-899b741a/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -720,7 +720,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/johanna-rantanen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/johanna-rantanen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Johanna Rantanen<br><span class="small">Partner at Dottir Attorneys</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://fi.linkedin.com/in/johanna-rantanen-2bb85649" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -730,7 +730,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/erkki-izarra.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/erkki-izarra.png" class="bordered"></div>
 						<p class="margin-bottom-10">Erkki Izarra<br><span class="small">Independent Consultant at Izarra</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://fi.linkedin.com/in/erkki-izarra-3205a58" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -740,7 +740,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/jaakko-waananen.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/jaakko-waananen.png" class="bordered"></div>
 						<p class="margin-bottom-10">Jaakko Wäänänen<br><span class="small">CEO at Hellon</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://fi.linkedin.com/in/jaakkowaananen" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -750,7 +750,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/jaakko-lindgren.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/jaakko-lindgren.png" class="bordered"></div>
 						<p class="margin-bottom-10">Jaakko Lindgren<br><span class="small">Partner at Dottir Attorneys</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/jaakkolindgren/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -760,7 +760,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/ilkka-kivimaki.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/ilkka-kivimaki.png" class="bordered"></div>
 						<p class="margin-bottom-10">Ilkka Kivimäki<br><span class="small">Entrepreneur & VC. Chairman Slush, Wolt, Umbra&Kasvuryhmä. ex-Beddit. Boardmember of Junction & Wave Ventures, RIC</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/ilkkak1/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
@@ -770,7 +770,7 @@
 					</div>
 
 					<div class="col-xs-6 col-md-3">
-						<div class="image"><img src="images/brainfactory/board/emma-jelley.png" class="bordered"></div>
+						<div class="image"><img src="images/brainfactory/2017/board/emma-jelley.png" class="bordered"></div>
 						<p class="margin-bottom-10">Emma Jelley<br><span class="small">General Counsel at Onfido</span></p>
 						<div class="margin-bottom-30">
 							<a href="https://www.linkedin.com/in/emma-jelley-34a5b13/" class="icon linkedin" target="_blank">LinkedIn</a>

@@ -98,8 +98,25 @@
                                                         <div class="image"><img src="images/team/maria-ahmas.png"></div>
                                                         <p>Maria Ahmas<br><span class="small">HR</p>
                                                         <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/mariaahmas/" class="icon linkedin">LinkedIn</a></span></p>
+						</div>
+						<div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/elise-rehula.png"></div>
+                                                        <p>Elise Rehula<br><span class="small">Brainfactory</p>
+                                                        <p class="margin-bottom-0"><a href="http://www.linkedin.com/in/eliserehula" class="icon linkedin">LinkedIn</a></span></p>
                                                 </div>
 					</div>
+                                        <div class="row equalize">
+                                                <div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/heini-heinonen.png"></div>
+                                                        <p>Heini Heinonen<br><span class="small">Brainfactory</p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/heini-heinonen-4561b1a5/" class="icon linkedin">LinkedIn</a></span></p>
+                                                </div>
+                                                <div class="col-xs-6 col-md-3">
+                                                        <div class="image"><img src="images/team/marjukka-rantala.png"></div>
+                                                        <p>Marjukka Rantala<br><span class="small">Brainfactory</p>
+                                                        <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/marjukkarantala/" class="icon linkedin">LinkedIn</a></span></p>
+                                                </div>
+                                        </div>
 				</div>
 				
 				<div class="small padding-top-30">
