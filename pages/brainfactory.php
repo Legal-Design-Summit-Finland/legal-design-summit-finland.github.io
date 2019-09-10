@@ -24,9 +24,6 @@
 					<h4>Application</h4>
 					<p>The application to the Brainfactory is now open. The participation is limited and we will inform you of admittance latest in the end of June, 2019. <a href="https://forms.gle/uU1my3zm8dwSETXi8" target="_blank">Apply here!</a></p>
 
-					<h4>Tracks</h4>
-					<p>This year Brainfactory will have multiple tracks built around different fields of law, like privacy, contracts and ligitations, from both public and private sector. The tracks and sponsorts behind the given challenges will be published in August 2019.</p>
-
 					<h4>Teams</h4>
 					<p>During the Brainfactory you will not only get to learn about legal design but you also get new friends! The workshop takes place in interdisciplinary teams of four people. The teams are formed on Day 1.</p>
 
@@ -53,7 +50,6 @@
 					<ul class="list justify-left">
 						<li class="large">Meet your interdisciplinary team!</li>
 						<li class="large">Opening and introduction to legal design</li>
-						<li class="large">Inspirational talks on last years Brainfactory participants - where are they now?</li>
 						<li class="large">Presenting the problems</li>
 					</ul>
 				</div>
@@ -62,7 +58,6 @@
 					<h2 class="plain">2. Day</h2>
 					<ul class="list justify-left">
 						<li class="large">Brainstorming & producing a solution to a legal design problem</li>
-						<li class="large">Expert lectures</li>
 						<li class="large">Producing legal design solutions with the support of mentors</li>
 					</ul>
 				</div>
@@ -71,7 +66,6 @@
 					<h2 class="plain">3. Day</h2>
 					<ul class="list justify-left">
 						<li class="large">Finalizing the outcomes</li>
-						<li class="large">Expert lectures</li>
 						<li class="large">Pitching to the Brainfactory Board</li>
 					</ul>
 				</div>
