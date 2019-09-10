@@ -280,7 +280,7 @@
                                                 </div>
 					</div>
 					<div class="col-xs-6 col-md-3" id="heikki-tolvanen">
-                                                <div class="image"><img src="images/speakers/heikki-tolvanen.png"></div>
+                                                <div class="image"><img src="images/speakers/heikki-tolvanen.jpg"></div>
                                                 <p class="margin-bottom-10">Heikki Tolvanen<br><span class="small">Chief Legal Engineer, PrivacyAnt</span></p>
                                                 <div class="margin-bottom-30">
                                                         <a href="https://www.linkedin.com/in/heikkitolvanen-gdpr-privacy/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>

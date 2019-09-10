@@ -172,8 +172,9 @@
 					</div>
 					<div class="col-xs-6 col-md-3">
                                                 <div class="image"><img src="images/brainfactory/speakers/emma-jelley.png" class="bordered"></div>
-                                                <p class="margin-bottom-10">Emma Jelley<br><span class="small"></span></p>
-                                                <div class="margin-bottom-30">
+                                                <p class="margin-bottom-10">Emma Jelley<br><span class="small">Former General Counsel in tech, turned entrepreneur, business coach and facilitator</span></p>
+						<div class="margin-bottom-30">
+							<a href="https://www.linkedin.com/in/emma-jelley-34a5b13/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
                                                         <p class="small margin-bottom-0"><em></em></p>
                                                 </div>
                                         </div>
