@@ -53,7 +53,7 @@
 					<li>Business College Helsinki</li>
 					<li>CAPSTAN LMS</li>
 					<li>Cassius Avocats</li>
-					<li>Castén & Snellman</li>
+					<li>Castrén & Snellman</li>
 					<li>CatalystZone</li>
 					<li>City of Helsinki</li>
 					<li>CMS</li>
@@ -92,7 +92,7 @@
 					<li>Finnish Education Employers /  Sivista</li>
 					<li>Finnish Government</li>
 					<li>Finnish Immigration Service</li>
-					<li>Finnish Legal Tech Forumm</li>
+					<li>Finnish Legal Tech Forum</li>
 					<li>Finnish Patent and Registration Office: PRH </li>
 					<li>Finnish Procurement Lawyers Attorneys Ltd.</li>
 					<li>Finnish Tax Administration</li>
@@ -151,7 +151,7 @@
 						<li>LAPISARDI AVOCATS</li>
 						<li>Lasker</li>
 						<li>Laura Fauqueur</li>
-						<li>Laurea University of Applied Sciense</li>
+						<li>Laurea University of Applied Sciences</li>
 						<li>Law Society Gazette</li>
 						<li>Lawgitech</li>
 						<li>LCA Studio Legale</li>
@@ -162,7 +162,7 @@
 						<li>Lefebvre Sarrut</li>
 						<li>Legal Army</li>
 						<li>Legal Design Lab of the University of Andes</li>
-						<li>Legal Design Lab, Stanford Law </li>
+						<li>Legal Design Lab, Stanford Law School</li>
 						<li>Legal Design Studio</li>
 						<li>Legal Design Summit Alumni</li>
 						<li>Legal Hackers</li>
@@ -188,7 +188,7 @@
 						<li>Microsoft</li>
 						<li>Miller & Company</li>
 						<li>Miltton</li>
-						<li>Ministry of Environment</li>
+						<li>Ministry of the Environment</li>
 						<li>Ministry of Justice</li>
 						<li>MLTech</li>
 						<li>Moscow State University</li>
@@ -240,7 +240,7 @@
 						<li>Secrays</li>
 						<li>Signatura</li>
 						<li>Silo.AI</li>
-						<li>Sis Ventures Ltd.</li>
+						<li>SisVentures Ltd.</li>
 						<li>Sitra</li>
 						<li>Skanska Oy</li>
 						<li>Société québécoise d’information juridique</li>
@@ -251,12 +251,12 @@
 						<li>Stanford University</li>
 						<li>Startup Foundation</li>
 						<li>Stibbe</li>
-						<li>Stockholm university</li>
+						<li>University of Stockholm</li>
 						<li>Studio Rossini</li>
 						<li>Supreme Administrative Court of Finland</li>
 						<li>Swisscom switzerland ltd</li>
 						<li>Taaleri</li>
-						<li>Tallin University</li>
+						<li>Tallinn University</li>
 						<li>Taylor Wessing LLP</li>
 						<li>Technology Industries of Finland</li>
 						<li>Telia Company</li>
@@ -300,7 +300,7 @@
 						<li>Wiidare Ltd</li>
 						<li>WILDCAT</li>
 						<li>Visual Contracts</li>
-						<li>Vivo energy Tunisia</li>
+						<li>Vivo Energy Tunisie</li>
 						<li>Wunderdog</li>
 						<li>Väestörekisterikeskus D9</li>
 						<li>Yleisradio Oy</li>
