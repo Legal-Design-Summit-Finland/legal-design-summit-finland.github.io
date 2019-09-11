@@ -316,3 +316,36 @@
 	</div>
 
 </div>
+<div class="wrapper program">
+
+        <div class="container">
+
+                <!-- Content Section Begins -->
+
+                <div class="justify-center">
+
+                        <h2>Host</h2>
+
+                        <div class="host">
+
+                                <div class="row equalize">
+
+                                        <div class="col-xs-6 col-xs-offset-3 col-md-offset-4 col-md-4">
+                                                <div class="image"><img src="images/hosts/saila-lofstrom.jpg" class="bordered"></div>
+                                                <p class="margin-bottom-10">Saila Löfström<br><span class="small">Head of Legal for Creative Content, YLE</span></p>
+						<div class="margin-bottom-30">
+							<a href="https://www.linkedin.com/in/saila-l%C3%B6fstr%C3%B6m-438a49105/" class="icon linkedin margin-right-5" target="_blank">LinkedIn</a>
+                                                        <div class="bio"><p class="small">Saila Löfström is our host for Legal Design Summit 2019. She is a lawyer by training and an artist by heart. She currently works as the Head of Legal for Creative Content at Yle - the Finnish Public Broadcasting Company - and has a background of supporting e.g. gaming, music and sports industries. Whenever she is not helping out behind the scenes with producing and commissioning new creative contents she takes the stage herself as a singer or as a host.</p></div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+
+                </div>
+
+                <!-- Content Section Ends -->
+
+        </div>
+
+</div>
