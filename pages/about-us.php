@@ -52,7 +52,7 @@
                                                         <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/talvela/" class="icon linkedin">LinkedIn</a></span></p>
 						</div>
 						<div class="col-xs-6 col-md-3">
-                                                        <div class="image"><img src="images/backgrounds/legal-design-summit.png"></div>
+                                                        <div class="image"><img src="images/team/nina-toivonen.jpg"></div>
                                                         <p>Nina Toivonen<br><span class="small">Producer<br><?php print encode_email('nina.toivonen@legaldesignsummit.com', true); ?></p>
                                                         <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/nina-toivonen-85300b20/" class="icon linkedin">LinkedIn</a></span></p>
 						</div>
