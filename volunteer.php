@@ -55,89 +55,6 @@
 
 
 
-
-<!-- Wrapper // Header Section Begins -->
-
-<div class="wrapper header">
-    
-    <!-- Container Section Begins -->
-    
-    <div class="container">
-        
-        <!-- Header Section Begins -->
-        
-        <div id="header">
-			
-            <!-- Content Main Section Begins -->
-            
-            <div class="content-main">
-				
-				<?php require_once('regions/header.php'); ?>
-				
-            </div>
-            
-            <!-- Content Main Section Ends -->
-			
-        </div>
-        
-        <!-- HEADER Section Ends -->
-		
-    </div>
-    
-    <!-- Container Section Ends -->
-    
-    <?php if ($is_home): ?>
-    
-	<a href="#" class="scroll-down"></a>
-	
-	<?php endif; ?>
-	
-</div>
-
-<!-- Wrapper // Header Section Ends -->
-
-
-
-
-
-<!-- Wrapper // Content Section Begins -->
-
-<div class="wrapper fluid fill content">
-    
-	<!-- Container Section Begins -->
-
-	<div class="container">
-
-		<!-- Content Section Begins -->
-
-		<div id="content">
-
-			<!-- Content Main Section Begins -->
-
-			<div class="content-main">
-
-				<?php require_once('regions/content.php'); ?>
-
-			</div>
-
-			<!-- Content Main Section Ends -->
-
-		</div>
-
-		<!-- Content Section Ends -->
-
-	</div>
-
-	<!-- Container Section Ends -->
-    
-</div>
-
-<!-- Wrapper // Content Section Ends -->
-
-
-
-
-
 <?php if (!$is_home) : ?>
 
 <!-- Wrapper // Content Spacer Section Begins -->
@@ -151,44 +68,9 @@
 
 
 
-
-<!-- Wrapper // Content Logos Section Begins -->
-
-<div class="wrapper logos">
-    
-    <!-- Container Section Begins -->
-    
-    <div class="container">
-		
-        <!-- Content Section Begins -->
-        
-        <div id="content-logos">
-        	
-            <!-- Content Main Section Begins -->
-            
-            <div class="content-main">
-				
-				<?php require_once('regions/content-logos.php'); ?>
-				
-            </div>
-            
-            <!-- Content Main Section Ends -->
-            
-        </div>
-        
-        <!-- Content Section Ends -->
-		
-    </div>
-    
-    <!-- Container Section Ends -->
-    
+<div class="wrapper">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzmfhXP80OTinW54K8e47e7xSdFbj5CNJrEG4ygGvRXc-L8A/viewform?embedded=true" width="100%" height="6500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
-
-<!-- Wrapper // Content Logos Section Ends -->
-
-
-
-
 
 <!-- Wrapper // Content Actions Section Begins -->
 

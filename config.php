@@ -29,19 +29,22 @@ $pages = array(
 	'Gallery',
 	'Program',
 	'Speakers',
-	'Brainfactory',
-	'Side Events',
-	'Our Story',
+#	'Brainfactory',
+#	'Side Events',
+	'Volunteer',
+#	'Our Story',
 	'About Us',
-	'2016',
-	'2017',
-	'Delegations',
+#	'2016',
+#	'2017',
+#	'Delegations',
 	'Why attend?'
 );
 
 $urls = array(
 	'Get Tickets' => 'http://tickets.legaldesignsummit.com',
-	'Speakers' => '/program#section-speakers'
+	'Speakers' => '/program#section-speakers',
+	'Volunteer' => '/volunteer.php',
+	'Home' => '/index.php'
 );
 
 foreach ($pages as $key => $value) {
@@ -51,9 +54,6 @@ foreach ($pages as $key => $value) {
 }
 
 $page_classes = array();
-
-
-
 
 
 // ----------------------------------------------------------------------
@@ -79,9 +79,6 @@ $site_active = true;
 
 if ($site_active == true) array_push($page_classes, 'active');
 if ($site_active != true) array_push($page_classes, 'not-active');
-
-
-
 
 
 // ----------------------------------------------------------------------
