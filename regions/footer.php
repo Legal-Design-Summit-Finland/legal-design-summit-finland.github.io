@@ -4,6 +4,6 @@
 	
 	<p class="small">Legal Design Summit reserves the right to make changes to the programme and the speakers.</p>
 	<p><a href="/privacy#section-privacy">Privacy Policy</a></p>
-    <p><a href="/privacy-rec#section-privacy">Recruitment Privacy Policy</a></p>	
+    <p><a href="/pages/privacy-rec.php">Recruitment Privacy Policy</a></p>	
 	
 </div>
