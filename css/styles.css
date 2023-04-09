@@ -3735,4 +3735,13 @@ a.icon.website {
 .typeform-widget {
   border:1px solid #7ddad0
 }
+#privacy-table {
+  table-layout: fixed;
+}
+
+.link-enlarge {
+  font-size: 120%;
+}
+
+
 /*# sourceMappingURL=styles.css.map */
