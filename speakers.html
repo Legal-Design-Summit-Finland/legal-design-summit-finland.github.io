@@ -36,6 +36,31 @@
         overflow: hidden;
         margin: auto;
       }
+        .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  width: 310px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.flex-item img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+  .flex-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
       
       </style>
   </head>
@@ -64,36 +89,88 @@
       </div>
     </div>
 
+
+
+
     <div class="wrapper color-secondary team">
       <div id="content-team">
 
         <div class="justify-center">
     
           <h2>Meet the confirmed speakers</h2>
-          <div class="col-xs-12 col-md-6">
-            <div class="col-xs-6 col-md-6">
-              <div class="justify-center"> <h3 style="font-size: 25px;">Cat Moon</h3></div>
-              <div class="image"><a><img src="images/speakers/2023/cat-moon.jpg"></a></div>
-              <p>Director of Innovation Design at Vanderbilt Law School and #MakeLawBetter Provocateur<br><span class="small"></p>
+
+          <div class="flex-container">
+            <div class="flex-item">
+              <div class="justify-center">
+                <h3 style="font-size: 25px;">Sankalp Bhatnagar</h3>
+                <div class="image"><a><img src="images/speakers/2023/sankalp-bhatnagar.jpeg"></a></div>
+                <p>gained his first exposure to the work of legal design in the Law, Justice, and Design Seminar at Harvard Law School, after which he led efforts to advance this field and co-taught the Laboratory Seminar in Applied & Critical Legal Design at Northeastern University School of Law. <br><br>He is a Fellow at the Harvard Library Innovation Lab conducting research in partnership with the NuLawLab, where he is a Senior Researcher, and has previously been a Research Resident.<br><span class="small"></p>
+              </div>
             </div>
-            <div class="col-xs-6 col-md-6">
-              <div class="justify-center"> <h3 style="font-size: 25px;">Sankalp Bhatnagar</h3></div>
-              <div class="image"><a><img src="images/speakers/2023/sankalp-bhatnagar.jpeg"></a></div>
-              <p>gained his first exposure to the work of legal design in the Law, Justice, and Design Seminar at Harvard Law School, after which he led efforts to advance this field and co-taught the Laboratory Seminar in Applied & Critical Legal Design at Northeastern University School of Law. <br><br>He is a Fellow at the Harvard Library Innovation Lab conducting research in partnership with the NuLawLab, where he is a Senior Researcher, and has previously been a Research Resident.<br><span class="small"></p>
-            </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-              <div class="col-xs-6 col-md-6">
-                <div class="justify-center"> <h3 style="font-size: 25px;">Michael Doherty</h3></div>
+            <div class="flex-item">
+              <div class="justify-center">
+                <h3 style="font-size: 25px;">Michael Doherty</h3>
                 <div class="image"><a><img src="images/speakers/2023/michael-doherty.JPG"></a></div>
                 <p>is Professor of Law, and Associate Head of the Law School, at Lancaster University, UK. His main teaching and research expertise, beyond Legal Design, is in constitutional law and human rights and he is co-author of Public Law (3rd edn, Routledge 2023). He is active in legal education and pedagogy and he co-created the Connecting Legal Education online community in 2020, and is a former Chair of the Association of Law Teachers. <br><br>Michael’s work in Legal Design encompasses education, cultural studies and disciplinarity, and access to justice. Professor Doherty is working with a team of Legal Design scholars and practitioners from around the world to launch the Legal Design Journal in 2023. Our goal is to provide a platform for great quality legal design work, and to make this as accessible as possible.<br><span class="small"></p>
               </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="justify-center"> <h3 style="font-size: 25px;">Dan Jackson</h3></div>
+              </div>
+            <div class="flex-item">
+              <div class="justify-center">
+                <h3 style="font-size: 25px;">Margaret Hagan</h3>
+                <div class="image"><a><img src="images/speakers/2023/margaret-hagan.jpg"></a></div>
+                <p>is the Executive Director of the Legal Design Lab at Stanford University, as well as lecturer at the Law School and d.school. She is a lawyer, and holds a J.D. from Stanford Law School, a DPhil from Queen’s University Belfast, an MA from Central European University, and an AB from University of Chicago. Margaret researches & designs new ways to make the legal system accessible, dignified, and just for more people. <br><br>Recently, her work has focused on designing and scaling new models of eviction prevention, and improving how search engines, AI tools, and other tech platforms serve people with legal help. See more work at the Stanford Legal Design Lab site (http://legaltechdesign.com).<br><span class="small"></p>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="justify-center">
+                <h3 style="font-size: 25px;">Dan Jackson</h3>
                 <div class="image"><a><img src="images/speakers/2023/dan-jackson.jpg"></a></div>
                 <p>directs the NuLawLab at Northeastern University School of Law, where he educates the legal inventors of the future. He is also the co-director of the law school’s legal design program and serves as chair of the American Bar Association Standing Committee on the Delivery of Legal Services. <br><br>He is a 1997 graduate of Northeastern Law and joined the NuLawLab after career as a litigator and talent development executive. Prior to law school, Dan worked as a designer for theater, and continues to do so whenever he can.<br><span class="small"></p>
               </div>
               </div>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Cat Moon</h3>
+                </div>
+                <div class="image"><a><img src="images/speakers/2023/cat-moon.jpg"></a></div>
+                <p>Director of Innovation Design at Vanderbilt Law School and #MakeLawBetter Provocateur<br><span class="small"></p>
+              </div>
+                </div>
+          </div>
+
+<!---
+<div class="col-xs-12 col-md-5">
+  <div class="col-xs-6 col-md-5">
+    <div class="justify-center"> <h3 style="font-size: 25px;">Cat Moon</h3></div>
+    <div class="image"><a><img src="images/speakers/2023/cat-moon.jpg"></a></div>
+    <p>Director of Innovation Design at Vanderbilt Law School and #MakeLawBetter Provocateur<br><span class="small"></p>
+  </div>
+  <div class="col-xs-6 col-md-5">
+    <div class="justify-center"> <h3 style="font-size: 25px;">Sankalp Bhatnagar</h3></div>
+    <div class="image"><a><img src="images/speakers/2023/sankalp-bhatnagar.jpeg"></a></div>
+    <p>gained his first exposure to the work of legal design in the Law, Justice, and Design Seminar at Harvard Law School, after which he led efforts to advance this field and co-taught the Laboratory Seminar in Applied & Critical Legal Design at Northeastern University School of Law. <br><br>He is a Fellow at the Harvard Library Innovation Lab conducting research in partnership with the NuLawLab, where he is a Senior Researcher, and has previously been a Research Resident.<br><span class="small"></p>
+  </div>
+  </div>
+    <div class="col-xs-12 col-md-2">
+      <div class="justify-center"> <h3 style="font-size: 25px;">Michael Doherty</h3></div>
+      <div class="image"><a><img src="images/speakers/2023/michael-doherty.JPG"></a></div>
+      <p>is Professor of Law, and Associate Head of the Law School, at Lancaster University, UK. His main teaching and research expertise, beyond Legal Design, is in constitutional law and human rights and he is co-author of Public Law (3rd edn, Routledge 2023). He is active in legal education and pedagogy and he co-created the Connecting Legal Education online community in 2020, and is a former Chair of the Association of Law Teachers. <br><br>Michael’s work in Legal Design encompasses education, cultural studies and disciplinarity, and access to justice. Professor Doherty is working with a team of Legal Design scholars and practitioners from around the world to launch the Legal Design Journal in 2023. Our goal is to provide a platform for great quality legal design work, and to make this as accessible as possible.<br><span class="small"></p>
+    </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="col-xs-6 col-md-6">
+      <div class="justify-center"> <h3 style="font-size: 25px;">Michael Doherty</h3></div>
+      <div class="image"><a><img src="images/speakers/2023/michael-doherty.JPG"></a></div>
+      <p>is Professor of Law, and Associate Head of the Law School, at Lancaster University, UK. His main teaching and research expertise, beyond Legal Design, is in constitutional law and human rights and he is co-author of Public Law (3rd edn, Routledge 2023). He is active in legal education and pedagogy and he co-created the Connecting Legal Education online community in 2020, and is a former Chair of the Association of Law Teachers. <br><br>Michael’s work in Legal Design encompasses education, cultural studies and disciplinarity, and access to justice. Professor Doherty is working with a team of Legal Design scholars and practitioners from around the world to launch the Legal Design Journal in 2023. Our goal is to provide a platform for great quality legal design work, and to make this as accessible as possible.<br><span class="small"></p>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <div class="justify-center"> <h3 style="font-size: 25px;">Dan Jackson</h3></div>
+      <div class="image"><a><img src="images/speakers/2023/dan-jackson.jpg"></a></div>
+      <p>directs the NuLawLab at Northeastern University School of Law, where he educates the legal inventors of the future. He is also the co-director of the law school’s legal design program and serves as chair of the American Bar Association Standing Committee on the Delivery of Legal Services. <br><br>He is a 1997 graduate of Northeastern Law and joined the NuLawLab after career as a litigator and talent development executive. Prior to law school, Dan worked as a designer for theater, and continues to do so whenever he can.<br><span class="small"></p>
+    </div>
+    </div>
+  -->
+
+
       <div class="container">
       </div>
     </div>

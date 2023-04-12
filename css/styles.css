@@ -3742,6 +3742,8 @@ a.icon.website {
 .link-enlarge {
   font-size: 120%;
 }
+/* Here starts code made by Eero, have not reviewed what portions of the code above is actually needed and used. Now trying to build the logic behind flex wrappers and not col-xs items */
+
 
 
 /*# sourceMappingURL=styles.css.map */
