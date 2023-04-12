@@ -28,6 +28,45 @@
     <script type="text/javascript" src="scripts/main.js"></script>
 
     <title>Legal Design Summit</title>
+	<style>
+		.team .image {
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+      } .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        justify-content: center;
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+      }.wrap    { 
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }  .flex-item {
+        padding: 20px;
+        margin: 10px;
+        width: 220px;
+        height: 220px;
+        line-height: 100px;
+        text-align: center;
+        justify-content: center;
+      } .flex-item:hover img {
+        transform: scale(1.2);
+      } .flex-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.2s ease-in-out;
+      }
+
+	</style>
 
   </head>
 
@@ -386,63 +425,37 @@
 	</div>
       </div>
     </div>
-</div>
-</div>
-</div>
-</div>
 
-<div class="wrapper logos">
-  <div class="container">
-    <div id="content-logos">
-      <div class="content-main">
-	<div class="logos justify-center">
-	  <div class="padding-top-40">
-	    <h3>Made possible by</h3>
-	    <p>Want to make Legal Design Summit 2023 possible?</p>
-	    <div class="row">
-	      <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a href="mailto:<?php print encode_email('partnerships@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
-	    </div>
 
-	  </div>
-	  <div class="padding-top-40"></div>
-	  
-	  <div class="padding-top-40">
+<!-- Reworked section on logos to appear, now using flex wrap instead of flexgrid-->
 
-	    <h3>In co-operation with</h3>
+<div class="padding-top-40 justify-center">
+	<h3>In co-operation with</h3>
 	    <p>We love collaborating with non-profits - Get in touch to join forces with us!</p>
 
-	    <div class="row padding-top-20">
-	      <div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://www.aalto.fi/en" target="_blank"><img src="images/collabs/aalto.png"></a></div></div>
-              <div class="col-md-2 justify-center"><div class="logo"><a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a></div></div>
-              <div class="col-md-2 justify-center"><div class="logo"><a href="https://jura.ku.dk/legaltechlab/" target="_blank"><img src="images/collabs/cltl.png"></a></div></div>
-	      <div class="col-md-2 justify-center"><div class="logo"><a href="https://elta.org/" target="_blank"><img src="images/collabs/elta.png"></a></div></div>
-	    </div>
+<ul class="flex-container wrap">
+	<li class="flex-item" style="width: 300px"><a href="https://www.aalto.fi/en" target="_blank"><img src="images/collabs/aalto.png"></a></li>
+	<li class="flex-item" style="width: 150px"><a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a></li>
+	<li class="flex-item"><a href="https://jura.ku.dk/legaltechlab/" target="_blank"><img src="images/collabs/cltl.png"></a></li>
+	<li class="flex-item" style="width: 300px"><a href="https://www.it-oikeus.org/" target="_blank"><img src="images/collabs/it.png"></a></li>
+	<li class="flex-item"><a href="https://elta.org/" target="_blank"><img src="images/collabs/elta.png"></a></li>
+	<li class="flex-item"><a href="https://law.vanderbilt.edu/academics/academic-programs/law-and-innovation/activities.php" target="_blank"><img src="images/collabs/vanderbilt.png"></a></li>
+	<li class="flex-item" style="width: 150px;"><a href="https://legalhackers.org/" target="_blank"><img src="images/collabs/lh.png"></a></li>
+	<li class="flex-item" style="width: 250px;"><a href="https://www.nulawlab.org/" target="_blank"><img src="images/collabs/nu-law.png"></a></li>
+	<li class="flex-item" style="width: 250px;"><a href="https://litelab.law.hku.hk/" target="_blank"><img src="images/collabs/LITE-Lab.jpg"></a></li>
+	<li class="flex-item" style="width: 250px;"><a href="https://www.uchceu.com/en/" target="_blank"><img src="images/collabs/universidad-uch.png"></a></li>
+	<li class="flex-item" style="width: 250px;"><a href="https://www.epj.es/" target="_blank"><img src="images/collabs/Escuela-de-Practica-Juridica.png"></a></li>
+	<li class="flex-item" style="width: 250px;"><a href="https://www.linkedin.com/company/think-legaltech/?viewAsMember=true" target="_blank"><img src="images/collabs/thinklegaltech.png"></a></li>
+	<li class="flex-item"><a href="https://www.legaltechdesign.com/" target="_blank"><img src="images/collabs/stanford.png"></a></li>
+  </ul>
 
-	    <div class="row">
-	      <div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://www.it-oikeus.org/" target="_blank"><img src="images/collabs/it.png"></a></div></div>
-	      <div class="col-md-2 justify-center"><div class="logo"><a href="https://law.vanderbilt.edu/academics/academic-programs/law-and-innovation/activities.php" target="_blank"><img src="images/collabs/vanderbilt.png"></a></div></div>
-              <div class="col-md-2 justify-center"><div class="logo"><a href="https://legalhackers.org/" target="_blank"><img src="images/collabs/lh.png"></a></div></div>
-	      <div class="col-md-2 justify-center"><div class="logo"><a href="https://www.nulawlab.org/" target="_blank"><img src="images/collabs/nu-law.png"></a></div></div>
-	    </div>
-		
-	    <div class="row">
-			<div class="col-md-2 col-md-offset-2 justify-center"><div class="logo"><a href="https://litelab.law.hku.hk/" style="width: 200px; height: 200px;" target="_blank"><img src="images/collabs/LITE-Lab.jpg"></a></div></div>
-			<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.uchceu.com/en" style="width: 200px; height: 200px;" target="_blank"><img src="images/collabs/universidad-uch.png"></a></div></div>
-				<div class="col-md-2 justify-center"><div class="logo"><a href="https://www.epj.es/" style="width: 200px; height: 200px;" target="_blank"><img src="images/collabs/Escuela-de-Practica-Juridica.png"></a></div></div>
-			<div class="col-md-2 justify-center"><div class="logo"><a href="https://thinklegaltech.com/" style="width: 200px; height: 200px;" target="_blank"><img src="images/collabs/thinklegaltech.png"></a></div></div>
-		  </div>
-
-	    <div class="row">
-	      <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a href="mailto:<?php print encode_email('partnerships@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
-	    </div>
-
-
-	  </div>
-	</div>
-      </div>
-    </div>
-  </div>
 </div>
+
+
+</div>
+
+
+
 
 <div class="wrapper actions">
   <div class="container">
