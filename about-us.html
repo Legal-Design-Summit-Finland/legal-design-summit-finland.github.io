@@ -36,11 +36,39 @@
         margin: auto;
       }
 
-      @media only screen and (max-width: 767px) {
-        .flex-item {
-          width: 25%;
-          margin: 10px 0;
-        }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .flex-item {
+        width: 510px;
+        padding: 30px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .flex-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.2s ease-in-out;
+      }
+
+
+      .footer .flex-item img {
+        max-width: auto;
+        height: auto;
+        align-items: center;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .footer .flex-item {
+        width: 110px;
+        padding: 10px;
+        margin: 0px;
+        align-items: center;
       }
 
 
@@ -122,30 +150,8 @@
 	    </p>
 
       <div class="container">
-        <div class="row justify-content-md-center" style="margin-left: 35px; margin-right: 35px;">
-          <div class="col-md-8" style=" padding-left: 0px; padding-right: 0px;">
-            <h3 style="font-size: 25px;">Partnerships</h3>
-            <div class="col-md-6">
-              <div class="image"><a href="mailto:partnerships@legaldesignsummit.com"><img src="images/team/team-2023/petro-vornanen.jpg"></a></div>
-              <p>Petro Vornanen<br><span class="small"></p>
-              <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/petrovornanen/" class="icon linkedin">LinkedIn</a></span></p>
-            </div>
-            <div class="col-md-6">
-              <div class="image"><a href="mailto:partnerships@legaldesignsummit.com"><img src="images/team/team-2023/vakkala-vilma.jpg"></a></div>
-              <p>Vilma Vakkala<br><span class="small"></p>
-              <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/vilmavakkala/" class="icon linkedin">LinkedIn</a></span></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h3 style="font-size: 25px;">Speakers</h3>
-            <div class="image"><a href="mailto:speakers@legaldesignsummit.com"><img src="images/team/team-2023/mantyla-sade-2.jpeg"></a></div>
-            <p>Sade Mäntylä<br><span class="small"></p>
-            <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/sademantyla/" class="icon linkedin">LinkedIn</a></span></p>
-          </div>  
-        </div>
-
-        <div class="row justify-content-md-center" style="margin-top: 30px; margin-left: 35px; margin-right: 35px;">
-          <div class="col-md-8 col-xs-12" style=" padding-left: 0px; padding-right: 0px;">
+        <div class="row justify-content-md-center" style="margin-left: 0px; margin-right: 0px;">
+          <div class="col-md-6 col-xs-12" style=" padding-left: 10px; padding-right: 10px;">
             <h3 style="font-size: 25px;">Brainfactory</h3>
             <div class="col-md-6">
               <div class="image"><a href="mailto:brainfactory@legaldesignsummit.com"><img src="images/team/team-2023/andrea-lindblom.png"></a></div>
@@ -158,17 +164,7 @@
               <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/mia-ihamuotila/" class="icon linkedin">LinkedIn</a></p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="justify-center"> <h3 style="font-size: 25px;">Communications</h3></div>
-            <div class="image"><a href="mailto:marika.nieminen@legaldesignsummit.com"><img src="images/team/team-2023/marika-nieminen.jpg"></a></div>
-            <p>Marika Nieminen<br><span class="small"></p>
-            <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/marikapnieminen/" class="icon linkedin">LinkedIn</a></span></p>
-          </div>          
-
-        </div>
-
-        <div class="row justify-content-md-center" style="margin-top: 30px; margin-left: 35px; margin-right: 35px;">
-          <div class="col-md-8 col-xs-12" style=" padding-left: 0px; padding-right: 0px;">
+          <div class="col-md-6 col-xs-12" style=" padding-left: 10px; padding-right: 10px;">
             <h3 style="font-size: 25px;">Production & Tickets</h3>
             <div class="col-md-6">
             <div class="image"><a href="mailto:werner.herajarvi@legaldesignsummit.com"><img src="images/team/team-2023/herajarvi-werner.jpg"></a></div>
@@ -181,12 +177,32 @@
               <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/arttu-mielonen-083402124/" class="icon linkedin">LinkedIn</a></span></p>
             </div>
           </div>
+        </div>
+
+        <div class="row justify-content-md-center" style="margin-top: 30px; margin-left: 35px; margin-right: 35px;">
+          <div class="col-md-4">
+            <h3 style="font-size: 25px;">Speakers</h3>
+            <div class="image"><a href="mailto:speakers@legaldesignsummit.com"><img src="images/team/team-2023/mantyla-sade-2.jpeg"></a></div>
+            <p>Sade Mäntylä<br><span class="small"></p>
+            <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/sademantyla/" class="icon linkedin">LinkedIn</a></span></p>
+          </div>  
+          <div class="col-md-4">
+            <div class="justify-center"> <h3 style="font-size: 25px;">Communications</h3></div>
+            <div class="image"><a href="mailto:marika.nieminen@legaldesignsummit.com"><img src="images/team/team-2023/marika-nieminen.jpg"></a></div>
+            <p>Marika Nieminen<br><span class="small"></p>
+            <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/marikapnieminen/" class="icon linkedin">LinkedIn</a></span></p>
+          </div>          
           <div class="col-md-4 col-xs-12">
             <div class="justify-center"> <h3 style="font-size: 25px;">Website</h3></div>
             <div class="image"><a href="mailto:eero.kemppinen@legaldesignsummit.com"><img src="images/team/team-2023/eero-kemppinen.jpg"></a></div>
             <p>Eero Kemppinen<br><span class="small"></p>
             <p class="margin-bottom-0"><a href="https://www.linkedin.com/in/eero-kemppinen-181982234/" class="icon linkedin">LinkedIn</a></span></p>
           </div>
+        </div>
+
+        <div class="row justify-content-md-center" style="margin-top: 30px; margin-left: 35px; margin-right: 35px;">
+
+  
         </div>
 
         <div class="row justify-content-md-center" style="margin-top: 60px;">
@@ -300,42 +316,68 @@
 <!-- Wrapper // Footer Section Begins -->
 
 <div class="wrapper footer">
-  
+      
   <!-- Container Section Begins -->
   
-  <div class="container">
+  <div id="footer">
+
+<!-- Footer Section Begins -->
+
     
-    <!-- Footer Section Begins -->
-    
-    <div id="footer">
-      
+      <div class="container" style="margin-right: 10px; margin-left: 10px; width:max-content;"></div>
       <!-- Content Main Section Begins -->
       
       <div class="content-main">
 
-	<div class="justify-center">
-
-	  <p><strong>Contact:</strong><br><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#108;&#101;&#103;&#097;&#108;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#117;&#109;&#109;&#105;&#116;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#108;&#101;&#103;&#097;&#108;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#117;&#109;&#109;&#105;&#116;&#046;&#099;&#111;&#109;</a></p>
-	  
-	  <p class="small">Legal Design Summit reserves the right to make changes to the programme and the speakers.</p>
-	  <p><a href="privacy.html">Privacy Policy</a></p>
-	  <p><a href="privacy-rec.html">Recruitment Privacy Policy</a></p>	
-	  
-	</div>
-
-        
-      </div>
-      
-      <!-- Content Main Section Ends -->
-      
-    </div>
-    
-    <!-- Footer Section Ends -->
-    
+  <div class="justify-center">
+    <p><a href="mailto:info@legaldesignsummit.com"> info@legaldesignsummit</a> | <a href="privacy.html">Privacy Policy</a> | <a href="privacy-rec.html">Recruitment Privacy Policy</a></p>
+    <p class="small">Legal Design Summit reserves the right to make changes to the programme and the speakers.</p>
   </div>
-  <a href="#" class="scroll-up"></a>
+
+  <a href="#" class="scroll-up" style="padding-top: 30px; padding-bottom: 10px; margin-bottom: 0px;"></a>
+
+      </div>
+      <div>
+        <p><strong>IN CO-OPERATION WITH:</strong></p>
+        <ul class="flex-container wrap" >
+          <li class="flex-item" style="width: 160px;"><a><img src="images/collabs/aalto.png"></a></li>
+          <li class="flex-item" style="width: 70px;"><a><img src="images/collabs/clt.png"></a></li>
+          <li class="flex-item" style="width: 140px;"><a><img src="images/collabs/cltl.png"></a></li>
+          <li class="flex-item" style="width: 170px;"><a><img src="images/collabs/it.png"></a></li>
+          <li class="flex-item"><a><img src="images/collabs/elta.png"></a></li>
+          <li class="flex-item" style="width: 150px;"><a><img src="images/collabs/vanderbilt.png"></a></li>
+          <li class="flex-item" style="width: 80px;"><a><img src="images/collabs/lh.png"></a></li>
+          <li class="flex-item" style="width: 160px;"><a><img src="images/collabs/nu-law.png"></a></li>
+          <li class="flex-item" style="width: 200px;"><a><img src="images/collabs/LITE-Lab.jpg"></a></li>
+          <li class="flex-item" style="width: 180px;"><a><img src="images/collabs/universidad-uch.png"></a></li>
+          <li class="flex-item" style="width: 220px;"><a><img src="images/collabs/Escuela-de-Practica-Juridica.png"></a></li>
+          <li class="flex-item" style="width: 150px;"><a><img src="images/collabs/thinklegaltech.png"></a></li>
+          <li class="flex-item" style="width: 120px;"><a><img src="images/collabs/stanford.png"></a></li>
+          <li class="flex-item" style="width: 160px;"><a><img src="images/collabs/LOGO-EUI-full.png"></a></li>
+          <li class="flex-item" style="width: 150px;"><a><img src="images/collabs/tuomioistuinvirasto.png"></a></li>
+          <li class="flex-item" style="width: 100px;"><a><img src="images/collabs/Juristiliitto.png"></a></li>
+          <li class="flex-item" style="width: 80px;"><a><img src="images/collabs/Asianajajaliitto.png"></a></li>
+          <li class="flex-item" style="width: 230px;"><a><img src="images/collabs/lapin-yliopisto.png"></a></li>
+        </ul>
+      </div>
+      <!-- Content Main Section Ends -->
+
+      
+
+    </div>
+
+    <!-- Footer Section Ends -->
+
+    </div>
+  </div>
+  
+  <!-- Container Section Ends -->
+  
+  
   
 </div>
+
+<!-- Wrapper // Footer Section Ends -->
 </body>
 
 </html>
