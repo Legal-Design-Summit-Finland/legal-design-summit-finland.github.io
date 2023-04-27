@@ -3744,6 +3744,37 @@ a.icon.website {
 }
 /* Here starts code made by Eero, have not reviewed what portions of the code above is actually needed and used. Now trying to build the logic behind flex wrappers and not col-xs items */
 
+.flex-item {
+  width: 510px;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+}
 
+.flex-item img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer .flex-item img {
+  max-width: auto;
+  height: auto;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer .flex-item {
+  width: 110px;
+  padding: 10px;
+  margin: 0px;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=styles.css.map */
