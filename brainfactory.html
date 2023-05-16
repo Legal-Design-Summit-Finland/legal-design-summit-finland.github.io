@@ -32,6 +32,12 @@
         $("#footer").load("footer.html"); 
       });
     </script>
+    <style>
+      .bold {font-weight: bold;}
+		  .underline {text-decoration: underline; color: #c30979;}
+      .italics {font-style: italic;}
+    </style>
+
 
     <title>Legal Design Summit</title>
 
@@ -42,19 +48,9 @@
     <!-- Wrapper // Menu Section Begins -->
 
     <div class="wrapper menu fluid">
-      
-      <!-- Container Section Begins -->
-      
       <div class="container">
-        
-        <!-- Menu Section Begins -->
-        
         <div id="menu">
-	  
-          <!-- Content Main Section Begins -->
-          
           <div class="content-main">
-
 	    <div class="block menu-main">
 	      <div class="content">
 		<div class="menu-toggler">Menu<span class="icon"></span></div>
@@ -75,62 +71,37 @@
       </div>
     </div>
 
-    <!-- Wrapper // Menu Section Ends -->
-
-
-
     <div class="wrapper why-attend">
-
       <div class="container">
-
-	<!-- Content Section Begins -->
-
 	<div id="content-why-attend" class="justify-center">
 
-	  <h2>What is legal design summit?</h2>
+	  <h2>BRAINFACTORY</h2>
 
-	  <p>Legal Design Summit is the world's largest legal design event held in Helsinki on September 2023. Our mission is to create a forum for forward-thinking professionals to exchange knowledge and expertise on law, design and digital services through interdisciplinary collaboration.</p>
+	  <h4 style="font-size: 20px; font-style: italic;">BrainFactory is a three-day event with highly interactive, immersive and inspiring hands-on workshops, brainstorming sessions, and prototyping exercises.<br><br></h4>
+	  <h3 style="margin: 40px 0 0 0;">What is BrainFactory?</h3>
+	  <p>At BrainFactory, teams with diverse backgrounds solve complex problems in teams of 5-6 people. Each team will have a legal design professional as a mentor.
+      Our BrainFactory team together with our Partners create the challenging BrainFactory problems that arise from real life examples from the cross-sections of law and design thinking.<br><br>
+      BrainFactory will take place 11-13 September 2023.
+    </p>
+	  <h4 style="margin: 40px 0 0 0;">Preliminary Program for BrainFactory 2023</h4>
+	  <p>Monday 11 September 15:00 - 20:00<br><br>
+      Tuesday 12 September 09:00 - 20:00<br><br>
+      Wednesday 13 September 09:00 - 16:00<br><br>
+      <span class="italics">As a participant or mentor you need to participate in the BrainFactory full-time on 11-13 September.</span><br><br></p>
 
-	  <div class="margin-top-40"></div>
-
-	  <h2>Why attend?</h2>
-
-	  <div class="bullets">
-
-	    <table>
-
-	      <tr>
-		<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-1.png"></td>
-		<td valign="middle"><p class="large">Connect with international experts in the fields of law, design, and digital services.</p></td>
-	      </tr>
-
-	      <tr>
-		<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-3.png"></td>
-		<td valign="middle"><p class="large">Experience demonstrative presentations, interactive panels, creative case-studies, innovative talks, and so much more...</p></td>
-	      </tr>
-
-	      <tr>
-		<td class="icon padding-15" valign="top"><img src="images/why-attend/icon-2.png"></td>
-		<td valign="middle"><p class="large">Absorb ideas to develop your own business</p></td>
-	      </tr>
-
-	    </table>
-
-	  </div>
+    <h3>Why partner with BrainFactory?</h3>
+    <p>Legal Design Summit is the largent Legal Design Event in the World. We welcome forward thinking organizations to join our innovative Legal Design Community.</p>
+    <h3>How do I apply?</h3>
+    <p>Call for Participants and Mentors is open between 17 May and 31 May.<br><br>We will get back to all applicants in the beginning of June with information whether you have been selected as a BrainFactory participant.</p>
+    <h3>What is a mentor?</h3>
+    <p>A mentor is a legal design professional who will support and coach our BrainFactory teams.</p>
+    <h3>Who to contact?</h3>
+    <p>This years’ Team Leads Andrea Lindblom and Mia Ihamoutila will be happy to answer all your questions about the BrainFactory:<br><br>Please reach out to us <a href="mailto:brainfactory@legaldesignsummit.com" style="color: #50cec1; text-decoration: underline;">brainfactory@legaldesignsummit.com</a>
+    </p>
 
 	</div>
-
-	<!-- Content Main Section Ends -->
-
       </div>
-
     </div>
-
-    <!-- Wrapper // Header Section Ends -->
-
-    <!-- Wrapper // Content Section Begins -->
-
-    <!-- Wrapper // Content Actions Section Begins -->
 
     <div class="wrapper actions">
       
@@ -147,7 +118,7 @@
           <div class="content-main">
 	    <div class="actions">
 	      <div class="row">
-		<div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a href="mailto:info&#64;legaldesignsummit.com" class="btn light">Contact Us</a></div>
+		<div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
 	      </div>
 	    </div>
 
@@ -160,7 +131,7 @@
 		<a href="https://www.instagram.com/legaldesignsummit/" class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
 		<a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5" target="_blank">Twitter</a>
 	      </div>
-	    </div>	    
+	    </div>
           </div>
           
           <!-- Content Main Section Ends -->
