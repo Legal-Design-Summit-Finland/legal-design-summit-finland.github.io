@@ -3857,15 +3857,47 @@ a.icon.website {
   height: auto;  /* maintain aspect ratio */
 }
 
-@media (max-width: 750px) {
+.img-fluid {
+  margin-bottom: -45%;
+}
+@media (max-width: 1300px) {
+  .text-content{
+  padding-top: 20%;
+  }
+  .h1{
+    fo
+  }
+}
+
+@media (max-width: 767px) {
   .background-video{
     height: 100%;
+  }
+  .text-content{
+    padding-top: 0;
   }
   .slogan-long {
     font-size: small; /* or any size suitable for smaller screens */
     line-height: 15px;
     max-width: 100%;
   }
+  .img-fluid{
+    margin-bottom: 0%;
+  }
+}
+
+.curved {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.curved svg {
+  z-index: -1;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 
