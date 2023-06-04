@@ -3860,12 +3860,13 @@ a.icon.website {
 .img-fluid {
   margin-bottom: -45%;
 }
+
 @media (max-width: 1300px) {
   .text-content{
   padding-top: 20%;
   }
   .h1{
-    fo
+    font-size: 15;
   }
 }
 
@@ -3900,6 +3901,17 @@ a.icon.website {
   width: 100%;
 }
 
+.read-more-btn {
+  color: #c30979;
+  cursor: pointer;
+}
 
+.read-more-text{
+  display: none;
+}
+
+.read-more-text--show{
+  display: inline;
+}
 
 /*# sourceMappingURL=styles.css.map */
