@@ -42,6 +42,44 @@
       .flez-item {
         align-items: center;
       }
+      .faq-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0px;
+        width: 2px;
+        background-color: white;
+      }
+
+      .faq-item {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .bubble {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: -44px;
+        top: 50%;
+        background-color: white;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+
     </style>
 
 
@@ -95,7 +133,7 @@
       </svg>
     </div>
 
-    <div class="wrapper why-attend" style="background-color: #50cec1;">
+    <div class="wrapper why-attend" style="background-color: #50cec1; padding-top: 10px;">
       <div class="container">
         <div id="content-why-attend" class="justify-center" style="color: #fff">
 
@@ -115,15 +153,29 @@
             <div class="flex-item" style="width: 560; height: 315;"><a href="https://www.youtube.com/embed/6dZudoTT8S8" target="_blank"><img src="images/brainfactory/Bf-youtube.jpg"></a></div>
             <p style="line-height: 14px;">Check out the awesome aftermovie from the last BrainFactory <br><br>(opens into a new tab)</p>
           </div>
-          <div class="col-lg-6 col-xs-12" style="text-align: left;">
-            <h4>Q: Why partner with BrainFactory?</h4>
-            <p>Legal Design Summit is the largent Legal Design Event in the World. We welcome forward thinking organizations to join our innovative Legal Design Community.</p>
-            <h4>Q: How do I apply?</h4>
-            <p>Call for Participants and Mentors is open between 17 May and 11 June.<br><br>We will get back to all applicants in the beginning of June with information whether you have been selected as a BrainFactory participant.</p>
-            <h4>Q: What is a mentor?</h4>
-            <p>A mentor is a legal design professional who will support and coach our BrainFactory teams.</p>
-            <h4>Q: Who to contact?</h4>
-            <p>This years’ Team Leads Andrea Lindblom and Mia Ihamoutila will be happy to answer all your questions about the BrainFactory:<br><br>Please reach out to us <a href="mailto:brainfactory@legaldesignsummit.com" style="color: #fff; text-decoration: underline;">brainfactory@legaldesignsummit.com</a></p>
+          <div class="col-lg-6 col-xs-12" style="text-align: left; padding-left: 0px;">
+            <div class="timeline">
+              <div class="faq-item">
+                <div class="bubble"></div>
+                <h4>Q: Why partner with BrainFactory?</h4>
+                <p>Legal Design Summit is the largent Legal Design Event in the World. We welcome forward thinking organizations to join our innovative Legal Design Community.</p>
+              </div>
+              <div class="faq-item">
+                <div class="bubble"></div>
+                <h4>Q: How do I apply?</h4>
+                <p>Call for Participants and Mentors is open between 17 May and 11 June.<br><br>We will get back to all applicants in the beginning of June with information whether you have been selected as a BrainFactory participant.</p>
+              </div>
+              <div class="faq-item">
+                <div class="bubble"></div>
+                <h4>Q: What is a mentor?</h4>
+                <p>A mentor is a legal design professional who will support and coach our BrainFactory teams.</p>
+              </div>
+              <div class="faq-item">
+                <div class="bubble"></div>
+                <h4>Q: Who to contact?</h4>
+                <p>This years’ Team Leads Andrea Lindblom and Mia Ihamoutila will be happy to answer all your questions about the BrainFactory:<br><br>Please reach out to us <a href="mailto:brainfactory@legaldesignsummit.com" style="color: black; text-decoration: underline;">brainfactory@legaldesignsummit.com</a></p>
+              </div>
+            </div>
           </div>
         </div>
           

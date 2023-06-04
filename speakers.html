@@ -13,6 +13,8 @@
     <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
     <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
@@ -25,13 +27,17 @@
     <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
     <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
     <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+    <script type="text/javascript" src="scripts/vendor/readmore.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
       $(function(){ 
         $("#footer").load("footer.html"); 
       });
     </script>
+    <script>
+
+    </script>
+      
 
 
     <title>Legal Design Summit</title>
@@ -46,10 +52,16 @@
 
       .speaker .flex-item{
         width: 350px;
+        border-radius: 20px;
+        margin: 10px;
       }
 
       .speaker .flex-item{
         font-size: 14px;
+      }
+
+      .read-more-container .flex-item{
+        background-color: #fff;
       }
 
 @media only screen and (max-width: 767px) {
@@ -97,81 +109,85 @@
     
           <h2>Meet the confirmed speakers</h2>
           <div class="speaker">
-
+            <div class="read-more-container">
           <div class="flex-container">
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Sankalp Bhatnagar</h3>
-                <div class="image"><a><img src="images/speakers/2023/sankalp-bhatnagar.jpeg"></a></div>
-                <p>gained his first exposure to the work of legal design in the Law, Justice, and Design Seminar at Harvard Law School, after which he led efforts to advance this field and co-taught the Laboratory Seminar in Applied & Critical Legal Design at Northeastern University School of Law. <br><br>He is a Fellow at the Harvard Library Innovation Lab conducting research in partnership with the NuLawLab, where he is a Senior Researcher, and has previously been a Research Resident.<br><span class="small"></p>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Sankalp Bhatnagar</h3>
+                  <div class="image"><a><img src="images/speakers/2023/sankalp-bhatnagar.jpeg"></a></div>
+                  <p>Research Fellow, Library Innovation Lab at Harvard Law School & Senior Researcher, NuLawLab at Northeastern University School of Law<span class="read-more-text">. Sankalp Bhatnagar gained his first exposure to the work of legal design in the Law, Justice, and Design Seminar at Harvard Law School, after which he led efforts to advance this field and co-taught the Laboratory Seminar in Applied & Critical Legal Design at Northeastern University School of Law. <br><br>He is a Fellow at the Harvard Library Innovation Lab conducting research in partnership with the NuLawLab, where he is a Senior Researcher, and has previously been a Research Resident.</span></p>
+                  <span class="read-more-btn">Read More...</span>
+                </div>
               </div>
-            </div>
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Michael Doherty</h3>
-                <div class="image"><a><img src="images/speakers/2023/michael-doherty.JPG"></a></div>
-                <p>is Professor of Law, and Associate Head of the Law School, at Lancaster University, UK. His main teaching and research expertise, beyond Legal Design, is in constitutional law and human rights and he is co-author of Public Law (3rd edn, Routledge 2023). He is active in legal education and pedagogy and he co-created the Connecting Legal Education online community in 2020, and is a former Chair of the Association of Law Teachers. <br><br>Michael’s work in Legal Design encompasses education, cultural studies and disciplinarity, and access to justice. Professor Doherty is working with a team of Legal Design scholars and practitioners from around the world to launch the Legal Design Journal in 2023. Our goal is to provide a platform for great quality legal design work, and to make this as accessible as possible.<br><span class="small"></p>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Michael Doherty</h3>
+                  <div class="image"><a><img src="images/speakers/2023/michael-doherty.JPG"></a></div>
+                  <p>Professor of Law, and Associate Head of the Law School at Lancaster University, UK<span class="read-more-text">. Michael Doherty is Professor of Law, and Associate Head of the Law School, at Lancaster University, UK. His main teaching and research expertise, beyond Legal Design, is in constitutional law and human rights and he is co-author of Public Law (3rd edn, Routledge 2023). He is active in legal education and pedagogy and he co-created the Connecting Legal Education online community in 2020, and is a former Chair of the Association of Law Teachers. <br><br>Michael’s work in Legal Design encompasses education, cultural studies and disciplinarity, and access to justice. Professor Doherty is working with a team of Legal Design scholars and practitioners from around the world to launch the Legal Design Journal in 2023. Our goal is to provide a platform for great quality legal design work, and to make this as accessible as possible.</span></p>
+                  <span class="read-more-btn">Read More...</span>
+                </div>
+                </div>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Margaret Hagan</h3>
+                  <div class="image"><a><img src="images/speakers/2023/margaret-hagan.jpg"></a></div>
+                  <p>Executive Director of the Legal Design Lab at Stanford University & Lecturer at Stanford Law School and d.school<span class="read-more-text">. Margaret Hagan is the Executive Director of the Legal Design Lab at Stanford University, as well as lecturer at the Law School and d.school. She is a lawyer, and holds a J.D. from Stanford Law School, a DPhil from Queen’s University Belfast, an MA from Central European University, and an AB from University of Chicago. Margaret researches & designs new ways to make the legal system accessible, dignified, and just for more people. Recently, her work has focused on designing and scaling new models of eviction prevention, and improving how search engines, AI tools, and other tech platforms serve people with legal help. See more work at the Stanford Legal Design Lab site (http://legaltechdesign.com).</span></p>
+                  <span class="read-more-btn">Read More...</span>
+                </div>
               </div>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Marco Imperiale</h3>
+                </div>
+                <div class="image"><a><img src="images/speakers/2023/marco-imperiale.jpg"></a></div>
+                <p>Head of Innovation at LCA, visiting researcher at Harvard Law School, Legal Designer<span class="read-more-text">. Marco Imperiale is the head of innovation at LCA, a leading Italian law firm, and a visiting researcher at Harvard Law School. At Harvard, he lectured the course on Legal Design at the Graduate School of Design. He is also the author of the first Italian book on legal design, written with Barbara de Muro.<br><br> Marco is one of the founding members of Design Rights, the joint collaboration between LCA and Mondora for legal design services and products. He has experience working with relevant institutions, Fortune 500 and listed companies. Fun facts. Marco has seen more than 1000 concerts, run a few marathons, and completed several times El Camino de Santiago. Whenever he finds time in his hectic agenda, he also works as negotiation consultant and mindfulness trainer.</span></p>
+                <span class="read-more-btn">Read More...</span>
               </div>
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Margaret Hagan</h3>
-                <div class="image"><a><img src="images/speakers/2023/margaret-hagan.jpg"></a></div>
-                <p>is the Executive Director of the Legal Design Lab at Stanford University, as well as lecturer at the Law School and d.school. She is a lawyer, and holds a J.D. from Stanford Law School, a DPhil from Queen’s University Belfast, an MA from Central European University, and an AB from University of Chicago. Margaret researches & designs new ways to make the legal system accessible, dignified, and just for more people. Recently, her work has focused on designing and scaling new models of eviction prevention, and improving how search engines, AI tools, and other tech platforms serve people with legal help. See more work at the Stanford Legal Design Lab site (http://legaltechdesign.com).<br><span class="small"></p>
-              </div>
-            </div>
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Hallie Jay Pope</h3>
-              </div>
-              <div class="image"><a><img src="images/speakers/2023/hallie-jay-pope.jpg"></a></div>
-              <p>is a legal information designer, educator, and cartoonist. She is the founder of the Graphic Advocacy Project, a nonprofit that works with advocates and communities to share legal knowledge. Hallie is currently a visiting professor at the University of Utah S.J. Quinney College of Law, where she runs the Creative Advocacy Lab, a legal information design clinic that re-envisions lawyers as community educators, problem-solvers, and storytellers.
-                <br><span class="small"></p>
-            </div>
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Marco Imperiale</h3>
-              </div>
-              <div class="image"><a><img src="images/speakers/2023/marco-imperiale.jpg"></a></div>
-              <p>is the head of innovation at LCA, a leading Italian law firm, and a visiting researcher at Harvard Law School. At Harvard, he lectured the course on Legal Design at the Graduate School of Design. He is also the author of the first Italian book on legal design, written with Barbara de Muro.<br><br> Marco is one of the founding members of Design Rights, the joint collaboration between LCA and Mondora for legal design services and products. He has experience working with relevant institutions, Fortune 500 and listed companies. Fun facts. Marco has seen more than 1000 concerts, run a few marathons, and completed several times El
-                Camino de Santiago. Whenever he finds time in his hectic agenda, he also works as negotiation consultant and mindfulness trainer.
-                <br><span class="small"></p>
-            </div>
-            <div class="flex-item">
-              <div class="justify-center">
-                <h3 style="font-size: 25px;">Dan Jackson</h3>
+              <div class="flex-item">
+                <div class="justify-center">
+                  <h3 style="font-size: 25px;">Dan Jackson</h3>
+                </div>
                 <div class="image"><a><img src="images/speakers/2023/dan-jackson.jpg"></a></div>
-                <p>directs the NuLawLab at Northeastern University School of Law, where he educates the legal inventors of the future. He is also the co-director of the law school’s legal design program and serves as chair of the American Bar Association Standing Committee on the Delivery of Legal Services. <br><br>He is a 1997 graduate of Northeastern Law and joined the NuLawLab after career as a litigator and talent development executive. Prior to law school, Dan worked as a designer for theater, and continues to do so whenever he can.<br><span class="small"></p>
-              </div>
-              </div>
-              <div class="flex-item">
-                <div class="justify-center">
-                  <h3 style="font-size: 25px;">Cat Moon</h3>
+                <p>Executive Director - NuLawLab - Northeastern University School of Law<span class="read-more-text">. Dan Jackson directs the NuLawLab at Northeastern University School of Law, where he educates the legal inventors of the future. He is also the co-director of the law school’s legal design program and serves as chair of the American Bar Association Standing Committee on the Delivery of Legal Services. <br><br>He is a 1997 graduate of Northeastern Law and joined the NuLawLab after career as a litigator and talent development executive. Prior to law school, Dan worked as a designer for theater, and continues to do so whenever he can.</span></p>
+                <span class="read-more-btn">Read More...</span>
                 </div>
-                <div class="image"><a><img src="images/speakers/2023/cat-moon.jpg"></a></div>
-                <p>Director of Innovation Design at Vanderbilt Law School and #MakeLawBetter Provocateur<br><span class="small"></p>
-              </div>
-              <div class="flex-item">
-                <div class="justify-center">
-                  <h3 style="font-size: 25px;">Stefania Passera</h3>
+                <div class="flex-item">
+                  <div class="justify-center">
+                    <h3 style="font-size: 25px;">Hallie Jay Pope</h3>
+                  </div>
+                  <div class="image"><a><img src="images/speakers/2023/hallie-jay-pope.jpg"></a></div>
+                  <p>Legal information designer, educator, and cartoonist<span class="read-more-text">. Hallie Jay Pope is a legal information designer, educator, and cartoonist. She is the founder of the Graphic Advocacy Project, a nonprofit that works with advocates and communities to share legal knowledge. Hallie is currently a visiting professor at the University of Utah S.J. Quinney College of Law, where she runs the Creative Advocacy Lab, a legal information design clinic that re-envisions lawyers as community educators, problem-solvers, and storytellers.</span></p>
+                  <span class="read-more-btn">Read More...</span>
                 </div>
-                <div class="image"><a><img src="images/speakers/2023/stefania-passera.jpg"></a></div>
-                <p>is an Italian-born information designer based in Helsinki, Finland. With almost 15 years of experience in simplifying contracts and other legal documents, she is considered a true legal design pioneer. She is the founder of Passera Design and collaborates as Contract Designer in Residence with World Commerce & Contracting.<br><br>Stefania is an all-rounder, backing her design expertise with a solid academic background. She has served as an Assistant Professor at the University of Vaasa and earned her PhD from Aalto University. Her research has been widely published, and she is an in-demand keynote speaker and lecturer on contract design, simplification, and legal design. As a legal design advocate and popularizer, she has co-authored the Legal Design Manifesto, built the open-access Contract Design Pattern Library, and organized 30+ Legal Design Jam workshops around the world.<br><br>Her innovative work has earned her the European Women of Legal Tech Award in 2020 and a World Commerce & Contracting Fellowship in 2017.
-                  <br><span class="small"></p>
-              </div>
-              <div class="flex-item">
-                <div class="justify-center">
-                  <h3 style="font-size: 25px;">Marie Potel-Saville</h3>
+                <div class="flex-item">
+                  <div class="justify-center">
+                    <h3 style="font-size: 25px;">Cat Moon</h3>
+                  </div>
+                  <div class="image"><a><img src="images/speakers/2023/cat-moon.jpg"></a></div>
+                  <p>Director of Innovation Design at Vanderbilt Law School and #MakeLawBetter Provocateur</p>
+                  <span class="read-more-btn">Read More...</span>
                 </div>
-                <div class="image"><a><img src="images/speakers/2023/marie-potel-saville.png"></a></div>
-                <p>is the founder of Amurabi, an award-winning legal innovation studio, and www.fairpatterns.com, a platform dedicated to fight against dark patterns and train all stakeholders to avoid them. She is an international keynote speaker in human-centric law and legal innovation by design (IAPP Global Privacy Summit, W@Privacy, Computer Privacy and Data Protection, LegalGeek…).<br><br>Before founding Amurabi, she worked in private practice for 10 years (Freshfields, Allen & Overy) in Europe, then moved in-house to become GC EMEA of a US listed group.  She holds a Master’s Degree in Innovation by Design at ENSCI. She is also a member of the Advisory Board of the Serpentine Galleries’ Legal Lab and is involved in pro bono access to access initiatives. Marie teaches innovation by design at Singapore Management University, Sciences Po and Assas.
-                  <br><span class="small"></p>
+                <div class="flex-item">
+                  <div class="justify-center">
+                    <h3 style="font-size: 25px;">Stefania Passera</h3>
+                  </div>
+                  <div class="image"><a><img src="images/speakers/2023/stefania-passera.jpg"></a></div>
+                  <p>Founder of Passera Design, Contract designer<span class="read-more-text">. Stefania Passera is an Italian-born information designer based in Helsinki, Finland. With almost 15 years of experience in simplifying contracts and other legal documents, she is considered a true legal design pioneer. She is the founder of Passera Design and collaborates as Contract Designer in Residence with World Commerce & Contracting.<br><br>Stefania is an all-rounder, backing her design expertise with a solid academic background. She has served as an Assistant Professor at the University of Vaasa and earned her PhD from Aalto University. Her research has been widely published, and she is an in-demand keynote speaker and lecturer on contract design, simplification, and legal design. As a legal design advocate and popularizer, she has co-authored the Legal Design Manifesto, built the open-access Contract Design Pattern Library, and organized 30+ Legal Design Jam workshops around the world.<br><br>Her innovative work has earned her the European Women of Legal Tech Award in 2020 and a World Commerce & Contracting Fellowship in 2017.</span></p>
+                  <span class="read-more-btn">Read More...</span>
+                </div>
+                <div class="flex-item">
+                  <div class="justify-center">
+                    <h3 style="font-size: 25px;">Marie Potel-Saville</h3>
+                  </div>
+                  <div class="image"><a><img src="images/speakers/2023/marie-potel-saville.png"></a></div>
+                  <p>Founder of Amurabi, Legal innovator, lecturer at Sciences Po Paris, Singapore Management University and Assas<span class="read-more-text">. Marie Potel-Saville is the founder of Amurabi, an award-winning legal innovation studio, and www.fairpatterns.com, a platform dedicated to fight against dark patterns and train all stakeholders to avoid them. She is an international keynote speaker in human-centric law and legal innovation by design (IAPP Global Privacy Summit, W@Privacy, Computer Privacy and Data Protection, LegalGeek…).<br><br>Before founding Amurabi, she worked in private practice for 10 years (Freshfields, Allen & Overy) in Europe, then moved in-house to become GC EMEA of a US listed group.  She holds a Master’s Degree in Innovation by Design at ENSCI. She is also a member of the Advisory Board of the Serpentine Galleries’ Legal Lab and is involved in pro bono access to access initiatives. Marie teaches innovation by design at Singapore Management University, Sciences Po and Assas.</span></p>
+                  <span class="read-more-btn">Read More...</span>
+                </div>
               </div>
-            </div>
-            </div>
           </div>
+        </div>
+      </div>
     </div>
-  </div>
   </div>
 
   
@@ -246,6 +262,27 @@
 		<div id="footer"></div>
         
     <!-- Footer Section Ends -->
+
+    <script>
+
+const parentContainer =  document.querySelector('.read-more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read-more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+}) 
+    </script>
 
 
 
