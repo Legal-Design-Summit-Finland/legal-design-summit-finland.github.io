@@ -33,6 +33,212 @@
       });
     </script>
 
+    <style>
+      .bold{
+        font-weight: bold;
+      }
+
+      .purple{
+        color: #c30979;
+        font-weight: bold;
+      }
+
+      .blue{
+        color: darkblue;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      .list_obj{
+        padding-bottom: 10px;
+      }
+
+      .highlight {
+      display: inline-block;
+      background-color: blue;
+      color: white;
+      padding: 3px 8px;
+      }
+
+      .timeline::after{
+        content: '';
+        position: absolute;
+        width: 5px;
+        background-color: black;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline {
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 2em;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px; /* adjust as needed */
+      }
+
+
+
+        .timeline-text, .timeline-image {
+            display: flex;
+            padding: 10px;
+        }
+
+        .timeline-image {
+          width: 80%;
+          max-width: 300px;
+          margin: auto;
+          padding: 10px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .timeline-image a img {
+          max-height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+
+      .bubble {
+        position: relative;
+      }
+
+      .text-box {
+        padding: 20px 30px;
+        background: #fff;
+        position: relative;
+        border: 2px solid #888;
+        border-radius: 1em;
+        border-radius: 6px;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      .left-container{
+        right: 0;
+        padding-right: 60px;
+      }
+
+      .right-container{
+        left: 0%;
+        padding-left: 50px;
+      }
+
+      .timeline-arrow{
+        position: absolute;
+        width: 120px;
+        right: -45px;
+        top: 15px;
+        z-index: 10;
+      }
+
+      .right-container .timeline-arrow{
+        left: -45px
+      }
+
+      .timeline-line {
+  background: rgb(228, 228, 228);
+  width: 4px;
+  border-radius: 12px;
+  position: relative;
+  justify-self: end;
+}
+
+.timeline-point {
+  border: none;
+  position: absolute;
+
+  border-radius: 50%;
+  background: rgb(228, 228, 228);
+  width: 8px;
+  height: 8px;
+
+  top: 30px;
+  left: -6px;
+  transition: 1.5s ease;
+}
+.timeline-innerline {
+  position: absolute;
+  background: blue;
+  width: 4px;
+  height: 0%;
+
+  top: 0%;
+  left: 0%;
+
+  transition: 1s linear;
+}
+
+
+      @media screen and (max-width: 960px) {
+        .timeline p, h3, h4, .list_obj{
+          font-size: small;
+        }
+        .timeline{
+          margin: 5px;
+          padding: 5px;
+        }
+        .timeline h4{
+          line-height: 1.2;
+        }
+      }
+
+      @media screen and (max-width: 660px) {
+
+      .timeline{
+        margin: 50px auto;
+      }
+      .timeline::after{
+        left: 31px;
+      }
+
+      .timeline-item{
+        grid-template-columns: 1fr;
+      }
+      .bubble{
+        width: 100%;
+      }
+      .text-box{
+        font-size: 13px;
+      }
+      .right-container, .left-container{
+        left: 0%;
+        padding-left: 50px;
+        padding-right: 20px;
+      }
+
+      .timeline-image{
+        visibility: hidden;
+        max-width: 0px;
+        padding: 0px;
+        display: none;
+
+      }
+
+      .right-container .timeline-arrow{
+        left: -40px;
+      }
+      .left-container .timeline-arrow{
+        left: -30px;
+      }
+  
+    }
+
+
+
+
+    </style>
+
     <title>Legal Design Summit</title>
 
   </head>
@@ -82,6 +288,7 @@
     <div class="wrapper why-attend">
 
       <div class="container">
+        
 
 	<!-- Content Section Begins -->
 
@@ -120,20 +327,169 @@
 
 	</div>
 
-	<!-- Content Main Section Ends -->
+
+      </div>
+
+
+    </div>
+  <div>
+
+ 
+    
+      <div style="text-align: center; padding-left: 10%; padding-right: 10%;">
+        <h2>The Legal Design Summit Timeline</h2>
+        <h3>How did it all come to be?</h3>
+        <p style="font-size: 24px; line-height: 1.5;">The story of Legal Design Summit is a story of people who had great interest in legal design, & of how <span class="bold">volunteering</span> & the <span class="bold">community</span> are the backbone of all movements.</p>
+      </div>
+      
+
+      <div class="timeline">
+        <div class="timeline-line">
+          <span class="timeline-innerline"></span>
+        </div>
+ 
+
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <div style="width: 140%;"><a><img src="images/why-attend/first_summit.png"></a></div>
+            <div style="width: 80%;"><a><img src="images/why-attend/first_summit_logo.png"></a></div>
+          </div>
+
+          <div class="timeline-text">
+            <div class="bubble right-container">
+              <img class="timeline-arrow" src="images/why-attend/timeline_arrow_right.png">
+              <div class="text-box">
+                <table><colgroup><col style="width: 10%;"><col style="width: 90%"></colgroup>
+                  <tbody><tr><td style="background-color: #aeede8;"><h4>2016</h4></td><td style="padding-left: 10px; padding-right: 20px;"><h4>The original birth of the Legal Design Summit</h4></td></tr></tbody></table>
+                <p>It all began with a vision...</p>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj"><span class="bold">The vision:</span>  Founders <span class="purple">Antti Innanen</span> & <span class="purple">Johanna Rantanen</span> (from <span class="blue">Dottir Attorneys</span>) and  <span class="purple"></span>Jaakko Wäänänen (from <span class="blue">Hellon</span> design consultancy), together with <span class="purple">Pilvi Alopaeus</span> (then a student at the U of Helsinki Law School) envisaged the first ever legal design event in Finland</li>
+                  <li class="list_obj"><span class="bold">The venue:</span> <span class="purple">Pilvi</span> contacted <span class="purple">Kimmo Nuotio</span> (Dean of Law School at the <span class="blue">U of Helsinki</span>) who offered the law school as the venue, making the first Legal Design Summit possible.</li>
+                  <li class="list_obj"><span class="bold">The organisers:</span> The event was financed by ticket sales & by <span class="blue">Dottir</span> & <span class="blue">Hellon</span>, and organised by a group of students from Finnish Law Schools, led by <span class="purple">Pilvi</span> as the CEO.  </li>
+                  <li class="list_obj"><span class="bold">The attendees:</span> The event was national & had about 300 attendees (who paid for tickets). Speakers included legal design big names such as <span class="purple">Margaret Hagan</span>, <span class="purple">Helena Haapio</span> & <span class="purple">Stefania Passera!</span></li>
+                  <li class="list_obj"><span class="bold">The impact:</span> The event had a great impact on the Finnish legal tech & design field. As an example, the <span class="blue">Legal Tech Lab</span> of the U of Helsinki, led by <span class="purple">Riikka Koulu</span>, was created after the Summit. </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-text">
+            <div class="bubble left-container">
+              <img class="timeline-arrow" src="images/why-attend/timeline_arrow_left.png">
+              <div class="text-box">
+                <table><colgroup><col style="width: 90%;"><col style="width: 10%"></colgroup>
+                  <tbody><tr><td style="padding-left: 10px; padding-right: 20px; text-align: right;"><h4>The power of community: from a national event to the largest legal design event in the world and the first ever BrainFactory</h4></td><td style="background-color: #aeede8;"><h4>2017</h4></td></tr></tbody></table>
+                <p>After the great impact of the first Legal Design Summit, the founders thought this could not be just a one off; there was something special here...</p>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj"><span class="bold">The vision:</span>  <span class="purple">Antti</span> called <span class="purple">Pilvi</span> & suggested she take the role of CEO & gather a team a volunteers, <span class="blue">Hellon</span> & <span class="blue">Dottir</span> would support, and <span class="purple">Antti</span>, <span class="purple">Johanna</span> & <span class="purple">Jaakko</span> would coach & guide whenever needed.  Pilvi said yes in about 20 seconds and the next thing she did was to call 15 of her friends and ask: "should we create the largest legal design event in the world?”. They all said "yes". Soon the team included 50-100 volunteers that all believed in the same vision.</li>
+                  <li class="list_obj"><span class="bold">The venue:</span> The venue: <span class="blue">U of Helsinki</span> & newly-founded <span class="blue">Legal Tech Lab</span> offered to sponsor the venue; the Great Hall of the U of Helsinki that would have seats for 700 people. The event was still to be commercially backed by <span class="blue">Hellon</span> & <span class="blue">Dottir</span>, however, the financing was based on ticket sales and sponsorships. Quite quickly the team realised that, in order to really create an impact and attract interest, the Summit should not be just an event, but an invitation for people to discuss with open minds, & make every participant feel ownership of the event and the community.  In other words, they needed to spark a movement and a community around the Summit.</li>
+                  <li class="list_obj"><span class="bold">Building the community:</span> There already was an amazing community on legal tech and design around the world, brought together by many great non-profit organisations and academic institutions and the Team wanted to bring them together.</li>
+                  <li class="list_obj"><span class="bold">The attendees:</span> The Summit included over 700 international attendees, plus an amazing group of speakers such as <span class="purple">Cat Moon</span>, <span class="purple">Dan Jackson</span>, <span class="purple">Margaret Hagan</span>.  The event was a success and the special atmosphere was described to be  open, safe, international, and inviting.  It was not just an event but a festival celebration of the community.</span></li>
+                  <li class="list_obj"><span class="bold">The impact:</span> This was also the first year when BrainFactory was held. It was important to create a workshop where everyone could feel safe to try out the legal design method when guided by legal design professionals, while working on real life cases in small teams. It was also important for the team to harness the power of diversity as much as possible.  The cases were provided by real clients, including but not limited to the <span class="blue">Finnish Ministry of Justice</span>.  The BrainFactory was a great success, and many wonderful new careers began as a result of it.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-image">
+            <div style="width: 140%;"><a><img src="images/why-attend/second_summit_group.png"></a></div>
+            <div style="width: 140%;"><a><img src="images/why-attend/second_summit_stage.png"></a></div>
+            <div><a><img src="images/why-attend/second_summit_passes.png"></a></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <div style="width: 120%;"><a><img src="images/why-attend/2019_save_date.png"></a></div>
+            <div style="width: 140%;"><a><img src="images/why-attend/2019_summit_speaker.png"></a></div>
+            <div style="width: 140%;"><a><img src="images/why-attend/2019_team_pic.png"></a></div>
+            <div style="width: 70%;"><a><img src="images/why-attend/2019_summit_speaker2.png"></a></div>
+          </div>
+          <div class="timeline-text">
+            <div class="bubble right-container">
+              <img class="timeline-arrow" src="images/why-attend/timeline_arrow_right.png">
+              <div class="text-box">
+                <table><colgroup><col style="width: 10%;"><col style="width: 90%"></colgroup>
+                  <tbody><tr><td style="background-color: #aeede8;"><h4>2019</h4></td><td style="padding-left: 10px; padding-right: 20px;"><h4>Re-founding the Legal Design Summit as a non-profit organisation; The new beginning as a free event</h4></td></tr></tbody></table>
+                <p>The Legal Design Summit of 2017 had been a great success. It had ignited the community and created joy, new opportunities, and paths for many...</p>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj"><span class="bold">The vision:</span>  In early spring 2019, <span class="purple">Jukka Linna</span>, who led the <span class="blue">Laurea University of Applied Science’s</span> legal design studies, wanted to make a new Summit happen. Thus, <span class="purple">Jukka</span> (<span class="blue">U of Applied Sciences</span>), <span class="purple">Mika Viljanen</span> (<span class="blue">U of Turku</span>), <span class="purple">Henna Tolvanen</span>, <span class="purple">Nina Toivonen</span>,  and <span class="purple">Pilvi Alopaeus</span> came together to consider what to do with the Summit. Even though the Summit of 2017 was a success, there had been something missing; on paper, it was still owned by <span class="blue">Dottir</span> & <span class="blue">Hellon</span>, but the community had taken ownership of it:</li>
+                </ul>
+                <p class="blue">The Three Decisions:</p>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj"><span class="purple">The first decision:</span> was to found the "Legal Design Finland Association" as a legal entity led by <span class="purple">Jukka</span>, <span class="purple">Mika</span>, <span class="purple">Nina</span>, <span class="purple">Henna</span> & <span class="purple">Pilvi</span>. <span class="blue">Dottir</span> and <span class="blue">Hellon</span> graciously gave all ownership to it in order to support the community and the legal design movement. Their support had been paramount over the years but they agreed that it was time for the Summit to try out its own legs & see where the community would take it.</li>
+                  <li class="list_obj"><span class="purple">The second decision:</span> that shaped the fate of the Summit was to make the Summit free of charge. This would really make the event more accessible. When word of this decision reached the global community, the reception was overwhelmingly positive. The Summit had taken probably one of its most important steps to date.</li>
+                  <li class="list_obj"><span class="purple">The third decision:</span> was that the Summit would <span class="blue">not become a digital event</span>. The world is full of amazing digital events but the Summit would be about meeting people in real life. The Board understood that this would limit the accessibility of the Summit, but they were confident that this would be necessary for the event’s spirit.  The most important part, that the Summit was organised and would always be organised by volunteers would remain as the core value of the organisation. Thus, the amazing volunteer team of 2019 was formed. <span class="purple">Pilvi continued as the CEO and Henna and Nina took the hats of Co-Producers</span>.</li>
+                </ul>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj"><span class="bold">The venue and funding:</span> The <span class="blue">City of Helsinki</span> kindly allowed the Summit’s venue to be the City Hall of Helsinki. The event was funded fully by sponsorships.</li>
+                  <li class="list_obj"><span class="bold">The organisers:</span> The team also collaborated with several amazing non-profit organisations & academic institutions in order to bring the community together.</li>
+                  <li class="list_obj"><span class="bold">The attendees:</span> The program was a great success and included the super stars of legal design and many new voices and ideas. The event was more international than ever before: people came from all over the world - every continent was represented! The spirit was described to be a "Woodstock-like”.</li>
+                  <li class="list_obj"><span class="bold">The impact:</span> The BrainFactory was organised at <span class="blue">Maria 01</span> (the Nordic’s leading startup campus). Real cases were provided by real clients, such as the <span class="blue">Finnish Ministry of Environment</span>.  The BrainFactory was again a huge success and had a great impact on many individuals who took part in it.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-text">
+            <div class="bubble left-container">
+              <img class="timeline-arrow" src="images/why-attend/timeline_arrow_left.png">
+              <div class="text-box">
+                <table><colgroup><col style="width: 90%;"><col style="width: 10%"></colgroup>
+                  <tbody><tr><td style="padding-left: 10px; padding-right: 20px; text-align: right;"><h4>The Covid years...</h4></td><td style="background-color: #aeede8;"><h4 style="text-align: center;">2020 / 2022</h4></td></tr></tbody></table>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li class="list_obj">In 2022, <span class="purple">Noora Rissanen</span>, <span class="purple">Pilvi Alopaeus</span>, <span class="purple">Sonja Kojo</span>, <span class="purple">Juulia Lehtinen</span>, and <span class="purple">Malin Männikkö</span> came together and formed the new Board of the owner association. The former Board members <span class="purple">Jukka Linna</span>, <span class="purple">Mika Viljanen</span>, <span class="purple">Nina Toivonen</span>, and <span class="purple">Henna Tolvanen</span> became the first honorary members of the Association. </li>
+                  <li class="list_obj">The new Board started to think: <span class="blue">should the Summit make a return?</span> COVID19 had changed the world & also caused the Summit to have a long break. The Board wondered: would there still be a need for an event like Summit? Would the community still want to gather in person or would it be time to announce that the Summit would retire?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-image">
+            <div style="width: 300px; margin: auto; padding: 10px;"><a><img src="images/why-attend/covid_years.png"></a></div>
+          </div>
+        </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-image">
+          <div style="width: 400px; margin: auto; padding: 10px;"><a><img src="images/why-attend/covid_years2.png"></a></div>
+        </div>
+
+        <div class="timeline-text">
+          <div class="bubble right-container">
+            <img class="timeline-arrow" src="images/why-attend/timeline_arrow_right.png">
+            <div class="text-box">
+              <table><colgroup><col style="width: 10%;"><col style="width: 90%"></colgroup>
+                <tbody><tr><td style="background-color: #aeede8;"><h4>2023</h4></td><td style="padding-left: 10px; padding-right: 20px;"><h4>Going global! The most international & diverse Legal Design Summit</h4></td></tr></tbody></table>
+              <p>The Board decided to take a leap of faith and, in early 2023, the <span class="blue">Volunteer Team of 2023</span> took the reins. This year, the volunteer team is more global and diverse than ever before!  Organically, the theme of organising the most diverse Summit was born. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
 
       </div>
 
     </div>
 
-    <!-- Wrapper // Header Section Ends -->
 
-    <!-- Wrapper // Content Section Begins -->
+ 
+
+
+    </div>
+    </div>
 
     <!-- Wrapper // Content Actions Section Begins -->
 
     <div class="wrapper actions">
-      
+
+     
       <!-- Container Section Begins -->
       
       <div class="container">
@@ -182,6 +538,8 @@
 		<div id="footer"></div>
         
     <!-- Footer Section Ends -->
+
+    <scirpt src="scripts/timeline.js"></scirpt>
 
 
   </body>
