@@ -38,140 +38,29 @@
     </script>
 
     <style>
-      .speaker{
-        margin: auto 10%;
-      }
-
-      .prog_list{
-        margin-top: 0;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        list-style-type: disc;
-        padding-left: 20px
-      }
-
-      .blue{
-        color: #50cec1;
-      }
-
-      .speaker h1{
-        font-size: 2rem;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        text-align: center;
-        color: #50cec1;
-        line-height: 1.3;
-      }
-      .speaker h3{
-        color: black;
-        font-size: 1.5rem;
-        text-align: left;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        line-height: 1.2;
-      }
-
       .flex-item h3{
         text-align: center;
       }
 
-      .speaker h4{
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1.2;
-        margin-bottom: 10px;
+      .flex-item img {
+          max-width: 100%;
+          height: auto;
+          transition: transform 0.2s ease-in-out;
       }
 
-      .speaker p{
-        margin-bottom: 7px;
-        margin-top: 7px;
-        font-size: 1rem;
+      .dot_logo {
+        max-width: 15%;
       }
-
-      .panel_discussion{
-        background-color: #aeede8;
-        border-radius: 15px;
-        padding: 0px 15px 0px;
-      }
-
-      .panel_discussion .image {
-        border-radius: 50%;
-        max-width: 150px;
-        overflow: hidden;
-        margin: auto;
-      }
-
-
-
-      .panel_discussion .flex-item{
-        max-width: 200px;
-        border-radius: 0px;
-        margin: 10px;
-        padding: 10px;
-        
-      }
-
-      .panel_discussion h3{
-        font-size: 1.5rem;
-        line-height: 1;
-        color: black;
-        margin-bottom: 0px;
-        padding-top: 10px;
-        line-height: 1.2;
-      }
-
-      .panel_discussion h4{
-        color: #c30979;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        line-height: 1.2;
-        font-size: 1.7rem;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      .panel_discussion p{
-        font-size: 1rem;
-        line-height: 1.3;
-      }
-
-
-
-      .read-more-container .flex-item{
-        border: 2px solid white;
-        border-radius: 15px;
-      }
-
-
-      .day_selector{
-        color: lightgray;
-      }
-
-      .selected_day{
-        color: #c30979;
-      }
-      .day_selector, .selected_day {
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-      .day_selector:hover, .selected_day:hover {
-        transform: scale(1.1); /* Expands the text a little on hover */
-      }
-
-
-
-	  .flex-item img {
-        max-width: 100%;
-        height: auto;
-        transition: transform 0.2s ease-in-out;
-      }
-
 
       @media only screen and (max-width: 767px){
-
+      .dot_logo{
+        max-width: 8rem;
+      }
     }
+
+
+
+
 
     </style>
 
@@ -195,9 +84,8 @@
 		<div class="menu-toggler">Menu<span class="icon"></span></div>
 		<div class="menu-container">
 		  <ul class="menu"><li class=" first"><a href="index.html">Home</a></li>
-		    <li class=""><a href="program.html">Program</a></li>
+		    <li class=""><a href="program-thursday.html">Program</a></li>
         <li class=""><a href="brainfactory.html">BrainFactory</a></li>
-		    <li class=""><a href="speakers.html">Speakers</a></li>
 		    <li class=""><a href="about-us.html">About Us</a></li>
         <li class=""><a href="tickets.html">Tickets</a></li>
 		    <li class=" last"><a href="why-attend.html">Why attend?</a></li>
@@ -214,7 +102,7 @@
       <div class="container">
         <div style="text-align: center;">
 
-          <h2>PROGRAM LEGAL DESIGN SUMMIT*</h2>
+          <h2>PROGRAM LEGAL DESIGN SUMMIT</h2>
 
         </div>
       </div>
@@ -226,8 +114,8 @@
 
       <div style="margin-bottom: 20px;">  
         <h1>
-          <a href="program/wednesday" class="day_selector">Wednesday</a> |
-          <a href="program/thursday" class="selected_day">Thursday</a> |
+          <a href="program-wednesday.html" class="day_selector">Wednesday</a> |
+          <a href="program-thursday.html" class="selected_day">Thursday</a> |
           <a href="program-friday.html" class="day_selector">Friday</a>
         </h1>
       
@@ -250,7 +138,7 @@
           <td colspan="2">
             <div class="panel_discussion">
               <div class="read-more-container">
-              <h4>PANEL I. - Beautiful & Better Documents & Visualising Information</h4>
+              <h4>I. - Beautiful & Better Documents & Visualising Information</h4>
               
                   <div class="flex-container">
                     <div class="flex-item">
@@ -306,7 +194,7 @@
           <td colspan="2">
             <div class="panel_discussion">
               <div class="read-more-container">
-              <h4>PANEL II. - THE CASE FOR LEGAL DESIGN</h4>
+              <h4>II. - THE CASE FOR LEGAL DESIGN</h4>
               
                 
                   <div class="flex-container">
@@ -383,7 +271,7 @@
           <td colspan="2">
             <div class="panel_discussion">
               <div class="read-more-container">
-              <h4>PANEL III. - Legal Design as a new mindset</h4>
+              <h4>III. - Legal Design as a new mindset</h4>
               
                 
                   <div class="flex-container">
@@ -417,8 +305,13 @@
           </td>
         </tr>
         <tr>
-          <td><h3>17.15</h3></td>
-          <td><h3>End time, it is time for after party at Dottir</h3></td>
+          <td style="vertical-align: top;"><h3>17.15</h3></td>
+          <td>
+            <h3 style="margin-bottom: 16px;">End time, After Party at Dottir!</h3>
+            <p style="margin-bottom: 32px;">After the first Summit day we are welcomed at Dottir - stay tuned for details, but don’t book your evening!</p>
+            <div class="dot_logo"><a href="https://www.dottirlaw.com/" target="_blank"><img src="images/collabs/Dottir-logo-musta.jpg"></a></div>
+
+          </td>
         </tr>
       </tbody>
     </table>
