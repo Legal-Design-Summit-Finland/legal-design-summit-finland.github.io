@@ -38,140 +38,29 @@
     </script>
 
     <style>
-      .speaker{
-        margin: auto 10%;
-      }
-
-      .prog_list{
-        margin-top: 0;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        list-style-type: disc;
-        padding-left: 20px
-      }
-
-      .blue{
-        color: #50cec1;
-      }
-
-      .speaker h1{
-        font-size: 2rem;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        text-align: center;
-        color: #50cec1;
-        line-height: 1.3;
-      }
-      .speaker h3{
-        color: black;
-        font-size: 1.5rem;
-        text-align: left;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        line-height: 1.2;
-      }
-
       .flex-item h3{
         text-align: center;
       }
 
-      .speaker h4{
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1.2;
-        margin-bottom: 10px;
+      .flex-item img {
+          max-width: 100%;
+          height: auto;
+          transition: transform 0.2s ease-in-out;
       }
 
-      .speaker p{
-        margin-bottom: 7px;
-        margin-top: 7px;
-        font-size: 1rem;
+      .dot_logo {
+        max-width: 15%;
       }
-
-      .panel_discussion{
-        background-color: #aeede8;
-        border-radius: 15px;
-        padding: 0px 15px 0px;
-      }
-
-      .panel_discussion .image {
-        border-radius: 50%;
-        max-width: 150px;
-        overflow: hidden;
-        margin: auto;
-      }
-
-
-
-      .panel_discussion .flex-item{
-        max-width: 200px;
-        border-radius: 0px;
-        margin: 10px;
-        padding: 10px;
-        
-      }
-
-      .panel_discussion h3{
-        font-size: 1.5rem;
-        line-height: 1;
-        color: black;
-        margin-bottom: 0px;
-        padding-top: 10px;
-        line-height: 1.2;
-      }
-
-      .panel_discussion h4{
-        color: #c30979;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        line-height: 1.2;
-        font-size: 1.7rem;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      .panel_discussion p{
-        font-size: 1rem;
-        line-height: 1.3;
-      }
-
-
-
-      .read-more-container .flex-item{
-        border: 2px solid white;
-        border-radius: 15px;
-      }
-
-
-      .day_selector{
-        color: lightgray;
-      }
-
-      .selected_day{
-        color: #c30979;
-      }
-      .day_selector, .selected_day {
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-      .day_selector:hover, .selected_day:hover {
-        transform: scale(1.1); /* Expands the text a little on hover */
-      }
-
-
-
-	  .flex-item img {
-        max-width: 100%;
-        height: auto;
-        transition: transform 0.2s ease-in-out;
-      }
-
 
       @media only screen and (max-width: 767px){
-
+      .dot_logo{
+        max-width: 8rem;
+      }
     }
+
+
+
+
 
     </style>
 
@@ -195,10 +84,10 @@
 		<div class="menu-toggler">Menu<span class="icon"></span></div>
 		<div class="menu-container">
 		  <ul class="menu"><li class=" first"><a href="index.html">Home</a></li>
-		    <li class=""><a href="program.html">Program</a></li>
+		    <li class=""><a href="program-thursday.html">Program</a></li>
         <li class=""><a href="brainfactory.html">BrainFactory</a></li>
-		    <li class=""><a href="speakers.html">Speakers</a></li>
 		    <li class=""><a href="about-us.html">About Us</a></li>
+        <li class=""><a href="tickets.html">Tickets</a></li>
         <li class=""><a href="speakers-thursday.html">Speakers</a></li>
 		    <li class=" last"><a href="why-attend.html">Why attend?</a></li>
 		  </ul>
@@ -214,7 +103,7 @@
       <div class="container">
         <div style="text-align: center;">
 
-          <h2>PROGRAM LEGAL DESIGN SUMMIT*</h2>
+          <h2>SPEAKERS</h2>
 
         </div>
       </div>
@@ -226,9 +115,8 @@
 
       <div style="margin-bottom: 20px;">  
         <h1>
-          <a href="program/wednesday" class="day_selector">Wednesday</a> |
-          <a href="program/thursday" class="selected_day">Thursday</a> |
-          <a href="program-friday.html" class="day_selector">Friday</a>
+          <a href="speakers-thursday.html" class="selected_day">Thursday</a> |
+          <a href="speakers-friday.html" class="day_selector">Friday</a>
         </h1>
       
   
@@ -239,24 +127,19 @@
     <table><colgroup><col style="width: 20%;"><col style="width: 70%"></colgroup>
       <tbody class="timetable" style="padding-left: 20px;">
         <tr>
-          <td><h3>09.00-10.00</h3></td>
-          <td><h3>Registration and coffee</h3></td>
-        </tr>
-        <tr>
-          <td><h3>10.00-10.15</h3></td>
-          <td><h3>Welcome to Summit, practical info, safety, introducing host(s)</h3></td>
+          <td><h3>10.15-12.15</h3></td>
+          <td><h3>I. - Beautiful & Better Documents & Visualising Information:</h3></td>
         </tr>
         <tr>
           <td colspan="2">
             <div class="panel_discussion">
-              <div class="read-more-container">
-              <h4>PANEL I. - Beautiful & Better Documents & Visualising Information</h4>
-              
+              <div class="read-more-container">    
                   <div class="flex-container">
                     <div class="flex-item">
                       <div class="image"><a><img src="images/speakers/2023/marco-imperiale.jpg"></a></div>
                       <h3>Marco Imperiale</h3>
-                      <p>Head of Innovation at LCA, visiting researcher at Harvard Law School<span class="read-more-text">. Marco Imperiale is the head of innovation at LCA, a leading Italian law firm, and a visiting researcher at Harvard Law School. At Harvard, he lectured the course on Legal Design at the Graduate School of Design. He is also the author of the first Italian book on legal design, written with Barbara de Muro.<br><br> Marco is one of the founding members of Design Rights, the joint collaboration between LCA and Mondora for legal design services and products. He has experience working with relevant institutions, Fortune 500 and listed companies. Fun facts. Marco has seen more than 1000 concerts, run a few marathons, and completed several times El Camino de Santiago. Whenever he finds time in his hectic agenda, he also works as negotiation consultant and mindfulness trainer.</span></p>
+                      <p>Founder and managing director of Better Ipsum, a consultancy focused on legal design, -innovation, and -wellbeing.<span class="read-more-text">. Marco Imperiale has a long-time experience working on legal design services and products for relevant institutions, Fortune 500 and listed companies. A true legal design pioneer, Marco wrote (with Barbara de Muro) the first Italian book on legal design and lectured the course on legal design at the Harvard Graduate School of Design. At Harvard, where he graduated as Fulbright Scholar, he also worked as visiting researcher.
+                        Fun facts. Marco has seen more than 1000 concerts, run a few marathons, and completed nine times El Camino de Santiago. Whenever he finds time in his hectic agenda, he also works as negotiation consultant and mindfulness trainer.</span></p>
                       <span class="read-more-btn">Read More...</span>
                     </div>
       
@@ -278,7 +161,9 @@
                     <div class="flex-item">
                       <div class="image"><a><img src="images/speakers/2023/Mel-Flanagan.png"></a></div>
                       <h3>Mel Flanagan</h3>
-                      <p>is an Information designer, creative director, storyteller, content maker, producer,and advocate<span class="read-more-text">. Mel Flanagan is a global transparency, social justice, environmental, open government advocate, and designer, with a background in theatre and filmmaking. She is the founder of Nook Studios, a social enterprise and company of researchers, artists, designers, and civic technologists based in Sydney, Australia. Mel and the Nook crew design revolutionary content and information products to help people simply explain, connect, and visualise complex information and processes such as legislation and regulations, making them easier to follow, analyse, and improve. Experiences include natural resource governance, mining, oil, gas, infrastructure projects, environmental approvals, government decision making processes, procurement pathways.<br><br>Mel speaks regularly about the role of design in making positive social and environment impact and various open initiatives such as open contracting. Nook run workshops to share their approach and are producing open-source digital tools to help everyone communicate more effectively and bring processes and data to life in engaging ways for community audiences.</span></p>
+                      <p>Founder Nook Studios, advocate, information designer, creative director, storyteller<span class="read-more-text">. Mel Flanagan  is a global social justice, environmental, open government advocate, and designer, with a background in theatre and filmmaking. Nook Studios is a social enterprise of researchers, artists, designers, and civic technologists based in Sydney, Australia.
+                        <br><br>Nook design revolutionary content and information products to help people simply explain, connect, and visualise complex information such as legislation and regulations - making them easier to follow, analyse, and improve. Nook's experience includes natural resource governance, (mining, oil, gas), infrastructure projects, environmental approvals, government decision making processes, contracting and procurement pathways.
+                        <br><br>Mel regularly speaks about the role of design in making positive social and environment impact and open initiatives such as open contracting. Nook run workshops to share their approach and are producing open-source digital tools to help everyone communicate more effectively and bring processes and data to life in engaging ways for community audiences.</span></p>
                       <span class="read-more-btn">Read More...</span>
                     </div>
       
@@ -299,16 +184,13 @@
           </td>
         </tr>
         <tr>
-          <td><h3>12.15-13.30</h3></td>
-          <td><h3>Lunch Break</h3></td>
+          <td><h3>13.35-14.55</h3></td>
+          <td><h3>II. - THE CASE FOR LEGAL DESIGN:</h3></td>
         </tr>
         <tr>
           <td colspan="2">
             <div class="panel_discussion">
               <div class="read-more-container">
-              <h4>PANEL II. - THE CASE FOR LEGAL DESIGN</h4>
-              
-                
                   <div class="flex-container">
       
       
@@ -341,12 +223,15 @@
                     </div>
                     
                     <div class="flex-item">
-                      <div class="image"><a><img src="images/events/event-1.png"></a></div>
+                      <div class="image"><a><img src="images/speakers/2023/Dorra-Harrar.jpg"></a></div>
                       <h3>Dorra Harrar</h3>
-                      <!--
-                      <p>Title<span class="read-more-text">. story</span></p>
+                      <p>Founder of Legal.D, the first legal design agency in the MENA region<span class="read-more-text">. Dorra Harrar is a humanist business lawyer and the first expert practitioner, a pioneer of legal design, in the MENA region. She is a founder of Legal.D, the first legal design agency in the MENA region, based in Tunisia.
+                        <br><br>Dorra combines her advanced experience as a business lawyer with her creative, innovative and humanistic spirit to help companies and individuals make their legal documents clear, understandable, and efficient, to enable change into a strategic drive for business and insure human dignity.
+                        <br><br>Dorra has worked on several legal design projects in social and business fields, both nationally and internationally, and has succeeded in using legal design in a litigation case for the first time before a Tunisian court.
+                        <br><br>In 2022, Dorra won the WorldCC Innovation & Excellence award in the personal initiative category. The award recognized Dorra’s significant impact in business and its unique contribution to challenging the status quo of the practice of law in her country.
+                        <br>She also organized, in Tunisia, the first legal design workshop for law students and has been invited to speak at national and international events.
+                        </span></p>
                       <span class="read-more-btn">Read More...</span>
-                      -->
                     </div>
       
                     <div class="flex-item">
@@ -364,9 +249,9 @@
                     </div>
                    
                     <div class="flex-item">
-                      <div class="image"><a><img src="images/speakers/2023/Angelica-Flechas.jpg"></a></div>
-                      <h3>Angélica Flechas</h3>
-                      <p>Founder of HÁPTICA, a service design consultancy agency<span class="read-more-text">. Angélica Flechas is a designer and a lawyer from Los Andes University in Bogotá Colombia. She has been working on service design for 9 years. She fell in love with this design wave when she presented a paper at the Global Service Design Conference in Helsinki in 2012 – Servdes. Then she decided to create her own Service Design Consultancy Agency – HÁPTICA – where she runs as Founder, Service, and Legal Designer Consultant, and General Manager. She has worked in different areas such as retail, FMCG, finance, hotels, health care, insurance, education, construction, government, and law offices, among others. She is also a teacher in the Business Administration and the Law program at Los Andes University.</span></p>
+                      <div class="image"><a><img src="images/speakers/2023/marie-potel-saville.png"></a></div>
+                      <h3>Marie Potel-Saville</h3>
+                      <p>Founder of Amurabi, Lecturer at Sciences Po Paris, Singapore Management University and Assas<span class="read-more-text">. Marie Potel-Saville is the founder of Amurabi, an award-winning legal innovation studio, and www.fairpatterns.com, a platform dedicated to fight against dark patterns and train all stakeholders to avoid them. She is an international keynote speaker in human-centric law and legal innovation by design (IAPP Global Privacy Summit, W@Privacy, Computer Privacy and Data Protection, LegalGeek…).<br><br>Before founding Amurabi, she worked in private practice for 10 years (Freshfields, Allen & Overy) in Europe, then moved in-house to become GC EMEA of a US listed group.  She holds a Master’s Degree in Innovation by Design at ENSCI. She is also a member of the Advisory Board of the Serpentine Galleries’ Legal Lab and is involved in pro bono access to access initiatives. Marie teaches innovation by design at Singapore Management University, Sciences Po and Assas.</span></p>
                       <span class="read-more-btn">Read More...</span>
                     </div>
                   </div>
@@ -376,16 +261,13 @@
           </td>
         </tr>
         <tr>
-          <td><h3>XX.XX</h3></td>
-          <td><h3>Break 50 minutes</h3></td>
+          <td><h3>15.50-17.00</h3></td>
+          <td><h3>III. - Legal Design as a New Mindset in the Face of Modern Tools</h3></td>
         </tr>
         <tr>
           <td colspan="2">
             <div class="panel_discussion">
               <div class="read-more-container">
-              <h4>PANEL III. - Legal Design as a new mindset</h4>
-              
-                
                   <div class="flex-container">
       
                     <div class="flex-item">
@@ -396,12 +278,10 @@
                     </div>
       
                     <div class="flex-item">
-                      <div class="image"><a><img src="images/events/event-1.png"></a></div>
+                      <div class="image"><a><img src="images/speakers/2023/Riikka-Koulu.jpg"></a></div>
                       <h3>Riikka Koulu</h3>
-                      <!--
-                      <p>Title<span class="read-more-text">. story</span></p>
+                      <p>Associate Professor at University of Helsinki and leader of Helsinki Legal Tech Lab<span class="read-more-text">. Prof. Dr. Riikka Koulu is the Associate Professor (Social and Legal Implications of AI) at the Faculties of Social Sciences and Law, University of Helsinki, Finland. Since 2016, she also leads the University of Helsinki Legal Tech Lab, an interdisciplinary research hub that examines the intersections of law, technology, and society. She holds several positions inside and outside of academia, e.g. the chairperson of the Finnish Data Protection Ombudsman’s Expert Board; member of the Ethical Advisory Board of the Finnish Centre for Artificial Intelligence (FCAI); and associated researcher at the Alexander von Humboldt Institute for Internet and Society HIIG (Berlin). Her current research interests include automation of legal practices, AI ethics, policy and regulation, and procedural perspectives to technological design.</span></p>
                       <span class="read-more-btn">Read More...</span>
-                      -->
                     </div>
       
                     <div class="flex-item">
@@ -417,9 +297,6 @@
           </td>
         </tr>
         <tr>
-          <td><h3>17.15</h3></td>
-          <td><h3>End time, it is time for after party at Dottir</h3></td>
-        </tr>
       </tbody>
     </table>
 
@@ -441,7 +318,6 @@
               </div>
  -->
 
-  <p style="font-size: 20px; padding-top: 40px; text-align: center;">Staying in Helsinki for the weekend?<br> See this guide to find what to do and eat: <a href="https://www.visitfinland.com/en/places-to-go/helsinki-region/" target="_blank" style="color: #50cec1; text-decoration: underline;">Visit Helsinki.fi -guide</a></p>
 
    
       </div>
