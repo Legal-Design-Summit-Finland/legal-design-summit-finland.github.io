@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <div id="meta"></div>
+    <div id="styles"></div>
+    <div id="scripts"></div>
+    <script>
+        fetch('regions/meta.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('meta').outerHTML = data;
+            });
+
+        fetch('regions/styles.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('styles').outerHTML = data;
+            });
+
+        fetch('regions/scripts.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('scripts').outerHTML = data;
+            });
+    </script>
+
+    <title>Side Events - Legal Design Summit</title>
+</head>
+
+<body class="side-events-page">
+
+    <!-- Wrapper // Menu Section Begins -->
+    <div class="wrapper menu fluid">
+        <div class="container">
+            <div id="menu"></div>
+            <script>
+                fetch('regions/menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu').innerHTML = data;
+                    });
+            </script>
+        </div>
+    </div>
+    <!-- Wrapper // Menu Section Ends -->
+
+    <div class="wrapper">
+        <div class="content justify-center">
+            <h1>Side Events</h1>
+            <p>Details about side events will be available soon.</p>
+        </div>
+    </div>
+
+    <!-- Wrapper // Footer Section Begins -->
+    <div id="footer"></div>
+    <script>
+        fetch('regions/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+    <!-- Wrapper // Footer Section Ends -->
+
+</body>
+
+</html>
