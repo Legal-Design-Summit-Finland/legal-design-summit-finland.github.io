@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+<head>
+    <div id="meta"></div>
+    <div id="styles"></div>
+    <div id="scripts"></div>
+    <script>
+        fetch('regions/meta.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('meta').outerHTML = data;
+            });
+
+        fetch('regions/styles.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('styles').outerHTML = data;
+            });
+
+        fetch('regions/scripts.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('scripts').outerHTML = data;
+            });
+    </script>
+
+    <title>Why Attend - Legal Design Summit</title>
+</head>
+
+<body class="why-attend-page">
+
+<!-- Wrapper // Menu Section Begins -->
+<div class="wrapper menu fluid">
+    <div class="container">
+        <div id="menu"></div>
+        <script>
+            fetch('regions/menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;
+                });
+        </script>
+    </div>
+</div>
+<!-- Wrapper // Menu Section Ends -->
+
+<div class="wrapper">
+  <div class="content justify-center">
+    <h1>Why Attend the Legal Design Summit?</h1>
+    <p>The Legal Design Summit is the leading event for innovation in the legal industry. Here’s why you should attend:</p>
+    <ul>
+      <li>Network with top legal professionals and innovators.</li>
+      <li>Explore how design thinking can transform the practice of law.</li>
+      <li>Learn from expert speakers and interactive workshops.</li>
+    </ul>
+    <p>Join us in shaping the future of law!</p>
+  </div>
+</div>
+
+<!-- Wrapper // Content Actions Section Begins -->
+<div id="content-actions"></div>
+<script>
+    fetch('regions/content-actions.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content-actions').innerHTML = data;
+        });
+</script>
+<!-- Wrapper // Content Actions Section Ends -->
+
+<!-- Wrapper // Footer Section Begins -->
+<div id="footer"></div>
+<script>
+    fetch('regions/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+<!-- Wrapper // Footer Section Ends -->
+
+</body>
+</html>

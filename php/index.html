@@ -1,0 +1,345 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <head>
+        <div id="meta"></div>
+        <div id="styles"></div>
+        <div id="scripts"></div>
+        <div id="menu"></div>
+        <div id="footer"></div>
+
+        <script>
+            // Dynamically include meta tags
+            fetch('regions/meta.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('meta').outerHTML = data;
+                });
+
+            // Dynamically include styles
+            fetch('regions/styles.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('styles').outerHTML = data;
+                });
+
+            // Dynamically include scripts
+            fetch('regions/scripts.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('scripts').outerHTML = data;
+                });
+            fetch('regions/menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;
+                });
+
+            fetch('regions/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+            fetch('regions/content.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('scripts').outerHTML = data;
+                });
+            fetch('regions/content-logos.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('scripts').outerHTML = data;
+                });
+        </script>
+    </head>
+
+
+    <title>Legal Design Summit</title>
+
+</head>
+
+<body class="default-page-class">
+
+    <!-- Assuming the site is always active in the static version -->
+
+
+    <!-- Wrapper // Menu Section Begins -->
+
+    <div class="wrapper menu fluid">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Menu Section Begins -->
+
+            <div id="menu">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+
+                    <div id="menu"></div>
+                    <script>
+                        fetch('regions/menu.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('menu').innerHTML = data;
+                            });
+                    </script>
+
+
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- Menu Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+    </div>
+
+    <!-- Wrapper // Menu Section Ends -->
+
+
+
+
+
+    <!-- Wrapper // Header Section Begins -->
+
+    <div class="wrapper header">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Header Section Begins -->
+
+            <div id="header">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+
+                    <div id="header"></div>
+                    <script>
+                        // Dynamically include the header
+                        fetch('regions/header.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('header').innerHTML = data;
+                            });
+                    </script>
+
+
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- HEADER Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+        <a href="#" class="scroll-down"></a>
+
+    </div>
+
+    <!-- Wrapper // Header Section Ends -->
+
+
+
+
+
+    <!-- Wrapper // Content Section Begins -->
+
+    <div class="wrapper fluid fill content">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Content Section Begins -->
+
+            <div id="content">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+                    <script>
+                        fetch('regions/content.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('scripts').outerHTML = data;
+                            });
+                    </script>
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- Content Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+    </div>
+
+    <!-- Wrapper // Content Section Ends -->
+
+    <body class="home-page">
+
+        <!-- Wrapper // Content Spacer Section Begins -->
+
+        <div class="wrapper spacer"></div>
+
+        <!-- Wrapper // Content Spacer Section Ends -->
+
+
+
+
+
+
+
+        <!-- Wrapper // Content Logos Section Begins -->
+
+        <div class="wrapper logos">
+
+            <!-- Container Section Begins -->
+
+            <div class="container">
+
+                <!-- Content Section Begins -->
+
+                <div id="content-logos">
+
+                    <!-- Content Main Section Begins -->
+
+                    <div class="content-main">
+
+                        <script>
+                            fetch('regions/content-logos.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('scripts').outerHTML = data;
+                                });
+                        </script>
+
+                    </div>
+
+                    <!-- Content Main Section Ends -->
+
+                </div>
+
+                <!-- Content Section Ends -->
+
+            </div>
+
+            <!-- Container Section Ends -->
+
+        </div>
+
+        <!-- Wrapper // Content Logos Section Ends -->
+
+
+
+
+
+        <!-- Wrapper // Content Actions Section Begins -->
+
+        <div class="wrapper actions">
+
+            <!-- Container Section Begins -->
+
+            <div class="container">
+
+                <!-- Content Section Begins -->
+
+                <div id="content-actions">
+
+                    <!-- Content Main Section Begins -->
+
+                    <div class="content-main">
+                        <script>
+                            fetch('regions/content-logos.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('scripts').outerHTML = data;
+                                });
+                        </script>
+                    </div>
+
+                    <!-- Content Main Section Ends -->
+
+                </div>
+
+                <!-- Content Section Ends -->
+
+            </div>
+
+            <!-- Container Section Ends -->
+
+        </div>
+
+        <!-- Wrapper // Content Actions Section Ends -->
+
+
+
+
+
+        <!-- Wrapper // Footer Section Begins -->
+
+        <div class="wrapper footer">
+
+            <!-- Container Section Begins -->
+
+            <div class="container">
+
+                <!-- Footer Section Begins -->
+
+                <div id="footer">
+
+                    <!-- Content Main Section Begins -->
+
+                    <div class="content-main">
+
+                        <script>
+                            fetch('regions/footer.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('footer').innerHTML = data;
+                                });
+                        </script>
+                    </div>
+
+                    <!-- Content Main Section Ends -->
+
+                </div>
+
+                <!-- Footer Section Ends -->
+
+            </div>
+
+            <!-- Container Section Ends -->
+
+            <a href="#" class="scroll-up"></a>
+
+        </div>
+
+        <!-- Wrapper // Footer Section Ends -->
+
+    </body>
+
+</html>
