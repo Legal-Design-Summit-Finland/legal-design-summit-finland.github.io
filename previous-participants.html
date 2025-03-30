@@ -1,0 +1,620 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:site_name" content="Legal Design Summit" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Legal Design Summit - Sectors Represented" />
+    <meta property="og:image" content="images/meta.png" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+
+    <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
+    <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
+    <title>Legal Design Summit - Sectors Represented</title>
+    <style>
+        /* Base styles */
+        .sectors-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .sectors-header {
+            background: linear-gradient(to right, #7DDFD3, #aeede8);
+            padding: 24px;
+        }
+
+        .sectors-header h2 {
+            color: #333;
+            margin: 0 0 4px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .sectors-header p {
+            color: #333;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Content */
+        .sectors-content {
+            padding: 16px;
+        }
+
+        .stats-container {
+            background-color: rgba(174, 237, 232, 0.3);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .stats-number {
+            font-weight: bold;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .stats-label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Charts layout */
+        .charts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .chart-column {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .chart-box {
+            border: 1px solid #7DDFD3;
+            border-radius: 6px;
+            padding: 16px;
+            height: 350px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-container {
+            flex: 1;
+            position: relative;
+            min-height: 200px;
+        }
+
+        /* Legend styling */
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            margin-top: 15px;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            margin-bottom: 6px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .legend-label {
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Testimonials */
+        .testimonials-container {
+            margin-top: 24px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .testimonial-card {
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #7DDFD3;
+            background-color: rgba(174, 237, 232, 0.2);
+            position: relative;
+        }
+
+        .testimonial-card:nth-child(odd) {
+            background-color: rgba(174, 237, 232, 0.4);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #333;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .testimonial-card:after {
+            content: '"';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 40px;
+            color: rgba(125, 223, 211, 0.5);
+            font-family: Georgia, serif;
+        }
+
+        /* Footer */
+        .sectors-footer {
+            padding: 16px;
+            font-size: 12px;
+            border-top: 1px solid #7DDFD3;
+            background-color: rgba(174, 237, 232, 0.1);
+            color: #555;
+            text-align: center;
+        }
+
+        .footer-bar {
+            height: 8px;
+            width: 220px;
+            background-color: #7DDFD3;
+            margin: 0 auto 10px;
+        }
+
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .charts-container {
+                flex-direction: row;
+            }
+
+            .chart-column {
+                width: 50%;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid>div:last-child {
+                grid-column: span 2;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .legend {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body class="active">
+
+    <!-- Wrapper // Menu Section Begins -->
+
+    <div class="wrapper menu fluid">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Menu Section Begins -->
+
+            <div id="menu">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+
+                    <div class="block menu-main">
+                        <div class="content">
+
+                            <div class="menu-toggler">Menu<span class="icon"></span></div>
+
+                            <div class="menu-container">
+                                <ul class="menu">
+                                    <li class=" first"><a href="index.html">Home</a></li>
+                                    <li class=""><a href="program-thursday.html">Program Loading...</a></li>
+                                    <li class=""><a href="speakers-thursday.html">Call for Speakers!</a></li>
+                                    <li class=""><a href="previous-participants.html">Who is attending?</a></li>
+                                    <li class=""><a href="about-us.html">Meet the team</a></li>
+                                    <li class=""><a href="tickets.html">Tickets</a></li>
+                                    <li class=" last"><a href="why-attend.html">History</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- Menu Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+    </div>
+
+    <!-- Wrapper // Menu Section Ends -->
+
+    <!-- Wrapper // Header Section Begins -->
+
+    <div class="wrapper fluid fill header" style="background-image: url('images/backgrounds/bg-1.jpg');">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Header Section Begins -->
+
+            <div id="header">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+
+                    <div class="block header-main">
+
+                        <div class="content">
+
+                            <div class="title-container">
+                                <div class="title">
+                                    <h1>Who is Attending<br><span style="color: #c30979;">Legal Design Summit</span>
+                                    </h1>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- Header Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+    </div>
+
+    <!-- Wrapper // Header Section Ends -->
+
+    <!-- Wrapper // Content Section Begins -->
+
+    <div class="wrapper fluid fill content">
+
+        <!-- Container Section Begins -->
+
+        <div class="container">
+
+            <!-- Content Section Begins -->
+
+            <div id="content">
+
+                <!-- Content Main Section Begins -->
+
+                <div class="content-main">
+
+                    <div class="sectors-container">
+                        <div class="sectors-header">
+                            <h2 style="text-align: center;">Explore the diverse community at Legal Design Summit!</h2>
+                        </div>
+
+                        <div class="sectors-content">
+                            <div class="stats-container">
+                                <span class="stats-number">600+</span>
+                                <span class="stats-label">Total Attendees in 2023</span>
+                            </div>
+
+                            <div class="charts-container">
+                                <!-- Pie Chart -->
+                                <div class="chart-column">
+                                    <h3 class="section-title">Sectors Distribution</h3>
+                                    <div class="chart-box">
+                                        <div class="chart-container">
+                                            <canvas id="sector-pie-chart"></canvas>
+                                        </div>
+                                        <div id="sector-pie-legend" class="legend"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Bar Chart -->
+                                <div class="chart-column">
+                                    <h3 class="section-title">Top 5 Sectors</h3>
+                                    <div class="chart-box">
+                                        <canvas id="sector-bar-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonials -->
+                            <div class="testimonials-container">
+                                <h3 class="section-title">Testimonials for Legal Design Summit</h3>
+                                <div class="testimonials-grid">
+                                    <div class="testimonial-card">
+                                        <p class="testimonial-text">"Unbelievable! From the organisation, the
+                                            volunteers, the speakers and the topics covered."</p>
+                                    </div>
+                                    <div class="testimonial-card">
+                                        <p class="testimonial-text">"Absolutley wonderful experience."</p>
+                                    </div>
+                                    <div class="testimonial-card">
+                                        <p class="testimonial-text">"Amazing. Not only because of the quality of content
+                                            and speakers but also thanks to all these volunteers to putting their time,
+                                            energy and brain juices to organise this event and make it accessible for
+                                            all."</p>
+                                    </div>
+                                    <div class="testimonial-card">
+                                        <p class="testimonial-text">"As a speaker, I felt extremely grateful to be
+                                            speaking at the prestigious Summit."</p>
+                                    </div>
+                                    <div class="testimonial-card">
+                                        <p class="testimonial-text">"What you pulled off is so impressive. The community
+                                            is great. People were approachable and friendly and you could just feel that
+                                            they were all having a good time. Everybody was always smiling. It was a
+                                            happy place all week!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sectors-footer">
+                            <div class="footer-bar"></div>
+                            Data based on previous Legal Design Summit attendance
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Content Main Section Ends -->
+
+            </div>
+
+            <!-- Content Section Ends -->
+
+        </div>
+
+        <!-- Container Section Ends -->
+
+    </div>
+
+    <!-- Wrapper // Content Section Ends -->
+
+    <div class="wrapper actions" style="background-color: white; padding-bottom: 0px;">
+        <div class="container">
+            <div id="content-actions">
+                <div class="content-main">
+                    <div class="padding-top-40"></div>
+                    <div class="social-media padding-top-40 justify-center">
+                        <div class="row col">
+                            <a href="https://www.linkedin.com/company/10936008/"
+                                class="icon linkedin col-3 margin-right-5" target="_blank">LinkedIn</a>
+                            <a href="https://www.facebook.com/legaldesignsummit/"
+                                class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/legaldesignsummit/"
+                                class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
+                            <a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5"
+                                target="_blank">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper footer" style="background-color: white; padding-top: 40px;">
+        <div class="container">
+            <div class="content-main">
+                <div class="justify-center">
+                    <p style="color: #7ddad0; font-weight: bold;"><a style="color: black; font-weight: normal;"
+                            href="mailto:info@legaldesignsummit.com"> info@legaldesignsummit</a> | <a
+                            style="color: black;  font-weight: normal;" href="https://forms.gle/yFSxNdMBgnmbwZdWA">
+                            Whistleblower Form</a> | <a style="color: black;  font-weight: normal;"
+                            href="privacy.html">Privacy Policy</a> | <a style="color: black;  font-weight: normal;"
+                            href="privacy-rec.html">Recruitment Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="scroll-up" style="padding-top: 30px; padding-bottom: 10px; margin-bottom: 0px;"></a>
+    </div>
+
+    <script>
+        // Sector data
+        const sectorData = [
+            { name: "Legal Services", value: 62, percentage: 39 },
+            { name: "Education", value: 26, percentage: 16 },
+            { name: "Legal Technology", value: 10, percentage: 6 },
+            { name: "Information Technology", value: 8, percentage: 5 },
+            { name: "Legal Innovation", value: 7, percentage: 4 },
+            { name: "Public Administration", value: 7, percentage: 4 },
+            { name: "Design Services", value: 6, percentage: 4 },
+            { name: "Legal Design", value: 5, percentage: 3 },
+            { name: "Social Causes", value: 5, percentage: 3 },
+            { name: "Other", value: 25, percentage: 16 }
+        ];
+
+        // Colors for charts
+        const COLORS = [
+            '#7DDFD3',
+            '#5eb8af',
+            '#4a9993',
+            '#333333',
+            '#555555',
+            '#c30979',
+            '#9a0861',
+            '#e840a5',
+            '#720649',
+            '#444444',
+            '#666666'
+        ];
+
+        // Render the charts when page loads
+        window.onload = function () {
+            // Sector Pie Chart
+            const sectorPieCtx = document.getElementById('sector-pie-chart').getContext('2d');
+            new Chart(sectorPieCtx, {
+                type: 'pie',
+                data: {
+                    labels: sectorData.map(item => item.name),
+                    datasets: [{
+                        data: sectorData.map(item => item.value),
+                        backgroundColor: sectorData.map((_, index) => COLORS[index % COLORS.length]),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            bottom: 10
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const percentage = sectorData[context.dataIndex].percentage;
+                                    return `${label}: ${value} attendees (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Create custom legend for sector pie chart
+            const sectorLegend = document.getElementById('sector-pie-legend');
+            sectorData.forEach((item, index) => {
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+
+                const colorBox = document.createElement('div');
+                colorBox.className = 'legend-color';
+                colorBox.style.backgroundColor = COLORS[index % COLORS.length];
+
+                const label = document.createElement('span');
+                label.className = 'legend-label';
+                label.textContent = `${item.name}: ${item.percentage}%`;
+
+                legendItem.appendChild(colorBox);
+                legendItem.appendChild(label);
+                sectorLegend.appendChild(legendItem);
+            });
+
+            // Sector Bar Chart (top 5)
+            const sectorBarCtx = document.getElementById('sector-bar-chart').getContext('2d');
+            const top5Sectors = sectorData.slice(0, 5);
+            new Chart(sectorBarCtx, {
+                type: 'bar',
+                data: {
+                    labels: top5Sectors.map(item => item.name),
+                    datasets: [{
+                        axis: 'y',
+                        data: top5Sectors.map(item => item.value),
+                        backgroundColor: top5Sectors.map((_, index) => COLORS[index % COLORS.length]),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const value = context.parsed.x || 0;
+                                    const percentage = top5Sectors[context.dataIndex].percentage;
+                                    return `${value} attendees (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(125, 223, 211, 0.3)'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>
