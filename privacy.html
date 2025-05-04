@@ -1,720 +1,1094 @@
 <!doctype html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:site_name" content="Legal Design Summit" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Legal Design Summit" />
-    <meta property="og:image" content="images/meta.png" />
-    
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 
-    <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
-	<script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:site_name" content="Legal Design Summit" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Legal Design Summit" />
+	<meta property="og:image" content="images/meta.png" />
+
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+
+	<script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
 	<script>
-		$(function(){ 
-			$("#footer").load("footer.html"); 
+		$(function () {
+			$("#footer").load("footer.html");
 		});
 	</script>
 
 	<title>Legal Design Summit</title>
 	<style>
-		.title {color: #c30979; text-align: center;}
-		.subtitle {text-transform: uppercase; color: #c30979;}
-		.column-container {display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;}
-		.column {flex: 1;}
-		.image-container {display: flex; margin-right: 10px;}
-		.image-container img {max-width: 100%; height: auto; margin-right: 10px;}
-		.bold {font-weight: bold;}
-		.underline {text-decoration: underline; color: #c30979;}
-		.padded-cell {padding-left: 10px; padding-right: 10px; border-collapse: collapse;}
-		.textbox{width: 1200px; margin: 0 auto; text-align: left; overflow-wrap: break-word;}
-		.table-cell{padding: 10px; margin: 10px; vertical-align: top; border: 0.5px solid #c30979; border-collapse: collapse;}
-		.table-cell2{padding: 10px; margin: 10px; vertical-align: top; background-color: #aeede8;  border: 0.5px solid #c30979; border-collapse: collapse;}
-		.table-cell3{padding: 10px; margin: 10px; vertical-align: top; color:#c30979; font-weight: bold; border: 0.5px solid #c30979; border-collapse: collapse;}
-		.table-cell4{padding: 10px; margin: 10px; vertical-align: top; background-color: #aeede8; border: 0.5px solid #c30979; border-collapse: collapse;}
-		.table-cell5{padding: 10px; line-height: normal; vertical-align: top; text-align: left; border: 0.5px solid #c30979; border-collapse: collapse; background-color: #c30979; color:white; font-weight: bold; font-size: 80%;}
-		.table-cell6{padding: 10px; line-height: normal; vertical-align: top; text-align: left; border: 0.5px solid #c30979; border-collapse: collapse; font-size: 80%;}
-		.blank_row{height: 10px; background-color: #FFFFFF;}
-		.visible-mobile{display: none;}
+		.title {
+			color: #c30979;
+			text-align: center;
+		}
+
+		.subtitle {
+			text-transform: uppercase;
+			color: #c30979;
+		}
+
+		.column-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-top: 20px;
+		}
+
+		.column {
+			flex: 1;
+		}
+
+		.image-container {
+			display: flex;
+			margin-right: 10px;
+		}
+
+		.image-container img {
+			max-width: 100%;
+			height: auto;
+			margin-right: 10px;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.underline {
+			text-decoration: underline;
+			color: #c30979;
+		}
+
+		.padded-cell {
+			padding-left: 10px;
+			padding-right: 10px;
+			border-collapse: collapse;
+		}
+
+		.textbox {
+			width: 1200px;
+			margin: 0 auto;
+			text-align: left;
+			overflow-wrap: break-word;
+		}
+
+		.table-cell {
+			padding: 10px;
+			margin: 10px;
+			vertical-align: top;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+		}
+
+		.table-cell2 {
+			padding: 10px;
+			margin: 10px;
+			vertical-align: top;
+			background-color: #aeede8;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+		}
+
+		.table-cell3 {
+			padding: 10px;
+			margin: 10px;
+			vertical-align: top;
+			color: #c30979;
+			font-weight: bold;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+		}
+
+		.table-cell4 {
+			padding: 10px;
+			margin: 10px;
+			vertical-align: top;
+			background-color: #aeede8;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+		}
+
+		.table-cell5 {
+			padding: 10px;
+			line-height: normal;
+			vertical-align: top;
+			text-align: left;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+			background-color: #c30979;
+			color: white;
+			font-weight: bold;
+			font-size: 80%;
+		}
+
+		.table-cell6 {
+			padding: 10px;
+			line-height: normal;
+			vertical-align: top;
+			text-align: left;
+			border: 0.5px solid #c30979;
+			border-collapse: collapse;
+			font-size: 80%;
+		}
+
+		.blank_row {
+			height: 10px;
+			background-color: #FFFFFF;
+		}
+
+		.visible-mobile {
+			display: none;
+		}
 
 
-	@media only screen and (max-width: 767px) {
-  .column-container {
-    display: flex;
-    flex-direction: column;
-  }
+		@media only screen and (max-width: 767px) {
+			.column-container {
+				display: flex;
+				flex-direction: column;
+			}
 
-  td {
-	font-size: 60%;
-	line-height: normal;
-  }
+			td {
+				font-size: 60%;
+				line-height: normal;
+			}
 
-  .hidden-mobile {
-	display: none;
-  }
+			.hidden-mobile {
+				display: none;
+			}
 
-  .visible-mobile {
-	display: block;
-  }
-  
-
-  .right-container {
-    height: auto;
-  }
-
-  .padded-cell {padding-left: 10px; padding-right: 10px; border-collapse: collapse; font-size: 60%;}
-}
+			.visible-mobile {
+				display: block;
+			}
 
 
+			.right-container {
+				height: auto;
+			}
+
+			.padded-cell {
+				padding-left: 10px;
+				padding-right: 10px;
+				border-collapse: collapse;
+				font-size: 60%;
+			}
+		}
 	</style>
-  </head>
+</head>
 
-  <body class="active">
-    <div class="wrapper menu fluid">
-      <div class="container">
-        <div id="menu">
-          <div class="content-main">
-	    <div class="block menu-main">
-	      <div class="content">
-		<div class="menu-toggler">Menu<span class="icon"></span></div>
-		<div class="menu-container">
-		  <ul class="menu"><li class=" first"><a href="index.html">Home</a></li>
-		    <li class=""><a href="program-thursday.html">Program</a></li>
-			<li class=""><a href="brainfactory.html">BrainFactory</a></li>
-		    <li class=""><a href="about-us.html">About Us</a></li>
-			<li class=""><a href="tickets.html">Tickets</a></li>
-			<li class=""><a href="speakers-thursday.html">Speakers</a></li>
-		    <li class=" last"><a href="why-attend.html">History</a></li>
-		  </ul>
-		</div>
-	      </div>
-	    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="wrapper privacy" id="section-privacy">
-      <div class="container">
-        <div id="content-privacy" class="justify-center">
-			<h2 class="subtitle">Privacy policy</h2>
-	  <p>Updated 9.4.2023</p>
-      </div>
-	  <div class="column-container">
-		<div class="column">
-			<h4 class="subtitle">1 WHO IS THE CONTROLLER AND HOW I CAN CONTACT IT?</h4>
-			<p>Legal Design Finland ry is the non-profit organization behind the event Legal Design Summit, BrainFactory and related side events. Our work towards making our events possible includes actions such as maintaining and providing the website <span class="underline">legaldesignsummit.com</span> as well as acquiring partners and speakers and providing related services such as online registration to our events.</p>
-			<p>To organize the event and to ensure the most wonderful experience for our participants, we collect and process personal data of Summit participants that have reserved a ticket through our ticket store, have sponsored the event through one of our partnership packages or have otherwise interacted with the Summit.</p>
-			<p>While doing this Legal Design Finland ry determines the purposes for which and the means by which personal data is processed, making Legal Design Finland ry the <span class="bold">data controller</span>.</p>
-		</div>
-		<div class="column">
-			<p style="margin-bottom: 20px;">The purpose of this Privacy Policy is to describe:</p>
-			<div class="image-container" style="display: flex; align-items: center; margin-bottom: 20px;">
-			  <img src="images/privacy/icon-1.png" alt="Logo 1" style="max-width: 70px; margin-right: 10px;">
-			  <p style="margin: 0;"><span class="bold">which</span> personal data we process,</p>
-			</div>
-			<div class="image-container" style="display: flex; align-items: center; margin-bottom: 20px;">
-			  <img src="images/privacy/icon-2.png" alt="Logo 2" style="max-width: 70px; margin-right: 10px;">
-			  <p style="margin: 0;"><span class="bold">how</span> and <span class="bold">why</span> the data is processed, and</p>
-			</div>
-			<div class="image-container" style="display: flex; align-items: center;">
-			  <img src="images/privacy/icon-3.png" alt="Logo 3" style="max-width: 70px; margin-right: 10px;">
-			  <p style="margin: 0;"><span class="bold">what rights do you have as a data subject</span>, and <span class="bold">how you can exercise them</span> to influence how your data is processed.</p>
-			</div>
-		  </div>
-		</div>
-    </div>
+<body class="active">
+	<div class="wrapper menu fluid">
+		<div class="container">
+			<div id="menu">
+				<div class="content-main">
+					<div class="block menu-main">
+						<div class="content">
+							<div class="menu-toggler">Menu<span class="icon"></span></div>
+							<div class="menu-container">
+								<ul class="menu">
+									<li class=" first"><a href="index.html">Home</a></li>
 
-	<div class="table-container">
-		<table style="width: 100%; margin: 0 auto; background-color: #aeede8; border: 0.5px solid #c30979; border-collapse: collapse; max-width: 850px">
-			<colgroup>
-			  <col style="width: 50%;">
-			  <col style="width: 17%">
-			  <col style="width: 33%;">
-			</colgroup>
-			<tbody>
-			  <tr>
-				<td class="padded-cell" style="text-align: right; vertical-align: middle;" rowspan="3">
-					<p>We at Legal Design Finland ry process your data responsibly and we want to be worthy of your trust. If you have any questions or concerns regarding this Privacy Policy – or if you for example want to exercise any of your rights as a data subject, you can always contact us using these contact details:</p>
-				</td>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p style="color: #c30979; font-weight: bold;">NAME</p>
-				</td>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p>Legal Design Finland ry</p>
-				</td>
-			  </tr>
-			  <tr>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p style="color: #c30979; font-weight: bold;">BUSINESS ID</p>
-				</td>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p>3017417-5</p>
-				</td>
-			  </tr>
-			  <tr>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p style="color: #c30979; font-weight: bold;">EMAIL</p>
-				</td>
-				<td class="padded-cell" style="text-align: left; vertical-align: middle;">
-					<p><span class="underline">privacy@legaldesignsummit.com</span></p>
-				</td>
-			  </tr>
-			</tbody>
-		  </table>
-    </div>
+									<li class=" first"><a href="brainfactory.html">Brainfactory workshops</a></li>
+									<li class=""><a href="program-thursday.html">Program Loading...</a></li>
 
-	<div class="container" style="margin-top: 20px;">
-		<div class="column">
-			<h4 class="subtitle" style="margin-top: 50px;">2 WHEN, WHAT AND WHY?</h4>
-			<p>There are multiple situations where collecting and processing your personal data is either useful or necessary - or both - for us to produce our event and to ensure the best possible experience for our participants, speakers, and representatives of our partners.</p>
+									<li class=""><a href="previous-participants.html">Who is attending?</a></li>
+									<li class=""><a href="about-us.html">Meet the team</a></li>
+									<li class=""><a href="tickets.html">Tickets</a></li>
+									<li class=" last"><a href="why-attend.html">History</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<div class="wrapper privacy" id="section-privacy">
+		<div class="container">
+			<div id="content-privacy" class="justify-center">
+				<h2 class="subtitle">Privacy policy</h2>
+				<p>Updated 9.4.2023</p>
+			</div>
+			<div class="column-container">
+				<div class="column">
+					<h4 class="subtitle">1 WHO IS THE CONTROLLER AND HOW I CAN CONTACT IT?</h4>
+					<p>Legal Design Finland ry is the non-profit organization behind the event Legal Design Summit,
+						BrainFactory and related side events. Our work towards making our events possible includes
+						actions such as maintaining and providing the website <span
+							class="underline">legaldesignsummit.com</span> as well as acquiring partners and speakers
+						and providing related services such as online registration to our events.</p>
+					<p>To organize the event and to ensure the most wonderful experience for our participants, we
+						collect and process personal data of Summit participants that have reserved a ticket through our
+						ticket store, have sponsored the event through one of our partnership packages or have otherwise
+						interacted with the Summit.</p>
+					<p>While doing this Legal Design Finland ry determines the purposes for which and the means by which
+						personal data is processed, making Legal Design Finland ry the <span class="bold">data
+							controller</span>.</p>
+				</div>
+				<div class="column">
+					<p style="margin-bottom: 20px;">The purpose of this Privacy Policy is to describe:</p>
+					<div class="image-container" style="display: flex; align-items: center; margin-bottom: 20px;">
+						<img src="images/privacy/icon-1.png" alt="Logo 1" style="max-width: 70px; margin-right: 10px;">
+						<p style="margin: 0;"><span class="bold">which</span> personal data we process,</p>
+					</div>
+					<div class="image-container" style="display: flex; align-items: center; margin-bottom: 20px;">
+						<img src="images/privacy/icon-2.png" alt="Logo 2" style="max-width: 70px; margin-right: 10px;">
+						<p style="margin: 0;"><span class="bold">how</span> and <span class="bold">why</span> the data
+							is processed, and</p>
+					</div>
+					<div class="image-container" style="display: flex; align-items: center;">
+						<img src="images/privacy/icon-3.png" alt="Logo 3" style="max-width: 70px; margin-right: 10px;">
+						<p style="margin: 0;"><span class="bold">what rights do you have as a data subject</span>, and
+							<span class="bold">how you can exercise them</span> to influence how your data is processed.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-
-	<!-- TABLE FOR PC and LARGE SCREENS-->
-	<div class="hidden-mobile">
-	<div class="table-container">
-	<table style="max-width: 1200px; margin: 0 auto; text-align: left;">
-		<colgroup>
-			<col style="width: 17%;">
-			<col style="width: 13%;">
-			<col style="width: 55%;">
-			<col style="width: 15%;">
-		  </colgroup>
-		<tbody>
-		<tr style="background-color: #c30979; color:white; font-weight: bold;">
-		  <td class="table-cell">WHAT KIND OF DATA DO WE COLLECT?</td>
-		  <td class="table-cell">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-		  <td class="table-cell">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-		  <td class="table-cell">HOW LONG IS MY DATA STORED?</td>
-		</tr>
-		<tr style="background-color: #50cec1; color:white; font-weight: bold;">
-		  <td colspan="4" class="table-cell">TICKETS & PARTICIPATION</td>
-		</tr>
-		<tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail</li>
-				</ul></td>
-			<td class="table-cell3">A CONTRACT</td>
-			<td class="table-cell">This data is necessary for us to reserve and deliver you a ticket to the Summit. We collect this data when you register as a participant to the Summit.</td>
-			<td class="table-cell">1 year from the Summit that you participated in*</td>
-		</tr>
-		<tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail</li>
-				<li>Billing address</li>
-				</ul></td>
-			<td class="table-cell3">A CONTRACT & CONTROLLER’S LEGAL OBLIGATION</td>
-			<td class="table-cell">If you have reserved a ticket but are not able to attend - and do not cancel your ticket or have someone else attend on your behalf – according to our terms, we will invoice you for the no-show. This also lengthens the storage period of your data due to legal obligations related to bookkeeping regulations.</td>
-			<td class="table-cell">Maximum of 10 years*</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail</li>
-				<li>Country</li>
-				<li>Occupation and/or organization</li>
-				</ul></td>
-			<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
-			<td class="table-cell">If you apply as a participant to the BrainFactory, you can choose to provide descriptive data such as your education and work experience and other related details. This data will be processed to enable the BrainFactory team to build the most diverse, engaging and inspiring BrainFactory teams possible for the best BrainFactory experience. We will also use the data to gather your feedback on BrainFactory and develop BrainFactory to be better in the future.</td>
-			<td class="table-cell">2,5 years*</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>Contact information</li>
-				<li>Details of the situation</li>
-				</ul></td>
-			<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
-			<td class="table-cell">We may process your personal data before the Summit, during the Summit, or after the Summit for customer service purposes.</td>
-			<td class="table-cell">As long as necessary for the customer service situation to be solved but no more than 3 years.</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>Country</li>
-				<li>Occupation and/or organization</li>
-				</ul></td>
-			<td class="table-cell3">CONSENT & LEGITIMATE INTERESTS</td>
-			<td class="table-cell">
-				You can choose whether you want to provide this data when e.g., registering as a participant or becoming a partner through one of our partnership packages. There are four purposes to why data would be processed – these you may choose to add to your registration form voluntarily:
-				<ul style="list-style-type: disc; padding-left: 20px">
-					<li><span class="bold">Occupation/organization printed in participant’s name tag</span> alongside their name to help participants better build connections at the Summit</li>
-					<li>Prior to the event, we will process all country data collected to create <span class="bold">an anonymized map of all the countries represented at the Summit</span> to be shared during the Summit and through our social media.</li>
-					<li>We may pseudonymize and whenever possible anonymize this personal data for development purposes: to understand our participants better and to be able to provide a better Summits in the future.</li>	
-				</ul>
-				We also process the below-mentioned personal data for the below-mentioned purpose based on your consent that is collected at the registering. Please note that you can change your consent at any time. You can do this by yourself through the ticket system until 14.8.2023, 10 AM, and after that by emailing <span class="underline">privacy@legaldesignsummit.com</span>.
-				<ul style="list-style-type: disc; padding-left: 20px">
-					<li>Prior to the event, we will process all entity/organization data to create <span class="bold">a pseudonymized list of all entities/organizations represented at the Summit</span> to be shared to other participants prior to the event.</li>	
-				</ul>
-			</td>
-			<td class="table-cell">2,5 years*</td>
-		  </tr>
-		  <tr style="background-color: #50cec1; color:white; font-weight: bold;">
-			<td colspan="4" class="table-cell">PARTNERSHIPS</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>Contact details provided or acquired, e.g,  e-mail address</li>
-				<li>Occupation/role at the company or organization you represent</li>
-				<li>Name and contact details of the company or organization you represent</li>
-				</ul></td>
-			<td class="table-cell3">LEGITIMATE INTERESTS</td>
-			<td class="table-cell">When you are a representative of our partner, we process your personal data on the basis of legitimate interest.  Before we have agreed upon collaboration we process your publicly available personal data for the purpose of contacting you and possibly entering into an agreement with you.<br><br>
-				When we have agreed upon collaboration we will process your personal information in order to fill our obligations to the entity that you represent.<br><br>
-				After the Summit we might contact you to request feedback regarding the Summit or to inquire about your interest in entering into a new partnership in the future.</td>
-			<td class="table-cell">2,5 years*</td>
-		  </tr>
-		  <tr style="background-color: #50cec1; color:white; font-weight: bold;">
-			<td colspan="4" class="table-cell">CUSTOMER SATISFACTION, MARKETING & SOCIAL MEDIA</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail and/or social media username depending on how you choose to interact with us</li>
-				<li>Other descriptive data (for example your feedback to us)</li>
-				</ul></td>
-			<td class="table-cell3">LEGITIMATE INTERESTS</td>
-			<td class="table-cell">We always want to learn how to make the Summit better and more interesting for our community. For this reason we process customer satisfaction data for analysis, for compiling statistics and reporting actions, for the purposes of developing our event and improving our participant’s experience. We utilize anonymization or pseudonymization whenever possible.<br><br>
-				We collect and process your personal data for processing when you contact us, interact with us in social media, participate in our events, or take part in surveys and opinion polls, allowing us to gain a better understanding of our participants and thereby make the event better for you.</td>
-			<td class="table-cell">2,5 years*</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>Visual recordings</li>
-				</ul></td>
-			<td class="table-cell3">LEGITIMATE INTERESTS & CONSENT</td>
-			<td class="table-cell">We take photographs and record video at all our events. We will ask for your consent if we photograph you in particular for a portrait and not the whole audience or ambiance. </td>
-			<td class="table-cell">If your consent is required and collected, visual recording of you are stored according to your consent. </td>
-		  </tr>
-		  <tr style="background-color: #50cec1; color:white; font-weight: bold;">
-			<td colspan="4" class="table-cell">SPEAKERS</td>
-		  </tr>
-		  <tr>
-			<td class="table-cell2"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail</li>
-				<li>Entity you represent (if applicable)</li>
-				<li>Your designation or position</li>
-			</ul> Optional descriptive data to help us build as diverse Summit as possible:
-			<ul style="list-style-type: disc; padding-left: 20px">
-				<li>Gender</li>
-				<li>Country or region</li>
-				<li>Nationality</li>
-				<li>Age</li>
-				<li>Mother tongue</li>
-				<li>Sector you work in/represent</li>
-				<li>Other details you may submit on your experience/background</li>
-				<li>LinkedIn profile</li>
-			</ul>
-			</td>
-			<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
-			<td class="table-cell">Prior to agreeing on participating the Summit as a speaker, BrainFactory mentor, or other presenter, or obtaining your consent through our call for speakers form or other ways, or on the basis of our legitimate interests, we process personal data that is available on public sources or that b) has been collected of our past speakers or sponsors for us to plan and explore potential speakers and/or partners for the summit. <br><br>
-				If you submit your personal data when registering as a speaker through our call for speakers form or by contacting us, we process your personal data based on your consent (optional fields in the form) or our legitimate interest (mandatory fields in the form) for us to plan the most interesting and diverse speakers for the summit.<br><br>
-				After agreeing with you on a presentation or other similar participation, we will process your personal data based on our contract to manage our relationship with you and to make the summit possible. This includes processing actions such as contacting you regarding your role as a speaker or other similar participant and delivering your ticket to you.<br><br>
-				After the summit, we may process your personal data based on our legitimate interests for us to contact you to hear about your experience at the summit and to inquire about you returning as a speaker. 
-				</td>
-			<td class="table-cell">No more than 2,5 years from the latest Summit you participated in this capacity*</td>
-		  </tr>
-		</tbody>
-	  </table>
-	</div>
-	</div>
-
-	<!-- Same tabe but now for mobile site-->
-
-	<div class="visible-mobile">
 		<div class="table-container">
-			<table style="border: solid 1px black;">
+			<table
+				style="width: 100%; margin: 0 auto; background-color: #aeede8; border: 0.5px solid #c30979; border-collapse: collapse; max-width: 850px">
 				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 80%;">
+					<col style="width: 50%;">
+					<col style="width: 17%">
+					<col style="width: 33%;">
 				</colgroup>
-				<tr style="background-color: #50cec1; color:white; font-weight: bold;">
-					<td colspan="2" class="table-cell">TICKETS & PARTICIPATION</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-				<li>First and last name</li>
-				<li>E-mail</li>
-				</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">This data is necessary for us to reserve and deliver you a ticket to the Summit. We collect this data when you register as a participant to the Summit.</td>
-				</tr>
-				<tr >
-					<td class="table-cell5" >HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6" >1 year from the Summit that you participated in*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>E-mail</li>
-						<li>Billing address</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">This data is necessary for us to reserve and deliver you a ticket to the Summit. We collect this data when you register as a participant to the Summit.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">1 year from the Summit that you participated in*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>E-mail</li>
-						<li>Billing address</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT & CONTROLLER’S LEGAL OBLIGATION</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">If you have reserved a ticket but are not able to attend - and do not cancel your ticket or have someone else attend on your behalf – according to our terms, we will invoice you for the no-show. This also lengthens the storage period of your data due to legal obligations related to bookkeeping regulations.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">Maximum of 10 years*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>E-mail</li>
-						<li>Country</li>
-						<li>Occupation and/or organization</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">If you apply as a participant to the BrainFactory, you can choose to provide descriptive data such as your education and work experience and other related details. This data will be processed to enable the BrainFactory team to build the most diverse, engaging and inspiring BrainFactory teams possible for the best BrainFactory experience. We will also use the data to gather your feedback on BrainFactory and develop BrainFactory to be better in the future.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">2,5 years*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>Contact information</li>
-						<li>Details of the situation</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">We may process your personal data before the Summit, during the Summit, or after the Summit for customer service purposes.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">As long as necessary for the customer service situation to be solved but no more than 3 years.</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>Country</li>
-						<li>Occupation and/or organization</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">CONSENT & LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">You can choose whether you want to provide this data when e.g., registering as a participant or becoming a partner through one of our partnership packages. There are four purposes to why data would be processed – these you may choose to add to your registration form voluntarily:
-						<ul style="list-style-type: disc; padding-left: 20px">
-							<li><span class="bold">Occupation/organization printed in participant’s name tag</span> alongside their name to help participants better build connections at the Summit</li>
-							<li>Prior to the event, we will process all country data collected to create <span class="bold">an anonymized map of all the countries represented at the Summit</span> to be shared during the Summit and through our social media.</li>
-							<li>We may pseudonymize and whenever possible anonymize this personal data for development purposes: to understand our participants better and to be able to provide a better Summits in the future.</li>	
-						</ul>
-						We also process the below-mentioned personal data for the below-mentioned purpose based on your consent that is collected at the registering. Please note that you can change your consent at any time. You can do this by yourself through the ticket system until 14.8.2023, 10 AM, and after that by emailing <span class="underline">privacy@legaldesignsummit.com</span>.
-						<ul style="list-style-type: disc; padding-left: 20px">
-							<li>Prior to the event, we will process all entity/organization data to create <span class="bold">a pseudonymized list of all entities/organizations represented at the Summit</span> to be shared to other participants prior to the event.</li>	
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">2,5 years*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr style="background-color: #50cec1; color:white; font-weight: bold;">
-					<td colspan="2" class="table-cell">PARTNERSHIPS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>Contact details provided or acquired, e.g,  e-mail address</li>
-						<li>Occupation/role at the company or organization you represent</li>
-						<li>Name and contact details of the company or organization you represent</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">When you are a representative of our partner, we process your personal data on the basis of legitimate interest.  Before we have agreed upon collaboration we process your publicly available personal data for the purpose of contacting you and possibly entering into an agreement with you.<br><br>
-						When we have agreed upon collaboration we will process your personal information in order to fill our obligations to the entity that you represent.<br><br>
-						After the Summit we might contact you to request feedback regarding the Summit or to inquire about your interest in entering into a new partnership in the future.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">2,5 years*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr style="background-color: #50cec1; color:white; font-weight: bold;">
-					<td colspan="2" class="table-cell">CUSTOMER SATISFACTION, MARKETING & SOCIAL MEDIA</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>E-mail and/or social media username depending on how you choose to interact with us</li>
-						<li>Other descriptive data (for example your feedback to us)</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">We always want to learn how to make the Summit better and more interesting for our community. For this reason we process customer satisfaction data for analysis, for compiling statistics and reporting actions, for the purposes of developing our event and improving our participant’s experience. We utilize anonymization or pseudonymization whenever possible.<br><br>
-						We collect and process your personal data for processing when you contact us, interact with us in social media, participate in our events, or take part in surveys and opinion polls, allowing us to gain a better understanding of our participants and thereby make the event better for you.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">2,5 years*</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>Visual recordings</li>
-						</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">LEGITIMATE INTERESTS & CONSENT</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">We take photographs and record video at all our events. We will ask for your consent if we photograph you in particular for a portrait and not the whole audience or ambiance.</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">If your consent is required and collected, visual recording of you are stored according to your consent.</td>
-				</tr>
-				<tr class="blank_row"><td colspan="2"></td></tr>
-				<tr style="background-color: #50cec1; color:white; font-weight: bold;">
-					<td colspan="2" class="table-cell">SPEAKERS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
-					<td class="table-cell6"><ul style="list-style-type: disc; padding-left: 20px">
-						<li>First and last name</li>
-						<li>E-mail</li>
-						<li>Entity you represent (if applicable)</li>
-						<li>Your designation or position</li>
-					</ul> Optional descriptive data to help us build as diverse Summit as possible:
-					<ul style="list-style-type: disc; padding-left: 20px">
-						<li>Gender</li>
-						<li>Country or region</li>
-						<li>Nationality</li>
-						<li>Age</li>
-						<li>Mother tongue</li>
-						<li>Sector you work in/represent</li>
-						<li>Other details you may submit on your experience/background</li>
-						<li>LinkedIn profile</li>
-					</ul></td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
-					<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
-					<td class="table-cell6">Prior to agreeing on participating the Summit as a speaker, BrainFactory mentor, or other presenter, or obtaining your consent through our call for speakers form or other ways, or on the basis of our legitimate interests, we process personal data that is available on public sources or that b) has been collected of our past speakers or sponsors for us to plan and explore potential speakers and/or partners for the summit. <br><br>
-						If you submit your personal data when registering as a speaker through our call for speakers form or by contacting us, we process your personal data based on your consent (optional fields in the form) or our legitimate interest (mandatory fields in the form) for us to plan the most interesting and diverse speakers for the summit.<br><br>
-						After agreeing with you on a presentation or other similar participation, we will process your personal data based on our contract to manage our relationship with you and to make the summit possible. This includes processing actions such as contacting you regarding your role as a speaker or other similar participant and delivering your ticket to you.<br><br>
-						After the summit, we may process your personal data based on our legitimate interests for us to contact you to hear about your experience at the summit and to inquire about you returning as a speaker. 
-					</td>
-				</tr>
-				<tr>
-					<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
-					<td class="table-cell6">No more than 2,5 years from the latest Summit you participated in this capacity*</td>
-				</tr>
+				<tbody>
+					<tr>
+						<td class="padded-cell" style="text-align: right; vertical-align: middle;" rowspan="3">
+							<p>We at Legal Design Finland ry process your data responsibly and we want to be worthy of
+								your trust. If you have any questions or concerns regarding this Privacy Policy – or if
+								you for example want to exercise any of your rights as a data subject, you can always
+								contact us using these contact details:</p>
+						</td>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p style="color: #c30979; font-weight: bold;">NAME</p>
+						</td>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p>Legal Design Finland ry</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p style="color: #c30979; font-weight: bold;">BUSINESS ID</p>
+						</td>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p>3017417-5</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p style="color: #c30979; font-weight: bold;">EMAIL</p>
+						</td>
+						<td class="padded-cell" style="text-align: left; vertical-align: middle;">
+							<p><span class="underline">privacy@legaldesignsummit.com</span></p>
+						</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
-	</div>
 
-	<div class="container" style="margin-top: 20px;">
-		<div class="column">
-			<p style="margin-top: 20px;">*= Your data may be stored for longer if you a) consent to that, b) there is a legal claim against us and the handling of matters related to such claim are ongoing and c) if we are required to do so to comply with applicable laws.</p>
+		<div class="container" style="margin-top: 20px;">
+			<div class="column">
+				<h4 class="subtitle" style="margin-top: 50px;">2 WHEN, WHAT AND WHY?</h4>
+				<p>There are multiple situations where collecting and processing your personal data is either useful or
+					necessary - or both - for us to produce our event and to ensure the best possible experience for our
+					participants, speakers, and representatives of our partners.</p>
+			</div>
 		</div>
-	</div>
-
-	<div class="table-container">
-		<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
-			<colgroup>
-				<col style="width: 31.5%;">
-				<col style="width: 68.5%;">
-			  </colgroup>
-			<tbody>
-				<tr>
-					<td colspan="2" style="padding: 10px; margin: 10px; vertical-align: top; color:#c30979; font-weight: bold; border: 0.5px solid white; border-collapse: collapse;"><h4 class="subtitle" style="margin-top: 50px;">3 TO WHOM IS YOUR DATA DISCLOSED OR TRANSFERRED TO?</h4></td>
-				</tr>
-				<tr>
-					<td class="table-cell3">WHO CAN ACCESS YOUR DATA?</td>
-					<td class="table-cell">If any of the exceptions below do not apply or you have not consented to anything else, your personal data is only processed within the Legal Design Finland ry.</td>
-				</tr>
-				<tr>
-					<td class="table-cell3">DO WE DISCLOSE YOUR DATA TO THIRD PARTIES?</td>
-					<td class="table-cell">We only disclose your data to third parties that are controllers in their own right when we are legally required to do so. We do, however, use vendors who process personal data on our behalf as our data processors. Processors are only allowed to process personal data for the purposes that we as the controller have defined.<br><br>
-						We use <span class="bold">Tito</span> as our ticket management system and in this capacity. You can read their privacy policy <a href="https://ti.to/privacy" style="color: #50cec1; text-decoration: underline;">here</a>.</td>
-				</tr>
-				<tr>
-					<td class="table-cell3">IS YOUR DATA TRANSFERRED BEYOND THE BORDERS OF THE EU OR EAA (“THIRD COUNTRIES”)</td>
-					<td class="table-cell">Where Legal Design Finland ry is the data controller and uses data processors that are located outside of the EU/EEA, we do this only in cases where:
-						<ul style="list-style-type: disc; padding-left: 20px">
-							<li>the transfers are either made to a country that is deemed to provide a sufficient level of privacy protection by the European Commission, or</li>
-							<li>the transfers are carried out by using appropriate legal safeguards such as standard data protection clauses (SCC) adopted, including any supplementary measures, where assessed to be necessary, or otherwise approved by the EU Commission or competent data protection authority in accordance with the GDPR.</li>
-						</ul>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 
 
-	<div class="container" style="margin-top: 20px;">
-			<h4 class="subtitle" style="margin-top: 50px;">4 HOW CAN YOU INFLUENCE THE PROCESSING OF YOUR PERSONAL DATA?</h4>
-			<p>ou have many ways to influence how your data is processed by using your data protection rights provided by the GDPR. 
+		<!-- TABLE FOR PC and LARGE SCREENS-->
+		<div class="hidden-mobile">
+			<div class="table-container">
+				<table style="max-width: 1200px; margin: 0 auto; text-align: left;">
+					<colgroup>
+						<col style="width: 17%;">
+						<col style="width: 13%;">
+						<col style="width: 55%;">
+						<col style="width: 15%;">
+					</colgroup>
+					<tbody>
+						<tr style="background-color: #c30979; color:white; font-weight: bold;">
+							<td class="table-cell">WHAT KIND OF DATA DO WE COLLECT?</td>
+							<td class="table-cell">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+							<td class="table-cell">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+							<td class="table-cell">HOW LONG IS MY DATA STORED?</td>
+						</tr>
+						<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+							<td colspan="4" class="table-cell">TICKETS & PARTICIPATION</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>E-mail</li>
+								</ul>
+							</td>
+							<td class="table-cell3">A CONTRACT</td>
+							<td class="table-cell">This data is necessary for us to reserve and deliver you a ticket to
+								the Summit. We collect this data when you register as a participant to the Summit.</td>
+							<td class="table-cell">1 year from the Summit that you participated in*</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>E-mail</li>
+									<li>Billing address</li>
+								</ul>
+							</td>
+							<td class="table-cell3">A CONTRACT & CONTROLLER’S LEGAL OBLIGATION</td>
+							<td class="table-cell">If you have reserved a ticket but are not able to attend - and do not
+								cancel your ticket or have someone else attend on your behalf – according to our terms,
+								we will invoice you for the no-show. This also lengthens the storage period of your data
+								due to legal obligations related to bookkeeping regulations.</td>
+							<td class="table-cell">Maximum of 10 years*</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>E-mail</li>
+									<li>Country</li>
+									<li>Occupation and/or organization</li>
+								</ul>
+							</td>
+							<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
+							<td class="table-cell">If you apply as a participant to the BrainFactory, you can choose to
+								provide descriptive data such as your education and work experience and other related
+								details. This data will be processed to enable the BrainFactory team to build the most
+								diverse, engaging and inspiring BrainFactory teams possible for the best BrainFactory
+								experience. We will also use the data to gather your feedback on BrainFactory and
+								develop BrainFactory to be better in the future.</td>
+							<td class="table-cell">2,5 years*</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>Contact information</li>
+									<li>Details of the situation</li>
+								</ul>
+							</td>
+							<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
+							<td class="table-cell">We may process your personal data before the Summit, during the
+								Summit, or after the Summit for customer service purposes.</td>
+							<td class="table-cell">As long as necessary for the customer service situation to be solved
+								but no more than 3 years.</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>Country</li>
+									<li>Occupation and/or organization</li>
+								</ul>
+							</td>
+							<td class="table-cell3">CONSENT & LEGITIMATE INTERESTS</td>
+							<td class="table-cell">
+								You can choose whether you want to provide this data when e.g., registering as a
+								participant or becoming a partner through one of our partnership packages. There are
+								four purposes to why data would be processed – these you may choose to add to your
+								registration form voluntarily:
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li><span class="bold">Occupation/organization printed in participant’s name
+											tag</span> alongside their name to help participants better build
+										connections at the Summit</li>
+									<li>Prior to the event, we will process all country data collected to create <span
+											class="bold">an anonymized map of all the countries represented at the
+											Summit</span> to be shared during the Summit and through our social media.
+									</li>
+									<li>We may pseudonymize and whenever possible anonymize this personal data for
+										development purposes: to understand our participants better and to be able to
+										provide a better Summits in the future.</li>
+								</ul>
+								We also process the below-mentioned personal data for the below-mentioned purpose based
+								on your consent that is collected at the registering. Please note that you can change
+								your consent at any time. You can do this by yourself through the ticket system until
+								14.8.2023, 10 AM, and after that by emailing <span
+									class="underline">privacy@legaldesignsummit.com</span>.
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>Prior to the event, we will process all entity/organization data to create <span
+											class="bold">a pseudonymized list of all entities/organizations represented
+											at the Summit</span> to be shared to other participants prior to the event.
+									</li>
+								</ul>
+							</td>
+							<td class="table-cell">2,5 years*</td>
+						</tr>
+						<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+							<td colspan="4" class="table-cell">PARTNERSHIPS</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>Contact details provided or acquired, e.g, e-mail address</li>
+									<li>Occupation/role at the company or organization you represent</li>
+									<li>Name and contact details of the company or organization you represent</li>
+								</ul>
+							</td>
+							<td class="table-cell3">LEGITIMATE INTERESTS</td>
+							<td class="table-cell">When you are a representative of our partner, we process your
+								personal data on the basis of legitimate interest. Before we have agreed upon
+								collaboration we process your publicly available personal data for the purpose of
+								contacting you and possibly entering into an agreement with you.<br><br>
+								When we have agreed upon collaboration we will process your personal information in
+								order to fill our obligations to the entity that you represent.<br><br>
+								After the Summit we might contact you to request feedback regarding the Summit or to
+								inquire about your interest in entering into a new partnership in the future.</td>
+							<td class="table-cell">2,5 years*</td>
+						</tr>
+						<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+							<td colspan="4" class="table-cell">CUSTOMER SATISFACTION, MARKETING & SOCIAL MEDIA</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>E-mail and/or social media username depending on how you choose to interact with
+										us</li>
+									<li>Other descriptive data (for example your feedback to us)</li>
+								</ul>
+							</td>
+							<td class="table-cell3">LEGITIMATE INTERESTS</td>
+							<td class="table-cell">We always want to learn how to make the Summit better and more
+								interesting for our community. For this reason we process customer satisfaction data for
+								analysis, for compiling statistics and reporting actions, for the purposes of developing
+								our event and improving our participant’s experience. We utilize anonymization or
+								pseudonymization whenever possible.<br><br>
+								We collect and process your personal data for processing when you contact us, interact
+								with us in social media, participate in our events, or take part in surveys and opinion
+								polls, allowing us to gain a better understanding of our participants and thereby make
+								the event better for you.</td>
+							<td class="table-cell">2,5 years*</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>Visual recordings</li>
+								</ul>
+							</td>
+							<td class="table-cell3">LEGITIMATE INTERESTS & CONSENT</td>
+							<td class="table-cell">We take photographs and record video at all our events. We will ask
+								for your consent if we photograph you in particular for a portrait and not the whole
+								audience or ambiance. </td>
+							<td class="table-cell">If your consent is required and collected, visual recording of you
+								are stored according to your consent. </td>
+						</tr>
+						<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+							<td colspan="4" class="table-cell">SPEAKERS</td>
+						</tr>
+						<tr>
+							<td class="table-cell2">
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>First and last name</li>
+									<li>E-mail</li>
+									<li>Entity you represent (if applicable)</li>
+									<li>Your designation or position</li>
+								</ul> Optional descriptive data to help us build as diverse Summit as possible:
+								<ul style="list-style-type: disc; padding-left: 20px">
+									<li>Gender</li>
+									<li>Country or region</li>
+									<li>Nationality</li>
+									<li>Age</li>
+									<li>Mother tongue</li>
+									<li>Sector you work in/represent</li>
+									<li>Other details you may submit on your experience/background</li>
+									<li>LinkedIn profile</li>
+								</ul>
+							</td>
+							<td class="table-cell3">A CONTRACT & LEGITIMATE INTERESTS</td>
+							<td class="table-cell">Prior to agreeing on participating the Summit as a speaker,
+								BrainFactory mentor, or other presenter, or obtaining your consent through our call for
+								speakers form or other ways, or on the basis of our legitimate interests, we process
+								personal data that is available on public sources or that b) has been collected of our
+								past speakers or sponsors for us to plan and explore potential speakers and/or partners
+								for the summit. <br><br>
+								If you submit your personal data when registering as a speaker through our call for
+								speakers form or by contacting us, we process your personal data based on your consent
+								(optional fields in the form) or our legitimate interest (mandatory fields in the form)
+								for us to plan the most interesting and diverse speakers for the summit.<br><br>
+								After agreeing with you on a presentation or other similar participation, we will
+								process your personal data based on our contract to manage our relationship with you and
+								to make the summit possible. This includes processing actions such as contacting you
+								regarding your role as a speaker or other similar participant and delivering your ticket
+								to you.<br><br>
+								After the summit, we may process your personal data based on our legitimate interests
+								for us to contact you to hear about your experience at the summit and to inquire about
+								you returning as a speaker.
+							</td>
+							<td class="table-cell">No more than 2,5 years from the latest Summit you participated in
+								this capacity*</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Same tabe but now for mobile site-->
+
+		<div class="visible-mobile">
+			<div class="table-container">
+				<table style="border: solid 1px black;">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 80%;">
+					</colgroup>
+					<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+						<td colspan="2" class="table-cell">TICKETS & PARTICIPATION</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">This data is necessary for us to reserve and deliver you a ticket to the
+							Summit. We collect this data when you register as a participant to the Summit.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">1 year from the Summit that you participated in*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail</li>
+								<li>Billing address</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">This data is necessary for us to reserve and deliver you a ticket to the
+							Summit. We collect this data when you register as a participant to the Summit.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">1 year from the Summit that you participated in*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail</li>
+								<li>Billing address</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT & CONTROLLER’S LEGAL OBLIGATION</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">If you have reserved a ticket but are not able to attend - and do not
+							cancel your ticket or have someone else attend on your behalf – according to our terms, we
+							will invoice you for the no-show. This also lengthens the storage period of your data due to
+							legal obligations related to bookkeeping regulations.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">Maximum of 10 years*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail</li>
+								<li>Country</li>
+								<li>Occupation and/or organization</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">If you apply as a participant to the BrainFactory, you can choose to
+							provide descriptive data such as your education and work experience and other related
+							details. This data will be processed to enable the BrainFactory team to build the most
+							diverse, engaging and inspiring BrainFactory teams possible for the best BrainFactory
+							experience. We will also use the data to gather your feedback on BrainFactory and develop
+							BrainFactory to be better in the future.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">2,5 years*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>Contact information</li>
+								<li>Details of the situation</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">We may process your personal data before the Summit, during the Summit,
+							or after the Summit for customer service purposes.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">As long as necessary for the customer service situation to be solved but
+							no more than 3 years.</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>Country</li>
+								<li>Occupation and/or organization</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">CONSENT & LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">You can choose whether you want to provide this data when e.g.,
+							registering as a participant or becoming a partner through one of our partnership packages.
+							There are four purposes to why data would be processed – these you may choose to add to your
+							registration form voluntarily:
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li><span class="bold">Occupation/organization printed in participant’s name tag</span>
+									alongside their name to help participants better build connections at the Summit
+								</li>
+								<li>Prior to the event, we will process all country data collected to create <span
+										class="bold">an anonymized map of all the countries represented at the
+										Summit</span> to be shared during the Summit and through our social media.</li>
+								<li>We may pseudonymize and whenever possible anonymize this personal data for
+									development purposes: to understand our participants better and to be able to
+									provide a better Summits in the future.</li>
+							</ul>
+							We also process the below-mentioned personal data for the below-mentioned purpose based on
+							your consent that is collected at the registering. Please note that you can change your
+							consent at any time. You can do this by yourself through the ticket system until 14.8.2023,
+							10 AM, and after that by emailing <span
+								class="underline">privacy@legaldesignsummit.com</span>.
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>Prior to the event, we will process all entity/organization data to create <span
+										class="bold">a pseudonymized list of all entities/organizations represented at
+										the Summit</span> to be shared to other participants prior to the event.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">2,5 years*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+						<td colspan="2" class="table-cell">PARTNERSHIPS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>Contact details provided or acquired, e.g, e-mail address</li>
+								<li>Occupation/role at the company or organization you represent</li>
+								<li>Name and contact details of the company or organization you represent</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">When you are a representative of our partner, we process your personal
+							data on the basis of legitimate interest. Before we have agreed upon collaboration we
+							process your publicly available personal data for the purpose of contacting you and possibly
+							entering into an agreement with you.<br><br>
+							When we have agreed upon collaboration we will process your personal information in order to
+							fill our obligations to the entity that you represent.<br><br>
+							After the Summit we might contact you to request feedback regarding the Summit or to inquire
+							about your interest in entering into a new partnership in the future.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">2,5 years*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+						<td colspan="2" class="table-cell">CUSTOMER SATISFACTION, MARKETING & SOCIAL MEDIA</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail and/or social media username depending on how you choose to interact with us
+								</li>
+								<li>Other descriptive data (for example your feedback to us)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">We always want to learn how to make the Summit better and more
+							interesting for our community. For this reason we process customer satisfaction data for
+							analysis, for compiling statistics and reporting actions, for the purposes of developing our
+							event and improving our participant’s experience. We utilize anonymization or
+							pseudonymization whenever possible.<br><br>
+							We collect and process your personal data for processing when you contact us, interact with
+							us in social media, participate in our events, or take part in surveys and opinion polls,
+							allowing us to gain a better understanding of our participants and thereby make the event
+							better for you.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">2,5 years*</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>Visual recordings</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">LEGITIMATE INTERESTS & CONSENT</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">We take photographs and record video at all our events. We will ask for
+							your consent if we photograph you in particular for a portrait and not the whole audience or
+							ambiance.</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">If your consent is required and collected, visual recording of you are
+							stored according to your consent.</td>
+					</tr>
+					<tr class="blank_row">
+						<td colspan="2"></td>
+					</tr>
+					<tr style="background-color: #50cec1; color:white; font-weight: bold;">
+						<td colspan="2" class="table-cell">SPEAKERS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT KIND OF DATA DO WE COLLECT?</td>
+						<td class="table-cell6">
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>First and last name</li>
+								<li>E-mail</li>
+								<li>Entity you represent (if applicable)</li>
+								<li>Your designation or position</li>
+							</ul> Optional descriptive data to help us build as diverse Summit as possible:
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>Gender</li>
+								<li>Country or region</li>
+								<li>Nationality</li>
+								<li>Age</li>
+								<li>Mother tongue</li>
+								<li>Sector you work in/represent</li>
+								<li>Other details you may submit on your experience/background</li>
+								<li>LinkedIn profile</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT ARE THE LEGAL BASES FOR DATA PROCESSING?</td>
+						<td class="table-cell6">A CONTRACT & LEGITIMATE INTERESTS</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">WHAT IS THE PURPOSE OF DATA PROCESSING?</td>
+						<td class="table-cell6">Prior to agreeing on participating the Summit as a speaker, BrainFactory
+							mentor, or other presenter, or obtaining your consent through our call for speakers form or
+							other ways, or on the basis of our legitimate interests, we process personal data that is
+							available on public sources or that b) has been collected of our past speakers or sponsors
+							for us to plan and explore potential speakers and/or partners for the summit. <br><br>
+							If you submit your personal data when registering as a speaker through our call for speakers
+							form or by contacting us, we process your personal data based on your consent (optional
+							fields in the form) or our legitimate interest (mandatory fields in the form) for us to plan
+							the most interesting and diverse speakers for the summit.<br><br>
+							After agreeing with you on a presentation or other similar participation, we will process
+							your personal data based on our contract to manage our relationship with you and to make the
+							summit possible. This includes processing actions such as contacting you regarding your role
+							as a speaker or other similar participant and delivering your ticket to you.<br><br>
+							After the summit, we may process your personal data based on our legitimate interests for us
+							to contact you to hear about your experience at the summit and to inquire about you
+							returning as a speaker.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell5">HOW LONG IS MY DATA STORED?</td>
+						<td class="table-cell6">No more than 2,5 years from the latest Summit you participated in this
+							capacity*</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="container" style="margin-top: 20px;">
+			<div class="column">
+				<p style="margin-top: 20px;">*= Your data may be stored for longer if you a) consent to that, b) there
+					is a legal claim against us and the handling of matters related to such claim are ongoing and c) if
+					we are required to do so to comply with applicable laws.</p>
+			</div>
+		</div>
+
+		<div class="table-container">
+			<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
+				<colgroup>
+					<col style="width: 31.5%;">
+					<col style="width: 68.5%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<td colspan="2"
+							style="padding: 10px; margin: 10px; vertical-align: top; color:#c30979; font-weight: bold; border: 0.5px solid white; border-collapse: collapse;">
+							<h4 class="subtitle" style="margin-top: 50px;">3 TO WHOM IS YOUR DATA DISCLOSED OR
+								TRANSFERRED TO?</h4>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell3">WHO CAN ACCESS YOUR DATA?</td>
+						<td class="table-cell">If any of the exceptions below do not apply or you have not consented to
+							anything else, your personal data is only processed within the Legal Design Finland ry.</td>
+					</tr>
+					<tr>
+						<td class="table-cell3">DO WE DISCLOSE YOUR DATA TO THIRD PARTIES?</td>
+						<td class="table-cell">We only disclose your data to third parties that are controllers in their
+							own right when we are legally required to do so. We do, however, use vendors who process
+							personal data on our behalf as our data processors. Processors are only allowed to process
+							personal data for the purposes that we as the controller have defined.<br><br>
+							We use <span class="bold">Tito</span> as our ticket management system and in this capacity.
+							You can read their privacy policy <a href="https://ti.to/privacy"
+								style="color: #50cec1; text-decoration: underline;">here</a>.</td>
+					</tr>
+					<tr>
+						<td class="table-cell3">IS YOUR DATA TRANSFERRED BEYOND THE BORDERS OF THE EU OR EAA (“THIRD
+							COUNTRIES”)</td>
+						<td class="table-cell">Where Legal Design Finland ry is the data controller and uses data
+							processors that are located outside of the EU/EEA, we do this only in cases where:
+							<ul style="list-style-type: disc; padding-left: 20px">
+								<li>the transfers are either made to a country that is deemed to provide a sufficient
+									level of privacy protection by the European Commission, or</li>
+								<li>the transfers are carried out by using appropriate legal safeguards such as standard
+									data protection clauses (SCC) adopted, including any supplementary measures, where
+									assessed to be necessary, or otherwise approved by the EU Commission or competent
+									data protection authority in accordance with the GDPR.</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+		<div class="container" style="margin-top: 20px;">
+			<h4 class="subtitle" style="margin-top: 50px;">4 HOW CAN YOU INFLUENCE THE PROCESSING OF YOUR PERSONAL DATA?
+			</h4>
+			<p>ou have many ways to influence how your data is processed by using your data protection rights provided
+				by the GDPR.
 			</p>
-			<p><span class="bold">If you wish to exercise any of the rights specified below or if you have any questions concerning your rights as a data subject, 
-				please contact us at privacy@legaldesignsummit.com.</span></p>
-	</div>
+			<p><span class="bold">If you wish to exercise any of the rights specified below or if you have any questions
+					concerning your rights as a data subject,
+					please contact us at privacy@legaldesignsummit.com.</span></p>
+		</div>
 
-	<div class="table-container">
-		<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
-			<colgroup>
-				<col style="width: 15%;">
-				<col style="width: 85%;">
-			  </colgroup>
-			<tbody>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-4.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO ACCESS</h4>You have the right to access your personal data; meaning that you have the right to ask us to provide you with a report that includes what personal data we are processing related to you. Please note, however, that there are some exceptions to this rule: we can not, as an example, disclose your data that also reveals other people’s personal data.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-5.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO OBJECT</h4>In general, you have the right to forbid the processing of your personal data when the legal basis is legitimate interest if exceptions do not apply.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-6.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO RECTIFY</h4>You have the right to ask for rectification regarding your personal data: meaning that if something is not right in the data collected or we have gotten something wrong, you can always contact us and ask us to rectify the incorrect personal data.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-7.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO ERASURE</h4>You have the right to the erasure of your personal data and to be forgotten; meaning that you can ask us anytime if you want to delete your personal data. There are, again, some exceptions to this rule: sometimes we have a legal obligation or other legal bases to keep some personal data even if you ask us to delete everything.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-8.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO DATA PORTABILITY</h4>In certain situations, you have the right to receive the personal data provided to us in digital format so that you can transfer the data to a third-party controller.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-9.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO WITHDRAW CONSENT</h4>If the processing of your personal data is based on consent given by you, you have the right to withdraw the consent at any time.</td>
-				</tr>
-				<tr>
-					<td class="table-cell" style="text-align: center; vertical-align: middle;"><img src="images/privacy/icon-10.png" style="max-width: 60%"></td>
-					<td class="table-cell4"><h4 class="subtitle">RIGHT TO RESTRICTION OF PROCESSING</h4>In certain situations, you have the right to restrict the processing of your personal data for a period of time. For example, if you have chosen to use your rights to rectify or object and your requests are pending, you have the right to restrict the processing of your personal data for a period of time that allows us to ensure that your concerns are handled.</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="table-container">
+			<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
+				<colgroup>
+					<col style="width: 15%;">
+					<col style="width: 85%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-4.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO ACCESS</h4>You have the right to access your personal data;
+							meaning that you have the right to ask us to provide you with a report that includes what
+							personal data we are processing related to you. Please note, however, that there are some
+							exceptions to this rule: we can not, as an example, disclose your data that also reveals
+							other people’s personal data.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-5.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO OBJECT</h4>In general, you have the right to forbid the
+							processing of your personal data when the legal basis is legitimate interest if exceptions
+							do not apply.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-6.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO RECTIFY</h4>You have the right to ask for rectification
+							regarding your personal data: meaning that if something is not right in the data collected
+							or we have gotten something wrong, you can always contact us and ask us to rectify the
+							incorrect personal data.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-7.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO ERASURE</h4>You have the right to the erasure of your personal
+							data and to be forgotten; meaning that you can ask us anytime if you want to delete your
+							personal data. There are, again, some exceptions to this rule: sometimes we have a legal
+							obligation or other legal bases to keep some personal data even if you ask us to delete
+							everything.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-8.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO DATA PORTABILITY</h4>In certain situations, you have the right
+							to receive the personal data provided to us in digital format so that you can transfer the
+							data to a third-party controller.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-9.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO WITHDRAW CONSENT</h4>If the processing of your personal data
+							is based on consent given by you, you have the right to withdraw the consent at any time.
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell" style="text-align: center; vertical-align: middle;"><img
+								src="images/privacy/icon-10.png" style="max-width: 60%"></td>
+						<td class="table-cell4">
+							<h4 class="subtitle">RIGHT TO RESTRICTION OF PROCESSING</h4>In certain situations, you have
+							the right to restrict the processing of your personal data for a period of time. For
+							example, if you have chosen to use your rights to rectify or object and your requests are
+							pending, you have the right to restrict the processing of your personal data for a period of
+							time that allows us to ensure that your concerns are handled.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="table-container">
-		<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
-			<colgroup>
-				<col style="width: 50%;">
-				<col style="width: 50%;">
-			  </colgroup>
-			<tbody>
-				<tr>
-					<td colspan="2" style="padding: 10px; margin: 10px; vertical-align: top; color:#c30979; font-weight: bold; border: 0.5px solid white; border-collapse: collapse;"><h4 class="subtitle" style="margin-top: 50px;">5 WHO CAN YOU TURN TO IF YOU HAVE QUESTIONS CONCERNING THE PROCESSING OF YOUR DATA?</h4></td>
-				</tr>
-				<tr>
-					<td class="table-cell4">In case you have any concerns or questions related to this Privacy Policy or processing of your personal data, you can always contact us via <span class="underline">privacy@legaldesignsummit.com</span>.</td>
-					<td class="table-cell4">If you consider our processing of personal data to be inconsistent with the applicable laws, you can also lodge a complaint with the local supervisory authority for data protection. In Finland, the authority in question is the Data Protection Ombudsman.<br><br>
-						<span class="bold" style="color: #c30979;">Office of the Data Protection Ombudsman</span><br><br>
-						Visiting address: Lintulahdenkuja 4, 00530 Helsinki, Finland<br><br>
-						Postal address: PL 800, 00531 Helsinki, Finland<br><br>
-						Switchboard: +358 29 566 6700<br><br>
-						Registry: +358 29 566 6768<br><br>
-						E-mail: tietosuoja@om.fi</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="table-container">
+			<table style="max-width: 1200px; margin: 0 auto; text-align: left; width: 100%">
+				<colgroup>
+					<col style="width: 50%;">
+					<col style="width: 50%;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<td colspan="2"
+							style="padding: 10px; margin: 10px; vertical-align: top; color:#c30979; font-weight: bold; border: 0.5px solid white; border-collapse: collapse;">
+							<h4 class="subtitle" style="margin-top: 50px;">5 WHO CAN YOU TURN TO IF YOU HAVE QUESTIONS
+								CONCERNING THE PROCESSING OF YOUR DATA?</h4>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-cell4">In case you have any concerns or questions related to this Privacy
+							Policy or processing of your personal data, you can always contact us via <span
+								class="underline">privacy@legaldesignsummit.com</span>.</td>
+						<td class="table-cell4">If you consider our processing of personal data to be inconsistent with
+							the applicable laws, you can also lodge a complaint with the local supervisory authority for
+							data protection. In Finland, the authority in question is the Data Protection
+							Ombudsman.<br><br>
+							<span class="bold" style="color: #c30979;">Office of the Data Protection
+								Ombudsman</span><br><br>
+							Visiting address: Lintulahdenkuja 4, 00530 Helsinki, Finland<br><br>
+							Postal address: PL 800, 00531 Helsinki, Finland<br><br>
+							Switchboard: +358 29 566 6700<br><br>
+							Registry: +358 29 566 6768<br><br>
+							E-mail: tietosuoja@om.fi
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-	<!-- Footer section loaded with javascipt from footer.html -->
+		<!-- Footer section loaded with javascipt from footer.html -->
 
-	<div id="footer"></div>
-        
-    <!-- Footer Section Ends -->
+		<div id="footer"></div>
 
-	
-  </body>
+		<!-- Footer Section Ends -->
+
+
+</body>
+
 </html>

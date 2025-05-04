@@ -1,394 +1,358 @@
 <!doctype html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:site_name" content="Legal Design Summit" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Legal Design Summit" />
-    <meta property="og:image" content="images/meta.png" />
-    
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 
-    <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
-    <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
-    <script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script>
-      $(function(){ 
-        $("#footer").load("footer.html"); 
-      });
-    </script>
-    <style>
-      .bold {font-weight: bold;}
-		  .underline {text-decoration: underline; color: #c30979;}
-      .italics {font-style: italic;}
-      .flex-item:hover img {
-        transform: scale(1.2);
-      }
-      .flez-item {
-        align-items: center;
-      }
-      .faq-item {
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 10px;
-        margin-bottom: 10px;
-      }
-      .timeline {
-        position: relative;
-        padding-left: 40px;
-      }
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta property="og:site_name" content="Legal Design Summit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Legal Design Summit" />
+  <meta property="og:image" content="images/meta.png" />
 
-      .timeline::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0px;
-        width: 2px;
-        background-color: white;
-      }
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 
-      .faq-item {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 10px;
-        margin-bottom: 10px;
-      }
+  <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
 
-      .bubble {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        left: -44px;
-        top: 50%;
-        background-color: white;
-        border-radius: 50%;
-        transform: translateY(-50%);
-      }
+    .underline {
+      text-decoration: underline;
+      color: #c30979;
+    }
 
-      .bf_program h4{
-        margin-top: 30px;
-        margin-bottom: 5px;
-        font-size: 22px;
-      }
+    .italics {
+      font-style: italic;
+    }
 
-      .bf_program{
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: left;
-        padding-bottom: 50px;
-      }
+    .flex-item:hover img {
+      transform: scale(1.2);
+    }
 
-      .blue{
-        color: #c30979;
-      }
+    .flez-item {
+      align-items: center;
+    }
 
-      .bf_program h3{
-        margin-top: 40px;
-        margin-bottom: 00px;
-        text-align: center;
-      }
+    .faq-item {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 
-      .bf_program p{
-        line-height: 1.4;
-        margin-bottom: 0px;
-      }
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
 
-      .bulp p{
-        background-color: #fff;
-        text-align: center;
-        margin-right: 15px;
-        border-radius: 5px;
-      }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0px;
+      width: 2px;
+      background-color: white;
+    }
 
-      .bf_program table{
-        color: black;
-        font-weight: bold;
-        padding-bottom: 20px;
-      }
+    .faq-item {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 
+    .bubble {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: -44px;
+      top: 50%;
+      background-color: white;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
 
-    </style>
+    .bf_program h4 {
+      margin-top: 30px;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
 
+    .bf_program {
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: left;
+      padding-bottom: 50px;
+    }
 
-    <title>Legal Design Summit</title>
+    .blue {
+      color: #c30979;
+    }
 
-  </head>
+    .bf_program h3 {
+      margin-top: 40px;
+      margin-bottom: 00px;
+      text-align: center;
+    }
 
-  <body class="active">
+    .bf_program p {
+      line-height: 1.4;
+      margin-bottom: 0px;
+    }
 
-    <!-- Wrapper // Menu Section Begins -->
+    .bulp p {
+      background-color: #fff;
+      text-align: center;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
 
-    <div class="wrapper menu fluid">
-      <div class="container">
-          <div id="menu">
-              <div class="content-main">
-                <div class="block menu-main">
-                    <div class="content">
-                      <div class="menu-toggler">Menu<span class="icon"></span></div>
-                      <div class="menu-container">
-                        <ul class="menu"><li class=" first"><a href="index.html">Home</a></li>
-                          <li class=""><a href="program-thursday.html">Program</a></li>
-                          <li class=""><a href="brainfactory.html">BrainFactory</a></li>
-                          <li class=""><a href="about-us.html">About Us</a></li>
-                          <li class=""><a href="tickets.html">Tickets</a></li>
-                          <li class=""><a href="speakers-thursday.html">Speakers</a></li>
-                          <li class=" last"><a href="why-attend.html">History</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="curved">
-      <h2 style="padding-top: 80px;">BrainFactory</h2>
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-6 col-xs-12">
-            <img src="images/brainfactory/2N5A5455.png" class="img-fluid">
-          </div>
-          <div class="col-md-6 col-xs-12">
-            <h4 style="font-size: 20px; font-style: italic; padding-top: 00px; ">BrainFactory is a three-day event with highly interactive, immersive and inspiring hands-on workshops, brainstorming sessions, and prototyping exercises.</h4>
-          </div>
-        </div>
-      </div>
-      <svg style="display:block"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#50cec1" fill-opacity="1" d="M0,0L60,42.7C120,85,240,171,360,176C480,181,600,107,720,80C840,53,960,75,1080,112C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-      </svg>
-    </div>
-
-    <div class="wrapper why-attend" style="background-color: #50cec1; padding-top: 10px;">
-      <div class="container">
-        <div id="content-why-attend" class="justify-center" style="color: #fff">
-
-          <h3>What is BrainFactory?</h3>
-          <p>At BrainFactory, teams with diverse backgrounds solve complex problems in teams of 5-6 people. Each team will have a legal design professional as a mentor.
-            Our BrainFactory team together with our Partners create the challenging BrainFactory problems that arise from real life examples from the cross-sections of law and design thinking.<br><br>
-            BrainFactory will take place 11-13 September 2023.
-          </p>
-          <div class="bf_program">
-          
-          <h3>Program*</h3>
-          <h4>DAY 1  <span class="blue">|</span> Monday <span class="blue">|</span> 11 september 2023</h4>
+    .bf_program table {
+      color: black;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+  </style>
 
 
-          <table><colgroup><col style="width: 20%;"><col style="width: 80%"></colgroup>
-            <tbody>
-              <tr>
-                <td colspan="2"><p>@ Oodi Library, Maijansali | Töölönlahdenkatu 4 Helsinki</p></td>
-              </tr>
-              <tr>
-                <td class="bulp"><p>15:00</p></td>
-                <td><p>Introduction and Kick-Off</p></td>
-              </tr>
+  <title>Legal Design Summit</title>
 
-              <tr>
-                <td class="bulp"><p>15:45</p></td>
-                <td><p>Introduction to Legal Design, BrainFactory Talk 1</p></td>
-              </tr>
+</head>
 
-              <tr>
-                <td class="bulp"><p>16:30</p></td>
-                <td><p>Teams gather with mentors and partners</p></td>
-              </tr>
+<body class="active">
 
-              <tr>
-                <td class="bulp"><p>19:00</p></td>
-                <td><p>End day 1</p></td>
-              </tr>
-            </tbody>
-          </table>
+  <!-- Wrapper // Menu Section Begins -->
 
-          <h4>DAY 2  <span class="blue">|</span> Tuesday <span class="blue">|</span> 12 september 2023</h4>
+  <div class="wrapper menu fluid">
+    <div class="container">
+      <div id="menu">
+        <div class="content-main">
+          <div class="block menu-main">
+            <div class="content">
+              <div class="menu-toggler">Menu<span class="icon"></span></div>
+              <div class="menu-container">
+                <ul class="menu">
+                  <li class=" first"><a href="index.html">Home</a></li>
+                  <li class=" first"><a href="brainfactory.html">Brainfactory workshops</a></li>
+                  <li class=""><a href="program-thursday.html">Program Loading...</a></li>
 
-          <table><colgroup><col style="width: 20%;"><col style="width: 80%"></colgroup>
-            <tbody>
-              <tr>
-                <td colspan="2"><p>@ Think Corner, Think Lounge | Yliopistonkatu 4 Helsinki</p></td>
-              </tr>
-              <tr>
-                <td class="bulp"><p>09:00</p></td>
-                <td><p>Teams meet with mentors and continue working </p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>12:00</p></td>
-                <td><p>BrainFactory Lunch</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>13:30</p></td>
-                <td><p>BrainFactory Talk 2</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>14:00</p></td>
-                <td><p>BrainFactory Talk 3</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>14:45</p></td>
-                <td><p>Teams+mentors continue working/p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>19:00-20:00</p></td>
-                <td><p>Joint dinner out for BrainFactory participants and mentors</p></td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <h4>DAY 3  <span class="blue">|</span> Wednesday <span class="blue">|</span> 13 september 2023</h4>
-
-          <table><colgroup><col style="width: 20%;"><col style="width: 80%"></colgroup>
-            <tbody>
-              <tr>
-                <td colspan="2"><p>09.00 - 12:00 @ Maria 01 | Lapinlahdenkatu 16 Helsinki</p></td>
-              </tr>
-              <tr>
-                <td colspan="2"><p>14.30 - end of BF @ Hotel Clarion | Tyynenmerenkatu 2 Helsinki</p></td>
-              </tr>
-              <tr>
-                <td class="bulp"><p>09:00</p></td>
-                <td><p>Teams and mentors continue working </p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>13:15</p></td>
-                <td><p>Teams finalize presentations</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>15:00</p></td>
-                <td><p>Presentations start (partners present)</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p>15:45</p></td>
-                <td><p>Thank you and see you at the Summit tomorrow</p></td>
-              </tr>
-
-              <tr>
-                <td class="bulp"><p></p></td>
-                <td><p>Afterwork at Clarion open for everyone!</p></td>
-              </tr>
-            </tbody>§ 
-          </table>
-
-        </div>
-        </div>
-        <div class="row justify-content-md-center justify-center">
-          <div class="col-lg-6 col-xs-12" style="padding-top: 100px;">
-            <div class="flex-item" style="width: 560; height: 315;"><a href="https://www.youtube.com/embed/6dZudoTT8S8" target="_blank"><img src="images/brainfactory/Bf-youtube.jpg"></a></div>
-            <p style="line-height: 14px;">Check out the awesome aftermovie from the last BrainFactory <br><br>(opens into a new tab)</p>
-          </div>
-          <div class="col-lg-6 col-xs-12" style="text-align: left; padding-left: 0px;">
-            <div class="timeline">
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: Why partner with BrainFactory?</h4>
-                <p>Legal Design Summit is the largent Legal Design Event in the World. We welcome forward thinking organizations to join our innovative Legal Design Community.</p>
-              </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: How do I apply?</h4>
-                <p>Call for Participants and Mentors is open between 17 May and 11 June.<br><br>We will get back to all applicants in the beginning of June with information whether you have been selected as a BrainFactory participant.</p>
-              </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: What is a mentor?</h4>
-                <p>A mentor is a legal design professional who will support and coach our BrainFactory teams.</p>
-              </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: Who to contact?</h4>
-                <p>This years’ Team Leads Andrea Lindblom and Mia Ihamoutila will be happy to answer all your questions about the BrainFactory:<br><br>Please reach out to us <a href="mailto:brainfactory@legaldesignsummit.com" style="color: black; text-decoration: underline;">brainfactory@legaldesignsummit.com</a></p>
+                  <li class=""><a href="previous-participants.html">Who is attending?</a></li>
+                  <li class=""><a href="about-us.html">Meet the team</a></li>
+                  <li class=""><a href="tickets.html">Tickets</a></li>
+                  <li class=" last"><a href="why-attend.html">History</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-          
-        </div>
-        </div>
       </div>
-    </div>
-
-    <div class="curved">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#50cec1" fill-opacity="1" d="M0,288L60,250.7C120,213,240,139,360,96C480,53,600,43,720,37.3C840,32,960,32,1080,32C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-
-  
-
-
-    <div class="wrapper actions" style="padding-bottom: 0px;">
-      
-      <!-- Container Section Begins -->
-      
-      <div class="container">
-	
-        <!-- Content Section Begins -->
-        
-        <div id="content-actions">
-          
-          <!-- Content Main Section Begins -->
-          
-      <div class="content-main" style="margin-top: -25%;">
-	    <div class="actions">
-	      <div class="row">
-		<div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact Us</a></div>
-	      </div>
-	    </div>
-
-
-	    <div class="padding-top-40"></div>
-	    <div class="social-media padding-top-40 justify-center">
-	      <div class="row col">
-		<a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5" target="_blank">LinkedIn</a>
-		<a href="https://www.facebook.com/legaldesignsummit/" class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
-		<a href="https://www.instagram.com/legaldesignsummit/" class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
-		<a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5" target="_blank">Twitter</a>
-	      </div>
-	    </div>
-          </div>
-          
-          <!-- Content Main Section Ends -->
-          
-        </div>
-        
-        <!-- Content Section Ends -->
-	
-      </div>
-      
-      <!-- Container Section Ends -->
-      
     </div>
   </div>
 
-    <!-- Wrapper // Content Actions Section Ends -->
+  <div class="curved">
+    <h2 style="padding-top: 80px;">BrainFactory</h2>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-6 col-xs-12">
+          <img src="images/brainfactory/2N5A5455.png" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <h4 style="font-size: 20px; font-style: italic; padding-top: 00px; ">BrainFactory is a one-day event with
+            highly interactive, immersive and inspiring hands-on workshops, brainstorming sessions, and prototyping
+            exercises.</h4>
+        </div>
+      </div>
+    </div>
+    <svg style="display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+      <path fill="#50cec1" fill-opacity="1"
+        d="M0,0L60,42.7C120,85,240,171,360,176C480,181,600,107,720,80C840,53,960,75,1080,112C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+      </path>
+    </svg>
+  </div>
 
-    <!-- Footer section loaded with javascipt from footer.html -->
+  <div class="wrapper why-attend" style="background-color: #50cec1; padding-top: 10px;">
+    <div class="container">
+      <div id="content-why-attend" class="justify-center" style="color: #fff">
 
-		<div id="footer"></div>
-        
-    <!-- Footer Section Ends -->
+        <h3>What is BrainFactory?</h3>
+        <p>For 2025, we're reimagining BrainFactory into interactive workshops where you not only get to experience
+          legal design, you get to dive into a specific area of legal design. Our BrainFactory team together with our
+          Partners are building workshops that arise from real life examples from the cross-sections of law and design
+          thinking.
+
+          We'll have workshops led by experts who work in legal design and apply it to: AI, legal tech, access to
+          justice, conflict management, contract design, sustainability, and legal writing.
+          <br><br>
+
+          Brains on for a full day of legal design! You'll attend two workshops - one in the morning and one in the
+          afternoon - where you'll get to know other interested and like-minded legal professionals and dive into the
+          topics at hand.
+
+          BrainFactory workshops take place 10 September 2025. AM Workshops take place 9:00-13:00, PM Workshops
+          14:00-16:00.
+        </p>
 
 
-  </body>
+      </div>
+    </div>
+    <div class="row justify-content-md-center justify-center">
+      <div class="col-lg-6 col-xs-12" style="padding-top: 100px;">
+        <div class="flex-item" style="width: 560; height: 315;"><a href="https://www.youtube.com/embed/6dZudoTT8S8"
+            target="_blank"><img src="images/brainfactory/Bf-youtube.jpg"></a></div>
+        <p style="line-height: 14px;">Check out the awesome aftermovie from the last BrainFactory <br><br>(opens into
+          a new tab)</p>
+      </div>
+      <div class="col-lg-6 col-xs-12" style="text-align: left; padding-left: 0px;">
+        <h3>FAQ</h3>
+        <div class="timeline">
+          <div class="faq-item">
+            <div class="bubble"></div>
+
+            <h4>Q: How do I participate?</h4>
+            <p>We’ll start taking early participants to sign up on 5 May and will open more slots in early June for
+              another round of registration. Follow Legal Design Summit on LinkedIn and Instagram for the latest.</p>
+
+            When registration is open, you’ll be able to register <a href="https://forms.gle/iznAzEELzg8ia43b9">
+              here
+            </a>
+            <br><br>
+            As 10 September gets closer, we will get back to all registered participants to rank their areas of workshop
+            interest. We'll do our best to match you with your interest, but rest assured there is something for
+            everyone in these workshops with the chance to engage in legal design and how it applies to so many areas of
+            legal problems.
+
+          </div>
+          <div class="faq-item">
+            <div class="bubble"></div>
+            <h4>Q: I can only make one workshop, is that possible?</h4>
+            <p>We’re looking for fully-committed BrainFactory participants who are in for the full day. </p>
+          </div>
+          <div class="faq-item">
+            <div class="bubble"></div>
+            <h4>Q: This is my first rodeo - is this still for me? </h4>
+            <p>Yes! We will, to the best of our ability, match you with a specialized track of workshops that will offer
+              you the opportunity to get your feet wet!
+              Also, legal designers are about the nicest people in the legal field you could ever meet. Everyone is
+              willing to answer questions. After all, having a “beginner’s mind” is a key tenet of legal design! Come
+              join us.</p>
+          </div>
+          <div class="faq-item">
+            <div class="bubble"></div>
+            <h4>Q: This is not my first rodeo - can I join?</h4>
+            <p>
+              Yes! Meet new people, learn from new experts, and apply legal design to the most current problems facing
+              legal professionals. You may even stretch yourself to take workshops outside your daily area and learn
+              through analogous experience how legal design can work in different fields.
+            </p>
+          </div>
+          <div class="faq-item">
+            <div class="bubble"></div>
+            <h4>Q: I have more questions - who do I contact?</h4>
+            <p>This years’ Team Lead Laura Hartnett and her team will be happy to answer all your questions
+              about the BrainFactory:<br><br>Please reach out to us <a href="mailto:brainfactory@legaldesignsummit.com"
+                style="color: black; text-decoration: underline;">brainfactory@legaldesignsummit.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="curved">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#50cec1" fill-opacity="1"
+        d="M0,288L60,250.7C120,213,240,139,360,96C480,53,600,43,720,37.3C840,32,960,32,1080,32C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+      </path>
+    </svg>
+
+
+
+
+    <div class="wrapper actions" style="padding-bottom: 0px;">
+
+      <!-- Container Section Begins -->
+
+      <div class="container">
+
+        <!-- Content Section Begins -->
+
+        <div id="content-actions">
+
+          <!-- Content Main Section Begins -->
+
+          <div class="content-main" style="margin-top: -25%;">
+            <div class="actions">
+              <div class="row">
+                <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a
+                    href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact
+                    Us</a></div>
+              </div>
+            </div>
+
+
+            <div class="padding-top-40"></div>
+            <div class="social-media padding-top-40 justify-center">
+              <div class="row col">
+                <a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5"
+                  target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com/legaldesignsummit/"
+                  class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/legaldesignsummit/"
+                  class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
+                <a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5"
+                  target="_blank">Twitter</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Main Section Ends -->
+
+        </div>
+
+        <!-- Content Section Ends -->
+
+      </div>
+
+      <!-- Container Section Ends -->
+
+    </div>
+  </div>
+
+  <!-- Wrapper // Content Actions Section Ends -->
+
+  <!-- Footer section loaded with javascipt from footer.html -->
+
+  <div id="footer"></div>
+
+  <!-- Footer Section Ends -->
+
+
+</body>
 
 </html>
