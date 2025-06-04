@@ -27,8 +27,8 @@
   <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
   <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
-  <script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
   <script>
     $(function () {
       $("#footer").load("footer.html");
@@ -56,10 +56,15 @@
       align-items: center;
     }
 
-    .faq-item {
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 10px;
-      margin-bottom: 10px;
+
+
+
+
+    .faq-column {
+      background-color: #ffffff;
+      /* White background for the section */
+      padding-left: 20px;
+      color: #000000;
     }
 
     .timeline {
@@ -67,6 +72,7 @@
       padding-left: 40px;
     }
 
+    /* Make the vertical line black */
     .timeline::before {
       content: "";
       position: absolute;
@@ -74,23 +80,26 @@
       bottom: 0;
       left: 0px;
       width: 2px;
-      background-color: white;
+      background-color: #000000;
     }
 
     .faq-item {
       position: relative;
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 10px;
-      margin-bottom: 10px;
+      background-color: #e0f7f6;
+      /* light-turquoise card */
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
 
     .bubble {
       position: absolute;
-      width: 10px;
-      height: 10px;
-      left: -44px;
+      width: 12px;
+      height: 12px;
+      left: -46px;
       top: 50%;
-      background-color: white;
+      background-color: #000000;
+      /* Make dot black for contrast */
       border-radius: 50%;
       transform: translateY(-50%);
     }
@@ -145,12 +154,18 @@
     }
 
     .workshop-card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
+      .workshop-card {
+        background-color: #e0f7f6;
+        /* light-turquoise */
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-align: center;
+        color: #000000;
+        /* Ensure black text for contrast */
+      }
+
     }
 
     .workshop-card:hover {
@@ -195,6 +210,13 @@
       color: #c30979;
     }
 
+    .workshop-card h4,
+    .workshop-card p,
+    .workshop-card ul,
+    .workshop-card li {
+      color: #000000;
+    }
+
 
     .workshop-divider {
       margin: 80px 10% 40px;
@@ -213,10 +235,170 @@
     .afternoon-workshops-section {
       margin-bottom: 80px;
     }
+
+    /* General Page Background and Text */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    strong {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+    }
+
+
+    /* Headings with serif font for editorial feel */
+    h1,
+    h2,
+    h3,
+    h4,
+    .section-heading {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #000;
+    }
+
+
+    /* Section headings with underline style */
+    .section-heading {
+      font-family: 'Georgia', serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 1.5em;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+    }
+
+    /* Workshop Card Styling */
+    .workshop-card {
+      background-color: #e0f7f6;
+      /* light turquoise */
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+      color: #000000;
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .workshop-card h4,
+    .workshop-card p,
+    .workshop-card ul,
+    .workshop-card li {
+      color: #000000;
+    }
+
+    /* Layout spacing and alignment */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2em 1em;
+    }
+
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      padding: 0 10%;
+    }
+
+    /* Link and button styling */
+    a {
+      color: #c30979;
+      text-decoration: underline;
+    }
+
+    .notify-btn {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: transparent;
+      border: 1px solid #000;
+      padding: 10px 20px;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .notify-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Optional helper class for turquoise background */
+    .bg-light-turquoise {
+      background-color: #e0f7f6;
+      color: #000;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      list-style-type: disc;
+    }
+
+    li {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    /* Optional: specific tweaks for workshop cards */
+    .workshop-card ul {
+      padding-left: 20px;
+      list-style-position: outside;
+    }
+
+    .workshop-card li {
+      font-size: 15px;
+      color: #000;
+    }
+
+    /* Optional: ensure FAQ <li> styles are reset too if used */
+    .faq-item li {
+      font-size: 15px;
+      color: #000;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px 40px;
+      background-color: #ffffff;
+    }
+
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .hero-date {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 20px;
+      margin-top: 10px;
+      color: #000;
+    }
+
+    #footer {
+      margin-top: -30px;
+    }
   </style>
-
-
-  <title>Legal Design Summit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -249,9 +431,12 @@
       </div>
     </div>
   </div>
+  <div class="hero-section">
+    <h2 class="hero-title">BrainFactory</h2>
+    <p class="hero-date">10 September | Helsinki</p>
+  </div>
 
   <div class="curved">
-    <h2 style="padding-top: 80px;">BrainFactory</h2>
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-md-6 col-xs-12">
@@ -264,317 +449,346 @@
         </div>
       </div>
     </div>
-    <svg style="display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
-      <path fill="#50cec1" fill-opacity="1"
-        d="M0,0L60,42.7C120,85,240,171,360,176C480,181,600,107,720,80C840,53,960,75,1080,112C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-      </path>
-    </svg>
-  </div>
+    <div>
+      <svg style="display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+        <path fill="#50cec1" fill-opacity="1"
+          d="M0,0L60,42.7C120,85,240,171,360,176C480,181,600,107,720,80C840,53,960,75,1080,112C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
+    </div>
 
-  <div class="wrapper why-attend" style="background-color: #50cec1; padding-top: 10px;">
-    <div class="container">
-      <div id="content-why-attend" class="justify-center" style="color: #fff">
+    <div class="notification-section">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
+        target="_blank" class="notify-btn">
+        Register here!
+      </a>
+    </div>
 
-        <h3>What is BrainFactory?</h3>
-        <p>BrainFactory is a one-day event with highly interactive, immersive, and inspiring hands-on workshops,
-          brainstorming sessions, and protoyping exercises.</p>
-        <p>For 2025, we're reimagining BrainFactory into interactive workshops where you not only get to experience
-          legal design, you get to dive into a specific area of legal design. Our BrainFactory team together with our
-          Partners are building workshops that arise from real life examples from the cross-sections of law and design
-          thinking.
-          <br><br>
+    <div class="wrapper why-attend" style="background-color: #ffffff; padding-top: 10px;">
+      <div class="container">
+        <div id="content-why-attend" class="justify-center" style="background-color: #ffffff">
 
-          Brains on for a full day of legal design! You'll attend two workshops - one in the morning and one in the
-          afternoon - where you'll get to know other interested and like-minded legal professionals and dive into the
-          topics at hand.
+          <h3>What is BrainFactory?</h3>
+          <p>BrainFactory is a one-day event with highly interactive, immersive, and inspiring hands-on workshops,
+            brainstorming sessions, and protoyping exercises.</p>
+          <p>For 2025, we're reimagining BrainFactory into interactive workshops where you not only get to experience
+            legal design, you get to dive into a specific area of legal design. Our BrainFactory team together with our
+            Partners are building workshops that arise from real life examples from the cross-sections of law and design
+            thinking.
+            <br><br>
 
-          Are you new to legal design? Don't worry - we've got you covered. We have a specific workshop track to get
-          your feet wet in legal design and still pick up more tips and tricks if you have some experience.
-          <br><br>
-        </p>
-        <h3>Program</h3>
-        <p>Locations: In and around central Helsinki (walking distance from the Summit venue)</p>
-        <p>9:00 - 13:00 Morning Workshops</p>
+            Brains on for a full day of legal design! You'll attend two workshops - one in the morning and one in the
+            afternoon - where you'll get to know other interested and like-minded legal professionals and dive into the
+            topics at hand.
 
-        <div class="morning-workshops-section">
-          <h4 style="text-align: center; margin-bottom: 30px;">Choose your morning workshop</h4>
-          <div class="workshop-grid">
-            <div class="workshop-card">
-              <h4>Can AI Agents Master Legal Design?</h4>
-              <p>
-                In this hands-on session, you’ll build your own AI “legal design team,” run a full legal design sprint,
-                and compare results in real time. You'll both think and experiment how both the legal design process and
-                roles could convert into prompts and guidance for AI. See how multi-agent collaboration could reshape
-                legal work.
-              </p>
-              <p><strong>Facilitators:</strong></p>
-              <ul>
-                <li>Antti Innanen, CEO and Founder, Dot. Legal Design</li>
-                <li>Imperiale, Founder and Managing Director, Better Ipsum</li>
-                <li>Cat Moon, Law Professor and Founding Co-Director, Vanderbilt AI + Law Lab (VAILL), Vanderbilt Law
-                  School</li>
-              </ul>
-            </div>
+            Are you new to legal design? Don't worry - we've got you covered. We have a specific workshop track to get
+            your feet wet in legal design and still pick up more tips and tricks if you have some experience.
+            <br><br>
+          </p>
+          <h3> Program</h3>
+          <p>Locations: In and around central Helsinki (walking distance from the Summit venue)</p>
+          <p>9:00 - 13:00</p>
 
-            <div class="workshop-card">
-              <h4>From Insights to Action: Advancing People-Centred Justice through Legal Design</h4>
-              <p>What if legal systems were designed like great services—intuitive, human, and radically focused on the
-                people they serve? In this dynamic, hands-on workshop, we’ll roll up our sleeves and explore how legal
-                design can move us from understanding justice needs to delivering people-centred solutions. Hosted by
-                HiiL
-                – The Hague Institute for Innovation of Law, this session brings to life insights from the Justice
-                Innovation Lab’s work in Tunisia, Nigeria, Burkina Faso, Ethiopia, and Niger. You’ll hear powerful,
-                real-world stories from legal designers and justice innovators on the ground—and then become part of the
-                story. Together, we’ll step into the shoes of justice users, identify urgent legal challenges, and
-                co-create breakthrough ideas using design tools. Expect fast-paced collaboration, fresh thinking, and a
-                few unexpected twists along the way. Whether you’re a policymaker, practitioner, designer, or curious
-                changemaker, you’ll leave with practical frameworks and renewed energy for making justice systems truly
-                work for people.
-              </p>
-              <p><strong>Facilitators:</strong></p>
-              <ul>
-                <li>Zainab Malik, Senior Policy and Advocacy Advisor - HiiL; </li>
-                <li> Viviana Brun, Programme Manager, Justice Innovation Labs - HiiL</li>
-              </ul>
-
-            </div>
-            <div class="workshop-card">
-              <h4>Legal Design Writing: Telling the World and Getting Heard</h4>
-              <p>Do you have something you want to tell the world, but publishing your ideas feels a bit intimidating?
-                Writing is a bit like a monster with razor-sharp deadlines, intimidating reviewer fangs, surrounded by
-                the
-                paralyzing fog of perfectionism? Join this four-hour workshop to tame the publication beast, tell the
-                world and make your ideas heard. Walk away with a roadmap for your work, as well as some key
-                accountability partners.
-              </p>
-              <p><strong>Facilitators:</strong></p>
-              <ul>
-                <li>Michael Doherty, Professor of Legal Design, Lancaster University</li>
-                <li>Helena Haapio, Contract Strategist, Lexpert Ltd</li>
-                <li>Lisa Toohey, Professor, UNSW Law & Justice</li>
-                <li>Michael Blasie, Dean and Professor of Law, KIMEP University</li>
-              </ul>
-            </div>
-            <div class="workshop-card">
-              <h4>Legal Design From First Principles</h4>
-              <p>Think design is just for creatives? Think again. This science-led workshop draws on human factors,
-                psychology, and usability research to show how lawyers can use proven design principles to make
-                contracts
-                work better for everyone. We’ll strip legal design back to its fundamentals, understanding how people
-                read, think, decide, and act, and use that understanding to build smarter, more user-friendly legal
-                documents. Through short exercises and real-world examples, you’ll explore why good design isn’t about
-                pretty fonts or graphics, it’s about using friction effectively, improving comprehension, and helping
-                people make better decisions. Whether you're new to legal design or looking to strengthen your approach,
-                you'll leave with practical tools grounded in science, not just style.
-              <p><strong>Facilitators:</strong></p>
-              <ul>
-                <li>Peter Hornsby, Designer - Edgerton Riley</li>
-              </ul>
-              </p>
-            </div>
-            <div class="workshop-card">
-              <h4>Organizational Design for Legal Teams in the Age of Artificial Intelligence</h4>
-              <p>This interactive workshop explores how artificial intelligence (AI) is reshaping the principles of
-                organisational design. Participants will dive into practical strategies for building more dynamic and
-                adaptive legal teams — rethinking processes, roles, structures, and culture to stay competitive in a
-                rapidly changing, AI-driven world. By the end of the session, attendees will have actionable tools to
-                rethink organisational design in the context of AI — from redefining job roles to fostering an
-                innovation-ready culture in a legal team.
-              </p>
-              <ul>
-                <p><strong>Facilitators:</strong></p>
-                <li>Heikki Ilvessalo, CEO, ILVES</li>
-                <li>Maria Sorsimo, Head of Finland, Legora</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="workshop-divider">
-          <h3>Afternoon Workshops</h3>
-          <p>14:00 – 18:00</p>
-        </div>
-        <div class="workshop-grid">
-          <div class="afternoon-workshops-section">
+          <div class="morning-workshops-section">
+            <h4 style="text-align: center; margin-bottom: 30px;">Morning Workshops</h4>
             <div class="workshop-grid">
-              <div class="workshop-card">
-                <h4>Designing the Future of Law: AI-Powered Legal Design Sprint</h4>
-                <p>How might we harness AI to accelerate the adoption of legal design across the profession? Join us for
-                  an
-                  intensive 4-hour design sprint where legal professionals, technologists, and designers will co-create
-                  innovative solutions to pressing legal challenges. Participants will collaborate at themed tables
-                  focused
-                  on
-                  high-impact areas like access to justice, contract simplification, and legal visualisation. Guided by
-                  the
-                  proven Brainfactory × DLA methodology and inspired by lightning talks from legal design pioneers,
-                  you’ll
-                  ideate, prototype, and pitch ideas that show how AI can make legal systems more human-centered,
-                  efficient,
-                  and accessible. With support from leading tech providers, you’ll leave with tangible prototypes - and
-                  a
-                  deeper understanding of the ROI of integrating AI into legal workflows. Whether you're a lawyer, a
-                  designer,
-                  or a changemaker in between, this is your chance to shape the future of law.
-                </p>
-                <p><strong>Facilitators:</strong></p>
-                <ul>
-                  <li>Mayowa Odusote, DLA Piper</li>
-
-                </ul>
-              </div>
-
-              <div class="workshop-card">
-                <h4>Contract design: practical techniques to transform your B2B contracts straight away</h4>
-                <p>In this interactive workshop, contract drafters and negotiators will learn how to transform business
-                  contracts to dramatically reduce friction and negotiation times – and improve commercial
-                  relationships.We
-                  will share our expertise in simplifying complex contracts, focusing on foundational techniques that
-                  can
-                  get
-                  you immediate results.
-                </p>
-                <p><strong>Facilitators:</strong></p>
-                <ul>
-                  <li>Stefania Passera, Contract Design Expert, CEO, Passera Design</li>
-
-                </ul>
-              </div>
-              <div class="workshop-card">
-                <h4>Enabling Digital Transformation through Legal Design</h4>
-                <p>How might we use legal design to solve digital transformation problems? We'll talk about common pain
-                  points
-                  in digital transformation and how we can address those pain points using legal design. The interactive
-                  workshop will focus on real cases where EY's clients have dealt with a digital transformation,
-                  exploring
-                  the
-                  ways legal design has and could enable a greater and smoother shift in the digital age.
-
-                </p>
-                <p><strong>Facilitators:</strong></p>
-                <ul>
-                  <li>Carol Hannud, Legal Transformation, Dispute System Design, and Legal Design Senior Executive, EY
-                    (Brazil)</li>
-                  <li> Piia Madissoo, Legal Transform & Operate Lead, EY (Finland)</li>
-                </ul>
-              </div>
-              <div class="workshop-card">
-                <h4>Legal Design for Sustainability</h4>
-                <p>This workshop explores how legal design can be applied to enhance sustainability-related processes
+              <div class="workshop-card bg-light-turquoise">
+                <h4>Can AI Agents Master Legal Design?</h4>
+                <p>
+                  In this hands-on session, you’ll build your own AI “legal design team,” run a full legal design
+                  sprint,
+                  and compare results in real time. You'll both think and experiment how both the legal design process
                   and
-                  language. Through hands-on activities and case studies, participants will: 1. co-create clearer
-                  sustainability clauses, 2. rethink legal transformation toolkits, and 3. design meaningful stakeholder
-                  engagement strategies.
-
+                  roles could convert into prompts and guidance for AI. See how multi-agent collaboration could reshape
+                  legal work.
                 </p>
                 <p><strong>Facilitators:</strong></p>
                 <ul>
-                  <li> Sampo Mielityinen, Head of Master’s Programme on Legal Design and Legal Expertise, Laurea
-                    University
-                    of
-                    Applied Sciences
-                  </li>
-                  <li> Seita Vesa, Professor of Environmental Law, UEF Law School, Research Professor, Finnish
-                    Environmental
-                    Institute (SYKE)</li>
-                  <li>Ebru Metin, Researcher, TalTech, Founder of Legal Design Turkey</li>
-                  <li> Anne Ketola, Senior Researcher, Tampere University</li>
+                  <li>Antti Innanen, CEO and Founder, Dot. Legal Design</li>
+                  <li>Imperiale, Founder and Managing Director, Better Ipsum</li>
+                  <li>Cat Moon, Law Professor and Founding Co-Director, Vanderbilt AI + Law Lab (VAILL), Vanderbilt Law
+                    School</li>
+                </ul>
+              </div>
+
+              <div class="workshop-card bg-light-turquoise">
+                <h4>From Insights to Action: Advancing People-Centred Justice through Legal Design</h4>
+                <p>What if legal systems were designed like great services—intuitive, human, and radically focused on
+                  the
+                  people they serve? In this dynamic, hands-on workshop, we’ll roll up our sleeves and explore how legal
+                  design can move us from understanding justice needs to delivering people-centred solutions. Hosted by
+                  HiiL
+                  – The Hague Institute for Innovation of Law, this session brings to life insights from the Justice
+                  Innovation Lab’s work in Tunisia, Nigeria, Burkina Faso, Ethiopia, and Niger. You’ll hear powerful,
+                  real-world stories from legal designers and justice innovators on the ground—and then become part of
+                  the
+                  story. Together, we’ll step into the shoes of justice users, identify urgent legal challenges, and
+                  co-create breakthrough ideas using design tools. Expect fast-paced collaboration, fresh thinking, and
+                  a
+                  few unexpected twists along the way. Whether you’re a policymaker, practitioner, designer, or curious
+                  changemaker, you’ll leave with practical frameworks and renewed energy for making justice systems
+                  truly
+                  work for people.
+                </p>
+                <p><strong>Facilitators:</strong></p>
+                <ul>
+                  <li>Zainab Malik, Senior Policy and Advocacy Advisor - HiiL; </li>
+                  <li> Viviana Brun, Programme Manager, Justice Innovation Labs - HiiL</li>
+                </ul>
+
+              </div>
+              <div class="workshop-card bg-light-turquoise">
+                <h4>Legal Design Writing: Telling the World and Getting Heard</h4>
+                <p>Do you have something you want to tell the world, but publishing your ideas feels a bit intimidating?
+                  Writing is a bit like a monster with razor-sharp deadlines, intimidating reviewer fangs, surrounded by
+                  the
+                  paralyzing fog of perfectionism? Join this four-hour workshop to tame the publication beast, tell the
+                  world and make your ideas heard. Walk away with a roadmap for your work, as well as some key
+                  accountability partners.
+                </p>
+                <p><strong>Facilitators:</strong></p>
+                <ul>
+                  <li>Michael Doherty, Professor of Legal Design, Lancaster University</li>
+                  <li>Helena Haapio, Contract Strategist, Lexpert Ltd</li>
+                  <li>Lisa Toohey, Professor, UNSW Law & Justice</li>
+                  <li>Michael Blasie, Dean and Professor of Law, KIMEP University</li>
+                </ul>
+              </div>
+              <div class="workshop-card bg-light-turquoise">
+                <h4>Legal Design From First Principles</h4>
+                <p>Think design is just for creatives? Think again. This science-led workshop draws on human factors,
+                  psychology, and usability research to show how lawyers can use proven design principles to make
+                  contracts
+                  work better for everyone. We’ll strip legal design back to its fundamentals, understanding how people
+                  read, think, decide, and act, and use that understanding to build smarter, more user-friendly legal
+                  documents. Through short exercises and real-world examples, you’ll explore why good design isn’t about
+                  pretty fonts or graphics, it’s about using friction effectively, improving comprehension, and helping
+                  people make better decisions. Whether you're new to legal design or looking to strengthen your
+                  approach,
+                  you'll leave with practical tools grounded in science, not just style.
+                <p><strong>Facilitators:</strong></p>
+                <ul>
+                  <li>Peter Hornsby, Designer - Edgerton Riley</li>
+                </ul>
+                </p>
+              </div>
+              <div class="workshop-card bg-light-turquoise">
+                <h4>Organizational Design for Legal Teams in the Age of Artificial Intelligence</h4>
+                <p>This interactive workshop explores how artificial intelligence (AI) is reshaping the principles of
+                  organisational design. Participants will dive into practical strategies for building more dynamic and
+                  adaptive legal teams — rethinking processes, roles, structures, and culture to stay competitive in a
+                  rapidly changing, AI-driven world. By the end of the session, attendees will have actionable tools to
+                  rethink organisational design in the context of AI — from redefining job roles to fostering an
+                  innovation-ready culture in a legal team.
+                </p>
+                <ul>
+                  <p><strong>Facilitators:</strong></p>
+                  <li>Heikki Ilvessalo, CEO, ILVES</li>
+                  <li>Maria Sorsimo, Head of Finland, Legora</li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-
-        <div class="notification-section">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
-            target="_blank" class="notify-btn">
-            Register here!
-          </a>
-        </div>
-
-        <div class="row justify-content-md-center justify-center" style="padding-top: 100px;">
-          <div class="col-lg-6 col-xs-12">
-            <div class="flex-item" style="width: 100%; max-width: 560px;">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GvknKJ2k98c"
-                title="BrainFactory Highlights" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+          <div class="workshop-divider">
+            <div class="notification-section">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
+                target="_blank" class="notify-btn">
+                Register here!
+              </a>
             </div>
-            <p style="line-height: 14px;">
-              Check out the awesome aftermovie from the last BrainFactory <br><br>(you can watch it directly here)
-            </p>
+
+            <h3>Afternoon Workshops</h3>
+            <p>14:00 – 18:00</p>
+          </div>
+          <div class="workshop-grid">
+            <div class="afternoon-workshops-section">
+              <div class="workshop-grid">
+                <div class="workshop-card bg-light-turquoise">
+                  <h4>Designing the Future of Law: AI-Powered Legal Design Sprint</h4>
+                  <p>How might we harness AI to accelerate the adoption of legal design across the profession? Join us
+                    for
+                    an
+                    intensive 4-hour design sprint where legal professionals, technologists, and designers will
+                    co-create
+                    innovative solutions to pressing legal challenges. Participants will collaborate at themed tables
+                    focused
+                    on
+                    high-impact areas like access to justice, contract simplification, and legal visualisation. Guided
+                    by
+                    the
+                    proven Brainfactory × DLA methodology and inspired by lightning talks from legal design pioneers,
+                    you’ll
+                    ideate, prototype, and pitch ideas that show how AI can make legal systems more human-centered,
+                    efficient,
+                    and accessible. With support from leading tech providers, you’ll leave with tangible prototypes -
+                    and
+                    a
+                    deeper understanding of the ROI of integrating AI into legal workflows. Whether you're a lawyer, a
+                    designer,
+                    or a changemaker in between, this is your chance to shape the future of law.
+                  </p>
+                  <p><strong>Facilitators:</strong></p>
+                  <ul>
+                    <li>Mayowa Odusote, DLA Piper</li>
+
+                  </ul>
+                </div>
+
+                <div class="workshop-card bg-light-turquoise">
+                  <h4>Contract design: practical techniques to transform your B2B contracts straight away</h4>
+                  <p>In this interactive workshop, contract drafters and negotiators will learn how to transform
+                    business
+                    contracts to dramatically reduce friction and negotiation times – and improve commercial
+                    relationships.We
+                    will share our expertise in simplifying complex contracts, focusing on foundational techniques that
+                    can
+                    get
+                    you immediate results.
+                  </p>
+                  <p><strong>Facilitators:</strong></p>
+                  <ul>
+                    <li>Stefania Passera, Contract Design Expert, CEO, Passera Design</li>
+
+                  </ul>
+                </div>
+                <div class="workshop-card bg-light-turquoise">
+                  <h4>Enabling Digital Transformation through Legal Design</h4>
+                  <p>How might we use legal design to solve digital transformation problems? We'll talk about common
+                    pain
+                    points
+                    in digital transformation and how we can address those pain points using legal design. The
+                    interactive
+                    workshop will focus on real cases where EY's clients have dealt with a digital transformation,
+                    exploring
+                    the
+                    ways legal design has and could enable a greater and smoother shift in the digital age.
+
+                  </p>
+                  <p><strong>Facilitators:</strong></p>
+                  <ul>
+                    <li>Carol Hannud, Legal Transformation, Dispute System Design, and Legal Design Senior Executive, EY
+                      (Brazil)</li>
+                    <li> Piia Madissoo, Legal Transform & Operate Lead, EY (Finland)</li>
+                  </ul>
+                </div>
+                <div class="workshop-card bg-light-turquoise">
+                  <h4>Legal Design for Sustainability</h4>
+                  <p>This workshop explores how legal design can be applied to enhance sustainability-related processes
+                    and
+                    language. Through hands-on activities and case studies, participants will: 1. co-create clearer
+                    sustainability clauses, 2. rethink legal transformation toolkits, and 3. design meaningful
+                    stakeholder
+                    engagement strategies.
+
+                  </p>
+                  <p><strong>Facilitators:</strong></p>
+                  <ul>
+                    <li> Sampo Mielityinen, Head of Master’s Programme on Legal Design and Legal Expertise, Laurea
+                      University
+                      of
+                      Applied Sciences
+                    </li>
+                    <li> Seita Vesa, Professor of Environmental Law, UEF Law School, Research Professor, Finnish
+                      Environmental
+                      Institute (SYKE)</li>
+                    <li>Ebru Metin, Researcher, TalTech, Founder of Legal Design Turkey</li>
+                    <li> Anne Ketola, Senior Researcher, Tampere University</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
 
-          <!-- FAQ Column -->
-          <div class="col-lg-6 col-xs-12"
-            style="text-align: left; padding-left: 20px; background-color: #50cec1; color: black;">
-            <h3>FAQ</h3>
-            <div class="timeline">
-              <div class="faq-item">
-                <div class="bubble"></div>
+          <div class="notification-section">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
+              target="_blank" class="notify-btn">
+              Register here!
+            </a>
+          </div>
 
-                <h4>Q: How do I participate?</h4>
-                <p>
-                  Full sign up begins on 5 June. Follow Legal Design Summit on LinkedIn and Instagram for the latest.
+          <div class="container" style="padding-top: 20px;">
+            <div class="row align-items-start">
 
-                  When registration is open, you’ll be able to register <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
-                    style="color: #c30979;"> here</a>
-                </p>
-                <p>
-                  We'll do our best to match you with workshops based on availability, preferences, background, and
-                  experience (in some cases) but rest assured there is something for everyone in these workshops with
-                  the
-                  chance to engage in legal design and how it applies to so many areas of legal problems.
-                </p>
-              </div>
-
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: I can only make one workshop, is that possible?</h4>
-                <p>We’re looking for fully-committed BrainFactory participants who are in for the full day. </p>
-              </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: This is my first rodeo - is this still for me? </h4>
-                <p>Yes! We will, to the best of our ability, match you with a specialized track of workshops that will
-                  offer
-                  you the opportunity to get your feet wet!
-                  Also, legal designers are about the nicest people in the legal field you could ever meet. Everyone
-                  is
-                  willing to answer questions. After all, having a “beginner’s mind” is a key tenet of legal design!
-                  Come join us.</p>
-              </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: This is not my first rodeo - can I join?</h4>
-                <p>
-                  Yes! Meet new people, learn from new experts, and apply legal design to the most current problems
-                  facing
-                  legal professionals. You may even stretch yourself to take workshops outside your daily area and
-                  learn
-                  through analogous experience how legal design can work in different fields.
+              <!-- Video Column -->
+              <div class="col-md-6 mb-4">
+                <div class="flex-item" style="width: 100%; max-width: 560px;">
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/GvknKJ2k98c"
+                    title="BrainFactory Highlights" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <p style="line-height: 1.4;">
+                  Check out the awesome aftermovie from the last BrainFactory.<br><br>
+                  (you can watch it directly here)
                 </p>
               </div>
-              <div class="faq-item">
-                <div class="bubble"></div>
-                <h4>Q: I have more questions - who do I contact?</h4>
-                <p>This years’ Team Lead Laura Hartnett and her team will be happy to answer all your questions
-                  about the BrainFactory:<br><br>Please reach out to us <a
-                    href="mailto:brainfactory@legaldesignsummit.com"
-                    style="color: black; text-decoration: underline;">brainfactory@legaldesignsummit.com</a></p>
+              <!-- FAQ Column -->
+              <div class="col-lg-6 col-xs-12 faq-column">
+                <h3>FAQ</h3>
+                <div class="timeline">
+                  <div class="faq-item">
+                    <div class="bubble"></div>
+                    <h4>Q: How do I participate?</h4>
+                    <p>
+                      Full sign up begins on 5 June. Follow Legal Design Summit on LinkedIn and Instagram for the
+                      latest.
+                      When registration is open, you’ll be able to register
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHpAdzXzkP84HBBlDGLZuKNthiVIXex8HG1faU-AU01c5wA/viewform?usp=sharing&ouid=118060274839672406819"
+                        style="color: #c30979;">here</a>.
+                    </p>
+                    <p>
+                      We'll do our best to match you with workshops based on availability, preferences, background, and
+                      experience.
+                      There is something for everyone in these workshops.
+                    </p>
+                  </div>
+
+                  <div class="faq-item">
+                    <div class="bubble"></div>
+                    <h4>Q: I can only make one workshop, is that possible?</h4>
+                    <p>We’re looking for fully-committed BrainFactory participants who are in for the full day.</p>
+                  </div>
+
+                  <div class="faq-item">
+                    <div class="bubble"></div>
+                    <h4>Q: This is my first rodeo - is this still for me?</h4>
+                    <p>
+                      Yes! We’ll match you with a workshop track that suits beginners. Legal designers are some of the
+                      nicest folks
+                      in the field — bring your questions!
+                    </p>
+                  </div>
+
+                  <div class="faq-item">
+                    <div class="bubble"></div>
+                    <h4>Q: This is not my first rodeo - can I join?</h4>
+                    <p>
+                      Absolutely! You’ll meet new people, explore new areas of legal design, and deepen your expertise
+                      through fresh challenges.
+                    </p>
+                  </div>
+
+                  <div class="faq-item">
+                    <div class="bubble"></div>
+                    <h4>Q: I have more questions - who do I contact?</h4>
+                    <p>
+                      Team Lead Laura Hartnett and her team are happy to help.<br><br>
+                      Reach out to us at
+                      <a href="mailto:brainfactory@legaldesignsummit.com"
+                        style="color: black; text-decoration: underline;">brainfactory@legaldesignsummit.com</a>
+                    </p>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
   <div class="curved">
@@ -583,61 +797,9 @@
         d="M0,288L60,250.7C120,213,240,139,360,96C480,53,600,43,720,37.3C840,32,960,32,1080,32C1200,32,1320,32,1380,32L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
       </path>
     </svg>
-
-
-
-
-    <div class="wrapper actions" style="padding-bottom: 0px;">
-
-      <!-- Container Section Begins -->
-
-      <div class="container">
-
-        <!-- Content Section Begins -->
-
-        <div id="content-actions">
-
-          <!-- Content Main Section Begins -->
-
-          <div class="content-main" style="margin-top: -25%;">
-            <div class="actions">
-              <div class="row">
-                <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a
-                    href="mailto:<?php print encode_email('info@legaldesignsummit.com'); ?>" class="btn light">Contact
-                    Us</a></div>
-              </div>
-            </div>
-
-
-            <div class="padding-top-40"></div>
-            <div class="social-media padding-top-40 justify-center">
-              <div class="row col">
-                <a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5"
-                  target="_blank">LinkedIn</a>
-                <a href="https://www.facebook.com/legaldesignsummit/"
-                  class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/legaldesignsummit/"
-                  class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
-                <a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5"
-                  target="_blank">Twitter</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Content Main Section Ends -->
-
-        </div>
-
-        <!-- Content Section Ends -->
-
-      </div>
-
-      <!-- Container Section Ends -->
-
-    </div>
   </div>
 
-  <!-- Wrapper // Content Actions Section Ends -->
+
 
   <!-- Footer section loaded with javascipt from footer.html -->
 
