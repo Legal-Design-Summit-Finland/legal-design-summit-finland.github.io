@@ -86,6 +86,44 @@
 			flex-wrap: wrap;
 			/* allows stacking on small screens */
 		}
+
+		.logo-section {
+			background-color: white;
+			padding: 40px 20px;
+			text-align: center;
+		}
+
+		.logo-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 24px;
+			margin-top: 30px;
+		}
+
+		.logo-grid a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 180px;
+			height: 120px;
+			padding: 10px;
+			background-color: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+			transition: transform 0.2s ease;
+		}
+
+		.logo-grid a:hover {
+			transform: scale(1.05);
+		}
+
+		.logo-grid img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
 	</style>
 
 </head>
@@ -284,57 +322,7 @@
 				<!-- Content Main Section Begins -->
 
 				<div class="row justify-content-md-center" style="text-align: center;">
-					<!--
-			<div class="col-md-6 col-xs-12">
-				<h3>Tweets by Legal Design Summit</h3>
-				<a class="twitter-timeline" data-chrome="noheader nofooter noborders" data-width="500" data-height="500" data-link-color="#aaaaaa" href="https://twitter.com/LegaldesignFI"></a>
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
-		
-			
-			<div class="col-md-6 col-xs-12" style="padding-left: 5%; padding-right: 5%;">
-				<h3 >Announcements</h3>
-				<ul style="padding-top: 50px; text-align: left;">
-					<li style="padding-bottom: 10px;">
-						<h4>11 September 2023</h4>
-						<p style="font-size: 20px;">Finalized program is now published!</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>11 Auguts 2023</h4>
-						<p style="font-size: 20px;">We are looking for volunteers to help during the Legal Design Summit in making it a success</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>3 July 2023</h4>
-						<p style="font-size: 20px;">Preliminary timetable for the main event is publish - find out the start and end times of the program to help you plan your trip to Helsinki! <a href="program-thursday.html" style="color: #50cec1; text-decoration: underline;">See more</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>18 June 2023</h4>
-						<p style="font-size: 20px;">Program for Brainfactory is published! <a href="brainfactory.html" style="color: #50cec1; text-decoration: underline;">See more</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>12 June 2023</h4>
-						<p style="font-size: 20px;">Call for participants and mentors for BRAINFACTORY is now closed, thank you all wonderful people for applying! <a href="brainfactory.html" style="color: #50cec1; text-decoration: underline;">See more</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>17 May 2023</h4>
-						<p style="font-size: 20px;">Call for participants and mentors for BRAINFACTORY is now open! <a href="brainfactory.html" style="color: #50cec1; text-decoration: underline;">See more</a></p>
-					</li>
-					<li style="padding-bottom: 10px;">
-						<h4>2 May 2023</h4>
-						<p style="font-size: 20px;">All tickets for the summit are gone, but you can still join the waitlist. <a href="tickets.html" style="color: #50cec1; text-decoration: underline;">See more</a></p>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-6 col-xs-12">
-				<h3 style="padding-bottom: 50px;">Summit location</h3>
-				<p style="font-size: 20px; text-align: left;">Legal Design Summit is held in the Main hall of University of Helsinki, Located in: Aleksanterinkatu 5, Helsinki Finland</p>
-				<p style="font-size: 20px; text-align: left; padding-top: 30px;">Here is a helpful map:</p>
-				<div><img src="images/backgrounds/Map-for-LDS-2023.png" class="img-fluid"></div>
-				
-			</div>
-		-->
 
-					<!-- Banner Section - Positioned below the mint green header -->
 
 
 
@@ -388,13 +376,19 @@
 									style="max-width: 100%; height: auto; object-fit: contain;">
 							</a>
 						</li>
+						<li style="width: 230px; display: flex; justify-content: center; align-items: center;">
+							<a href="https://newcode.ai/" target="_blank">
+								<img src="images/collabs/-Newcode.ai.png" alt="Newcode.ai"
+									style="max-width: 100%; height: auto; object-fit: contain;">
+							</a>
+						</li>
 						<li style="width: 170px; display: flex; justify-content: center; align-items: center;">
 							<a href="https://www.dlapiper.com/en/about-us/law-and" target="_blank">
 								<img src="images/collabs/DLA Piper.jpg" alt="DLA Piper"
 									style="max-width: 100%; height: auto; object-fit: contain;">
 							</a>
 						</li>
-						<li style="width: 170px; display: flex; justify-content: center; align-items: center;">
+						<li style="width: 160px; display: flex; justify-content: center; align-items: center;">
 							<a href="https://www.legora.com" target="_blank">
 								<img src="images/collabs/Legora (word logo).png" alt="Legora"
 									style="max-width: 100%; height: auto; object-fit: contain;">
@@ -402,22 +396,25 @@
 						</li>
 					</ul>
 
-					<!-- Second row with only EY -->
-					<ul
-						style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; padding: 20px 0; list-style: none; margin: 0;">
-						<li style="width: 130px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://ey.com" target="_blank">
-								<img src="images/collabs/EY_Law_ Black.png" alt="EY Law"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-						<li style="width: 130px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://www.almainsights.fi/" target="_blank">
-								<img src="images/collabs/Alma Insights__black.png" alt="Alma"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-					</ul>
+					<!-- Second row -->
+					<div style="width: 100%; display: flex; justify-content: center;">
+						<ul
+							style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; padding: 20px 0; list-style: none; margin: 0;">
+							<li style="width: 130px; display: flex; justify-content: center; align-items: baseline;">
+
+								<a href="https://ey.com" target="_blank">
+									<img src="images/collabs/EY_Law_ Black.png" alt="EY Law"
+										style="width: auto; height: 50px;">
+								</a>
+							</li>
+							<li style="width: 150px; display: flex; justify-content: center; align-items: center;">
+								<a href="https://www.almainsights.fi/" target="_blank">
+									<img src="images/collabs/Alma Insights__black.png" alt="Alma"
+										style="width: auto; height: 50px; margin-top: 6px">
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 			</div>
@@ -470,156 +467,71 @@
 
 	</div>
 
-	<div class="padding-top-40 justify-center" style="background-color: white;">
+
+	<div class="logo-section">
 		<h3>In co-operation with:</h3>
 		<p>We love collaborating with non-profits - Get in touch to join forces with us!</p>
+		<div class="logo-grid">
+			<a href="legaldesignsummit.com" target="_blank"><img src="images/collabs/RTK logo (Peegi Kaibald).png"
+					alt="RTK"></a>
+			<a href="https://legaldesign-journal.com/" target="_blank"><img
+					src="images/collabs/Legal Design Journal.JPG" alt="Legal Design Journal"></a>
+			<a href="https://www.tum.de/" target="_blank"><img
+					src="images/collabs/TUM_Logo_extern_mt_EN_RGB_neg_p(Christian Djeffal).png"></a>
+			<a href="https://www.iltanet.org/home" target=" _blank"><img src="images/collabs/ILTA-logo-full.png"></a>
+			<a href="https://elta.org/" target="_blank"><img src="images/collabs/elta.png"></a>
+			<a href="https://law.vanderbilt.edu/academics/academic-programs/law-and-innovation/activities.php"
+				target="_blank"><img src="images/collabs/vanderbilt.png"></a>
 
-		<ul class="flex-container wrap">
-			<!--<li class="flex-item" style="width: 300px"><a href="https://www.aalto.fi/en" target="_blank"><img
-						src="images/collabs/aalto.png"></a></li>
-			
-			<li class="flex-item"><a href="https://jura.ku.dk/legaltechlab/" target="_blank"><img
-						src="images/collabs/cltl.png"></a></li>
-			<li class="flex-item" style="width: 300px"><a href="https://www.it-oikeus.org/" target="_blank"><img
-						src="images/collabs/it.png"></a></li>
-						-->
-			<li class="flex-item" style="width: 260px;"><a href="https://www.iltanet.org/home" target=" _blank"><img
-						src="images/collabs/ILTA-logo-full.png"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a href="https://elta.org/" target="_blank"><img
-						src="images/collabs/elta.png"></a>
-			</li>
-			<li class="flex-item"><a
-					href="https://law.vanderbilt.edu/academics/academic-programs/law-and-innovation/activities.php"
-					target="_blank"><img src="images/collabs/vanderbilt.png"></a></li>
-			<li class="flex-item" style="width: 150px;"><a href="https://legalhackers.org/" target="_blank"><img
-						src="images/collabs/lh.png"></a></li>
-			<li class="flex-item" style="width: 150px;"><a href="https://www.hiil.org/" target="_blank"><img
-						src="images/collabs/HiiL_Logo color tagline.png"></a></li>
-			<li class="flex-item" style="width: 150px"><a href="https://www.copenhagenlegaltech.dk/"
-					target="_blank"><img src="images/collabs/clt.png"></a></li>
-			<li class="flex-item" style="width: 215px;"><a href="https://juristiliitto.fi/" target="_blank"><img
-						src="images/collabs/Juristiliitto.png"></a></li>
-			<li class="flex-item" style="width: 250px;"><a href="https://www.nulawlab.org/" target="_blank"><img
-						src="images/collabs/nu-law.png"></a></li>
-			<!--<li class="flex-item" style="width: 250px;"><a href="https://litelab.law.hku.hk/" target="_blank"><img
-						src="images/collabs/LITE-Lab.jpg"></a></li>
-			<li class="flex-item" style="width: 250px;"><a href="https://www.uchceu.com/en/" target="_blank"><img
-						src="images/collabs/universidad-uch.png"></a></li>
-			<li class="flex-item" style="width: 250px;"><a href="https://www.epj.es/" target="_blank"><img
-						src="images/collabs/Escuela-de-Practica-Juridica-black.jpg"></a></li>
-			<li class="flex-item" style="width: 250px;"><a
-					href="https://www.linkedin.com/company/think-legaltech/?viewAsMember=true" target="_blank"><img
-						src="images/collabs/thinklegaltech.png"></a></li>
-			<li class="flex-item"><a href="https://www.legaltechdesign.com/" target="_blank"><img
-						src="images/collabs/stanford.png"></a></li>
-			<li class="flex-item"><a href="https://www.eui.eu/en/home/" target="_blank"><img
-						src="images/collabs/LOGO-EUI-full.png"></a></li>
-			<li class="flex-item" style="width: 300px;"><a href="https://tuomioistuinvirasto.fi/en/index.html"
-					target="_blank"><img src="images/collabs/tuomioistuinvirasto.png"></a></li>
-			
-			<li class="flex-item" style="width: 175px;"><a href="https://asianajajaliitto.fi/" target="_blank"><img
-						src="images/collabs/Asianajajaliitto.png"></a></li>
-			<li class="flex-item" style="width: 350px;"><a href="https://www.ulapland.fi/EN" target="_blank"><img
-						src="images/collabs/lapin-yliopisto.png"></a></li>
-			<li class="flex-item" style="width: 300px;"><a href="https://sjquinney.utah.edu/" target="_blank"><img
-						src="images/collabs/college-of-law-logolcolor.jpg"></a></li>
-			<li class="flex-item" style="width: 300px;"><a href="https://www.lancaster.ac.uk/law/" target="_blank"><img
-						src="images/collabs/lancaster-logo-2.PNG"></a></li>-->
+			<a href="https://legalhackers.org/" target="_blank"><img src="images/collabs/lh.png"></a>
+			<a href="https://www.hiil.org/" target="_blank"><img src="images/collabs/HiiL_Logo color tagline.png"></a>
 
-			<!--	<li class="flex-item"><a href="https://www.elegal.technology/" target="_blank"><img
-						src="images/collabs/logo-eLegal.png"></a></li>
-			<li class="flex-item" style="width: 370px;"><a href="https://www.laurea.fi/en/" target="_blank"><img
-						src="images/collabs/Laurea.png"></a></li>
-			<li class="flex-item" style="width: 240px;"><a href="https://www.uef.fi/en" target="_blank"><img
-						src="images/collabs/UEF.jpg"></a></li>
-			<li class="flex-item" style="width: 200px;"><a
-					href="https://oikeus.fi/hallintooikeudet/helsinginhallinto-oikeus/en/index.html"
-					target="_blank"><img src="images/collabs/Helsinki_Court_of_Appeal.png"></a></li>-->
-			<li class="flex-item" style="width: 390px;"><a href="https://www.domstol.se/helsingborgs-tingsratt/"
-					target="_blank"><img src="images/collabs/tr_Helsingborg_logo.png"></a></li>
-			<!--<li class="flex-item" style="width: 270px;"><a href="https://bond.edu.au/" target="_blank"><img
-						src="images/collabs/Bond-University.jpg"></a></li>
-			<li class="flex-item" style="width: 250px;"><a
-					href="https://oikeus.fi/karajaoikeudet/helsinginkarajaoikeus/en/index.html" target="_blank"><img
-						src="images/collabs/Helsinki_District_Court_Logo.jpg"></a></li>
-			<li class="flex-item" style="width: 300px;"><a href="https://www.pelastakaalapset.fi/en/frontpage/"
-					target="_blank"><img src="images/collabs/Save_the_Children.png"></a></li>-->
-			<li class="flex-item" style="width: 270px;"><a
-					href="https://www.domstol.se/domstolsverket/other-languages/english/" target="_blank"><img
-						src="images/collabs/Domstolsverket.png"></a></li>
-			<!--<li class="flex-item" style="width: 270px;"><a href="https://www.legaloperations.com.br/"
-					target="_blank"><img src="images/collabs/CLOB.png"></a></li>
-			<li class="flex-item" style="width: 220px;"><a href="https://www.linkedin.com/company/neld-usp"
-					target="_blank"><img src="images/collabs/NELD.png"></a></li>
-			<li class="flex-item" style="width: 260px;"><a
-					href="https://www.helsinki.fi/en/networks/helsinki-incubators" target="_blank"><img
-						src="images/collabs/Helsinki-Incubators.png"></a></li>-->
-			<li class="flex-item" style="width: 220px;"><a href="https://taltech.ee/en/department-law"
-					target="_blank"><img src="images/collabs/TalTech.png"></a></li>
-			<!--<li class="flex-item" style="width: 350px;"><a href="https://direitosp.fgv.br/en" target="_blank"><img
-						src="images/collabs/FGV-Direito-SP.png"></a></li>
-			<li class="flex-item" style="width: 270px;"><a
-					href="https://www.uchceu.com/en/advanced-learning-facilities/legal-tech" target="_blank"><img
-						src="images/collabs/Erasmus_program.PNG"></a></li>-->
-			<li class="flex-item" style="width: 220px;"><a href="https://taltech.ee/en/department-law"
-					target="_blank"><img src="images/collabs/lancaster-logo-2.PNG"></a></li>
-			<li class="flex-item" style="width: 220px;"><a href="https://chancerylaneproject.org/" target="_blank"><img
-						src="images/logos/Logo blue.png"></a></li>
-			<li class="flex-item" style="width: 220px;"><a href="https://www.utu.fi/en" target="_blank"><img
-						src="images/collabs/UTU_logo_EN_RGB.png"></a></li>
-			<li class="flex-item" style="width: 220px;"><a href="https://www.laurea.fi/en/" target=" _blank"><img
-						src="images/collabs/laurea-pystylogo_rgb.png"></a></li>
-			<li class="flex-item" style="width: 190px;"><a href="https://www.vttresearch.com/en" target=" _blank"><img
-						src="images/collabs/VTT_Orange_Logo.png"></a></li>
+			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a>
+			<a href="https://juristiliitto.fi/" target="_blank"><img src="images/collabs/Juristiliitto.png"></a>
+			<a href="https://www.nulawlab.org/" target="_blank"><img src="images/collabs/nu-law.png"></a>
+			<a href="https://tuomioistuinvirasto.fi/en/index.html" target="_blank"><img
+					src="images/collabs/tuomioistuinvirasto.png"></a>
+			<a href="https://asianajajaliitto.fi/" target="_blank"><img src="images/collabs/Asianajajaliitto.png"></a>
+			<a href="https://www.ulapland.fi/EN" target="_blank"><img src="images/collabs/lapin-yliopisto.png"></a>
+			<a href="https://sjquinney.utah.edu/" target="_blank"><img
+					src="images/collabs/college-of-law-logolcolor.jpg"></a>
+			<a href="https://www.domstol.se/helsingborgs-tingsratt/" target="_blank"><img
+					src="images/collabs/tr_Helsingborg_logo.png"></a>
 
-			<li class="flex-item" style="width: 280px;"><a href="https://www.uni-hamburg.de/en.html"
-					target=" _blank"><img src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"></a>
-			</li>
-			<li class="flex-item" style="width: 190px;"><a href="https://www.helsinki.fi/en/networks/legal-tech-lab"
-					target=" _blank"><img src="images/collabs/helsinki-legal-tech-lab.png"></a>
-			</li>
-		</ul>
-		<ul class="flex-container wrap">
-			<li class="flex-item" style="width: 280px;"><a href="https://www.linkedin.com/in/olive-mumbo-72ba2059/"
-					target=" _blank"><img src="images/collabs/OliveHarbor Global Solutions.png"></a></li>
-			<li class="flex-item" style="width: 190px;"><a href="https://www.aalto.fi/en" target=" _blank"><img
-						src="images/collabs/Aalto uni logo.png"></a>
-			</li>
-			<li class="flex-item" style="width: 190px;"><a href="https://www.linkedin.com/in/nokkonen/"
-					target=" _blank"><img src="images/collabs/kolmas persoona logo (Outi Nokkonen).svg"></a>
-			</li>
-			<li class="flex-item" style="width: 190px;"><a href="https://projects.tuni.fi/jargonfree/"
-					target=" _blank"><img src="images/collabs/JARGONFREE_logo.jpg"></a>
-			</li>
-			<li class="flex-item" style="width: 190px;"><a href="https://legalshake.com/" target=" _blank"><img
-						src="images/collabs/Legal_Shake.png"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a href="https://me.stanford.edu/" target=" _blank"><img
-						src="images/collabs/Stanford Mechanical Engineeering Logo.png"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a href="https://lawyersdesignschool.com/" target=" _blank"><img
-						src="images/collabs/lawyer_design_school.png"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a href="https://www.jku.at/en/schools/" target=" _blank"><img
-						src="images/collabs/JKU_School_LIFT_C_en_schwarz_hoch_cmyk.jpg"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a
-					href="https://www.nu.edu/college/school-of-arts-letters-and-sciences/" target=" _blank"><img
-						src="images/collabs/NU College of Art and Design. JPG"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a href="https://legaldesignsummit.com" target=" _blank"><img
-						src="images/collabs/NJLDL-Logo-v1.png"></a>
-			</li>
-			<li class="flex-item" style="width: 220px;"><a
-					href="https://www.nulawlab.org/projects/the-east-boston-spatial-justice-lab" target=" _blank"><img
-						src="images/collabs/East Boston Spatial Justice Lab.jpeg"></a>
-			</li>
-		</ul>
+			<a href="https://www.domstol.se/domstolsverket/other-languages/english/" target="_blank"><img
+					src="images/collabs/Domstolsverket.png"></a>
+			<a href="https://taltech.ee/en/department-law" target="_blank"><img src="images/collabs/TalTech.png"></a>
+			<a href="https://taltech.ee/en/department-law" target="_blank"><img
+					src="images/collabs/lancaster-logo-2.PNG"></a>
+			<a href="https://chancerylaneproject.org/" target="_blank"><img src="images/logos/Logo blue.png"></a>
+			<a href="https://www.utu.fi/en" target="_blank"><img src="images/collabs/UTU_logo_EN_RGB.png"></a>
+			<a href="https://www.laurea.fi/en/" target=" _blank"><img src="images/collabs/laurea-pystylogo_rgb.png"></a>
+			<a href="https://www.vttresearch.com/en" target=" _blank"><img src="images/collabs/VTT_Orange_Logo.png"></a>
+			<a href="https://www.uni-hamburg.de/en.html" target=" _blank"><img
+					src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"></a>
+			<a href="https://www.helsinki.fi/en/networks/legal-tech-lab" target=" _blank"><img
+					src="images/collabs/helsinki-legal-tech-lab.png"></a>
+			<a href="https://www.linkedin.com/in/olive-mumbo-72ba2059/" target=" _blank"><img
+					src="images/collabs/OliveHarbor Global Solutions.png"></a>
+			<a href="https://www.aalto.fi/en" target=" _blank"><img src="images/collabs/Aalto uni logo.png"></a>
+			<a href="https://www.linkedin.com/in/nokkonen/" target=" _blank"><img
+					src="images/collabs/kolmas persoona logo (Outi Nokkonen).svg"></a>
+			<a href="https://projects.tuni.fi/jargonfree/" target=" _blank"><img
+					src="images/collabs/JARGONFREE_logo.jpg"></a>
+			<a href="https://legalshake.com/" target=" _blank"><img src="images/collabs/Legal_Shake.png"></a>
+			<a href="https://me.stanford.edu/" target=" _blank"><img
+					src="images/collabs/Stanford Mechanical Engineeering Logo.png"></a>
+			<a href="https://lawyersdesignschool.com/" target=" _blank"><img
+					src="images/collabs/lawyer_design_school.png"></a>
+			<a href="https://www.jku.at/en/schools/" target=" _blank"><img
+					src="images/collabs/JKU_School_LIFT_C_en_schwarz_hoch_cmyk.jpg"></a>
+			<a href="https://www.nu.edu/college/school-of-arts-letters-and-sciences/" target=" _blank"><img
+					src="images/collabs/NU College of Art and Design. JPG"></a>
+			<a href="https://legaldesignsummit.com" target=" _blank"><img src="images/collabs/NJLDL-Logo-v1.png"></a>
+			<a href="https://www.nulawlab.org/projects/the-east-boston-spatial-justice-lab" target=" _blank"><img
+					src="images/collabs/East Boston Spatial Justice Lab.jpeg"></a>
 
-	</div>
-
-
+		</div>
 	</div>
 	<div class="wrapper actions" style="background-color: white; padding-bottom: 0px;">
 		<div class="container">
