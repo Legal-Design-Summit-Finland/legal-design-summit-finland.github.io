@@ -106,7 +106,7 @@
 			align-items: center;
 			justify-content: center;
 			width: 180px;
-			height: 120px;
+			height: 160px;
 			padding: 10px;
 			background-color: #fff;
 			border-radius: 8px;
@@ -120,9 +120,25 @@
 		}
 
 		.logo-grid img {
+			width: auto;
+			height: auto;
 			max-width: 100%;
-			max-height: 100%;
+			max-height: 100px;
 			object-fit: contain;
+		}
+
+		.logo-grid img[src*="RTK"],
+		.logo-grid img[src*="OliveHarbor"],
+		.logo-grid img[src*="Stanford"],
+		.logo-grid img[src*="NU College"],
+		.logo-grid img[src*="lawyer_design_school"],
+		.logo-grid img[src*="tr_Helsingborg"],
+		.logo-grid img[src*="hamburg"] {
+			max-height: 140px;
+		}
+
+		.logo-grid img.large-logo {
+			max-height: 140px;
 		}
 	</style>
 
@@ -378,7 +394,7 @@
 						</li>
 						<li style="width: 230px; display: flex; justify-content: center; align-items: center;">
 							<a href="https://newcode.ai/" target="_blank">
-								<img src="images/collabs/-Newcode.ai.png" alt="Newcode.ai"
+								<img src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai"
 									style="max-width: 100%; height: auto; object-fit: contain;">
 							</a>
 						</li>
@@ -472,8 +488,7 @@
 		<h3>In co-operation with:</h3>
 		<p>We love collaborating with non-profits - Get in touch to join forces with us!</p>
 		<div class="logo-grid">
-			<a href="legaldesignsummit.com" target="_blank"><img src="images/collabs/RTK logo (Peegi Kaibald).png"
-					alt="RTK"></a>
+
 			<a href="https://legaldesign-journal.com/" target="_blank"><img
 					src="images/collabs/Legal Design Journal.JPG" alt="Legal Design Journal"></a>
 			<a href="https://www.tum.de/" target="_blank"><img
@@ -489,8 +504,6 @@
 			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a>
 			<a href="https://juristiliitto.fi/" target="_blank"><img src="images/collabs/Juristiliitto.png"></a>
 			<a href="https://www.nulawlab.org/" target="_blank"><img src="images/collabs/nu-law.png"></a>
-			<a href="https://www.domstol.se/helsingborgs-tingsratt/" target="_blank"><img
-					src="images/collabs/tr_Helsingborg_logo.png"></a>
 
 			<a href="https://www.domstol.se/domstolsverket/other-languages/english/" target="_blank"><img
 					src="images/collabs/Domstolsverket.png"></a>
@@ -499,31 +512,54 @@
 					src="images/collabs/lancaster-logo-2.PNG"></a>
 			<a href="https://chancerylaneproject.org/" target="_blank"><img src="images/logos/Logo blue.png"></a>
 			<a href="https://www.utu.fi/en" target="_blank"><img src="images/collabs/UTU_logo_EN_RGB.png"></a>
-			<a href="https://www.laurea.fi/en/" target=" _blank"><img src="images/collabs/laurea-pystylogo_rgb.png"></a>
+
 			<a href="https://www.vttresearch.com/en" target=" _blank"><img src="images/collabs/VTT_Orange_Logo.png"></a>
-			<a href="https://www.uni-hamburg.de/en.html" target=" _blank"><img
-					src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"></a>
+
 			<a href="https://www.helsinki.fi/en/networks/legal-tech-lab" target=" _blank"><img
 					src="images/collabs/helsinki-legal-tech-lab.png"></a>
-			<a href="https://www.linkedin.com/in/olive-mumbo-72ba2059/" target=" _blank"><img
-					src="images/collabs/OliveHarbor Global Solutions.png"></a>
+
 			<a href="https://www.aalto.fi/en" target=" _blank"><img src="images/collabs/Aalto uni logo.png"></a>
 			<a href="https://www.linkedin.com/in/nokkonen/" target=" _blank"><img
 					src="images/collabs/kolmas persoona logo (Outi Nokkonen).svg"></a>
 			<a href="https://projects.tuni.fi/jargonfree/" target=" _blank"><img
 					src="images/collabs/JARGONFREE_logo.jpg"></a>
 			<a href="https://legalshake.com/" target=" _blank"><img src="images/collabs/Legal_Shake.png"></a>
-			<a href="https://me.stanford.edu/" target=" _blank"><img
-					src="images/collabs/Stanford Mechanical Engineeering Logo.png"></a>
-			<a href="https://lawyersdesignschool.com/" target=" _blank"><img
-					src="images/collabs/lawyer_design_school.png"></a>
 			<a href="https://www.jku.at/en/schools/" target=" _blank"><img
 					src="images/collabs/JKU_School_LIFT_C_en_schwarz_hoch_cmyk.jpg"></a>
-			<a href="https://www.nu.edu/college/school-of-arts-letters-and-sciences/" target=" _blank"><img
-					src="images/collabs/NU College of Art and Design. JPG"></a>
+
 			<a href="https://legaldesignsummit.com" target=" _blank"><img src="images/collabs/NJLDL-Logo-v1.png"></a>
 			<a href="https://www.nulawlab.org/projects/the-east-boston-spatial-justice-lab" target=" _blank"><img
 					src="images/collabs/East Boston Spatial Justice Lab.jpeg"></a>
+
+			<a href="https://www.laurea.fi/en/" target=" _blank"><img src="images/collabs/laurea-pystylogo_rgb.png"></a>
+			<a href="https://legaldesignsummit.com" target="_blank">
+				<img src="images/collabs/RTK logo (Peegi Kaibald).png" alt="RTK" class="large-logo" />
+			</a>
+
+			<a href="https://www.linkedin.com/in/olive-mumbo-72ba2059/" target="_blank">
+				<img src="images/collabs/OliveHarbor Global Solutions.png" alt="Olive Harbor" class="large-logo" />
+			</a>
+
+			<a href="https://me.stanford.edu/" target="_blank">
+				<img src="images/collabs/Stanford Mechanical Engineeering Logo.png" alt="Stanford" class="large-logo" />
+			</a>
+
+			<a href="https://www.nu.edu/college/school-of-arts-letters-and-sciences/" target="_blank">
+				<img src="images/collabs/NU College of Art and Design. JPG" alt="NU College" class="large-logo" />
+			</a>
+
+			<a href="https://lawyersdesignschool.com/" target="_blank">
+				<img src="images/collabs/lawyer_design_school.png" alt="Lawyers Design School" class="large-logo" />
+			</a>
+
+			<a href="https://www.domstol.se/helsingborgs-tingsratt/" target="_blank">
+				<img src="images/collabs/tr_Helsingborg_logo.png" alt="Helsingborg Court" class="large-logo" />
+			</a>
+
+			<a href="https://www.uni-hamburg.de/en.html" target="_blank">
+				<img src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"
+					alt="University of Hamburg" class="large-logo" />
+			</a>
 
 		</div>
 	</div>
