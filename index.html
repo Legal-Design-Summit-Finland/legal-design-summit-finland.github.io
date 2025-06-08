@@ -82,9 +82,7 @@
 			display: flex;
 			justify-content: center;
 			gap: 30px;
-			/* adjust spacing as needed */
 			flex-wrap: wrap;
-			/* allows stacking on small screens */
 		}
 
 		.logo-section {
@@ -140,25 +138,288 @@
 		.logo-grid img.large-logo {
 			max-height: 140px;
 		}
+
+		.stats-section {
+			background: linear-gradient(to right, #f2f9fd, #f8fbff);
+			padding: 60px 20px;
+			text-align: center;
+		}
+
+		.stats-title {
+			font-size: 2em;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.stats-subtitle {
+			font-size: 1.2em;
+			color: #888;
+			margin-bottom: 40px;
+		}
+
+		.stats-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 50px;
+		}
+
+		.stat-box {
+			background: #ffffff;
+			border-radius: 16px;
+			box-shadow: 0 8px 20px -8px rgb(0 0 0 / 10%);
+			padding: 2rem 1rem 1.75rem;
+			transition: transform 0.25s ease;
+		}
+
+		.stat-box:hover {
+			transform: translateY(-6px);
+		}
+
+		.stat-box i {
+			font-size: 1.75rem;
+			color: var(--lds-primary-dark);
+			margin-bottom: 0.75rem;
+		}
+
+		.stat-num {
+			display: block;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--lds-text);
+		}
+
+		.stat-label {
+			display: block;
+			font-size: 0.9rem;
+			letter-spacing: 0.4px;
+			opacity: 0.8;
+		}
+
+		.stat-icon {
+			background: linear-gradient(135deg, #7ddad0, #8cc9f0);
+			color: white;
+			font-size: 30px;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+
+		.stat-number {
+			font-size: 1.8em;
+			font-weight: bold;
+			color: #222;
+		}
+
+		.stat-label {
+			font-size: 1em;
+			color: #444;
+		}
+
+		:root {
+			--lds-primary: #aeece9;
+			--lds-primary-dark: #0e9d98;
+			--lds-bg-light: #eaf7fc;
+
+			--lds-text: #232323;
+		}
+
+
+		.lds-hero {
+			background: linear-gradient(to bottom, #fff 0%, var(--lds-bg-light) 100%);
+			padding: 4rem 0 6rem;
+
+			border-bottom: 4px solid var(--lds-primary);
+			color: var(--lds-text);
+			overflow: hidden;
+		}
+
+
+		.hero-header {
+			display: flex;
+			align-items: center;
+			gap: 2.5rem;
+			flex-wrap: wrap;
+			margin-bottom: 3rem;
+			justify-content: flex-start;
+		}
+
+		.lds-logo {
+			max-height: 340px;
+			flex: 0 0 340px;
+		}
+
+		.hero-headline {
+			flex: 1 1 400px;
+			font-size: 2rem;
+			line-height: 1.35;
+		}
+
+		.hero-headline strong {
+			font-weight: 800;
+			color: var(--lds-primary-dark);
+		}
+
+		.hero-stats {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 1.75rem 2.5rem;
+			text-align: center;
+			max-width: none;
+			margin: 0 auto;
+		}
+
+		@media (max-width: 992px) {
+			.lds-hero {
+				padding: 3rem 0 4.5rem;
+			}
+
+			.hero-headline {
+				font-size: 1.5rem;
+			}
+
+			.lds-logo {
+				flex: 0 0 260px;
+				max-height: 260px;
+			}
+
+		}
+
+		@media(max-width:560px) {
+			.sponsor-row.primary img {
+				height: 72px;
+			}
+
+			.sponsor-row.secondary img {
+				height: 56px;
+			}
+		}
+
+		#content-events {
+
+			background: #fff;
+
+			padding: 60px 0;
+
+		}
+
+
+		.sponsors {
+			background: #fff;
+			padding: 32px 0 36px;
+			text-align: center;
+			box-shadow: 0 -3px 8px -4px rgba(0, 0, 0, .06);
+		}
+
+		.sponsors h3 {
+			margin: 0 0 18px;
+			font-weight: 700;
+		}
+
+		.sponsor-row {
+			display: grid;
+			justify-content: center;
+			gap: 32px 56px;
+			/* row gap / column gap */
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		.sponsor-row img {
+			max-height: 200px;
+			max-width: 240px;
+			width: auto;
+			height: auto;
+		}
+
+
+		.sponsor-row.primary {
+			grid-template-columns: repeat(4, auto);
+		}
+
+		.sponsor-row.secondary {
+			grid-template-columns: repeat(2, auto);
+			margin-top: 22px;
+		}
+
+		.sponsor-row a {
+			display: flex;
+			align-items: center;
+			transition: transform .18s ease;
+		}
+
+		.sponsor-row a:hover {
+			transform: scale(1.06);
+		}
+
+
+		.sponsor-logos a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform .18s ease;
+		}
+
+		.sponsor-logos a:hover {
+			transform: scale(1.06);
+		}
+
+		.sponsor-logos img {
+			max-width: 100%;
+			max-height: 90px;
+			object-fit: contain;
+		}
+
+		.wrapper.menu {
+			background: rgba(125, 218, 208, 0.83);
+			box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+
+		}
+
+		.wrapper.menu .content-main {
+
+			padding: 24px 0;
+		}
+
+		.wrapper.menu .menu-container ul.menu>li>a {
+			padding: 12px 18px;
+			font-size: 1.25rem !important;
+			line-height: 1.4;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		/* 4.  “Menu” button (mobile) */
+		.menu-toggler,
+		.menu-toggler .icon {
+			color: #fff;
+		}
+
+		/* 5.  Optional: space out items on wide screens */
+		@media (min-width: 992px) {
+			.wrapper.menu .menu-container ul.menu>li {
+				margin: 0 1rem;
+				/* more horizontal spacing */
+			}
+		}
 	</style>
 
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <body class="active">
 
-	<!-- Wrapper // Menu Section Begins -->
-
 	<div class="wrapper menu fluid">
-
-		<!-- Container Section Begins -->
 
 		<div class="container">
 
-			<!-- Menu Section Begins -->
-
 			<div id="menu">
-
-				<!-- Content Main Section Begins -->
 
 				<div class="content-main">
 
@@ -172,8 +433,6 @@
 									<li class=" first"><a href="#">Home</a></li>
 									<li class=" first"><a href="brainfactory.html">Brainfactory workshops</a></li>
 									<li class=""><a href="program-thursday.html">Program Loading...</a></li>
-
-									<li class=""><a href="previous-participants.html">Who is attending?</a></li>
 									<li class=""><a href="about-us.html">Meet the team</a></li>
 									<li class=""><a href="tickets.html">Tickets</a></li>
 									<li class=" last"><a href="why-attend.html">History</a></li>
@@ -183,28 +442,13 @@
 						</div>
 					</div>
 
-
 				</div>
-
-				<!-- Content Main Section Ends -->
 
 			</div>
 
-			<!-- Menu Section Ends -->
-
 		</div>
 
-		<!-- Container Section Ends -->
-
 	</div>
-
-	<!-- Wrapper // Menu Section Ends -->
-
-
-
-
-
-	<!-- Wrapper // Header Section Begins -->
 
 	<div class="background-video">
 		<video autoplay loop muted plays-inline class="back-video">
@@ -237,217 +481,82 @@
 		</a>
 	</div>
 
+	<section class="lds-hero">
+		<div class="hero-inner container">
+			<!-- Top row  ---------------------------------------------------- -->
+			<div class="hero-header">
+				<img src="images/logos/LDS2025 logo.png" alt="Legal Design Summit 2025 logo" class="lds-logo" />
 
-	<!-- Wrapper // Header Section Ends -->
-
-	<!-- Wrapper // Content Section Begins -->
-
-	<div class="wrapper fluid fill content">
-
-		<!-- Container Section Begins -->
-
-		<div class="container">
-
-			<!-- Content Section Begins -->
-
-			<div id="content" style="background-color: white;">
-
-				<!-- Content Main Section Begins -->
-
-				<div class="content-main">
-
-					<!-- !content! -->
-
-					<div class="wrapper divided forewords">
-
-						<!-- Container Section Begins -->
-
-						<div class="container">
-
-							<div class="row no-gutters equalize">
-
-								<div class="col-md-6 col-first">&nbsp;</div>
-
-								<div class="col-md-6 col-second">
-
-									<!-- Content Section Begins -->
-
-									<div id="content-forewords">
-
-										<!-- Content Main Section Begins -->
-
-										<div class="content-main">
-
-
-											<h2 class="plain larger justify-center-xs justify-center-sm">Today
-												<strong>law lacks usability</strong>. Legal documents are poorly
-												designed and inadequate to meet the needs of a modern
-												society.<br><br>DESIGN THINKING WILL CHANGE THE PRACTICE OF LAW.
-											</h2>
-
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!-- Content Main Section Ends -->
-
+				<h1 class="hero-headline">
+					Where law meets design—and a global community turns ideas into better justice, strategic advantage,
+					and truly human-centered legal services.<br /><br />
+				</h1>
 			</div>
 
-			<!-- Content Section Ends -->
-
-		</div>
-
-		<!-- Container Section Ends -->
-
-	</div>
-
-	<!-- Wrapper // Content Spacer Section Ends -->
-
-
-
-
-
-	<!-- Wrapper // Content Events Section Begins -->
-	<div class="wrapper color-secondary twitter" style="background-color: #f2f2f2;">
-		<div class="content-main">
-
-			<h3 class="plain justify-center">The Legal Design Summit <span class="enhanced grey">brings
-					together</span> international experts in the fields of law, design, and digital services.
-			</h3>
-		</div>
-
-		<!-- Container Section Begins -->
-
-		<div class="container">
-
-			<!-- Content Section Begins -->
-
-			<div id="content-twitter">
-
-				<!-- Content Main Section Begins -->
-
-				<div class="row justify-content-md-center" style="text-align: center;">
-
-
-
-
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- Content Main Section Ends -->
-
-	</div>
-
-	<!-- Content Section Ends -->
-
-
-	<!-- Container Section Ends -->
-
-	</div>
-
-	<div class="wrapper color-secondary events" style="background-color: #fff">
-
-
-		<!-- Container Section Begins -->
-
-		<div class="container">
-
-			<!-- Content Section Begins -->
-
-			<div id="content-events">
-
-				<!-- Content Main Section Begins -->
-
-
-
-				<!--				<div class="row no-gutters">
-						<div class="col-sm-4 justify-center"><img src="images/events/event-2.png"></div>
-						<div class="col-sm-4 justify-center"><a href="/side-events"><img src="images/events/event-3.png"></a></div>
-						<div class="col-sm-4 justify-center"><a href="/brainfactory"><img src="images/events/event-4.png"></a></div>
-	    </div>
-	    -->
-				<div style="padding-top: 40px; text-align: center;">
-					<h3>The Legal Design Summit is made possible by:</h3>
-					<p></p>
-
-					<!-- First row of logos with increased spacing -->
-					<ul
-						style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; padding: 20px 0; list-style: none; margin: 0;">
-						<li style="width: 170px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://www.helsinki.fi/en/faculty-law" target="_blank">
-								<img src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-						<li style="width: 230px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://newcode.ai/" target="_blank">
-								<img src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-						<li style="width: 170px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://www.dlapiper.com/en/about-us/law-and" target="_blank">
-								<img src="images/collabs/DLA Piper.jpg" alt="DLA Piper"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-						<li style="width: 160px; display: flex; justify-content: center; align-items: center;">
-							<a href="https://www.legora.com" target="_blank">
-								<img src="images/collabs/Legora (word logo).png" alt="Legora"
-									style="max-width: 100%; height: auto; object-fit: contain;">
-							</a>
-						</li>
-					</ul>
-
-					<!-- Second row -->
-					<div style="width: 100%; display: flex; justify-content: center;">
-						<ul
-							style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; padding: 20px 0; list-style: none; margin: 0;">
-							<li style="width: 130px; display: flex; justify-content: center; align-items: baseline;">
-
-								<a href="https://ey.com" target="_blank">
-									<img src="images/collabs/EY_Law_ Black.png" alt="EY Law"
-										style="width: auto; height: 50px;">
-								</a>
-							</li>
-							<li style="width: 150px; display: flex; justify-content: center; align-items: center;">
-								<a href="https://www.almainsights.fi/" target="_blank">
-									<img src="images/collabs/Alma Insights__black.png" alt="Alma"
-										style="width: auto; height: 50px; margin-top: 6px">
-								</a>
-							</li>
-						</ul>
-					</div>
+			<div class="hero-stats">
+				<div class="stat-box">
+					<i class="fas fa-users"></i>
+					<span class="stat-num">600+</span>
+					<span class="stat-label">Global Attendees</span>
 				</div>
 
+				<div class="stat-box">
+					<i class="fas fa-calendar-alt"></i>
+					<span class="stat-num">20+</span>
+					<span class="stat-label">Sessions</span>
+				</div>
+
+				<div class="stat-box">
+					<i class="fas fa-brain"></i>
+					<span class="stat-num">10</span>
+					<span class="stat-label">BrainFactory Workshops</span>
+				</div>
+
+				<div class="stat-box">
+					<i class="fas fa-clock"></i>
+					<span class="stat-num">2</span>
+					<span class="stat-label">Intensive Days</span>
+				</div>
+
+				<div class="stat-box">
+					<i class="fas fa-microphone"></i>
+					<span class="stat-num">50+</span>
+					<span class="stat-label">Expert Speakers</span>
+				</div>
 			</div>
-
-			<!-- Content Main Section Ends -->
-
 		</div>
+	</section>
 
-		<!-- Content Section Ends -->
+	<!-- ─── Sponsor block ───────────────────────────────────────── -->
+	<section class="sponsors" id="sponsors">
+		<h3>The Legal Design Summit is made possible by:</h3>
 
-	</div>
+		<!-- 1st-tier sponsors (row of 4) -->
+		<div class="sponsor-row primary">
+			<a href="https://www.helsinki.fi/en/faculty-law" target="_blank">
+				<img src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University" style="height:200px;">
+			</a>
+			<a href="https://newcode.ai/" target="_blank">
+				<img src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai" style="height: 85px;">
+			</a>
+			<a href="https://www.dlapiper.com/en/about-us/law-and" target="_blank">
+				<img src="images/collabs/DLA Piper.jpg" alt="DLA Piper" style="height: 80px;">
+			</a>
+			<a href="https://www.legora.com" target="_blank">
+				<img src="images/collabs/Legora (word logo).png" alt="Legora" style="height: 70px;">
+			</a>
+		</div>
+		<div class="sponsor-row secondary">
+			<a href="https://ey.com" target="_blank">
+				<img src="images/collabs/EY_Law_ Black.png" alt="EY Law" style="height: 80px !important;">
+			</a>
+			<a href="https://www.almainsights.fi/" target="_blank">
+				<img src="images/collabs/Alma Insights__black.png" alt="Alma Insights" style="height: 70px;">
+			</a>
+		</div>
+	</section>
 
-	<!-- Container Section Ends -->
 
-	</div>
-
-	<!-- Wrapper // Content Propositions Section Begins -->
 
 	<div class="wrapper fluid propositions">
 
@@ -499,7 +608,7 @@
 			<a href="https://www.iltanet.org/home" target=" _blank"><img src="images/collabs/ILTA-logo-full.png"></a>
 			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a>
 			<a href="https://juristiliitto.fi/" target="_blank"><img src="images/collabs/Juristiliitto.png"></a>
-			<a href="https://chancerylaneproject.org/" target="_blank"><img src="images/logos/Logo blue.png"></a>
+			<a href="https://chancerylaneproject.org/" target="_blank"><img src="images/collabs/TCLP.png"></a>
 			<a href="https://www.vttresearch.com/en" target=" _blank"><img src="images/collabs/VTT_Orange_Logo.png"></a>
 			<a href="https://www.helsinki.fi/en/networks/legal-tech-lab" target=" _blank"><img
 					src="images/collabs/helsinki-legal-tech-lab.png"></a>
