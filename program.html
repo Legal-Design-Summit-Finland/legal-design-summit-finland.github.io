@@ -40,10 +40,101 @@
       box-sizing: border-box;
     }
 
+
     body {
-      background-color: #ffffff !important;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       color: #000000;
       font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+    }
+
+    .floating-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .floating-shapes::before,
+    .floating-shapes::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(174, 236, 233, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-shapes::before {
+      width: 200px;
+      height: 200px;
+      top: 10%;
+      right: 10%;
+      animation-delay: -2s;
+    }
+
+    .floating-shapes::after {
+      width: 150px;
+      height: 150px;
+      bottom: 20%;
+      left: 5%;
+      animation-delay: -4s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #AEECE9 0%, #8de3de 100%);
+      color: black;
+      padding: 20px 0;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(174, 236, 233, 0.3);
     }
 
     h1,
@@ -61,13 +152,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
-    }
-
-    .header {
-      background-color: #5BBAA7;
-      color: white;
-      padding: 15px 0;
-      margin-bottom: 40px;
     }
 
     .nav-menu {
@@ -91,32 +175,36 @@
 
     .main-title {
       text-align: center;
-      font-size: 36px;
-      font-weight: 600;
-      color: #333;
-      text-transform: none;
-      margin-bottom: 10px;
+      font-size: 48px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 15px;
       font-family: 'Oswald', sans-serif;
       padding-top: 50px;
 
+      animation: fadeInUp 1s ease-out;
     }
+
 
     .agenda-subtitle {
       text-align: center;
       font-size: 18px;
       max-width: 720px;
       margin: 0 auto 40px auto;
-      line-height: 1.6;
-      color: #333;
+      line-height: 1.8;
+      color: #555;
       font-family: 'Helvetica Neue', sans-serif;
+      animation: fadeInUp 1s ease-out 0.2s both;
     }
 
     .agenda-section {
-      background: #ffffff;
-      border-radius: 0;
-      box-shadow: none;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
       margin-bottom: 30px;
       overflow: hidden;
+      animation: fadeInUp 1s ease-out 0.6s both;
+      border: 1px solid rgba(174, 236, 233, 0.1);
     }
 
     .session-row {
@@ -127,64 +215,154 @@
 
 
     .day-header {
-      background-color: #AEECE9;
-      color: #333;
-      padding: 15px 30px;
-      font-weight: normal;
-      font-size: 20px;
+      background: linear-gradient(135deg, #AEECE9 0%, #8de3de 100%);
+      color: black;
+      padding: 20px 30px;
       font-weight: 600;
+      font-size: 22px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
 
+
+    .day-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    .day-progress {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 20px;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .day-indicator {
+      padding: 12px 24px;
+      background: white;
+      border-radius: 25px;
+      border: 2px solid #AEECE9;
+      color: #AEECE9;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(174, 236, 233, 0.2);
+    }
+
+    .day-indicator.active {
+      background: #AEECE9;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(174, 236, 233, 0.4);
+    }
 
     .session-row:last-child {
       border-bottom: none;
     }
 
+    .session-row {
+      border-bottom: 2px solid #f0f9f8;
+      background-color: white;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .session-row::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #AEECE9;
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .session-row:hover::before {
+      transform: scaleY(1);
+    }
+
+    .session-row:hover {
+      background: linear-gradient(135deg, #f8fdfc 0%, #e8f6f3 100%);
+      transform: translateX(5px);
+    }
+
     .session-header {
       display: flex;
       align-items: center;
-      padding: 20px 30px;
+      padding: 25px 30px;
       cursor: pointer;
       user-select: none;
-    }
-
-    .session-header:hover {
-      background-color: #f8f9fa;
+      transition: all 0.3s ease;
     }
 
     .time-slot {
-      font-weight: normal;
-      color: #666;
+      font-weight: 600;
+      color: #333;
       min-width: 120px;
-      font-size: 18px;
+      font-size: 16px;
+      background: rgba(174, 236, 233, 0.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(174, 236, 233, 0.2);
     }
 
-    .dropdown-arrow {
-      margin-left: 30px;
-      margin-right: 15px;
-      transition: transform 0.3s;
-      color: #999;
-      font-size: 18px;
-      min-width: 20px;
+    .session-icon {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 20px;
+      color: #AEECE9;
+      min-width: 25px;
+      text-align: center;
     }
+
 
     .session-content {
       flex: 1;
+      margin-left: 15px;
     }
 
     .session-title {
-      font-weight: normal;
+      font-weight: 600;
       color: #333;
-      margin-bottom: 5px;
-      font-size: 16px;
+      margin-bottom: 8px;
+      font-size: 17px;
+      line-height: 1.4;
     }
 
     .session-speaker {
-      color: #333;
+      color: #666;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .speaker-icon {
+      margin-right: 8px;
+      color: #AEECE9;
     }
 
     .dropdown-arrow.expanded {
@@ -211,21 +389,82 @@
 
     }
 
-    .keynote-session {
-      background-color: #E8F6F3;
+    .lunch-divider {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      color: #155724;
+      border-left: 4px solid #28a745;
     }
 
-    .special-session {
-      background-color: #5BBAA7;
+    .lunch-divider::before {
+      content: '🍽️';
+    }
+
+    .break-divider {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      color: #856404;
+      border-left: 4px solid #ffc107;
+    }
+
+    .break-divider::before {
+      content: '☕';
+    }
+
+    .party-section {
+      background: linear-gradient(135deg, #f8a5d8 0%, #c30979 100%);
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(195, 9, 121, 0.3);
+      margin-bottom: 30px;
+      overflow: hidden;
+      position: relative;
+      animation: pulse 2s infinite;
+    }
+
+    .party-section::before {
+      content: '🎉';
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .party-header {
+      background: linear-gradient(135deg, #f8a5d8 0%, #c30979 100%);
       color: white;
+      padding: 25px 30px;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: none;
     }
 
-    .special-session .session-title,
-    .special-session .session-speaker {
+    .party-content {
+      padding: 30px;
+      text-align: center;
       color: white;
+      font-size: 18px;
+      font-weight: 500;
     }
 
-
+    .party-emoji {
+      font-size: 40px;
+      margin: 20px 0;
+      display: block;
+    }
 
     @media (max-width: 768px) {
       .nav-menu {
@@ -253,6 +492,51 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 36px;
+      }
+
+      .session-header {
+        padding: 20px 15px;
+        flex-wrap: wrap;
+      }
+
+      .time-slot {
+        min-width: auto;
+        margin-bottom: 10px;
+      }
+
+      .session-details-content {
+        padding: 20px 15px;
+        margin-left: 15px;
+      }
+
+      .day-progress {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .session-row {
+      cursor: pointer;
+    }
+
+    .session-row:hover .session-icon {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+
+    .session-row:hover .time-slot {
+      background: #AEECE9;
+      color: #333;
+      transform: scale(1.05);
+    }
+
     .session-divider {
       background-color: #AEECE9;
       color: #333;
@@ -263,9 +547,25 @@
       letter-spacing: 0.5px;
     }
 
-    .white-gap {
-      height: 2px;
-      background-color: white;
+    .keynote-session::after {
+      content: '✨';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      animation: twinkle 1.5s infinite;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
     }
   </style>
 
@@ -303,33 +603,41 @@
 
   <!-- Main Content -->
   <div class="container">
-    <h1 class="main-title"> Agenda</h1>
-    <p class="agenda-subtitle">Get ready to align legal innovation with user-centered design and strategic outcomes.</p>
+    <h1 class="main-title">🎯 Agenda</h1>
+    <p class="agenda-subtitle">
+      Get ready to: <br><br>
+      ✨ Be inspired by legal design leaders from all over the globe<br>
+      🚀 Discover stories and successes from AI governance to social innovation<br>
+      🌍 Explore challenges and opportunities from access to justice to sustainability<br><br>
+      <strong>Let's transform the future of law together!</strong>
+    </p>
 
-
+    <div class="day-progress">
+      <div class="day-indicator active">
+        <i class="fas fa-calendar-day"></i> Day 1
+      </div>
+      <div class="day-indicator">
+        <i class="fas fa-calendar-day"></i> Day 2
+      </div>
+    </div>
     <div class="agenda-section">
       <div class="day-header">DAY 1 | Thursday | Human-Centred Law in Technology and Governance</div>
 
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
-          <div class="time-slot">08:30-09:45</div>
-          <div class="dropdown-arrow">▼</div>
+          <div class="time-slot">08:30-09:30</div>
+
           <div class="session-content">
             <div class="session-title">Registration</div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content">
-            Welcome coffee and networking. Pick up your conference materials and connect with fellow attendees.
           </div>
         </div>
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">09:50</div>
-          <div class="dropdown-arrow">▼</div>
+
           <div class="session-content">
-            <div class="session-title">Welcome to the 2025 Legal Design Summit</div>
+            <div class="session-title">Welcome to the 2025 Legal Design Summit!</div>
           </div>
         </div>
         <div class="session-details">
@@ -339,13 +647,13 @@
         </div>
       </div>
       <div class="session-divider">
-        The New Normal: Generative Artificial Intelligence in Law
+        🤖 The New Normal: Generative Artificial Intelligence in Law
       </div>
 
-      <div class="session-row">
+      <div class="session-row keynote-session">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">10:00–10:20</div>
-          <div class="dropdown-arrow">▼</div>
+
           <div class="session-content">
             <div class="session-title">Opening keynote: Legal Design in the Age of AI</div>
             <div class="session-speaker"><strong>Antti Innanen</strong></div>
@@ -353,41 +661,28 @@
         </div>
         <div class="session-details">
           <div class="session-details-content" style="background-color: #e0f7f6;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
+            Opening keynote: Legal Design in the Age of AI.
           </div>
         </div>
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">10:25–10:45</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
-            <div class="session-title">The Adventures of a Visual Lawyer and Judicious Designer: The Art of Breaking
-              down Silos Using the Power of Design and AI
+            <div class="session-title">The Art of Breaking down Silos Using the Power of Design and AI
             </div>
             <div class="session-speaker"><strong>Ilona van de Kooi-van Opdorp & Kim Raad:</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            The Adventures of a Visual Lawyer and Judicious Designer: The Art of Breaking
-            down Silos Using the Power of Design and AI.
           </div>
         </div>
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">10:50–11:10</div>
-          <div class="dropdown-arrow">▼</div>
+
           <div class="session-content">
-            <div class="session-title">Responsible by Design - How to Harness AI for Constitutional Values
+            <div class="session-title">Activate AI in Legal Design: The Art of Legal Prompt Engineering
             </div>
             <div class="session-speaker"><strong>Christian Djeffal</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Responsible by Design – How to Harness AI for Constitutional Values.
           </div>
         </div>
       </div>
@@ -397,7 +692,7 @@
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">11:15-11:35</div>
-          <div class="dropdown-arrow">▼</div>
+
           <div class="session-content">
             <div class="session-title">Law Drafting Meets Legal Design
             </div>
@@ -412,11 +707,11 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">11:40-12:00</div>
-            <div class="dropdown-arrow">▼</div>
+
             <div class="session-content">
-              <div class="session-title">TBC
+              <div class="session-title">Title coming soon...
               </div>
-              <div class="session-speaker"><strong>Jenni Harrarinen</strong></div>
+              <div class="session-speaker"><strong>Jenni Hakkarainen</strong></div>
             </div>
           </div>
           <div class="session-details">
@@ -428,205 +723,147 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">12:05-12:35</div>
-            <div class="dropdown-arrow">▼</div>
+
             <div class="session-content">
-              <div class="session-title">Fireside chat
+              <div class="session-title">Fireside chat: Driving Systemic Change – A Regional Perspective
               </div>
-              <div class="session-speaker"><strong> Sophie Ranaivoharisoa, Mirza Chiragov & Suparat Fern Sawetamal:
-                  Driving Systemic Change – A Regional Perspective</strong></div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              TBC
+              <div class="session-speaker"><strong> Mirza Chiragov, Sophie Ranaivoharisoa & Suparat Fern
+                  Sawetamal</strong></div>
             </div>
           </div>
         </div>
-        <div class="session-divider">
-          12:35 - 13:35 Lunchbreak
+        <div class="lunch-divider session-divider">
+          Full brain, hungry stomach - time for lunch! (Self-paid at local venues)
         </div>
       </div>
-      <div class="white-gap"></div>
+
       <div class="session-divider">
-        The Power and Value of Design in Law
+        Afternoon Sessions: The Power and Value of Design in Law
       </div>
 
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">13:40-14:00</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
-            <div class="session-title">Making Sense of Law Through Design
+            <div class="session-title">Legal Design as Sensemaking
             </div>
-            <div class="session-speaker"><strong>Naij Shah</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Making sense of law through design.
+            <div class="session-speaker"><strong>Naji Shah</strong></div>
           </div>
         </div>
       </div>
+
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">14:05-14:25</div>
-          <div class="dropdown-arrow">▼</div>
+
           <div class="session-content">
-            <div class="session-title">Designing for Legal Error: What the Law Can Learn from Human Factors
+            <div class="session-title">How to Stop Dumb Design Confusing Smart People
             </div>
             <div class="session-speaker"><strong> Peter Hornsby</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Designing for Legal Error: What the Law Can Learn from Human Factors
           </div>
         </div>
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">14:30-15:00</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
             <div class="session-title">Fireside chat: Opening up Possibilities for Legal Design
             </div>
-            <div class="session-speaker"><strong>Joaquin Santuber, Siddharth de Souza, Abdul Rehman Kahn, Ade
-                Mabogunje
-                &
-                Jules Sievert</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Fireside chat: Opening up Possibilities for Legal Design
+            <div class="session-speaker"><strong>Ade Mabogunje, Joaquin Santuber, Jules Sievert
+                & Siddharth de Souza
+              </strong></div>
           </div>
         </div>
       </div>
-      <div class="session-divider">
-        15:00-15:45 Coffee Break
+      <div class="break-divider session-divider">
+        15:00-15:45 Caffeine needed: Time to recharge and network
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">15:50-16:10</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
-            <div class="session-title">Combining My Love for Design and Legal Practice
+            <div class="session-title">A Life-Changing Merger: When My Passion for Design Met the Practice of Law
             </div>
             <div class="session-speaker"><strong> Jovita Morta Gabne</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Combining My Love for Design and Legal Practice
           </div>
         </div>
       </div>
       <div class="session-row">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">16:15-16:35</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
             <div class="session-title">Fireside chat: The ROI of Legal Design
             </div>
-            <div class="session-speaker"><strong>Piia Madissoo, Hannele Korhonen & Christine Inkinen</strong></div>
-          </div>
-        </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Fireside chat: The ROI of Legal Design
+            <div class="session-speaker"><strong>Christine Inkinen,Hannele Korhonen & Piia Madissoo</strong></div>
           </div>
         </div>
       </div>
 
-      <div class="session-row">
+      <div class="session-row keynote-session">
         <div class="session-header" onclick="toggleSession(this)">
           <div class="time-slot">16:40-17:00</div>
-          <div class="dropdown-arrow">▼</div>
           <div class="session-content">
-            <div class="session-title">Merging Law and Design
+            <div class="session-title">Closing keynote: Merging Law and Design
             </div>
             <div class="session-speaker"><strong>Karma Dabaghi</strong></div>
           </div>
         </div>
-        <div class="session-details">
-          <div class="session-details-content" style="background-color: #e0f7f6;">
-            Merging Law and Design
-          </div>
+      </div>
+
+      <div class="party-section">
+        <div class="party-header">
+          🎉 Afterpartyyy! 🎉
+        </div>
+        <div class="party-content">
+          <span class="party-emoji">🥳🍾🎵</span>
+          <div>The night is young and so are we!</div>
+          <div><strong>Details dropping soon... Stay tuned!</strong></div>
+          <span class="party-emoji">🌟✨🎊</span>
         </div>
       </div>
 
-      <div class="session-divider">
-        Afterparty!
-      </div>
-
-      <div class="white-gap"></div>
-
       <div class="agenda-section">
-        <div class="day-header">DAY 2 | Friday | Advancing Environmental and Social Goals</div>
+        <div class="day-header">
+          <i class="fas fa-leaf"></i> DAY 2 | Friday | Advancing Environmental and Social Goals
+        </div>
 
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">09:00</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
               <div class="session-title">Doors Open</div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content">
-              Welcome to day 2!
             </div>
           </div>
         </div>
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">09:30</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title">Welcome to Day 2
-              </div>
-              <div class="session-speaker"><strong></strong></div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Presentation of the Agenda.
+              <div class="session-title">Welcome to Day 2!</div>
             </div>
           </div>
         </div>
         <div class="session-divider">
-          Designing Sustainable Societies
+          🌱 Designing Sustainable Societies
         </div>
-        <div class="session-row">
+        <div class="session-row keynote-session">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">09:35-9:55</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title">Revolutionising Business and Human Rights through Legal Design
+              <div class="session-title">Opening keynote:
+                Dear Business: You Can’t Spell Sustainability Without Human Rights and Legal Design
               </div>
               <div class="session-speaker"><strong>Ebru Metin</strong></div>
             </div>
           </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Revolutionising Business and Human Rights through Legal Design.
-            </div>
-          </div>
         </div>
-
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">10:00-10:20</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
               <div class="session-title"> Can Contracts Save the World?
               </div>
               <div class="session-speaker"><strong>Anne Ketola & Anna Hurmerinta-Haanpää</strong></div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Can Contracts Save the World?
             </div>
           </div>
         </div>
@@ -634,18 +871,11 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">10:25-10:45</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> What if Birds Could Tell Us What is Right? A Curious Visit to the World of
-                Designing with the More-than-human
+              <div class="session-title"> What if Birds Could Tell Us What is Right? A Curious Visit to the World
+                of Designing with the More-than-human
               </div>
               <div class="session-speaker"><strong>Nina Toivonen</strong></div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              What if Birds Could Tell Us What is Right? A Curious Visit to the World of Designing with the
-              More-than-human
             </div>
           </div>
         </div>
@@ -657,16 +887,11 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">10:50-11:10</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> From Courts to Innovation for Open, People-Centered Systems
+              <div class="session-title">Artificial Intelligence for Open Justice: Conscious, Community-driven
+                Solutions
               </div>
               <div class="session-speaker"><strong>Laura Márquez Martínez</strong></div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              From Courts to Innovation for Open, People-Centered Systems
             </div>
           </div>
         </div>
@@ -674,41 +899,29 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">11:15-11:35</div>
-            <div class="dropdown-arrow">▼</div>
+
             <div class="session-content">
-              <div class="session-title"> How Legal Design is Transforming Access to Justice in Tunisia: a Case study
-                with the UNDP
+              <div class="session-title"> Beyond Brochures : Legal Design as a Powerful Driver for Systemic
+                Justice Reform in Tunisia
               </div>
               <div class="session-speaker"><strong>Dorra Harrar</strong></div>
             </div>
           </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              How Legal Design is Transforming Access to Justice in Tunisia: a Case study
-              with the UNDP
-            </div>
-          </div>
         </div>
 
-        <div class="session-divider">
-          11:35-13:00 Lunchbreak
+        <div class="lunch-divider session-divider">
+          11:35-13:00 Creativity and innovation requires carbs - it’s lunch time!
+          Lunch is not provided at the venue and is self-paid
         </div>
 
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">13:05-13:35</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> Fireside chat: TBC
+              <div class="session-title"> Fireside chat: Announcement coming soon…
               </div>
-              <div class="session-speaker"><strong>Aaron Leakey, Emily Oliver, Jeremie Quiohilag & Scott
-                  Young</strong>
+              <div class="session-speaker"><strong>Coming soon...</strong>
               </div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              TBC
             </div>
           </div>
         </div>
@@ -716,25 +929,19 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">13:35-14:00</div>
-            <div class="dropdown-arrow">▼</div>
+
             <div class="session-content">
-              <div class="session-title"> UX Research Practical Insights for Designing Better Legal Experiences
+              <div class="session-title"> Unlocking Clarity: UX Research Insights from Real Legal Experiences
               </div>
               <div class="session-speaker"><strong>Natalia Grant</strong>
               </div>
             </div>
           </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              UX Research Practical Insights for Designing Better Legal Experiences
-            </div>
-          </div>
         </div>
-
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">14:00-14:20</div>
-            <div class="dropdown-arrow">▼</div>
+
             <div class="session-content">
               <div class="session-title"> Legal Service Design: A Tool for Rethinking Reproduction
               </div>
@@ -742,18 +949,10 @@
               </div>
             </div>
           </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Legal Service Design: A Tool for Rethinking Reproduction
-            </div>
-          </div>
         </div>
-
-        <div class="session-divider">
-          14:20-15:15 - Coffee Break
+        <div class="break-divider session-divider">
+          14:20-15:15 - Coffee break: Refill your cup and make new connections.
         </div>
-
-        <div class="white-gap"></div>
 
         <div class="session-divider">
           Challenging Tradition through Innovation
@@ -762,18 +961,14 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">15:20-15:50</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> Fireside chat: Redesigning Legal Education
+              <div class="session-title"> Fireside chat:
+                From Primary School to University: How Legal Design can Redesign Legal Literacy and
+                Education
               </div>
-              <div class="session-speaker"><strong>Michael Doherty, Ruy Coppola Jr, Tiago Guerreiro, Barbora
-                  Obracajova</strong>
+              <div class="session-speaker"><strong>Barbora Obracajova, Michael Doherty, Ruy Coppola Jr,
+                  Tiago Guerreiro </strong>
               </div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Fireside chat: Redesigning Legal Education
             </div>
           </div>
         </div>
@@ -781,7 +976,6 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">15:55-16:15</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
               <div class="session-title"> Mission Impossible: Designing the Mindset of Public Officials
               </div>
@@ -789,27 +983,16 @@
               </div>
             </div>
           </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Mission Impossible: Designing the Mindset of Public Officials
-            </div>
-          </div>
         </div>
-
-        <div class="session-row">
+        <div class="session-row keynote-session">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">16:20-16:40</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> The Myths and Misconceptions that Hinder Innovation in Law
+              <div class="session-title"> Closing keynote: Shaping the Future of Law – 5 Myths We Must
+                Leave Behind
               </div>
               <div class="session-speaker"><strong>Astrid Kohlmeier & Lina Keßler</strong>
               </div>
-            </div>
-          </div>
-          <div class="session-details">
-            <div class="session-details-content" style="background-color: #e0f7f6;">
-              Mission Impossible: Designing the Mindset of Public Officials
             </div>
           </div>
         </div>
@@ -817,65 +1000,100 @@
         <div class="session-row">
           <div class="session-header" onclick="toggleSession(this)">
             <div class="time-slot">16:45</div>
-            <div class="dropdown-arrow">▼</div>
             <div class="session-content">
-              <div class="session-title"> Closing of the Summit
+              <div class="session-title"> Final reflections
               </div>
             </div>
           </div>
-
         </div>
 
-        <div class="session-divider">
-          Thank you for the 2025 Summit - now time for the Afterparty!
+        <div class="party-section">
+          <div class="party-header">
+            🎊 Grand Finale Celebration! 🎊
+          </div>
+          <div class="party-content">
+            <span class="party-emoji">🎪🎭🎨</span>
+            <div>Thank you for an amazing 2025 Summit!</div>
+            <div><strong>Time to celebrate our achievements together!</strong></div>
+            <div style="margin-top: 15px; font-size: 16px;">Exciting details coming soon! 🚀</div>
+            <span class="party-emoji">🌈✨🎯</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div id="footer"></div>
 
-        <script>
-          function toggleSession(header) {
-            const details = header.nextElementSibling;
-            const arrow = header.querySelector('.dropdown-arrow');
+  <div id="footer"></div>
 
-            // Close all other sessions
-            document.querySelectorAll('.session-details').forEach(detail => {
-              if (detail !== details) {
-                detail.classList.remove('expanded');
-                detail.previousElementSibling.querySelector('.dropdown-arrow').classList.remove('expanded');
-              }
-            });
+  <script>
+    function toggleSession(header) {
+      const details = header.nextElementSibling;
+      const arrow = header.querySelector('.dropdown-arrow i');
 
-            // Toggle current session
-            details.classList.toggle('expanded');
-            arrow.classList.toggle('expanded');
+      // Close all other sessions
+      document.querySelectorAll('.session-details').forEach(detail => {
+        if (detail !== details && detail.classList.contains('expanded')) {
+          detail.classList.remove('expanded');
+          const otherArrow = detail.previousElementSibling.querySelector('.dropdown-arrow i');
+          if (otherArrow) {
+            otherArrow.style.transform = 'rotate(0deg)';
           }
+        }
+      });
 
-          // Add click handlers for navigation items
-          document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function () {
-              // Remove active class from all items
-              document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-              // Add active class to clicked item
-              this.classList.add('active');
+      // Toggle current session
+      details.classList.toggle('expanded');
+      if (details.classList.contains('expanded')) {
+        arrow.style.transform = 'rotate(180deg)';
+      } else {
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
 
-              // You can add navigation logic here
-              console.log('Navigating to:', this.textContent);
-            });
-          });
+    // Add smooth scrolling for day indicators
+    document.querySelectorAll('.day-indicator').forEach((indicator, index) => {
+      indicator.addEventListener('click', function () {
+        document.querySelectorAll('.day-indicator').forEach(ind => ind.classList.remove('active'));
+        this.classList.add('active');
 
-          // Add some hover effects and animations
-          document.querySelectorAll('.session-header').forEach(header => {
-            header.addEventListener('mouseenter', function () {
-              this.style.backgroundColor = '#f8f9fa';
-            });
+        const sections = document.querySelectorAll('.agenda-section');
+        if (sections[index]) {
+          sections[index].scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
 
-            header.addEventListener('mouseleave', function () {
-              if (!this.nextElementSibling.classList.contains('expanded')) {
-                this.style.backgroundColor = '';
-              }
-            });
-          });
-        </script>
+    // Add entrance animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.session-row').forEach(row => {
+      observer.observe(row);
+    });
+
+    // Add party mode animation
+    document.querySelectorAll('.party-section').forEach(party => {
+      party.addEventListener('mouseenter', function () {
+        this.style.transform = 'scale(1.02)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+
+      party.addEventListener('mouseleave', function () {
+        this.style.transform = 'scale(1)';
+      });
+    });
+  </script>
 </body>
 
 </html>
