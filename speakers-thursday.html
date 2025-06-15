@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,17 +9,11 @@
   <meta property="og:title" content="Legal Design Summit" />
   <meta property="og:image" content="images/meta.png" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">"
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
   <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
   <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
   <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
 
   <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
   <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
@@ -33,49 +27,399 @@
   <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
   <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
-  <script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script>
-    $(function () {
-      $("#footer").load("footer.html");
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    .flex-item h3 {
-      text-align: center;
-    }
+  <title>Legal Design Summit Speakers</title>
 
-    .flex-item img {
-      max-width: 100%;
-      height: auto;
-      transition: transform 0.2s ease-in-out;
-    }
+  <!DOCTYPE html>
+  <html lang="en">
 
-    .dot_logo {
-      max-width: 15%;
-    }
-
-    @media only screen and (max-width: 767px) {
-      .dot_logo {
-        max-width: 8rem;
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Design Conference - Speakers</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }
-  </style>
 
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+      }
 
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
 
-  <title>Legal Design Summit</title>
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
 
-</head>
+      .main-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
 
-<body class="active">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+      .subtitle {
+        font-size: 1.5rem;
+        color: #666;
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
 
-  <!-- Wrapper // Menu Section Begins -->
+      .day-label {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+      }
 
+      .section-header {
+        background-color: #AEECE9;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+        border-radius: 8px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .speakers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .speaker-row-group {
+        margin-bottom: 40px;
+      }
+
+      .speakers-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 0;
+      }
+
+      .speaker-card {
+        text-align: center;
+        cursor: pointer;
+        padding: 25px 15px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        background: white;
+      }
+
+      .speaker-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .speaker-card.active {
+        border-color: #AEECE9;
+        background-color: #f8fffe;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(174, 236, 233, 0.3);
+      }
+
+      .speaker-image {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        border: 4px solid #AEECE9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 500;
+        overflow: hidden;
+        transition: border-color 0.3s ease;
+      }
+
+      .speaker-card.active .speaker-image {
+        border-color: #333;
+      }
+
+      .speaker-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        border-radius: 50%;
+        transition: filter 0.3s ease;
+      }
+
+      .speaker-card.active .speaker-image img {
+        filter: grayscale(0%);
+      }
+
+      .speaker-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .speaker-position {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #AEECE9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: #333;
+      }
+
+      .linkedin-icon::before {
+        content: "in";
+        font-size: 14px;
+      }
+
+      .email-icon::before {
+        content: "@";
+        font-size: 18px;
+      }
+
+      .bio-panel {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        background: #f8fffe;
+        border: 2px solid #AEECE9;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      .bio-panel.active {
+        max-height: 600px;
+        opacity: 1;
+        padding: 30px;
+      }
+
+      .bio-content {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+      }
+
+      .bio-left {
+        flex: 0 0 120px;
+        text-align: center;
+      }
+
+      .bio-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        border: 3px solid #AEECE9;
+        overflow: hidden;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .bio-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .bio-social {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .bio-social .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+      }
+
+      .bio-right {
+        flex: 1;
+      }
+
+      .bio-header {
+        margin-bottom: 20px;
+      }
+
+      .bio-name {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .bio-position {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .bio-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 25px;
+      }
+
+      .bio-sessions {
+        background: #AEECE9;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .sessions-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .session-item {
+        background: white;
+        padding: 12px 15px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+
+      .session-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .session-day {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 3px;
+        font-size: 0.9rem;
+      }
+
+      .session-title {
+        color: #666;
+        font-style: italic;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.3rem;
+        }
+
+        .day-label {
+          font-size: 2rem;
+        }
+
+        .speakers-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .speaker-image {
+          width: 140px;
+          height: 140px;
+        }
+
+        .bio-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+
+        .bio-left {
+          flex: none;
+        }
+
+        .bio-image {
+          margin: 0 auto 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .main-title {
+          font-size: 2rem;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+        }
+
+        .speakers-grid {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        .speaker-image {
+          width: 120px;
+          height: 120px;
+        }
+
+        .speaker-name {
+          font-size: 1.1rem;
+        }
+
+        .speaker-position {
+          font-size: 0.9rem;
+        }
+
+        .bio-panel.active {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+<body>
   <div class="wrapper menu fluid">
     <div class="container">
       <div id="menu">
@@ -86,9 +430,8 @@
               <div class="menu-container">
                 <ul class="menu">
                   <li class=" first"><a href="index.html">Home</a></li>
-                  <li class=""><a href="program-thursday.html">Program Loading...</a></li>
-                  <li class=""><a href="speakers-thursday.html">Speakers</a></li>
-                  <li class=""><a href="previous-participants.html">Who is attending?</a></li>
+                  <li class=" first"><a href="brainfactory.html">BrainFactory </a></li>
+                  <li class=""><a href="program.html">Program</a></li>
                   <li class=""><a href="about-us.html">Meet the team</a></li>
                   <li class=""><a href="tickets.html">Tickets</a></li>
                   <li class=" last"><a href="why-attend.html">History</a></li>
@@ -100,486 +443,262 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <header class="header">
+      <h1 class="main-title">Meet this year's Speakers</h1>
+      <p class="subtitle">Shaping the next chapter in legal design</p>
+      <h2 class="day-label">DAY 1</h2>
+    </header>
 
-  <div style="padding: 60px 0; font-family: Arial, sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-      <h2
-        style="text-align: center; font-size: 32px; color: #333; margin-bottom: 20px; font-weight: 700; text-transform: uppercase;">
-        Meet this years's Speakers</h2>
-
-      <div style="height: 8px; width: 220px; background-color: #7DDFD3; margin: 0 auto 40px;"></div>
-
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 60px; line-height: 1.6; color: #555;">
-        <p>Shaping the next chapter in legal design</p>
-      </div>
+    <div class="section-header">
+      <h3 class="section-title">I. The new normal: generative artificial intelligence in law</h3>
     </div>
 
-
-
-
-  </div>
-  </div>
-  <!--
-  <h2>THANK YOU 2023 SPEAKERS</h2>
-
-  </div>
-  </div>
-  </div>
-
-
-
-  <div class="speaker">
-
-    <div style="margin-bottom: 20px;">
-      <h1>
-        <a href="speakers-thursday.html" class="selected_day">Thursday</a> |
-        <a href="speakers-friday.html" class="day_selector">Friday</a>
-      </h1>
-
-
-      <h1 style="color:#c30979; margin-top: 0;">LEGAL DESIGN SUBSTANCE</h1>
-
+    <div class="speakers-container" id="speakers-container">
+      <!-- Speaker row groups will be dynamically generated here -->
     </div>
-
-    <table>
-      <colgroup>
-        <col style="width: 20%;">
-        <col style="width: 70%">
-      </colgroup>
-      <tbody class="timetable" style="padding-left: 20px;">
-        <tr>
-          <td>
-            <h3>10.15-12.15</h3>
-          </td>
-          <td>
-            <h3>I. - Beautiful & Better Documents & Visualising Information:</h3>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <div class="panel_discussion">
-              <div class="read-more-container">
-                <div class="flex-container">
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/marco-imperiale.jpg"></a></div>
-                    <h3>Marco Imperiale</h3>
-                    <p>Founder and managing director of Better Ipsum, a consultancy focused on legal design,
-                      -innovation, and -wellbeing.<span class="read-more-text">. Marco Imperiale has a long-time
-                        experience working on legal design services and products for relevant institutions, Fortune 500
-                        and listed companies. A true legal design pioneer, Marco wrote (with Barbara de Muro) the first
-                        Italian book on legal design and lectured the course on legal design at the Harvard Graduate
-                        School of Design. At Harvard, where he graduated as Fulbright Scholar, he also worked as
-                        visiting researcher.
-                        Fun facts. Marco has seen more than 1000 concerts, run a few marathons, and completed nine times
-                        El Camino de Santiago. Whenever he finds time in his hectic agenda, he also works as negotiation
-                        consultant and mindfulness trainer.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/stefania-passera.jpg"></a></div>
-                    <h3>Stefania Passera</h3>
-                    <p>Founder of Passera Design, Contract designer<span class="read-more-text">. Stefania Passera is an
-                        Italian-born information designer based in Helsinki, Finland. With almost 15 years of experience
-                        in simplifying contracts and other legal documents, she is considered a true legal design
-                        pioneer. She is the founder of Passera Design and collaborates as Contract Designer in Residence
-                        with World Commerce & Contracting.<br><br>Stefania is an all-rounder, backing her design
-                        expertise with a solid academic background. She has served as an Assistant Professor at the
-                        University of Vaasa and earned her PhD from Aalto University. Her research has been widely
-                        published, and she is an in-demand keynote speaker and lecturer on contract design,
-                        simplification, and legal design. As a legal design advocate and popularizer, she has
-                        co-authored the Legal Design Manifesto, built the open-access Contract Design Pattern Library,
-                        and organized 30+ Legal Design Jam workshops around the world.<br><br>Her innovative work has
-                        earned her the European Women of Legal Tech Award in 2020 and a World Commerce & Contracting
-                        Fellowship in 2017.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/dan-riley.JPG"></a></div>
-                    <h3>Dan Riley</h3>
-                    <p>CEO, Spearhead Interactive & Founder, Resol-vr<span class="read-more-text">. Dan Riley is an
-                        award-winning technology entrepreneur specialising in the design of immersive and interactive
-                        experiences that tackle complex and critical challenges. With a portfolio of 150+ solutions
-                        delivered across various sectors, Dan empowers organisations through engagement and positive
-                        disruption; effectively bridging the gap between people and technology.<br><br>Passionate about
-                        adding value to the legal industry, Dan will share insights on immersive visualisation in
-                        litigation as a speaker at the Legal Design Summit, drawing from his firsthand experience and
-                        expertise. Notably, Dan will present a groundbreaking virtual reality solution that played a
-                        pivotal role in resolving a complex legal dispute, underscoring the transformative potential of
-                        immersive technologies.<br><br>Attendees can expect an enlightening and impactful presentation;
-                        through his talk, Dan aims to inspire and empower fellow professionals to leverage technology to
-                        improve processes, drive innovation and achieve exceptional outcomes in the legal industry.
-                      </span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Mel-Flanagan.png"></a></div>
-                    <h3>Mel Flanagan</h3>
-                    <p>Founder Nook Studios, advocate, information designer, creative director, storyteller<span
-                        class="read-more-text">. Mel Flanagan is a global social justice, environmental, open government
-                        advocate, and designer, with a background in theatre and filmmaking. Nook Studios is a social
-                        enterprise of researchers, artists, designers, and civic technologists based in Sydney,
-                        Australia.
-                        <br><br>Nook design revolutionary content and information products to help people simply
-                        explain, connect, and visualise complex information such as legislation and regulations - making
-                        them easier to follow, analyse, and improve. Nook's experience includes natural resource
-                        governance, (mining, oil, gas), infrastructure projects, environmental approvals, government
-                        decision making processes, contracting and procurement pathways.
-                        <br><br>Mel regularly speaks about the role of design in making positive social and environment
-                        impact and open initiatives such as open contracting. Nook run workshops to share their approach
-                        and are producing open-source digital tools to help everyone communicate more effectively and
-                        bring processes and data to life in engaging ways for community audiences.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/kanan-dhru.jpg"></a></div>
-                    <h3>Kanan Dhru</h3>
-                    <p>Founder of Research Foundation for Governance and Lawtoons<span class="read-more-text">. Kanan
-                        Dhru has developed and researched innovative solutions in law since 2009. She has been a
-                        practicing lawyer, founder of a think-tank on legal reforms called Research Foundation for
-                        Governance and Lawtoons. Operational Board Member of Legal Hackers and a Senior Lecturer in
-                        legal technology at The Hague University of Applied Sciences, Kanan led a legal innovation
-                        community at the Hague Institute for Innovation of Laws.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                </div>
-              </div>
-
-
-            </div>
-
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>13.35-14.55</h3>
-          </td>
-          <td>
-            <h3>II. - THE CASE FOR LEGAL DESIGN:</h3>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <div class="panel_discussion">
-              <div class="read-more-container">
-                <div class="flex-container">
-
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/erika-pagano.jpg"></a></div>
-                    <h3>Erika Pagano</h3>
-                    <p>Head of Legal Innovation and Design, Simmons & Simmons<span class="read-more-text">. Erika Pagano
-                        is an award-winning lawyer, innovator, and educator whose sweet spots include culture creation,
-                        leadership, strategy, teaming, technology, and cross-border initiatives. Having dedicated a
-                        decade to change, creativity, and client centricity in the legal profession, Erika works with a
-                        wide variety of clients on harnessing the power of legal design. <br><br>Erika was recognized by
-                        LawTechUK, a Ministry of Justice-backed initiative, as a legal tech trailblazer. She was named
-                        Rising Star of the Year (the Lynne Freeman Award) by WeAreTheCity in 2021, as well as “highly
-                        commended” for Rising Star of the Year at the 2019 British Legal Awards. She is a regular
-                        speaker and published author. She also serves as Guest Faculty at IE University (Madrid), where
-                        she teaches undergraduate and masters courses on innovation in the legal profession. She sits on
-                        multiple boards (Georgetown Class of 2008 Committee, LawWithoutWalls Advisory Board, University
-                        of Miami School of Law Alumni Board and National Advisory Council, and others) and is a member
-                        of Simmons’ gender balance and neurodiversity committees.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/callum-brown.jpg"></a></div>
-                    <h3>Callum Brown</h3>
-                    <p>Senior Legal Designer, Simmons & Simmons<span class="read-more-text">. Callum Brown is a Senior
-                        Legal Designer at Simmons & Simmons. He has been working in legal tech and legal design for the
-                        past 4 years with the international law firm Simmons and Simmons. He has guest lectured at
-                        Oxford, Science Po, IE Madrid and Swansea. He was an English teacher for 10 years, and was a
-                        professional fire juggler.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/glen-byrne.jpg"></a></div>
-                    <h3>Glen Byrne</h3>
-                    <p>Legal Designer, Simmons & Simmons<span class="read-more-text">. Glen Byrne qualified as a lawyer
-                        in Ireland before joining Simmons Wavelength as a legal designer. Drawing on experiences working
-                        in design and communications, Glen creates a better experience of law for its users. As part of
-                        training as a solicitor, Glen worked in employment law, European competition law, debt and
-                        enforcement, and eventually qualifying into international tax law. Glen also worked in
-                        communications and in graphic design, which has given him a perspective unique in the legal
-                        industry and skills that are pertinent to successful legal design. <br><br>Glen has worked on
-                        large legal design projects as part of Simmons & Simmons, such as recreating the data privacy
-                        manual for a large, multinational energy business, and redesigning the code of conduct for a
-                        global financial institution. Glen has also taught legal design principles at Oxford University
-                        and Swansea University. </span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Astrid-Kohlmeier.png"></a></div>
-                    <h3>Astrid Kohlmeier</h3>
-                    <p>AK Legal Design, Co-author of "The Legal Design Book"<span class="read-more-text">. Astrid
-                        Kohlmeier is a lawyer and designer and internationally considered as a pioneer of legal design.
-                        She runs the Munich-based consulting firm AK LEGAL DESIGN. Co-author of ‘The Legal Design Book’,
-                        Astrid particularly advises legal departments and law firms on the development of user-centered
-                        solutions with a strong focus on legal innovation and digital transformation. She is a member
-                        and lecturer of the Executive Faculty at the Bucerius Center on the Legal Profession, co-founder
-                        of the non-profit association Liquid Legal Institute, speaker at relevant conferences worldwide
-                        and works with a global network of legal designers. She is a gardener at heart, loves good food
-                        and can‘t sit still when it comes to music.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Dorra-Harrar.jpg"></a></div>
-                    <h3>Dorra Harrar</h3>
-                    <p>Founder of Legal.D, the first legal design agency in the MENA region<span
-                        class="read-more-text">. Dorra Harrar is a humanist business lawyer and the first expert
-                        practitioner, a pioneer of legal design, in the MENA region. She is a founder of Legal.D, the
-                        first legal design agency in the MENA region, based in Tunisia.
-                        <br><br>Dorra combines her advanced experience as a business lawyer with her creative,
-                        innovative and humanistic spirit to help companies and individuals make their legal documents
-                        clear, understandable, and efficient, to enable change into a strategic drive for business and
-                        insure human dignity.
-                        <br><br>Dorra has worked on several legal design projects in social and business fields, both
-                        nationally and internationally, and has succeeded in using legal design in a litigation case for
-                        the first time before a Tunisian court.
-                        <br><br>In 2022, Dorra won the WorldCC Innovation & Excellence award in the personal initiative
-                        category. The award recognized Dorra’s significant impact in business and its unique
-                        contribution to challenging the status quo of the practice of law in her country.
-                        <br>She also organized, in Tunisia, the first legal design workshop for law students and has
-                        been invited to speak at national and international events.
-                      </span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Laura-Hartmann.jpg"></a></div>
-                    <h3>Laura Hartmann</h3>
-                    <p>General Counsel, Legal Designer<span class="read-more-text">. Laura Hartmann is a General Counsel
-                        and Legal Designer based in regional Victoria, Australia. She is passionate about creating
-                        in-house legal services that people love. Laura uses design methodologies to re-examine
-                        everything we think we know about in-house legal teams- from the way we write and speak, to the
-                        processes that underpin service delivery. She is currently building a legal service from the
-                        ground up at Grampians Health and loving every minute of it. Laura holds a Bachelor of Laws and
-                        a Master of Public and International Law from the University of Melbourne. She is the legal
-                        design portfolio lead for the Legal Technology and Innovation Committee for the Association of
-                        Corporate Counsel (Australian chapter).</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Karol-Valencia.jpeg"></a></div>
-                    <h3>Karol Valencia</h3>
-                    <p>DesignOps & Legal Design Lead at WOW Legal Experience | Legal Design Ops Agency<span
-                        class="read-more-text">. Karol Valencia is a lawyer, legal designer, full stack developer and UX
-                        Design Unicorn. Karol is Director of the ITLS lab (innovation & technology lab for the legal
-                        sector), Advisory board member at Global Legaltech Hub, Senior lecturer on legal innovation
-                        courses, mentor at ADP List and Speaker.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/marie-potel-saville.png"></a></div>
-                    <h3>Marie Potel-Saville</h3>
-                    <p>Founder of Amurabi, Lecturer at Sciences Po Paris, Singapore Management University and Assas<span
-                        class="read-more-text">. Marie Potel-Saville is the founder of Amurabi, an award-winning legal
-                        innovation studio, and www.fairpatterns.com, a platform dedicated to fight against dark patterns
-                        and train all stakeholders to avoid them. She is an international keynote speaker in
-                        human-centric law and legal innovation by design (IAPP Global Privacy Summit, W@Privacy,
-                        Computer Privacy and Data Protection, LegalGeek…).<br><br>Before founding Amurabi, she worked in
-                        private practice for 10 years (Freshfields, Allen & Overy) in Europe, then moved in-house to
-                        become GC EMEA of a US listed group. She holds a Master’s Degree in Innovation by Design at
-                        ENSCI. She is also a member of the Advisory Board of the Serpentine Galleries’ Legal Lab and is
-                        involved in pro bono access to access initiatives. Marie teaches innovation by design at
-                        Singapore Management University, Sciences Po and Assas.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>15.50-17.00</h3>
-          </td>
-          <td>
-            <h3>III. - Legal Design as a New Mindset in the Face of Modern Tools</h3>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <div class="panel_discussion">
-              <div class="read-more-container">
-                <div class="flex-container">
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Geoffrey-Delcroix.jpg"></a></div>
-                    <h3>Geoffrey Delcroix</h3>
-                    <p>Head of innovation for the legal team at Ubisoft<span class="read-more-text">. Geoffrey Delcroix
-                        As Head of innovation for the legal team at Ubisoft - a world leading creator and publisher of
-                        video games - Geoffrey Delcroix brings his experience as a professional futurist and innovation
-                        enabler to explore new territories and create the unknown for the legal team! He joined Ubisoft
-                        in 2019 to create an ambitious transformation team whose mission is to anticipate futures and
-                        inspire legal strategic ambitions, catalyze the legal team transformation journey, deliver new
-                        legal services in line with Ubisoft priorities and business opportunities and enhance daily
-                        operational excellence through simplification. The team deals with legal techs, legal design,
-                        legal operations and legal awareness & communications strategies and projects with a diverse set
-                        of skills and a fast prototyping and makers mindset. We nurture an entrepreneurial and
-                        human-centric mindset in the legal department to ensure legal team best ideas are captured,
-                        tested, developed, and scaled.<br><br>Before joining Ubisoft in 2019, Geoffrey co-founded and
-                        managed LINC, the innovation and foresight laboratory of the French Data protection Authority
-                        (CNIL).</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Riikka-Koulu.jpg"></a></div>
-                    <h3>Riikka Koulu</h3>
-                    <p>Associate Professor at University of Helsinki and leader of Helsinki Legal Tech Lab<span
-                        class="read-more-text">. Prof. Dr. Riikka Koulu is the Associate Professor (Social and Legal
-                        Implications of AI) at the Faculties of Social Sciences and Law, University of Helsinki,
-                        Finland. Since 2016, she also leads the University of Helsinki Legal Tech Lab, an
-                        interdisciplinary research hub that examines the intersections of law, technology, and society.
-                        She holds several positions inside and outside of academia, e.g. the chairperson of the Finnish
-                        Data Protection Ombudsman’s Expert Board; member of the Ethical Advisory Board of the Finnish
-                        Centre for Artificial Intelligence (FCAI); and associated researcher at the Alexander von
-                        Humboldt Institute for Internet and Society HIIG (Berlin). Her current research interests
-                        include automation of legal practices, AI ethics, policy and regulation, and procedural
-                        perspectives to technological design.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                  <div class="flex-item">
-                    <div class="image"><a><img src="images/speakers/2023/Natalie-Byrom.jpeg"></a></div>
-                    <h3>Natalie Byrom</h3>
-                    <p>Honorary Senior Research Fellow at UCL Laws<span class="read-more-text">. Dr Natalie Byrom is
-                        Honorary Senior Research Fellow at UCL Laws. Her research focuses on evaluating the impact of
-                        data driven technologies on access to justice and mechanisms for increasing public participation
-                        in justice data governance. Between 2018 and 2020 she was expert advisor to the UK Ministry of
-                        Justice where she led the development of a data strategy to underpin their £1bn programme of
-                        digital court reform. She sits on the Civil Justice Council and the Ministry of Justice Senior
-                        Data Governance Panel, which advises the Lord Chancellor and Lord Chief Justice on novel and
-                        contentious uses of justice data. She is part of the BBC Expert Women network and her research
-                        has been published in the legal and national press.</span></p>
-                    <span class="read-more-btn">Read More...</span>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-      </tbody>
-    </table>
-
-
-
-
   </div>
 
+  <script>
 
+    const speakersData = [
+      {
+        name: "Antti Innanen",
+        position: "CEO of Dot., Co-founder of Legal Design Summit",
 
-  </div>
+        image: "images/speakers/2025/Antti_Innanen.jpg",
+        linkedin: "https://www.linkedin.com/in/anttiinnanen/",
 
-  <!--
-                <div class="flex-item">
-                <div class="image"><a><img src="images/speakers/2023/"></a></div>
-                <h3>name</h3>
-                <p>Title<span class="read-more-text">. story</span></p>
-                <span class="read-more-btn">Read More...</span>
-              </div>
- -->
+        bio: "Antti is the CEO of Dot. and co-founder of the Legal Design Summit. A true Legal Design OG, he is one of the most widely recognized voices in the field and has played a key role in shaping the global movement toward more human-centered law. Lately, Antti has been exploring the frontiers of AI and agentic systems. His upcoming book, Prompted: How to Create and Communicate with AI, will be published by Routledge in 2025. For the first time since 2016, Antti is back on the Summit stage, and this time with a bang.",
+        sessions: [
+          { day: "DAY 0", title: "BrainFactory: Can AI Agents Master Legal Design?" },
+          { day: "DAY 1", title: "Opening keynote: Legal Design in the Age of AI" }
+        ]
+      },
+      {
+        name: "Ilona van de Kooi",
+        position: "Researcher at the Convergence Center for Law, Design & AI (The Delft University of Technology & Erasmus School of Law)",
 
+        image: "images/speakers/2025/Ilona van de Kooi.jpg",
+        linkedin: "https://www.linkedin.com/in/ilona-van-de-kooi/",
+        bio: "Ilona recognized early on that technology would reshape the legal field. With over 15 years of experience in legal higher education, she strongly advocates for integrating design thinking and visual communication into law curricula. She sees design as a critical lens—one that helps future legal professionals assess, question, and shape how technology is adopted. She believes meaningful legal innovation requires interdisciplinary collaboration within multidisciplinary teams. Her current research explores how legal professionals in the Netherlands understand and apply AI in their daily practice.",
+        sessions: [
+          { day: "DAY 1", title: "The Art of Breaking down Silos Using the Power of Design and AI" },
+        ]
+      },
+      {
+        name: "Kim Raad",
+        position: "Senior information designer at Stibbe",
 
+        image: "images/speakers/2025/Kim Raad.png",
+        linkedin: "#",
+        bio: "With over 20 years of experience and a background in visual journalism, Kim has worked across sectors including healthcare, finance, and law. Since 2019, she has been the lead designer and legal design adviser at the law firm Stibbe. She is passionate about clarifying complex expert information with visualisation, human-centred design and is a strong advocate for Legal Design in multidisciplinary teams. Kim uncovers the deeper layers—the human logic, the hidden assumptions, the untold stories with design thinking methods. She asks the questions lawyers often don’t think to ask—or don’t dare to.",
 
-  </div>
-  </div>
+        sessions: [
+          { day: "DAY 1", title: "The Art of Breaking down Silos Using the Power of Design and AI" },
 
+        ]
+      },
+      {
+        name: "Prof. Dr. Christian Djeffal",
+        position: "Tenured Professor, Technical University of Munich (TUM)",
 
+        image: "images/speakers/2025/Christian_Djeffal.jpg",
+        linkedin: "#",
+        bio: "Christian is a Tenured Professor for Law, Science, and Technology at the Technical University of Munich (TUM) and a certified design thinking coach. His overarching research explores societal stability and change, with a focus on the ability to steer these dynamics. To study this in practice, Christian examines the interplay between law and technology, particularly in relation to emerging fields like artificial intelligence and the Internet of Things. He champions integrative and transdisciplinary legal approaches and founded the Constitutional Design Lab, which emphasizes normative participatory design, designerly knowledge creation, and creative methods to address complexity.",
+        sessions: [
+          { day: "DAY 1", title: "Activate AI in Legal Design: The Art of Legal Prompt Engineering" }
+        ]
+      },
+      {
+        name: "Eeva Attila",
+        position: "Senior Ministerial Adviser, LL.M., PhD",
 
-  <div class="wrapper actions">
+        image: "images/speakers/2025/Eeva_Attila.jpg",
+        linkedin: "https://linkedin.com/in/amandafoster",
+        bio: "Eeva is a lawyer and linguist with a particular interest in legal language, especially legislative language. She works as Senior Ministerial Adviser in Legal Revision at the Finnish Ministry of Justice, focusing on law drafting and legislative texts. Previously, she worked in the application of law, including in various courts. For a long time, her free-time hobby was studying the Finnish language at university, until last spring she defended her PhD with a dissertation on Finnish legislative language.",
+        sessions: [
+          { day: "DAY 1", title: "Law Drafting Meets Legal Design" }
+        ]
+      },
+      {
+        name: "Saija Suominen",
+        position: "Senior Specialist, LL.B., M.A.",
 
-    <!-- Container Section Begins -->
+        image: "images/speakers/2025/Saija Suominen.jpg",
+        linkedin: "#",
+        bio: "Saija works as a Senior Specialist in Legal Revision at the Finnish Ministry of Justice. Her journey into legal design started from a slightly different angle — through language. She worked for many years as a legal translator in both the banking sector and a law firm, where she also had the chance to participate in legal design projects. Saija holds a Master’s degree in Translation Studies and a Bachelor of Laws, and she is especially interested in how language, structure, and user experience intersect in legal texts. She is excited to be part of the Legal Design Summit and to share ideas on how we can rethink legal communication together.",
 
-    <div class="container">
+        sessions: [
+          { day: "DAY 1", title: "Law Drafting Meets Legal Design" }
+        ]
+      },
+      {
+        name: "Jenni Hakkarainen",
+        position: "",
 
-      <!-- Content Section Begins -->
+        image: "#",
+        linkedin: "#",
+        bio: "",
+        sessions: [
+          { day: "DAY 1", title: "TBC" }
+        ]
+      },
+      {
+        name: "Mirza Chiragov",
+        position: "Academic Director at the Digital Law Lab Azerbaijan, CEO of Dejured, ELTA Ambassador in Azerbaijan",
+        image: "images/speakers/2025/Mirza Chiragov.jpeg",
+        linkedin: "#",
+        bio: "Mirza has extensive experience in corporate law, bankruptcy, and litigation. Having witnessed firsthand the internal complexities and barriers within the legal profession, he realized that law must be dynamic, adaptable, and accessible. Driven by this vision, Mirza actively promotes the concept of 'plan law' (clear and understandable law) across Azerbaijan, Uzbekistan, Kazakhstan, and beyond. As Academic Director of the Digital Law Lab, he leads research projects, hosts podcasts, and frequently delivers public lectures. Mirza is also building a platform in Azerbaijan to provide ordinary citizens with user-friendly legal documents, applying Legal Design principles. He holds two LL.M. degrees, is currently pursuing his PhD, and teaches law courses at several universities. Additionally, Mirza was honored as the Lifetime Contribution to Innovation Winner at the 2025 European Legal Innovation & Technology Awards.",
+        sessions: [
+          { day: "DAY 1", title: "Fireside chat: Driving Systemic Change – A Regional Perspective" }
+        ]
+      },
+      {
+        name: "Sophie Ranaivoharisoa",
+        position: "PhD Candidate in Law, University of Antananarivo",
 
-      <div id="content-actions">
+        image: "images/speakers/2025/Sophie Ranaivoharisoa_photo.jpg",
+        linkedin: "#",
+        bio: "Sophie is a PhD candidate in Law, holding a master’s in business law from the University of Antananarivo. Her doctoral research focuses on the protection of consumer data privacy in Madagascar through Corporate Digital Responsibility, proposing Legal Design as a practical approach to address this challenge. With the accelerated growth of digital technology, she is committed to inclusive legal innovation, aiming to improve access to legal information in Madagascar by accounting for systemic and cultural realities. As a Mandela Washington Fellow under the Young African Leaders Initiative, she advocates for the integration of Southern perspectives in global legal conversations.",
+        sessions: [
+          { day: "DAY 1", title: "Fireside chat: Driving Systemic Change – A Regional Perspective" }
+        ]
+      }
+    ];
 
-        <!-- Content Main Section Begins -->
+    let currentActiveIndex = null;
+    let currentActiveRowGroup = null;
 
-        <div class="content-main">
-          <div class="actions">
-            <div class="row">
-              <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a
-                  href="mailto:speakers@legaldesignsummit.com>" class="btn light">Contact
-                  Us</a></div>
-            </div>
+    function initializeSpeakers() {
+      generateSpeakerRowGroups();
+    }
 
+    function generateSpeakerRowGroups() {
+      const container = document.getElementById('speakers-container');
+      const speakersPerRow = 3;
+      let html = '';
 
+      for (let i = 0; i < speakersData.length; i += speakersPerRow) {
+        const rowSpeakers = speakersData.slice(i, i + speakersPerRow);
+        const rowIndex = Math.floor(i / speakersPerRow);
 
-            <div class="padding-top-40"></div>
-            <div class="social-media padding-top-40 justify-center">
-              <div class="row col" style="justify-content: center;">
-                <a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5"
-                  target="_blank">LinkedIn</a>
-                <a href="https://www.facebook.com/legaldesignsummit/"
-                  class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/legaldesignsummit/"
-                  class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
-                <a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5"
-                  target="_blank">Twitter</a>
-              </div>
-            </div>
-          </div>
+        html += `
+                      <div class="speaker-row-group" id="row-group-${rowIndex}">
+                          <div class="speakers-grid">
+                              ${rowSpeakers.map((speaker, localIndex) => {
+          const globalIndex = i + localIndex;
+          return `
+                                      <div class="speaker-card" onclick="toggleSpeakerBio(${globalIndex}, ${rowIndex})" id="speaker-card-${globalIndex}">
+                                          <div class="speaker-image">
+                                              ${speaker.image ? `<img src="${speaker.image}" alt="${speaker.name}">` : 'B&W pic'}
+                                          </div>
+                                          <h4 class="speaker-name">${speaker.name}</h4>
+                                          <p class="speaker-position">${speaker.position}</p>
+                                          <div class="social-icons">
+                                              <a href="${speaker.linkedin}" class="social-icon linkedin-icon" aria-label="LinkedIn" onclick="event.stopPropagation()" target="_blank"></a>
+                                          </div>
+                                      </div>
+                                  `;
+        }).join('')}
+                          </div>
+                          <div class="bio-panel" id="bio-panel-${rowIndex}">
+                              <div class="bio-content" id="bio-content-${rowIndex}">
+                                  <!-- Bio content will be populated here -->
+                              </div>
+                          </div>
+                      </div>
+                  `;
+      }
 
-          <!-- Content Main Section Ends -->
+      container.innerHTML = html;
+    }
 
-        </div>
+    function toggleSpeakerBio(speakerIndex, rowIndex) {
+      const speaker = speakersData[speakerIndex];
+      const speakerCard = document.getElementById(`speaker-card-${speakerIndex}`);
+      const bioPanel = document.getElementById(`bio-panel-${rowIndex}`);
+      const bioContent = document.getElementById(`bio-content-${rowIndex}`);
 
-        <!-- Content Section Ends -->
+      // If clicking the same speaker, close it
+      if (currentActiveIndex === speakerIndex) {
+        closeAllBios();
+        return;
+      }
 
-      </div>
+      // Close any currently open bio
+      closeAllBios();
 
-      <!-- Container Section Ends -->
+      // Populate bio content
+      bioContent.innerHTML = `
+                  <div class="bio-left">
+                      <div class="bio-image">
+                          ${speaker.image ? `<img src="${speaker.image}" alt="${speaker.name}">` : 'B&W pic'}
+                      </div>
+                      <div class="bio-social">
+                          <a href="${speaker.linkedin}" class="social-icon linkedin-icon" aria-label="LinkedIn" target="_blank"></a>
+                      </div>
+                  </div>
+                  <div class="bio-right">
+                      <div class="bio-header">
+                          <h3 class="bio-name">${speaker.name}</h3>
+                          <p class="bio-position">${speaker.position}</p>
+                      </div>
+                      <div class="bio-text">${speaker.bio}</div>
+                      <div class="bio-sessions">
+                          <h4 class="sessions-title">All sessions featuring ${speaker.name}:</h4>
+                          ${speaker.sessions.map(session => `
+                              <div class="session-item">
+                                  <div class="session-day">${session.day}</div>
+                                  <div class="session-title">"${session.title}"</div>
+                              </div>
+                          `).join('')}
+                      </div>
+                  </div>
+              `;
 
-    </div>
+      // Open the bio panel and mark speaker as active
+      speakerCard.classList.add('active');
+      bioPanel.classList.add('active');
 
-    <!-- Wrapper // Content Actions Section Ends -->
+      currentActiveIndex = speakerIndex;
+      currentActiveRowGroup = rowIndex;
+    }
 
-    <!-- Footer section loaded with javascipt from footer.html -->
-
-    <div id="footer"></div>
-
-    <!-- Footer Section Ends -->
-
-    <script>
-
-      const parentContainers = document.querySelectorAll('.read-more-container');
-
-      parentContainers.forEach(parentContainer => {
-        parentContainer.addEventListener('click', event => {
-          const current = event.target;
-          const isReadMoreBtn = current.className.includes('read-more-btn');
-
-          if (!isReadMoreBtn) return;
-
-          const currentText = event.target.parentNode.querySelector('.read-more-text');
-
-          currentText.classList.toggle('read-more-text--show');
-
-          current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
-        });
+    function closeAllBios() {
+      // Remove active class from all speaker cards
+      document.querySelectorAll('.speaker-card.active').forEach(card => {
+        card.classList.remove('active');
       });
-    </script>
 
+      // Close all bio panels
+      document.querySelectorAll('.bio-panel.active').forEach(panel => {
+        panel.classList.remove('active');
+      });
+
+      currentActiveIndex = null;
+      currentActiveRowGroup = null;
+    }
+
+    // Close bio when clicking outside
+    document.addEventListener('click', function (event) {
+      if (currentActiveIndex !== null &&
+        !event.target.closest('.speaker-card') &&
+        !event.target.closest('.bio-panel')) {
+        closeAllBios();
+      }
+    });
+
+    // Close bio with Escape key
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && currentActiveIndex !== null) {
+        closeAllBios();
+      }
+    });
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', initializeSpeakers);
+  </script>
 
 </body>
 
