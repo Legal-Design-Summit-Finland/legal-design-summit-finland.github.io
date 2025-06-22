@@ -435,6 +435,7 @@
                   <li class=" first"><a href="index.html">Home</a></li>
                   <li class=" first"><a href="brainfactory.html">BrainFactory </a></li>
                   <li class=""><a href="program.html">Program</a></li>
+                  <li class=""><a href="speakers.html">Speakers</a></li>
                   <li class=""><a href="about-us.html">Meet the team</a></li>
                   <li class=""><a href="tickets.html">Tickets</a></li>
                   <li class=" last"><a href="why-attend.html">History</a></li>
@@ -1044,10 +1045,12 @@
                     <div class="bio-sessions">
                       <h4 class="sessions-title">All sessions featuring ${speaker.name}:</h4>
                       ${speaker.sessions.map(session => `
+                      <a href="/program#${slugify(session.title)}" class="session-item-link">
                               <div class="session-item">
                                   <div class="session-day">${session.day}</div>
                                   <div class="session-title">"${session.title}"</div>
                               </div>
+                              </a>
                           `).join('')}
                     </div>
                   </div>
@@ -1094,6 +1097,12 @@
 
     // Initialize when page loads
     document.addEventListener('DOMContentLoaded', initializeSpeakers);
+    function slugify(str) {
+      return str
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')   // spaces & punctuation → -
+        .replace(/^-+|-+$/g, '');      // trim leading/trailing -
+    }
   </script>
 
 </body>
