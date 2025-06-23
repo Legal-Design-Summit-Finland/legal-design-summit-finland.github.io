@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta property="og:site_name" content="Legal Design Summit" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Legal Design Summit" />
@@ -46,6 +46,7 @@
       color: #000000;
       font-family: 'Helvetica Neue', sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .floating-shapes {
@@ -162,11 +163,15 @@
       font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 1px;
+      flex-wrap: wrap;
     }
 
     .nav-item {
       cursor: pointer;
       transition: opacity 0.3s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
 
     .nav-item:hover {
@@ -266,6 +271,9 @@
       transition: all 0.3s ease;
       cursor: pointer;
       box-shadow: 0 4px 15px rgba(174, 236, 233, 0.2);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
 
     .day-indicator.active {
@@ -315,6 +323,7 @@
       cursor: pointer;
       user-select: none;
       transition: all 0.3s ease;
+      min-height: 44px;
     }
 
     .time-slot {
@@ -327,6 +336,7 @@
       border-radius: 8px;
       text-align: center;
       border: 1px solid rgba(174, 236, 233, 0.2);
+      white-space: nowrap;
     }
 
     .session-icon {
@@ -342,6 +352,7 @@
     .session-content {
       flex: 1;
       margin-left: 15px;
+      min-width: 0;
     }
 
     .session-title {
@@ -350,6 +361,7 @@
       margin-bottom: 8px;
       font-size: 17px;
       line-height: 1.4;
+      word-wrap: break-word;
     }
 
     .session-speaker {
@@ -358,6 +370,7 @@
       font-weight: 500;
       display: flex;
       align-items: center;
+      word-wrap: break-word;
     }
 
     .speaker-icon {
@@ -473,6 +486,10 @@
         font-size: 12px;
       }
 
+      .floating-shapes {
+        display: none;
+      }
+
       .session-header {
         padding: 15px 20px;
       }
@@ -524,6 +541,11 @@
 
     .session-row {
       cursor: pointer;
+    }
+
+    .session-row:hover {
+      background: white;
+      transform: none;
     }
 
     .session-row:hover .session-icon {
