@@ -57,21 +57,217 @@
     }
 
     @media only screen and (max-width: 767px) {}
+
+    :root {
+      --accent: #AEECE9;
+      --accent-light: #e5faf7;
+      --danger: #ff3b65;
+      --text-dark: #222;
+      --text-light: #555;
+      --max-width: 900px;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.55;
+      background: #fafafa;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1rem 4rem;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #000;
+      justify-self: center;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 2vw + 1rem, 2.2rem);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    /* turquoise underline on section titles */
+    h1::after,
+    h2::after {
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 4px;
+      margin: .5rem auto 0;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-light);
+    }
+
+
+    .values-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-bottom: 3rem;
+    }
+
+    .value-card {
+      background: var(--accent-light);
+      padding: 1.25rem 1rem 1.5rem;
+      border-left: 4px solid var(--accent);
+      border-radius: .25rem;
+    }
+
+    .value-card h3 {
+      margin: 0 0 .5rem;
+      text-transform: uppercase;
+      font-size: .9rem;
+      letter-spacing: .05em;
+    }
+
+    .value-card p {
+      margin: 0;
+      font-size: .95rem;
+      color: var(--text-light);
+    }
+
+
+    .box {
+      border: 2px solid var(--accent);
+      border-radius: .5rem;
+      padding: 1.5rem 1.25rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .box.unacceptable {
+      border-color: var(--danger);
+    }
+
+    .box-title {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+    }
+
+    .box-title .icon {
+      font-size: 1.25em;
+      line-height: 1;
+    }
+
+    .box ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      list-style-type: disc;
+    }
+
+    .box li+li {
+      margin-top: .6rem;
+    }
+
+
+
+
+    .contact {
+      padding: 1.5rem 1.25rem 1.75rem;
+      border: 2px solid var(--accent);
+
+      border-radius: .5rem;
+      background: #fff;
+
+      line-height: 1.6;
+    }
+
+    .box li,
+    .box li span {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .acknowledgement {
+      background: var(--accent-light);
+      border: 2px dashed var(--accent);
+      border-radius: .5rem;
+      padding: 1.75rem 1.25rem 2rem;
+      margin-bottom: 3rem;
+      font-size: .95rem;
+      text-align: center;
+    }
+
+    .acknowledgement p {
+      margin: 0 0 1.1rem;
+      color: var(--text-dark);
+    }
+
+    .acknowledgement strong {
+      font-weight: 600;
+    }
+
+    /* ----- shared vertical rhythm for the three blocks ----- */
+    main>.box,
+    main>.contact,
+    main>.acknowledgement {
+      max-width: 780px;
+      /* keeps paragraphs from stretching too wide */
+      margin-left: auto;
+      margin-right: auto;
+      /* centres them perfectly */
+    }
+
+    main>.box:not(:last-child),
+    main>.contact,
+    main>.acknowledgement {
+      margin-bottom: 2.75rem;
+      /* consistent gap between the blocks */
+    }
+
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #e9e9e9;
+      }
+
+      .intro,
+      .value-card p,
+      .contact,
+      .box li {
+        color: #bdbdbd;
+      }
+
+      .value-card {
+        background: #013c34;
+      }
+    }
   </style>
 
-
-
-  <title>Legal Design Summit</title>
-
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <body class="active">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
-  <!-- Wrapper // Menu Section Begins -->
-
   <div class="wrapper menu fluid">
     <div class="container">
       <div id="menu">
@@ -82,8 +278,9 @@
               <div class="menu-container">
                 <ul class="menu">
                   <li class=" first"><a href="index.html">Home</a></li>
-                  <li class=""><a href="program-thursday.html">Program Loading...</a></li>
-                  <li class=""><a href="speakers-thursday.html">Call for Speakers!</a></li>
+                  <li class=" first"><a href="brainfactory.html">Brainfactory workshops</a></li>
+                  <li class=""><a href="program.html">Program</a></li>
+                  <li class=""><a href="speakers.html">Speakers</a></li>
                   <li class=""><a href="about-us.html">Meet the team</a></li>
                   <li class=""><a href="tickets.html">Tickets</a></li>
                   <li class=" last"><a href="why-attend.html">History</a></li>
@@ -95,113 +292,161 @@
       </div>
     </div>
   </div>
+</body>
 
-  <div class="wrapper why-attend" style="padding-bottom: 0px;">
-    <div class="container">
-      <div style="text-align: center;">
+<body>
+  <main class="container">
 
-        <h2>PROGRAM LEGAL DESIGN SUMMIT</h2>
-        <p style="font-size: 20px; padding-top: 40px;">
-          Stay tuned for updates - or email us with your best ideas!<br>
-          <a href="mailto:info@legaldesignsummit.com" target="_blank"
-            style="color: #50cec1; text-decoration: underline;">
-            Get in touch
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+    <h1>Code&nbsp;of&nbsp;Conduct</h1>
 
+    <p class="intro">
+      This Code of Conduct outlines our expectations for all participants at
+      <strong>Legal&nbsp;Design&nbsp;Summit</strong> (including volunteers, staff, attendees,
+      speakers, and partners) and reflects the core values of Legal&nbsp;Design&nbsp;Finland ry.
+      We are committed to creating a welcoming, inclusive, and respectful environment for
+      everyone, free from harassment and discrimination.<br><br>
+      By participating in the Legal&nbsp;Design&nbsp;Summit, you agree to abide by this Code of Conduct.
+    </p>
 
+    <h2>Our&nbsp;Values</h2>
+    <p style="text-align:center; margin:-.75rem 0 2rem; color:var(--text-light)">
+      Legal Design Summit is committed to the following values:
+    </p>
 
-  <div class="speaker">
-    <div style="margin-bottom: 20px;">
-      <nav>
-        <h2>
-          <a href="program-wednesday.html" class="selected_day">Wednesday</a> |
-          <a href="program-thursday.html" class="day_selector">Thursday</a> |
-          <a href="program-friday.html" class="day_selector">Friday</a>
-        </h2>
-      </nav>
-    </div>
-  </div>
+    <section class="values-grid">
+      <article class="value-card">
+        <h3>Selflessness</h3>
+        <p>We believe in supporting each other in achieving our shared goals. We see each other
+          and the world with empathy, and never put personal gain before the interests of
+          the community.</p>
+      </article>
+
+      <article class="value-card">
+        <h3>Inclusion</h3>
+        <p>We create a space where everyone feels welcome and valued, and where diversity and
+          different perspectives are celebrated. To support this, LDS is accessible to everyone
+          through free tickets.</p>
+      </article>
+
+      <article class="value-card">
+        <h3>Courage</h3>
+        <p>Learning, imagination and reaching for the impossible is in our backbone. We are
+          curious about the world and passionate about improving it. When faced with a problem
+          to solve, we ask: how hard can it be?</p>
+      </article>
+
+      <article class="value-card">
+        <h3>Authenticity</h3>
+        <p>We are a movement dedicated to making a difference through creative design-thinking.
+          We strive to make an impact by showing up as our authentic selves, while remaining
+          honest, open and true to our core values.</p>
+      </article>
+    </section>
+
+    <section class="box expected">
+      <div class="box-title"><span class="icon">😊</span> Expected&nbsp;Behaviour</div>
+      <ul>
+        <li>Treat everyone with kindness, courtesy, and empathy.</li>
+        <li>Actively work to create a welcoming environment for people of all backgrounds,
+          identities, and abilities.</li>
+        <li>Keep an open mind.</li>
+        <li>Work together constructively and supportively—helping others and being open to
+          receiving help.</li>
+        <li>Follow all instructions and rules provided by event organizers, including being
+          mindful of the event space.</li>
+      </ul>
+    </section>
+    <section class="box unacceptable">
+      <div class="box-title"><span class="icon">❌</span> Unacceptable&nbsp;Behaviour</div>
+      <ul class="unacceptable">
+        <li><strong>Harassment:</strong> Any form of verbal, physical, or written abuse, intimidation,
+          threats, or unwelcome advances.</li>
+        <li><strong>Discrimination:</strong> Any form of prejudice or discrimination based on race,
+          ethnicity, religion, gender, gender identity, sexual orientation, age, disability or
+          any other personal characteristic.</li>
+        <li><strong>Bullying:</strong> Repeated or persistent negative behaviour that is intended to
+          intimidate, humiliate, or demean another person.</li>
+        <li><strong>Disruption:</strong> Any behaviour that disrupts the event or creates a hostile
+          environment.</li>
+        <li><strong>Theft&nbsp;or&nbsp;Damage:</strong> Stealing or damaging property belonging to the
+          organization, other participants, or the venue.</li>
+      </ul>
+    </section>
+    <section class="contact">
+      <strong>Who to contact?</strong><br>
+      If you experience or witness any behavior that violates this Code of Conduct, please report it immediately to the
+      Vice Chair of the Board (Sade Mäntylä). All reports will be treated confidentially to the extent possible.
+
+      Legal Design Summit is committed to investigating all reports of Code of Conduct violations promptly and fairly.
+      Depending on the severity of the violation, we may take action, such as issuing a warning, removal from current
+      and future events or when necessary, contacting relevant authorities.
+      <br>
+    </section>
+
+    <section class="acknowledgement">
+      <p>
+        By participating in the 2025 Legal&nbsp;Design&nbsp;Summit, you acknowledge that you
+        have read, understood, and agree to abide by this Code of Conduct.
+      </p>
+
+      <p>
+        This Code of Conduct is subject to change at the discretion of the Legal Design
+        Summit Board. Any updates will be communicated to participants.
+      </p>
+
+      <p>
+        <strong>For questions or concerns regarding this Code of Conduct,<br>
+          please contact:</strong><br><br>
+        Name:&nbsp;Sade&nbsp;Mäntylä&nbsp;(Vice&nbsp;Chair)<br>
+        Email:&nbsp;<a href="mailto:sade.mantyla@legaldesignsummit.com">
+          sade.mantyla@legaldesignsummit.com</a>
+      </p>
+    </section>
+  </main>
 
   <div class="wrapper actions" style="padding-bottom: 0px;">
-
-    <!-- Container Section Begins -->
-
     <div class="container">
-
-      <!-- Content Section Begins -->
-
       <div id="content-actions">
 
-        <!-- Content Main Section Begins -->
+        <div class="padding-top-40"></div>
+        <div class="social-media padding-top-40 justify-center">
+          <div class="row col" style="justify-content: center;">
+            <a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5"
+              target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/legaldesignsummit/"
+              class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/legaldesignsummit/"
+              class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
 
-        <div class="content-main">
-          <div class="actions">
-            <div class="row">
-              <div class="col-sm-12 justify-center-xs justify-center padding-top-xs-30"><a
-                  href="mailto:info@legaldesignsummit.com" class="btn light">Contact
-                  Us</a></div>
-            </div>
-
-
-
-            <div class="padding-top-40"></div>
-            <div class="social-media padding-top-40 justify-center">
-              <div class="row col" style="justify-content: center;">
-                <a href="https://www.linkedin.com/company/10936008/" class="icon linkedin col-3 margin-right-5"
-                  target="_blank">LinkedIn</a>
-                <a href="https://www.facebook.com/legaldesignsummit/"
-                  class="icon facebook col-3 margin-right-5 margin-left-5" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/legaldesignsummit/"
-                  class="icon instagram col-3 margin-right-5 margin-left-5" target="_blank">Instagram</a>
-                <a href="https://twitter.com/legaldesignFI" class="icon twitter col-3 margin-left-5"
-                  target="_blank">Twitter</a>
-              </div>
-            </div>
           </div>
-
-          <!-- Content Main Section Ends -->
-
         </div>
-
-        <!-- Content Section Ends -->
-
       </div>
-
-      <!-- Container Section Ends -->
 
     </div>
 
-    <!-- Wrapper // Content Actions Section Ends -->
+  </div>
 
-    <!-- Footer section loaded with javascipt from footer.html -->
+  <div id="footer"></div>
 
-    <div id="footer"></div>
+  <script>
 
-    <!-- Footer Section Ends -->
+    const parentContainers = document.querySelectorAll('.read-more-container');
 
-    <script>
+    parentContainers.forEach(parentContainer => {
+      parentContainer.addEventListener('click', event => {
+        const current = event.target;
+        const isReadMoreBtn = current.className.includes('read-more-btn');
 
-      const parentContainers = document.querySelectorAll('.read-more-container');
+        if (!isReadMoreBtn) return;
 
-      parentContainers.forEach(parentContainer => {
-        parentContainer.addEventListener('click', event => {
-          const current = event.target;
-          const isReadMoreBtn = current.className.includes('read-more-btn');
+        const currentText = event.target.parentNode.querySelector('.read-more-text');
 
-          if (!isReadMoreBtn) return;
+        currentText.classList.toggle('read-more-text--show');
 
-          const currentText = event.target.parentNode.querySelector('.read-more-text');
-
-          currentText.classList.toggle('read-more-text--show');
-
-          current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
-        });
+        current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
       });
-    </script>
+    });
+  </script>
 
 
 </body>
