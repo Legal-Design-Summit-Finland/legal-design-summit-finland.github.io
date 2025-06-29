@@ -408,9 +408,102 @@
 				/* more horizontal spacing */
 			}
 		}
-	</style>
 
+
+		@media (max-width: 640px) {
+
+			html {
+				font-size: 100%;
+			}
+
+			body {
+				line-height: 1.45;
+			}
+
+			h1,
+			.hero-headline {
+				font-size: clamp(1.35rem, 6vw, 1.75rem);
+			}
+
+			.stats-title {
+				font-size: 1.35rem;
+			}
+
+			.stats-subtitle {
+				font-size: 1rem;
+			}
+
+			section,
+			.wrapper {
+				padding-left: 5vw;
+				padding-right: 5vw;
+			}
+
+
+			.lds-logo {
+				max-height: 140px;
+				flex: 0 0 140px;
+			}
+
+			.hero-header {
+				gap: 1.5rem;
+			}
+
+			.hero-stats {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.25rem;
+			}
+
+
+			.notify-btn {
+				display: block;
+				padding: .9rem 1.25rem;
+				margin-bottom: .75rem;
+			}
+
+
+			.flex-item {
+				width: 46%;
+				padding: 10px;
+				height: auto;
+			}
+
+			.logo-grid a,
+			.sponsor-row a {
+				width: 44vw;
+				height: 110px;
+			}
+
+			.logo-grid img,
+			.sponsor-row img {
+				max-height: 80%;
+			}
+
+			.sponsor-row.primary,
+			.sponsor-row.secondary,
+			.logo-grid {
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			}
+
+			.team .image {
+				width: 140px;
+				height: 140px;
+			}
+
+			.footer p {
+				font-size: .85rem;
+				word-break: break-word;
+			}
+
+			.social-media a {
+				display: inline-block;
+				margin: 4px 6px;
+			}
+		}
+	</style>
 </head>
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <body class="active">
@@ -426,7 +519,7 @@
 					<div class="block menu-main">
 						<div class="content">
 
-							<div class="menu-toggler">Menu<span class="icon"></span></div>
+							<div class="menu-toggler" aria-label="Open navigation">Menu<span class="icon"></span></div>
 
 							<div class="menu-container">
 								<ul class="menu">
@@ -539,24 +632,27 @@
 		<!-- 1st-tier sponsors (row of 4) -->
 		<div class="sponsor-row primary">
 			<a href="https://www.helsinki.fi/en/faculty-law" target="_blank">
-				<img src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University" style="height:200px;">
+				<img loading="lazy" src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University"
+					style="height:200px;">
 			</a>
 			<a href="https://newcode.ai/" target="_blank">
-				<img src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai" style="height: 85px;">
+				<img loading="lazy" src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai" style="height: 85px;">
 			</a>
 			<a href="https://www.dlapiper.com/en/about-us/law-and" target="_blank">
-				<img src="images/collabs/DLA Piper.jpg" alt="DLA Piper" style="height: 80px;">
+				<img loading="lazy" src="images/collabs/DLA Piper.jpg" alt="DLA Piper" style="height: 80px;">
 			</a>
 			<a href="https://www.legora.com" target="_blank">
-				<img src="images/collabs/Legora (word logo).png" alt="Legora" style="height: 70px;">
+				<img loading="lazy" src="images/collabs/Legora (word logo).png" alt="Legora" style="height: 70px;">
 			</a>
 		</div>
 		<div class="sponsor-row secondary">
 			<a href="https://ey.com" target="_blank">
-				<img src="images/collabs/EY_Law_ Black.png" alt="EY Law" style="height: 80px !important;">
+				<img loading="lazy" src="images/collabs/EY_Law_ Black.png" alt="EY Law"
+					style="height: 80px !important;">
 			</a>
 			<a href="https://www.almainsights.fi/" target="_blank">
-				<img src="images/collabs/Alma Insights__black.png" alt="Alma Insights" style="height: 70px;">
+				<img loading="lazy" src="images/collabs/Alma Insights__black.png" alt="Alma Insights"
+					style="height: 70px;">
 			</a>
 		</div>
 	</section>
@@ -593,7 +689,6 @@
 	</div>
 
 	</div>
-	<!-- Reworked section on logos to appear, now using flex wrap instead of flexgrid-->
 
 	</div>
 
