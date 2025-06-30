@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:site_name" content="Legal Design Summit" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Legal Design Summit" />
@@ -15,7 +15,7 @@
 	<link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
 	<link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 
-	<script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+
 	<script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
 	<script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
@@ -44,16 +44,11 @@
 			list-style: none;
 			justify-content: center;
 			-ms-box-orient: horizontal;
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -moz-flex;
-			display: -webkit-flex;
 			display: flex;
 		}
 
 		.wrap {
-			-webkit-flex-wrap: wrap;
+
 			flex-wrap: wrap;
 		}
 
@@ -217,10 +212,6 @@
 			color: #222;
 		}
 
-		.stat-label {
-			font-size: 1em;
-			color: #444;
-		}
 
 		:root {
 			--lds-primary: #aeece9;
@@ -326,7 +317,7 @@
 			display: grid;
 			justify-content: center;
 			gap: 32px 56px;
-			/* row gap / column gap */
+
 			margin: 0 auto;
 			padding: 0 20px;
 		}
@@ -382,11 +373,6 @@
 
 		}
 
-		.wrapper.menu .content-main {
-
-			padding: 24px 0;
-		}
-
 		.wrapper.menu .menu-container ul.menu>li>a {
 			padding: 12px 18px;
 			font-size: 1.25rem !important;
@@ -395,17 +381,103 @@
 			text-decoration: none;
 		}
 
-		/* 4.  “Menu” button (mobile) */
 		.menu-toggler,
 		.menu-toggler .icon {
 			color: #fff;
 		}
 
-		/* 5.  Optional: space out items on wide screens */
+
+		.wrapper.menu .content-main {
+			padding: 12px 0;
+		}
+
+		.lds-nav>li>a,
+		.lds-nav .more>button {
+			padding: 8px 14px;
+			font-size: 1.1rem;
+		}
+
+		.lds-nav {
+			overflow-x: hidden;
+
+			overflow-y: visible;
+
+		}
+
+		.lds-nav>li {
+			white-space: nowrap;
+		}
+
+		.lds-nav .more>button {
+			all: unset;
+
+			cursor: pointer;
+			padding: 8px 14px;
+			font-size: 1.1rem;
+			line-height: 1.4;
+			color: #fff;
+
+		}
+
+		.lds-nav .more>button::after {
+			content: " ▾";
+			font-size: 0.8em;
+		}
+
+		.lds-nav .more>button:focus {
+			outline: 2px solid var(--lds-primary-dark);
+			outline-offset: 2px;
+		}
+
+		.lds-nav .more {
+			position: relative;
+		}
+
+		.lds-nav .submenu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			min-width: 180px;
+			margin: 0;
+			padding: 6px 0;
+			list-style: none;
+			background: #0e9d98;
+
+			box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+			z-index: 50;
+		}
+
+		.lds-nav .submenu li a {
+			display: block;
+			padding: 10px 18px;
+			font-size: 1rem;
+			color: #fff;
+		}
+
+
+		.lds-nav .more.open .submenu {
+			display: block;
+		}
+
+
+		.lds-nav .more.hidden {
+			display: none;
+		}
+
+		.wrapper.menu .menu-container {
+			overflow: visible !important;
+		}
+
+		.wrapper.menu {
+			box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+		}
+
 		@media (min-width: 992px) {
 			.wrapper.menu .menu-container ul.menu>li {
 				margin: 0 1rem;
-				/* more horizontal spacing */
+
 			}
 		}
 
@@ -501,10 +573,11 @@
 			}
 		}
 	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <body class="active">
 
@@ -522,15 +595,20 @@
 							<div class="menu-toggler" aria-label="Open navigation">Menu<span class="icon"></span></div>
 
 							<div class="menu-container">
-								<ul class="menu">
-									<li class=" first"><a href="#">Home</a></li>
-									<li class=" first"><a href="brainfactory.html">Brainfactory workshops</a></li>
-									<li class=""><a href="program.html">Program</a></li>
-									<li class=""><a href="speakers.html">Speakers</a></li>
-									<li class=""><a href="about-us.html">Meet the team</a></li>
-									<li class=""><a href="tickets.html">Tickets</a></li>
-									<li class=" last"><a href="why-attend.html">History</a></li>
+								<ul class="menu lds-nav" id="ldsNav">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="brainfactory.html">BrainFactory</a></li>
+									<li><a href="program.html">Program</a></li>
+									<li><a href="tickets.html">Tickets</a></li>
+									<li><a href="speakers.html">Speakers</a></li>
+
+									<li><a href="about-us.html">Meet the Team</a></li>
+									<li><a href="values.html">Values</a></li>
+
+									<li><a href="blog.html">Blog</a></li>
 								</ul>
+
+
 							</div>
 
 						</div>
@@ -545,7 +623,7 @@
 	</div>
 
 	<div class="background-video">
-		<video autoplay loop muted plays-inline class="back-video">
+		<video autoplay loop muted playsinline class="back-video">
 			<source src="images/video/summit-footage.mp4" type="video/mp4">
 		</video>
 
@@ -661,11 +739,11 @@
 
 	<div class="wrapper fluid propositions">
 
-		<!-- Container Section Begins -->
+
 
 		<div class="container">
 
-			<!-- Content Section Begins -->
+
 
 			<div class="row no-gutters">
 
@@ -675,7 +753,7 @@
 
 					<div id="content-propositions">
 
-						<!-- Content Main Section Begins -->
+
 
 						<div class="content-main">
 							<h3>Terms of Service that no one reads?<br><span class="enhanced">Check.</span></h3>
@@ -698,129 +776,156 @@
 		<p>We love collaborating with non-profits - Get in touch to join forces with us!</p>
 		<div class="logo-grid">
 
-			<a href="https://www.dot.legal/" target="_blank"><img src="images/collabs/Dot.-logo.jpg" alt="Dot"></a>
+			<a href="https://www.dot.legal/" target="_blank"><img loading="lazy" src="images/collabs/Dot.-logo.jpg"
+					alt="Dot"></a>
 			<a href="https://legaldesign-journal.com/" target="_blank"><img
 					src="images/collabs/Legal Design Journal.JPG" alt="Legal Design Journal"></a>
-			<a href="https://www.hiil.org/" target="_blank"><img src="images/collabs/HiiL_Logo color tagline.png"></a>
-			<a href="https://legalhackers.org/" target="_blank"><img src="images/collabs/lh.png"></a>
-			<a href="https://elta.org/" target="_blank"><img src="images/collabs/elta.png"></a>
+			<a href="https://www.hiil.org/" target="_blank"><img loading="lazy"
+					src="images/collabs/HiiL_Logo color tagline.png"></a>
+			<a href="https://legalhackers.org/" target="_blank"><img loading="lazy" src="images/collabs/lh.png"></a>
+			<a href="https://elta.org/" target="_blank"><img loading="lazy" src="images/collabs/elta.png"></a>
 			<a href="https://www.tum.de/" target="_blank"><img
 					src="images/collabs/TUM_Logo_extern_mt_EN_RGB_neg_p(Christian Djeffal).png"></a>
-			<a href="https://www.iltanet.org/home" target=" _blank"><img src="images/collabs/ILTA-logo-full.svg"></a>
-			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img src="images/collabs/clt.png"></a>
+			<a href="https://www.iltanet.org/home" target=" _blank"><img loading="lazy"
+					src="images/collabs/ILTA-logo-full.svg"></a>
+			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img loading="lazy"
+					src="images/collabs/clt.png"></a>
 			<a href="https://www.copenhagenlegaltech.dk/" target="_blank"><img
 					src="images/collabs/Copenhagen Legal Tech.png"></a>
-			<a href="https://juristiliitto.fi/" target="_blank"><img src="images/collabs/Juristiliitto.png"></a>
-			<a href="https://chancerylaneproject.org/" target="_blank"><img src="images/collabs/TCLP.png"></a>
-			<a href="https://www.vttresearch.com/en" target=" _blank"><img src="images/collabs/VTT_Orange_Logo.png"></a>
+			<a href="https://juristiliitto.fi/" target="_blank"><img loading="lazy"
+					src="images/collabs/Juristiliitto.png"></a>
+			<a href="https://chancerylaneproject.org/" target="_blank"><img loading="lazy"
+					src="images/collabs/TCLP.png"></a>
+			<a href="https://www.vttresearch.com/en" target=" _blank"><img loading="lazy"
+					src="images/collabs/VTT_Orange_Logo.png"></a>
 			<a href="https://www.helsinki.fi/en/networks/legal-tech-lab" target=" _blank"><img
 					src="images/collabs/helsinki-legal-tech-lab.png"></a>
-			<a href="https://projects.tuni.fi/jargonfree/" target=" _blank"><img
+			<a href="https://projects.tuni.fi/jargonfree/" target=" _blank"><img loading="lazy"
 					src="images/collabs/JARGONFREE_logo.jpg"></a>
-			<a href="https://legalshake.com/" target=" _blank"><img src="images/collabs/Legal_Shake.png"></a>
-			<a href="https://legaldesignsummit.com" target=" _blank"><img src="images/collabs/NJLDL-Logo-v1.png"></a>
+			<a href="https://legalshake.com/" target=" _blank"><img loading="lazy"
+					src="images/collabs/Legal_Shake.png"></a>
+			<a href="https://legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/NJLDL-Logo-v1.png"></a>
 			<a href="https://oikeusministerio.fi/en/frontpage" target=" _blank"><img
 					src="images/collabs/OM_eng_RGB.png"></a>
-			<a href="https://www.uwasa.fi/en" target=" _blank"><img
+			<a href="https://www.uwasa.fi/en" target=" _blank"><img loading="lazy"
 					src="images/collabs/University-of-Vaasa-Logo-EN-Small-Vertical-Greytxt.jpg"></a>
-			<a href="https://www.univ-antananarivo.mg/" target=" _blank"><img
+			<a href="https://www.univ-antananarivo.mg/" target=" _blank"><img loading="lazy"
 					src="images/collabs/Logo FDSP - Université d'Antananarivo (1).png"></a>
 
 			<a href="https://law.vanderbilt.edu/academics/academic-programs/law-and-innovation/activities.php"
-				target="_blank"><img src="images/collabs/vanderbilt.png"></a>
+				target="_blank"><img loading="lazy" src="images/collabs/vanderbilt.png"></a>
 			<a href="https://www.newcastle.edu.au/" target="_blank"><img
 					src="images/collabs/University of Newcastle (Australia).jpg"></a>
-			<a href="https://www.nulawlab.org/" target="_blank"><img src="images/collabs/nu-law.png"></a>
+			<a href="https://www.nulawlab.org/" target="_blank"><img loading="lazy" src="images/collabs/nu-law.png"></a>
 
 
-			<a href="https://taltech.ee/en/department-law" target="_blank"><img src="images/collabs/TalTech.png"></a>
-			<a href="https://taltech.ee/en/department-law" target="_blank"><img
+			<a href="https://taltech.ee/en/department-law" target="_blank"><img loading="lazy"
+					src="images/collabs/TalTech.png"></a>
+			<a href="https://taltech.ee/en/department-law" target="_blank"><img loading="lazy"
 					src="images/collabs/lancaster-logo-2.PNG"></a>
-			<a href="https://suffolklitlab.org/" target=" _blank"><img
+			<a href="https://suffolklitlab.org/" target=" _blank"><img loading="lazy"
 					src="images/collabs/Suffolk University Law School Legal Tech Lab.png"></a>
 
-			<a href="https://www.utu.fi/en" target="_blank"><img src="images/collabs/UTU_logo_EN_RGB.png"></a>
+			<a href="https://www.utu.fi/en" target="_blank"><img loading="lazy"
+					src="images/collabs/UTU_logo_EN_RGB.png"></a>
 
-			<a href="https://www.aalto.fi/en" target=" _blank"><img src="images/collabs/Aalto uni logo.png"></a>
+			<a href="https://www.aalto.fi/en" target=" _blank"><img loading="lazy"
+					src="images/collabs/Aalto uni logo.png"></a>
 			<a href="https://www.nulawlab.org/projects/the-east-boston-spatial-justice-lab" target=" _blank"><img
-					src="images/collabs/East Boston Spatial Justice Lab.jpeg"></a>
+					loading="lazy" src="images/collabs/East Boston Spatial Justice Lab.jpeg"></a>
 
-			<a href="legaldesignsummit.com" target=" _blank"><img src="images/collabs/TiLD Logo ORIGINAL.png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img src="images/collabs/LawInova_1.png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/TiLD Logo ORIGINAL.png"></a>
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/LawInova_1.png"></a>
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
 					src="images/collabs/Constitutional Design Lab1 (Christian Djeffal).png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img src="images/collabs/Digital Law Lab.png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/Digital Law Lab.png"></a>
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
 					src="images/collabs/BC Access to Justice Center for Excellence (BC ACE).png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img src="images/collabs/Attorney-at-Code.png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img src="images/collabs/Liquid Legal Institute .png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/Attorney-at-Code.png"></a>
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
+					src="images/collabs/Liquid Legal Institute .png"></a>
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
 					src="images/collabs/Lebanese American University.jpg"></a>
 
-			<a href="legaldesignsummit.com" target=" _blank"><img
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
 					src="images/collabs/Gabne Gabnys Law Firm (Jovita Morta Gabne).png"></a>
-			<a href="legaldesignsummit.com" target=" _blank"><img
+			<a href="legaldesignsummit.com" target=" _blank"><img loading="lazy"
 					src="images/collabs/iO_Justice_Logo(LauraMarquez).png"></a>
-			<a href="https://www.linkedin.com/in/nokkonen/" target=" _blank"><img
+			<a href="https://www.linkedin.com/in/nokkonen/" target=" _blank"><img loading="lazy"
 					src="images/collabs/kolmas persoona logo (Outi Nokkonen).svg"></a>
 
 
-			<a href="https://www.jku.at/en/schools/" target=" _blank"><img
+			<a href="https://www.jku.at/en/schools/" target=" _blank"><img loading="lazy"
 					src="images/collabs/JKU_School_LIFT_C_en_schwarz_hoch_cmyk.jpg"></a>
 
 			<a href="https://me.stanford.edu/" target="_blank">
-				<img src="images/collabs/Stanford Mechanical Engineeering Logo.png" alt="Stanford" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Stanford Mechanical Engineeering Logo.png" alt="Stanford"
+					class="large-logo" />
 			</a>
 
 			<a href="https://www.nu.edu/college/school-of-arts-letters-and-sciences/" target="_blank">
-				<img src="images/collabs/NU College of Art and Design. JPG" alt="NU College" class="large-logo" />
+				<img loading="lazy" src="images/collabs/NU College of Art and Design. JPG" alt="NU College"
+					class="large-logo" />
 			</a>
 
 
-			<a href="https://www.laurea.fi/en/" target=" _blank"><img src="images/collabs/laurea-pystylogo_rgb.png"></a>
+			<a href="https://www.laurea.fi/en/" target=" _blank"><img loading="lazy"
+					src="images/collabs/laurea-pystylogo_rgb.png"></a>
 
 			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/d-Van updated logo.png" alt="RTK" class="large-logo" />
+				<img loading="lazy" src="images/collabs/d-Van updated logo.png" alt="RTK" class="large-logo" />
 			</a>
 			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/Legal-D(DorraHarrar)UPDATED.png" alt="Dorra Harrar" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Legal-D(DorraHarrar)UPDATED.png" alt="Dorra Harrar"
+					class="large-logo" />
 			</a>
 			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/RTK logo (Peegi Kaibald).png" alt="RTK" class="large-logo" />
+				<img loading="lazy" src="images/collabs/RTK logo (Peegi Kaibald).png" alt="RTK" class="large-logo" />
 			</a>
 			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/Jaramillo Villamizar SAS (1).jpg" alt="RTK" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Jaramillo Villamizar SAS (1).jpg" alt="RTK"
+					class="large-logo" />
 			</a>
 			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/EdgertonRiley-full(Peter Hornsby).png" alt="RTK" class="large-logo" />
+				<img loading="lazy" src="images/collabs/EdgertonRiley-full(Peter Hornsby).png" alt="RTK"
+					class="large-logo" />
 			</a>
 			<a href="https://www.aho.no/english/" target="_blank">
-				<img src="images/collabs/Oslo School of Architecture & Design.png" alt="OSAD" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Oslo School of Architecture & Design.png" alt="OSAD"
+					class="large-logo" />
 			</a>
-			<a href="https://legaldesignsummit.com" target="_blank">
-				<img src="images/collabs/EdgertonRiley-full(Peter Hornsby).png" alt="RTK" class="large-logo" />
+
 			</a>
 			<a href="#" target="_blank">
-				<img src="images/collabs/Public Legal Design.PNG" alt="Olive Harbor" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Public Legal Design.PNG" alt="Olive Harbor"
+					class="large-logo" />
 			</a>
 			<a href="https://www.lawtoons.in/" target="_blank">
-				<img src="images/collabs/Lawtoons.jpg" alt="Lawtoons" class="large-logo" />
+				<img loading="lazy" src="images/collabs/Lawtoons.jpg" alt="Lawtoons" class="large-logo" />
 			</a>
-			<a href="https://www.domstol.se/domstolsverket/other-languages/english/" target="_blank"><img
+			<a href="https://www.domstol.se/domstolsverket/other-languages/english/" target="_blank"><img loading="lazy"
 					src="images/collabs/Domstolsverket.png"></a>
 			<a href="https://lawyersdesignschool.com/" target="_blank">
-				<img src="images/collabs/lawyer_design_school.png" alt="Lawyers Design School" class="large-logo" />
+				<img loading="lazy" src="images/collabs/lawyer_design_school.png" alt="Lawyers Design School"
+					class="large-logo" />
 			</a>
 
 			<a href="https://ddw.nl/en/locations/716/foundation-we-are" target="_blank">
-				<img src="images/collabs/FoundationWeAre.png" alt="Foundation we are" class="large-logo" />
+				<img loading="lazy" src="images/collabs/FoundationWeAre.png" alt="Foundation we are"
+					class="large-logo" />
 			</a>
 			<a href="https://www.domstol.se/helsingborgs-tingsratt/" target="_blank">
-				<img src="images/collabs/tr_Helsingborg_logo.png" alt="Helsingborg Court" class="large-logo" />
+				<img loading="lazy" src="images/collabs/tr_Helsingborg_logo.png" alt="Helsingborg Court"
+					class="large-logo" />
 			</a>
 
 			<a href="https://www.uni-hamburg.de/en.html" target="_blank">
-				<img src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"
+				<img loading="lazy" src="images/collabs/university of hamburg-logo-u-2010-u-farbe-u-rgb.jpg"
 					alt="University of Hamburg" class="large-logo" />
 			</a>
 
@@ -862,7 +967,61 @@
 		</div>
 		<a href="#" class="scroll-up" style="padding-top: 30px; padding-bottom: 10px; margin-bottom: 0px;"></a>
 	</div>
-	</div>
+	<script>
+		(function () {
+			const MAX_VISIBLE = 5;
+			const nav = document.getElementById('ldsNav');
+			const moreLi = nav.querySelector('.more');
+			const moreBtn = moreLi.querySelector('button');
+			const subMenu = moreLi.querySelector('.submenu');
+
+			function redistribute() {
+
+				while (subMenu.firstChild) nav.insertBefore(subMenu.firstChild, moreLi);
+				moreLi.classList.add('hidden');
+				moreBtn.setAttribute('aria-expanded', 'false');
+
+				const navWidth = nav.offsetWidth;
+				let usedWidth = 0;
+				let visibleCount = 0;
+
+
+				[...nav.children].forEach(li => {
+					if (li === moreLi) return;
+
+					const fits = usedWidth + li.offsetWidth <= navWidth;
+					const underCap = visibleCount < MAX_VISIBLE;
+
+					if (fits && underCap) {
+						usedWidth += li.offsetWidth;
+						visibleCount++;
+					} else {
+						subMenu.appendChild(li);
+						moreLi.classList.remove('hidden');
+					}
+				});
+			}
+
+
+			moreBtn.addEventListener('click', () => {
+				const isOpen = moreLi.classList.contains('open');
+				if (isOpen) {
+					moreLi.classList.remove('open');
+					moreBtn.setAttribute('aria-expanded', 'false');
+				} else {
+					moreLi.classList.add('open');
+					moreBtn.setAttribute('aria-expanded', 'true');
+				}
+			});
+
+			window.addEventListener('load', redistribute);
+			window.addEventListener('resize', redistribute);
+		})();
+	</script>
+
+
 </body>
+
+
 
 </html>
