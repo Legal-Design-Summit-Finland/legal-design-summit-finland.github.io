@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:site_name" content="Legal Design Summit" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Legal Design Summit" />
+	<meta property="og:image" content="images/meta.png" />
+
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+
+	<script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
+	<script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			$("#footer").load("footer.html");
+		});
+	</script>
+
+	<style>
+		:root {
+			--brand-turquoise: #8bd8d6;
+			--tag-bg: #AEECE9;
+			/* updated turquoise */
+			--tag-text: #333;
+			--heading: #000;
+			--body: #333;
+			--max-width: 900px;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: "Inter", Arial, Helvetica, sans-serif;
+			color: var(--body);
+			line-height: 1.6;
+			background: #fff;
+		}
+
+		/* Top navigation */
+		.top-bar {
+			background: var(--brand-turquoise);
+			padding: 0.75rem 0;
+		}
+
+		.nav {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			flex-wrap: wrap;
+			max-width: var(--max-width);
+			margin: 0 auto;
+			padding: 0 1rem;
+		}
+
+		.nav a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+		}
+
+		/* Main layout */
+		.container {
+			max-width: var(--max-width);
+			margin: 0 auto;
+			padding: 0 1rem;
+		}
+
+		.blog-title {
+			margin: 2rem 0 1rem;
+			font-size: 1.9rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-align: center;
+			/* centered */
+			font-family: "Oswald", sans-serif;
+			/* Oswald font */
+		}
+
+		/* Tag pills */
+		.tags {
+			display: flex;
+			gap: 0.75rem;
+			flex-wrap: wrap;
+			margin-bottom: 1.5rem;
+			justify-content: flex-start;
+		}
+
+		.tag {
+			background: var(--tag-bg);
+			color: var(--tag-text);
+			padding: 0.45rem 0.9rem;
+			border-radius: 9999px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		/* Article */
+		article h2 {
+			font-size: 1.55rem;
+			margin-bottom: 1rem;
+			color: var(--heading);
+		}
+
+		article h3 {
+			font-size: 1.25rem;
+			margin: 1.5rem 0 0.5rem;
+			color: var(--heading);
+		}
+
+		article p {
+			margin-bottom: 1rem;
+			text-align: justify;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			color: #000;
+			justify-self: center;
+			padding: 1rem;
+		}
+
+		.author {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-top: 2rem;
+			padding-top: 1.25rem;
+			border-top: 1px solid #ccc;
+		}
+
+		.author p {
+			flex: 1 1 auto;
+			font-size: 0.9rem;
+		}
+
+		.author img {
+			flex-shrink: 0;
+			width: 160px;
+			height: auto;
+			border-radius: 0.5rem;
+
+			object-fit: cover;
+			justify-content: right;
+		}
+
+
+		@media (max-width: 600px) {
+			.blog-title {
+				font-size: 1.6rem;
+			}
+
+			article h2 {
+				font-size: 1.35rem;
+			}
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<title>Legal Design Summit</title>
+	<div class="wrapper menu fluid">
+		<div class="container">
+			<div id="menu">
+				<div class="content-main">
+					<div class="block menu-main">
+						<div class="content">
+							<div class="menu-toggler">Menu<span class="icon"></span></div>
+							<div class="menu-container">
+								<ul class="menu">
+									<li class=" first"><a href="index.html">Home</a></li>
+									<li class=" first"><a href="brainfactory.html">Brainfactory</a></li>
+									<li class=""><a href="program.html">Program</a></li>
+									<li class=""><a href="speakers.html">Speakers</a></li>
+									<li class=""><a href="about-us.html">Meet the team</a></li>
+									<li class=""><a href="tickets.html">Tickets</a></li>
+									<li class=" last"><a href="why-attend.html">History</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main class="container">
+		<h1 class="blog-title">Legal Design Summit Blog</h1>
+
+		<div class="tags">
+			<span class="tag">#Selflessness</span>
+			<span class="tag">#Inclusion</span>
+			<span class="tag">#Courage</span>
+			<span class="tag">#Authenticity</span>
+		</div>
+
+		<article>
+			<h2>The Legal Design Summit: What we stand for as a global movement</h2>
+			<p>
+				<strong>The Legal Design Summit</strong> began as a movement focused on
+				the end-users of legal services. Thus, the initial focus of the
+				event, founded in 2016, was on contract design, user-experience in
+				various legal services, and the wider interlinks between technology
+				and law.
+			</p>
+			<p>
+				While legal design is still about all of these things, over the years,
+				the Summit and the associated movement and community have grown
+				towards a more ambitious agenda. The aim is no longer simply making
+				law more usable but <em>redesigning the whole legal system</em>. What
+				started off as a user-centric revolution in law is today a globally
+				significant non-governmental organization aiming for transborder
+				solidarity, deliberative democracy, social innovation and practical
+				justice outcomes.
+			</p>
+			<p>
+				To reflect this changing vision ahead of the 2025 event, it was time
+				to clarify what the Summit stands for. As a community, the Legal
+				Design Summit is committed to four core values:
+				<strong>selflessness, inclusion, courage, and authenticity</strong>. In
+				what follows, I will explain how each is reflected in our activities.
+			</p>
+
+			<!--  Core values -->
+			<h3>Selflessness</h3>
+			<p>
+				Selflessness means that we believe in collective action and support as
+				the most important tools in achieving our shared goals. We see each
+				other and the world with empathy and never put personal gain before
+				the interests of the community.
+			</p>
+			<p>
+				The Summit, organized by volunteers and relying on self-funded
+				speakers, is not about personal profit or monetary value, but about a
+				value of a different kind: collective imagination for better futures.
+				This is no longer limited to simply end-users or other human beings
+				but encompasses non-human beings, the environment, and even the future
+				of life on earth.
+			</p>
+
+			<h3>Inclusion</h3>
+			<p>
+				By being inclusive we strive to create a space where different
+				perspectives and backgrounds come together, and where diversity is
+				celebrated – both in organizers and speakers. While legal design is
+				still dominated by lawyers from Western countries, both legal and
+				non-legal professionals from all over the world are increasingly and
+				importantly involved in the community.
+			</p>
+			<p>
+				By organizing the Summit free of charge and with a focus on globally
+				relevant themes, we aim to foster an accessible, international and
+				multicultural community where anyone can participate in shaping the
+				future of law.
+			</p>
+
+			<h3>Courage</h3>
+			<p>
+				Courage means that reaching for the impossible is in our backbone. We
+				are curious about the world and passionate about improving it by
+				innovatively combining practical and academic knowledge. When faced
+				with a problem to solve, we ask: <em>how hard can it be?</em>
+			</p>
+			<p>
+				This means that we do not steer away from wicked problems – be they
+				functional or theoretical. Nor do we accept the status quo as it is.
+				There is always room for improvement, and it is up to brave people to
+				rise to the challenge.
+			</p>
+
+			<h3>Authenticity</h3>
+			<p>
+				Authenticity means that the Summit is dedicated to making a difference
+				through creative, outside-the-box design thinking. We strive to make
+				an impact by showing up as our authentic selves and by remaining
+				honest and open about our core mission.
+			</p>
+			<p>
+				By welcoming anyone from any background into the community, we aim to
+				expand possibilities for legal design across all areas of law and
+				society. This means remaining open towards what legal design can be,
+				as well as its limitations – while staying true to the common core of
+				design-thinking.
+			</p>
+
+			<h3>The value of collective imagination in turbulent times</h3>
+			<p>
+				As our guiding values show, the Summit stands for an important
+				message. The Summit is not about monetary value, even if it often
+				translates into it – many fantastic careers have taken off in its
+				wake. Instead, it is about scaling ideas for a better world. When a
+				diverse group of open-minded people with different perspectives come
+				together, the outcome is bound to be valuable. Yet the value of such
+				an outcome cannot be expressed in monetary terms, as its primary aim
+				is not to create profit. Instead, it creates a path for a world where
+				well-being and social justice are a reality for more ‘users’ – both
+				human and non-human.
+			</p>
+			<p>
+				One of my personal key learnings from being involved in the Summit for
+				the past few years is that a group of dedicated and imaginative people
+				working for the same end goal can achieve – if not anything, almost
+				anything. As we look to the upcoming event and beyond, the Summit
+				invites everyone to join this community towards a world that is more
+				just <em>by design</em>.
+			</p>
+
+			<!--  Author attribution -->
+			<footer class="author">
+				<img src="images/team/team-2025/sade_mantyla_vice_chair.jpeg" alt="Portrait of Sade Mäntylä" />
+				<p>
+					This post was written by <strong>Sade Mäntylä</strong>, a lawyer and
+					political scientist, doctoral researcher, and Vice Chair at the
+					Legal Design Summit.
+				</p>
+			</footer>
+		</article>
+	</main>
+
+</head>
+
+
+
+<div id="footer"></div>
+
+
+
+
+
+</body>
+
+</html>
