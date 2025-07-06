@@ -223,22 +223,22 @@
       font-weight: 600;
     }
 
-    /* ----- shared vertical rhythm for the three blocks ----- */
+
     main>.box,
     main>.contact,
     main>.acknowledgement {
       max-width: 780px;
-      /* keeps paragraphs from stretching too wide */
+
       margin-left: auto;
       margin-right: auto;
-      /* centres them perfectly */
+
     }
 
     main>.box:not(:last-child),
     main>.contact,
     main>.acknowledgement {
       margin-bottom: 2.75rem;
-      /* consistent gap between the blocks */
+
     }
 
 
@@ -259,6 +259,111 @@
         background: #013c34;
       }
     }
+
+    :root {
+      --lds-bar-bg: rgba(125, 218, 208, 0.83);
+
+      --nav-font-size: 1.125rem;
+
+    }
+
+
+    .wrapper.menu {
+      background: var(--lds-bar-bg);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    }
+
+    .wrapper.menu .menu-container {
+      text-align: center;
+    }
+
+    .lds-nav {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: transparent;
+
+      max-width: 100%;
+
+
+    }
+
+    .lds-nav li {
+      white-space: nowrap;
+    }
+
+    .lds-nav>li>a,
+    .lds-nav .more>button {
+      display: block;
+      padding: 0.9rem 1.4rem;
+      font: var(--nav-font-size)/1.35 'Oswald', sans-serif;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .lds-nav .more>button::after {
+      content: " ▾";
+    }
+
+    .lds-nav .more>button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ---------- drop-down panel --------------------------------------- */
+    .lds-nav .more {
+      position: relative;
+    }
+
+    .lds-nav .submenu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      min-width: 180px;
+      margin: 0;
+      padding: 0.5rem 0;
+      list-style: none;
+      background: var(--lds-bar-bg);
+      z-index: 1000;
+    }
+
+    .lds-nav .more.open .submenu {
+      display: block;
+    }
+
+    .lds-nav .submenu li a {
+      padding: 0.9rem 1.4rem;
+      font: inherit;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    .lds-nav a:hover,
+    .lds-nav .more>button:hover,
+    .lds-nav .submenu li a:hover {
+      background: rgba(255, 255, 255, .10);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .lds-nav {
+        flex-direction: column;
+      }
+
+      .lds-nav .more.hidden {
+        display: none;
+      }
+    }
   </style>
 
 </head>
@@ -276,17 +381,21 @@
             <div class="content">
               <div class="menu-toggler">Menu<span class="icon"></span></div>
               <div class="menu-container">
-                <ul class="menu">
+                <ul class="lds-nav" id="ldsNav">
                   <li><a href="index.html">Home</a></li>
                   <li><a href="brainfactory.html">BrainFactory</a></li>
                   <li><a href="program.html">Program</a></li>
                   <li><a href="tickets.html">Tickets</a></li>
                   <li><a href="speakers.html">Speakers</a></li>
-
+                  <li><a href="previous-participants.html">Who is attending?</a></li>
                   <li><a href="about-us.html">Meet the Team</a></li>
                   <li><a href="values.html">Values</a></li>
-
                   <li><a href="blog.html">Blog</a></li>
+
+                  <li class="more hidden">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">More</button>
+                    <ul class="submenu"></ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -451,7 +560,53 @@
     });
   </script>
 
+  <script>
+    (() => {
+      const MAX_VISIBLE = 4;
+      const nav = document.getElementById('ldsNav');
+      const moreLi = nav.querySelector('.more');
+      const moreBtn = moreLi.querySelector('button');
+      const subMenu = moreLi.querySelector('.submenu');
 
+      function redistribute() {
+
+        while (subMenu.firstChild) {
+          nav.insertBefore(subMenu.firstChild, moreLi);
+        }
+        moreLi.classList.add('hidden');
+
+
+        if (window.innerWidth <= 640) return;
+
+
+        const available = nav.parentElement.getBoundingClientRect().width;
+        let used = moreLi.offsetWidth;
+        let shown = 0;
+
+        [...nav.children].forEach(li => {
+          if (li === moreLi) return;
+
+          const fits = used + li.offsetWidth <= available;
+          const underCap = shown < MAX_VISIBLE;
+
+          if (fits && underCap) {
+            used += li.offsetWidth;
+            shown += 1;
+          } else {
+            subMenu.appendChild(li);
+            moreLi.classList.remove('hidden');
+          }
+        });
+      }
+      moreBtn.addEventListener('click', () => {
+        const isOpen = moreLi.classList.toggle('open');
+        moreBtn.setAttribute('aria-expanded', isOpen);
+      });
+
+      window.addEventListener('load', redistribute);
+      window.addEventListener('resize', redistribute);
+    })();
+  </script>
 </body>
 
 </html>
