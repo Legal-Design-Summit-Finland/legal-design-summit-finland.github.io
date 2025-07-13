@@ -156,11 +156,65 @@
             border-radius: 12px;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
             overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .exhibition-details {
+            border-top: 2px solid #AEECE9;
+            background: #fff;
+            padding: 2rem 1.5rem;
+        }
+
+        .details-inner {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+        }
+
+        .details-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 4px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .details-title {
+            font: 700 2rem/1.2 'Oswald', sans-serif;
+            margin-bottom: .75rem;
+        }
+
+        .person-name {
+            font: 600 1.4rem/1.3 'Oswald', sans-serif;
+            margin: .5rem 0 0;
+        }
+
+        .person-meta {
+            font: 500 1rem/1.4 'Oswald', sans-serif;
+            margin-bottom: .5rem;
+        }
+
+        .person-links a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        .person-links a:hover {
+            text-decoration: underline;
         }
 
         .exhibition-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .exhibition-card.open {
+
+            grid-column: 1 / -1;
+
+            z-index: 2;
+
         }
 
         .exhibition-image {
@@ -249,16 +303,25 @@
             font-size: 15px;
         }
 
-        /*  BREAKPOINTS  */
-        /* Keep sidebar left down to 900 px; switch card grid to single column */
         @media (max-width: 900px) {
             .exhibitions-grid {
                 grid-template-columns: 1fr;
             }
 
-            /* one card per row */
+
         }
 
+        @media (max-width: 900px) {
+            .exhibition-card.open {
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .details-inner {
+                grid-template-columns: 1fr;
+            }
+        }
 
         @media (max-width:900px) {
             .gallery-wrapper {
@@ -470,22 +533,70 @@
 
                 <section class="exhibitions-grid" aria-label="Exhibitions list">
                     <!-- Card 1 -->
-                    <article class="exhibition-card">
-                        <div class="exhibition-image"><img src="images/gallery/the-gallery-background.png"
-                                alt="background"></div>
-                        <div class="exhibition-body">
-                            <h3 class="exhibition-title">Exhibition title</h3>
-                            <p class="exhibition-meta">Name | Organisation</p>
-                            <p class="exhibition-summary">Short summary (25 words)</p>
-                        </div>
-                        <div class="exhibition-footer">
-                            <div class="badge-container">
-                                <span class="badge">Tags</span>
-                                <span class="badge badge-year">Year</span>
+                    <article class="exhibition-card" tabindex="0" aria-expanded="false">
+                        <!-- ───── SUMMARY (what you already had) ───── -->
+                        <div class="card-summary">
+                            <div class="exhibition-image">
+                                <img src="images/gallery/the-gallery-background.png" alt="background">
                             </div>
-                            <div class="exhibition-actions">
-                                <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn"></a>
-                                <a href="#" class="social-icon email-icon" aria-label="Email"></a>
+
+                            <div class="exhibition-body">
+                                <h3 class="exhibition-title">Exhibition title</h3>
+                                <p class="exhibition-meta">Name | Organisation</p>
+                                <p class="exhibition-summary">Short summary (25 words)</p>
+                            </div>
+
+                            <footer class="exhibition-footer">
+                                <div class="badge-container">
+                                    <span class="badge">Tags</span>
+                                    <span class="badge badge-year">2024</span>
+                                </div>
+                                <div class="exhibition-actions">
+                                    <a href="#" class="social-icon linkedin-icon" aria-label="LinkedIn"></a>
+                                    <a href="#" class="social-icon email-icon" aria-label="Email"></a>
+                                </div>
+                            </footer>
+                        </div>
+
+                        <!-- ───── FULL EXHIBITION (initially hidden) ───── -->
+                        <div class="exhibition-details" hidden aria-hidden="true">
+                            <div class="details-inner">
+                                <div class="details-image">
+                                    <!-- square / portrait works fine -->
+                                    <img src="images/speakers/2025/Aaron_Leakey.png" alt="Black & white portrait">
+                                </div>
+
+                                <div class="details-text">
+                                    <h2 class="details-title">The Gallery<br><span>[Exhibition title]</span></h2>
+
+                                    <h3 class="person-name">
+                                        <img src="images/flags/vn.svg" alt="" height="18"> Name Surname
+                                    </h3>
+                                    <p class="person-meta">Position | Organisation</p>
+
+                                    <p class="person-links">
+                                        <a href="#" class="linkedin-icon">LinkedIn</a> | <a
+                                            href="mailto:name@surname.com">@ email</a>
+                                    </p>
+
+                                    <hr>
+
+                                    <h4>About me</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at semper est,
+                                        non consequat magna.</p>
+
+                                    <h4>About this work</h4>
+                                    <p>Lorem ipsum…</p>
+
+                                    <h4>Impact</h4>
+                                    <p>Lorem ipsum…</p>
+
+                                    <h4>Key learnings</h4>
+                                    <p>Lorem ipsum…</p>
+
+                                    <h4>Visuals / video links</h4>
+                                    <p><a href="https://youtu.be/your-video">Watch the demo on YouTube</a></p>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -532,6 +643,35 @@
             </main>
         </div>
     </div>
+    <script>
+        $(function () {
+
+            $(".exhibition-card .card-summary").on("click keypress", function (e) {
+                if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+
+                    const $card = $(this).closest(".exhibition-card");
+                    const $details = $card.find(".exhibition-details");
+
+                    // close any other open card first
+                    $(".exhibition-card.open").not($card).each(function () {
+                        $(this).removeClass("open")
+                            .attr("aria-expanded", "false")
+                            .find(".exhibition-details")
+                            .slideUp(250)
+                            .attr("aria-hidden", "true");
+                    });
+
+                    // toggle this one
+                    const isOpen = $card.hasClass("open");
+                    $card.toggleClass("open").attr("aria-expanded", !isOpen);
+                    $details.attr("aria-hidden", isOpen)
+                        .slideToggle(250);
+                }
+            });
+
+        });
+    </script>
+
 
 </body>
 <div id="footer"></div>
