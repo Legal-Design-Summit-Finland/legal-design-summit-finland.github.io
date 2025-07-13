@@ -178,6 +178,38 @@
 			justify-content: right;
 		}
 
+		article ul {
+			margin: 0 0 1.5rem 1.5rem;
+
+			padding: 0;
+		}
+
+
+		article li {
+			position: relative;
+			margin: 0 0 .6rem;
+
+			padding-left: 1.1rem;
+
+			list-style: none;
+
+			line-height: 1.55;
+		}
+
+		article li::before {
+			content: '';
+			position: absolute;
+			left: 0;
+
+			top: .55em;
+
+			width: .45rem;
+			height: .45rem;
+			border-radius: 50%;
+			background: var(--brand-turquoise);
+		}
+
+
 
 		@media (max-width: 600px) {
 			.blog-title {
@@ -292,6 +324,41 @@
 			background: rgba(255, 255, 255, .10);
 		}
 
+		/* Blog navigation */
+		.blog-nav {
+			margin: 2rem 0 2.5rem;
+			border-left: 4px solid var(--brand-turquoise);
+			padding-left: 1.25rem;
+		}
+
+		.blog-nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			/* horizontal on wide screens */
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
+
+		.blog-nav a {
+			font: 600 1rem/1 Oswald, sans-serif;
+			text-decoration: none;
+			color: var(--heading);
+		}
+
+		.blog-nav a:hover {
+			color: var(--brand-turquoise);
+		}
+
+		/* Stack the links on very small screens */
+		@media (max-width: 480px) {
+			.blog-nav ul {
+				flex-direction: column;
+				gap: .75rem;
+			}
+		}
+
 		.hidden {
 			display: none !important;
 		}
@@ -341,10 +408,27 @@
 	</div>
 
 	<main class="container">
+
+
 		<h1 class="main-title">Legal Design Summit Blog</h1>
 
-		<article>
+		<nav class="blog-nav" aria-label="Blog post list">
+			<ul>
+				<li><a href="#lds-post-2">From Proposals to Program – Creating the LDS 2025</a></li>
+				<li><a href="#lds-post-1">The Legal Design Summit: What we stand for</a></li>
+			</ul>
+		</nav>
+
+		<article id="lds-post-2">
+
 			<h2>LDS Blog #2: From Proposals to Program - Creating the Legal Design Summit 2025</h2>
+			<footer class="author">
+				<img src="images/team/team-2025/Humzah Khan Speakers Team.jpeg" alt="Portrait of Humzah Khan" />
+				<p>
+					This post was written by <strong>Humzah Khan</strong>, part of the Legal Design Summit Program
+					and Speakers Team
+				</p>
+			</footer>
 			<p>
 				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the curtain
 				and
@@ -430,12 +514,14 @@
 				and, of course, returning legends. However, the majority of the program includes new people and
 				perspectives ready to challenge and expand what legal design is and can be. Here’s the unfiltered
 				breakdown across the two days: </p>
-			<li>Day 1 is pure legal design, with a focus on its role and value across the profession. We’ll look at
-				how legal design is shaping policy making, transforming legal services and grappling with generative
-				AI - the sector’s biggest disruptor.</li>
-			<li>Day 2 is about impact, and what legal design can do for people and the planet. The future of law is
-				as much about social and nature value as it is about technology innovation, so sessions touch on big
-				systemic issues, including sustainability, justice and education.</li>
+			<ul>
+				<li>Day 1 is pure legal design, with a focus on its role and value across the profession. We’ll look at
+					how legal design is shaping policy making, transforming legal services and grappling with generative
+					AI - the sector’s biggest disruptor.</li>
+				<li>Day 2 is about impact, and what legal design can do for people and the planet. The future of law is
+					as much about social and nature value as it is about technology innovation, so sessions touch on big
+					systemic issues, including sustainability, justice and education.</li>
+			</ul>
 			<h2>We also created something new: The LDS Gallery </h2>
 			<p>We received so many incredible proposals this year, but unfortunately couldn’t fit everyone on the
 				shortlist into the program. So we’re launching a new platform. A new space to showcase the important
@@ -452,32 +538,29 @@
 				first iteration with you soon.
 			</p>
 			<h2>Final reflections - what we learned</h2>
-			<li>This was less about building an event schedule and more about writing the next chapter in the legal
-				design story </li>
-			<li>The quality, ambition and range of perspectives across the ecosystem is genuinely incredible and
-				inspiring </li>
-			<li>Embedding design thinking into our approach was our most valuable tool </li>
+			<ul>
+				<li>This was less about building an event schedule and more about writing the next chapter in the legal
+					design story </li>
+				<li>The quality, ambition and range of perspectives across the ecosystem is genuinely incredible and
+					inspiring </li>
+				<li>Embedding design thinking into our approach was our most valuable tool </li>
+			</ul>
 			<p>Thanks again to everyone involved - see you in Helsinki in September! </p>
 
 			<!--  Author attribution -->
-			<footer class="author">
-				<img src="images/team/team-2025/Humzah Khan Speakers Team.jpeg" alt="Portrait of Humzah Khan" />
-				<p>
-					This post was written by <strong>Humzah Khan</strong>, part of the Legal Design Summit Program
-					and Speakers Team
-				</p>
-			</footer>
+
 		</article>
 		<br>
-		<div class="tags">
-			<span class="tag">#Selflessness</span>
-			<span class="tag">#Inclusion</span>
-			<span class="tag">#Courage</span>
-			<span class="tag">#Authenticity</span>
-		</div>
 
-		<article>
+
+		<article id="lds-post-1">
 			<h2>LDS Blog #1: The Legal Design Summit: What we stand for as a global movement</h2>
+			<div class="tags">
+				<span class="tag">#Selflessness</span>
+				<span class="tag">#Inclusion</span>
+				<span class="tag">#Courage</span>
+				<span class="tag">#Authenticity</span>
+			</div>
 			<p>
 				<strong>The Legal Design Summit</strong> began as a movement focused on
 				the end-users of legal services. Thus, the initial focus of the
