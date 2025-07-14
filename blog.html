@@ -39,7 +39,6 @@
 		:root {
 			--brand-turquoise: #8bd8d6;
 			--tag-bg: #AEECE9;
-			/* updated turquoise */
 			--tag-text: #333;
 			--heading: #000;
 			--body: #333;
@@ -61,7 +60,7 @@
 			background: #fff;
 		}
 
-		/* Top navigation */
+
 		.top-bar {
 			background: var(--brand-turquoise);
 			padding: 0.75rem 0;
@@ -86,7 +85,7 @@
 			font-size: 0.9rem;
 		}
 
-		/* Main layout */
+
 		.container {
 			max-width: var(--max-width);
 			margin: 0 auto;
@@ -99,12 +98,12 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			text-align: center;
-			/* centered */
+
 			font-family: "Oswald", sans-serif;
-			/* Oswald font */
+
 		}
 
-		/* Tag pills */
+
 		.tags {
 			display: flex;
 			gap: 0.75rem;
@@ -123,7 +122,7 @@
 			text-transform: uppercase;
 		}
 
-		/* Article */
+
 		article h2 {
 			font-size: 1.55rem;
 			margin-bottom: 1rem;
@@ -143,14 +142,39 @@
 		}
 
 		h1,
-		h2,
+		h2 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			color: #000;
+			justify-self: center;
+		}
+
 		h3,
 		h4 {
 			font-family: 'Oswald', sans-serif;
 			font-weight: 600;
 			letter-spacing: 0.5px;
 			color: #000;
-			justify-self: center;
+			justify-self: left;
+			padding: 1.15;
+		}
+
+		:root {
+
+			--para-lh: 1.15;
+
+			--para-gap: 0em;
+
+		}
+
+		article p {
+			line-height: var(--para-lh);
+			margin: 0 0 var(--para-gap);
+		}
+
+		article p:last-of-type {
+			margin-bottom: 0;
 		}
 
 		.author {
@@ -193,7 +217,7 @@
 
 			list-style: none;
 
-			line-height: 1.55;
+			line-height: 1.15;
 		}
 
 		article li::before {
@@ -274,7 +298,6 @@
 			outline-offset: 2px;
 		}
 
-		/* ---------- drop-down panel --------------------------------------- */
 		.lds-nav .more {
 			position: relative;
 		}
@@ -324,7 +347,7 @@
 			background: rgba(255, 255, 255, .10);
 		}
 
-		/* Blog navigation */
+
 		.blog-nav {
 			margin: 2rem 0 2.5rem;
 			border-left: 4px solid var(--brand-turquoise);
@@ -336,7 +359,7 @@
 			margin: 0;
 			padding: 0;
 			display: flex;
-			/* horizontal on wide screens */
+
 			flex-wrap: wrap;
 			gap: 1.5rem;
 		}
@@ -351,7 +374,7 @@
 			color: var(--brand-turquoise);
 		}
 
-		/* Stack the links on very small screens */
+
 		@media (max-width: 480px) {
 			.blog-nav ul {
 				flex-direction: column;
@@ -414,8 +437,8 @@
 
 		<nav class="blog-nav" aria-label="Blog post list">
 			<ul>
-				<li><a href="#lds-post-2">From Proposals to Program – Creating the LDS 2025</a></li>
-				<li><a href="#lds-post-1">The Legal Design Summit: What we stand for</a></li>
+				<li><a href="#lds-post-2">From Proposals to Program – Creating the LDS 2025 by Humzah Khan</a></li>
+				<li><a href="#lds-post-1">The Legal Design Summit: What we stand for by Sade Mäntylä</a></li>
 			</ul>
 		</nav>
 
@@ -429,6 +452,7 @@
 					and Speakers Team
 				</p>
 			</footer>
+			<br>
 			<p>
 				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the curtain
 				and
@@ -447,11 +471,8 @@
 				the LDS team, embedded design thinking into our methods, and co-created with our community.
 				Step-by-step, here’s how we built the program:
 			</p>
-
-
 			<h3>1. Brainstorming workshop</h3>
 			<p>
-
 				We kicked things off with a workshop with the LDS team to explore what our audiences needed and
 				brainstorm possible themes. We mapped the legal design landscape through three lenses - the past,
 				present, and future - and explored how those themes met the needs of different audiences, for
