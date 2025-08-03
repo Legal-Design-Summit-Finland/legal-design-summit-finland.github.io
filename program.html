@@ -824,7 +824,7 @@
                   <li><a href="about-us.html">Meet the Team</a></li>
                   <li><a href="values.html">Values</a></li>
                   <li><a href="blog.html">Blog</a></li>
-
+                  <li><a href="the-gallery.html">The Gallery</a></li>
                   <li class="more hidden">
                     <button type="button" aria-haspopup="true" aria-expanded="false">More</button>
                     <ul class="submenu"></ul>
@@ -839,7 +839,7 @@
   </div>
 
 
-  <!-- Main Content -->
+
   <div class="container">
     <h1 class="main-title">Program</h1>
     <p class="agenda-subtitle">
@@ -1255,7 +1255,6 @@
       const details = header.nextElementSibling;
       const arrow = header.querySelector('.dropdown-arrow i');
 
-      // Close all other sessions
       document.querySelectorAll('.session-details').forEach(detail => {
         if (detail !== details && detail.classList.contains('expanded')) {
           detail.classList.remove('expanded');
@@ -1266,7 +1265,6 @@
         }
       });
 
-      // Toggle current session
       details.classList.toggle('expanded');
       if (details.classList.contains('expanded')) {
         arrow.style.transform = 'rotate(180deg)';
@@ -1275,7 +1273,6 @@
       }
     }
 
-    // Add smooth scrolling for day indicators
     document.querySelectorAll('.day-indicator').forEach((indicator, index) => {
       indicator.addEventListener('click', function () {
         document.querySelectorAll('.day-indicator').forEach(ind => ind.classList.remove('active'));
@@ -1288,7 +1285,6 @@
       });
     });
 
-    // Add entrance animations on scroll
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
