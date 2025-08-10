@@ -85,6 +85,12 @@
 			font-size: 0.9rem;
 		}
 
+		.lds-nav a[aria-current="page"] {
+			background: rgba(255, 255, 255, .15);
+			border-bottom: 2px solid #fff;
+		}
+
+
 
 		.container {
 			max-width: var(--max-width);
@@ -348,11 +354,19 @@
 		}
 
 
-		.blog-nav {
-			margin: 2rem 0 2.5rem;
-			border-left: 4px solid var(--brand-turquoise);
-			padding-left: 1.25rem;
+
+
+		.blog-nav a.is-active {
+			color: var(--brand-turquoise);
+			text-decoration: underline;
 		}
+
+		:where(article h2, article h3) {
+			scroll-margin-top: 80px;
+		}
+
+
+
 
 		.blog-nav ul {
 			list-style: none;
@@ -399,6 +413,84 @@
 			color: var(--brand-turquoise);
 		}
 
+		.anchor-link {
+			margin-left: .5rem;
+			opacity: .5;
+			text-decoration: none;
+		}
+
+		.anchor-link:hover {
+			opacity: 1;
+		}
+
+		:root {
+			--header-height: 64px;
+			--header-height-compact: 44px;
+			--reveal-ease: .25s ease;
+		}
+
+		/* Sticky header that can slide away */
+		.wrapper.menu {
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			transition: transform var(--reveal-ease), padding .2s ease;
+			will-change: transform;
+		}
+
+		.wrapper.menu.is-hidden {
+			transform: translateY(-100%);
+		}
+
+		/* Compact mode: tighter paddings when scrolled a bit */
+		.wrapper.menu.is-compact .lds-nav>li>a,
+		.wrapper.menu.is-compact .lds-nav .more>button {
+			padding: .55rem .9rem;
+		}
+
+		/* Blog subnav also sticky, below the header */
+		main {
+			--sticky-offset: var(--header-height);
+		}
+
+		.blog-nav {
+			position: sticky;
+			top: var(--sticky-offset);
+			z-index: 900;
+			transition: transform var(--reveal-ease), top .2s ease;
+			transition: opacity .2s ease;
+			margin: 2rem 0 2.5rem;
+			border-left: 4px solid var(--brand-turquoise);
+			padding-left: 1.25rem;
+			z-index: 10;
+			background: #fff;
+			padding: .75rem 0 1rem 1.25rem;
+
+		}
+
+		.blog-nav.is-hidden {
+			transform: translateY(calc(-100% - .5rem));
+		}
+
+
+		.wrapper.menu.is-compact~main {
+			--sticky-offset: var(--header-height-compact);
+		}
+
+
+		:where(article h2, article h3) {
+			scroll-margin-top: calc(var(--sticky-offset) + 12px);
+		}
+
+
+		@media (prefers-reduced-motion: reduce) {
+
+			.wrapper.menu,
+			.blog-nav {
+				transition: none;
+			}
+		}
+
 
 		@media (max-width: 480px) {
 			.blog-nav ul {
@@ -421,7 +513,10 @@
 			}
 		}
 	</style>
+
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
 	<title>Legal Design Summit</title>
 	<div class="wrapper menu fluid">
 		<div class="container">
@@ -440,8 +535,9 @@
 									<li><a href="previous-participants.html">Who is attending?</a></li>
 									<li><a href="about-us.html">Meet the Team</a></li>
 									<li><a href="values.html">Values</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="the-gallery.html">The Gallery</a></li>
+									<li><a href="blog.html" aria-current="page">Blog</a></li>
+
+									<li><a href="the-gallery.html">[Beta] The Gallery</a></li>
 
 									<li class="more hidden">
 										<button type="button" aria-haspopup="true" aria-expanded="false">More</button>
@@ -463,34 +559,159 @@
 
 		<nav class="blog-nav" aria-label="Blog post list">
 			<ul>
+				<li><a href="#lds-post-4">Speaker Testimonial Series: Peegi Kaibald - How Legal Design is Transforming
+						Citizen Experience in the Public Sector</a></li>
 				<li><a href="#lds-post-3">Speaker Testimonial Series: Natalia Grant - How UX Research
 						Naturally Evolved Into Creating Access to Justice</a></li>
 				<li><a href="#lds-post-2">From Proposals to Program – Creating the LDS 2025 by Humzah Khan</a></li>
 				<li><a href="#lds-post-1">The Legal Design Summit: What we stand for by Sade Mäntylä</a></li>
 			</ul>
 		</nav>
-		<article id="lds-post-3">
 
-			<h2>LDS Blog #3: Speaker Testimonial Series: Natalia Grant - How UX Research Naturally Evolved Into Creating
-				Access to Justice</h2>
+
+		<article id="lds-post-4" data-tags="Speaker Testimonials">
+
+			<h2>LDS Blog #4: Speaker Testimonial Series: Peegi Kaibald - How Legal Design is Transforming
+				Citizen Experience in the Public Sector</h2>
+			<div class="tags">
+				<span class="tag">#Speaker Testimonials</span>
+			</div>
 			<footer class="author">
-				<img src="images/speakers/2025/NataliaGrant_crop.jpeg" alt="Natalia Grant" />
+				<img src="images/speakers/2025/Peegi Kaibald.jpg" alt="Peegi Kailbald" />
 				<p>
-					Natalia is speaking at the 2025 Summit on Day 2! Read more about Natalia <a
-						href="speakers.html#natalia-grant">
+					Peegi will be on Day 2 of the 2025 Summit presenting 'Mission Impossible: Designing the Mindset
+					of
+					Public Officials.' with Outi Nokkonen. See the full program <a href="program.html">
 						here</a>
 			</footer>
 			<br>
 			<p>
-				We asked Natalia Grant to share her Legal Design story, and her responses revealed incredible journeys
+				We asked Peegi Kaibald to share her Legal Design story, and discovered inspiring examples of how
+				legal
+				design thinking is revolutionizing government services! In this ongoing series featuring Legal
+				Design
+				Summit 2025 Speaker Testimonials, we're thrilled to spotlight professionals who are reshaping how we
+				think about law, design, and human experience.
+			</p>
+			<br>
+			<p>
+				Meet Peegi Kaibald, who is a service designer and business analyst who helps to transform Estonia's
+				public sector by making legal systems more human-centered. Her passion is ensuring people never feel
+				lost or excluded when navigating complex regulations. Leading legal design projects at the Estonian
+				State Shared Service Centre, she's revolutionizing grant measures and digital transformation. Her
+				work
+				earned the prestigious Estonian Design Award in 2024! With master's degrees in service innovation
+				and
+				design, she's proving that design can make law accessible. Her upcoming LDS presentation with Outi
+				Nokkonen will explore how design evolves from buzzword to genuine mindset for public officials.
+				Through three key questions, we explored our Legal Design Summit 2025 speakers' journeys, and their
+				responses are truly inspiring! You'll find Peegi's thoughts below.
+
+			</p>
+
+
+			<h3>Tell us your legal design story - what brought you here?</h3>
+			<p>
+				What I love about legal design is its power to help people navigate complex legal systems without
+				feeling lost, excluded, small, or inadequate. For me, it’s all about making the legal system more
+				human
+				– so people can feel seen, cared for, and able to move through it without feeling helpless.
+
+			</p>
+			<p>
+				I’m glad I can give my own contribution to that as a service designer-business analyst in the
+				Estonian
+				public sector, where I lead legal projects focused on grant measure design, information design,
+				process
+				improvement, and digital transformation. My journey into legal design began over five years ago when
+				I
+				joined the newly established service design unit at the Estonian State Shared Service Centre – the
+				institution responsible for managing the European Union funds in Estonia. At the time, we were just
+				beginning to explore how design could bring meaningful impact to the complex and highly regulated
+				world
+				of grants. From then on, my interest in legal design deepened through my master’s thesis in Service
+				Innovation and Design at Laurea University of Applied Sciences, where I explored the process of
+				shaping
+				our team’s mission and value proposition – an effort that opened up new ways for us to approach
+				legal
+				design in practice.
+			</p>
+			<p>
+
+				Working hands-on with grant regulations and public sector challenges have shown me how legal design
+				can
+				not only break down silos but genuinely make law more accessible – in both content and clarity. I’m
+				proud that our legal design initiatives have also gained recognition and I hope that the Estonian
+				Design
+				Award my colleagues and I received in 2024 for our transformative legal design work inspires others
+				to
+				believe in and to adopt legal design practices as well.
+
+			</p>
+			<h3>What are you most looking forward to about the LDS?</h3>
+			<p>
+				I’m really excited to be part of the legal design community and to get inspired and to connect with
+				peers from other organizations, countries, and continents who are tackling similar challenges. What
+				I
+				especially appreciate about the Summit is its interdisciplinary spirit as it brings together
+				lawyers,
+				designers, and other changemakers. I believe it is exactly this mix of perspectives and expertise
+				that
+				drives legal design forward.
+
+			</p>
+
+			<h3>What key message do you hope to convey? (a teaser on your presentation)</h3>
+			<p>
+				I’m delighted to join forces with Outi Nokkonen to explore how design can evolve from a buzzword
+				into a
+				genuine mindset and daily practice for public officials. Together, we’ll share experiences from
+				Estonia
+				and Finland to find out whether this challenge is a mission impossible or a breakthrough waiting to
+				happen.
+			</p>
+			<footer class="author">
+				<img src="images/team/team-2025/Aysenur.png" alt="Portrait of Ayşenur Kölgesiz" />
+				<p>
+					The introduction to this blog post was written by <strong>Ayşenur Kölgesiz</strong>, part of the
+					Legal Design Summit 2025 and Communication and Social Media Team
+				</p>
+			</footer>
+
+		</article>
+		<article id="lds-post-3" data-tags="Speaker Testimonials">
+
+			<h2>LDS Blog #3: Speaker Testimonial Series: Natalia Grant - How UX Research Naturally Evolved Into
+				Creating
+				Access to Justice</h2>
+			<div class="tags">
+				<span class="tag">#Speaker Testimonials</span>
+			</div>
+			<footer class="author">
+				<img src="images/speakers/2025/NataliaGrant_crop.jpeg" alt="Natalia Grant" />
+				<p>
+					Natalia will be on Day 2 of the 2025 Summit presenting 'Unlocking Clarity: UX Research Insights
+					from
+					Real Legal Experiences.' with Outi Nokkonen. See the full program <a href="program.html">
+						here</a>
+			</footer>
+
+			<br>
+			<p>
+				We asked Natalia Grant to share her Legal Design story, and her responses revealed incredible
+				journeys
 				of discovery and purpose! In this ongoing series featuring Legal Design Summit 2025 Speaker
 				Testimonials, we're thrilled to spotlight professionals who are reshaping how we think about law,
 				design, and human experience.
-				Meet Natalia Grant, who is a Senior UX Researcher at Jaramillo Villamizar and an innovator who's spent
-				over 20 years making complex experiences beautifully simple. Her journey from journalism to UX research
+				Meet Natalia Grant, who is a Senior UX Researcher at Jaramillo Villamizar and an innovator who's
+				spent
+				over 20 years making complex experiences beautifully simple. Her journey from journalism to UX
+				research
 				led her to Legal Design: a perfect reconnection with her career roots in journalism and information
-				architecture! Now she's transforming complex legal experiences into clear, user-centered solutions. With
-				her MA in Applied Imagination, she's bridging cultures and making justice accessible. Her upcoming LDS
+				architecture! Now she's transforming complex legal experiences into clear, user-centered solutions.
+				With
+				her MA in Applied Imagination, she's bridging cultures and making justice accessible. Her upcoming
+				LDS
 				presentation reveals how to unlock clarity by understanding user context beyond text and tech.
 				Through three key questions, we explored our Legal Design Summit 2025 speakers' journeys, and their
 				responses are truly inspiring! You’ll find Natalia’s thoughts below.
@@ -501,26 +722,34 @@
 			<h3>Tell us your legal design story - what brought you here?</h3>
 			<p>
 				“Last year, after two decades in UX, I was searching for deeper meaning in my career when I was
-				contacted by Jaramillo Villamizar, a legal firm that was expanding its Legal Design practice. Thanks to
+				contacted by Jaramillo Villamizar, a legal firm that was expanding its Legal Design practice. Thanks
+				to
 				them, I realized that as a UX Researcher, I was already involved in this field by observing people
-				interacting with legal systems in multiple cultures, and that my role was sort of promoting change and
-				justice for them. Finding Legal Design was reconnecting with my career roots: journalism and information
+				interacting with legal systems in multiple cultures, and that my role was sort of promoting change
+				and
+				justice for them. Finding Legal Design was reconnecting with my career roots: journalism and
+				information
 				architecture.”
 			</p>
 			<h3>What are you most looking forward to about the LDS?</h3>
 			<p>
-				“I’m passionate about communities, and I look forward to connecting with people and their stories, and
-				secondly, to learning more about what is happening in the Legal Design World and how to add value as a
+				“I’m passionate about communities, and I look forward to connecting with people and their stories,
+				and
+				secondly, to learning more about what is happening in the Legal Design World and how to add value as
+				a
 				professional and as a company. As a researcher, I’m curious about how lawyers work across different
-				cultures and what similarities or differences there are compared to the USA and Latin America, so I will
+				cultures and what similarities or differences there are compared to the USA and Latin America, so I
+				will
 				be observing and listening.”
 
 			</p>
 
 			<h3>What key message do you hope to convey? (a teaser on your presentation)</h3>
 			<p>
-				“In my talk, I expect to create awareness about the importance of understanding the user's context for
-				designing better Legal Experiences. I’ll provide tips and tricks to run observational research, based on
+				“In my talk, I expect to create awareness about the importance of understanding the user's context
+				for
+				designing better Legal Experiences. I’ll provide tips and tricks to run observational research,
+				based on
 				two cases: the closing ceremony of buying a house in Massachusetts and the reading analysis from a
 				package insert of a pharmaceutical ecosystem. I think the best way to unlock clarity is by observing
 				what could be “blurring” the user's understanding beyond the text or technology itself.”
@@ -535,9 +764,14 @@
 
 		</article>
 		<br>
-		<article id="lds-post-2">
+		<article id="lds-post-2" data-tags="Making of LDS">
 
 			<h2>LDS Blog #2: From Proposals to Program - Creating the Legal Design Summit 2025</h2>
+			<div class="tags">
+
+				<span class="tag">#Making of LDS</span>
+
+			</div>
 			<footer class="author">
 				<img src="images/team/team-2025/Humzah Khan Speakers Team.jpeg" alt="Portrait of Humzah Khan" />
 				<p>
@@ -547,11 +781,13 @@
 			</footer>
 			<br>
 			<p>
-				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the curtain
+				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the
+				curtain
 				and
 				share how we
 				created the program - from our approach to what we learned along the way.
 			</p>
+
 			<figure class="blog-graphic">
 				<img src="images/gallery/From Proposals to Program_ Creating the Legal Design Summit 2025.png"
 					alt="Illustrated flow from speaker proposals to the final Legal Design Summit 2025 program, featuring colourful sticky‑notes, the Finnish flag and a unicorn."
@@ -638,11 +874,15 @@
 				perspectives ready to challenge and expand what legal design is and can be. Here’s the unfiltered
 				breakdown across the two days: </p>
 			<ul>
-				<li>Day 1 is pure legal design, with a focus on its role and value across the profession. We’ll look at
-					how legal design is shaping policy making, transforming legal services and grappling with generative
+				<li>Day 1 is pure legal design, with a focus on its role and value across the profession. We’ll look
+					at
+					how legal design is shaping policy making, transforming legal services and grappling with
+					generative
 					AI - the sector’s biggest disruptor.</li>
-				<li>Day 2 is about impact, and what legal design can do for people and the planet. The future of law is
-					as much about social and nature value as it is about technology innovation, so sessions touch on big
+				<li>Day 2 is about impact, and what legal design can do for people and the planet. The future of law
+					is
+					as much about social and nature value as it is about technology innovation, so sessions touch on
+					big
 					systemic issues, including sustainability, justice and education.</li>
 			</ul>
 			<h2>We also created something new: The LDS Gallery </h2>
@@ -662,22 +902,18 @@
 			</p>
 			<h2>Final reflections - what we learned</h2>
 			<ul>
-				<li>This was less about building an event schedule and more about writing the next chapter in the legal
+				<li>This was less about building an event schedule and more about writing the next chapter in the
+					legal
 					design story </li>
 				<li>The quality, ambition and range of perspectives across the ecosystem is genuinely incredible and
 					inspiring </li>
 				<li>Embedding design thinking into our approach was our most valuable tool </li>
 			</ul>
 			<p>Thanks again to everyone involved - see you in Helsinki in September! </p>
-
-
-
-
-
 		</article>
 		<br>
 
-		<article id="lds-post-1">
+		<article id="lds-post-1" data-tags="Selflessness,Inclusion,Courage,Authenticity">
 			<h2>LDS Blog #1: The Legal Design Summit: What we stand for as a global movement</h2>
 			<footer class="author">
 				<img src="images/team/team-2025/sade_mantyla_vice_chair.jpeg" alt="Portrait of Sade Mäntylä" />
@@ -806,7 +1042,76 @@
 
 
 	</main>
+	<script>
+		(() => {
+			const header = document.querySelector('.wrapper.menu');
+			const blogNav = document.querySelector('.blog-nav');
+			const moreLi = header?.querySelector('.more');
+			const moreBtn = moreLi?.querySelector('button');
 
+			if (!header) return;
+
+			let lastY = window.scrollY;
+			let ticking = false;
+
+			const MIN_DELTA = 8;     // ignore tiny scrolls
+			const REVEAL_TOP = 80;   // always show near the top
+			const COMPACT_AT = 120;  // when to switch to compact header
+
+			const setHidden = (hide) => {
+				header.classList.toggle('is-hidden', hide);
+				blogNav?.classList.toggle('is-hidden', hide);
+			};
+
+			const isMenuOpen = () => moreLi?.classList.contains('open');
+			const focusInHeader = () => header.contains(document.activeElement);
+
+			const update = () => {
+				const y = window.scrollY;
+				const dy = y - lastY;
+
+				// Compact mode after small scroll
+				header.classList.toggle('is-compact', y > COMPACT_AT);
+
+				// Don’t hide near the very top, when menu open, or while keyboard focusing inside
+				if (y < REVEAL_TOP || isMenuOpen() || focusInHeader()) {
+					setHidden(false);
+				} else if (Math.abs(dy) > MIN_DELTA) {
+					// Hide on scroll down, show on scroll up
+					setHidden(dy > 0);
+				}
+
+				lastY = y;
+				ticking = false;
+			};
+
+			window.addEventListener('scroll', () => {
+				if (!ticking) {
+					requestAnimationFrame(update);
+					ticking = true;
+				}
+			}, { passive: true });
+
+			// Reveal when pointer hits the top edge (nice on desktop)
+			window.addEventListener('mousemove', (e) => {
+				if (e.clientY <= 8) setHidden(false);
+			});
+
+			// Always reveal while interacting with the nav
+			header.addEventListener('focusin', () => setHidden(false));
+			header.addEventListener('click', () => setHidden(false), true);
+
+			// Close “More” menu when hiding (prevents orphaned submenu)
+			document.addEventListener('scroll', () => {
+				if (moreLi && header.classList.contains('is-hidden')) {
+					moreLi.classList.remove('open');
+					moreBtn?.setAttribute('aria-expanded', 'false');
+				}
+			}, { passive: true });
+		})();
+	</script>
+
+</body>
 </head>
 
 
@@ -861,6 +1166,53 @@
 		window.addEventListener('load', redistribute);
 		window.addEventListener('resize', redistribute);
 	})();
+	const more = document.querySelector('.lds-nav .more');
+	const btn = more?.querySelector('button');
+	const menu = more?.querySelector('.submenu');
+
+	btn?.addEventListener('keydown', e => {
+		if (e.key === 'ArrowDown') { more.classList.add('open'); menu?.querySelector('a')?.focus(); }
+		if (e.key === 'Escape') { more.classList.remove('open'); btn.focus(); }
+	});
+	menu?.addEventListener('keydown', e => {
+		if (e.key === 'Escape') { more.classList.remove('open'); btn.focus(); }
+	});
+	document.addEventListener('click', e => {
+		if (!more.contains(e.target)) more.classList.remove('open');
+	});
+
+	const sections = [...document.querySelectorAll('article[id]')];
+	const links = new Map(sections.map(s => [s.id, document.querySelector(`.blog-nav a[href="#${s.id}"]`)]));
+	const obs = new IntersectionObserver(entries => {
+		entries.forEach(e => {
+			const link = links.get(e.target.id);
+			if (!link) return;
+			if (e.isIntersecting) link.classList.add('is-active'); else link.classList.remove('is-active');
+		});
+	}, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+	sections.forEach(s => obs.observe(s));
+
+	document.querySelectorAll('article h2, article h3').forEach(h => {
+		if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+		const a = document.createElement('a');
+		a.href = `#${h.id}`;
+		a.className = 'anchor-link';
+		a.setAttribute('aria-label', 'Copy link to section');
+		a.textContent = '§';
+		h.appendChild(a);
+	});
+
+	const filter = document.querySelector('#tagFilter');
+	filter?.addEventListener('change', e => {
+		const val = e.target.value;
+		document.querySelectorAll('article[id^="lds-post-"]').forEach(a => {
+			const tags = (a.dataset.tags || '').split(',');
+			a.style.display = !val || tags.includes(val) ? '' : 'none';
+		});
+	});
+
+
 </script>
 
 </body>
