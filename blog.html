@@ -1,41 +1,64 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta property="og:site_name" content="Legal Design Summit" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Legal Design Summit" />
-	<meta property="og:image" content="images/meta.png" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<link rel="icon" type="image/png" href="images/favicon.png" />
-	<link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+	<title>Legal Design Summit</title>
 
-	<script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
-	<script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
-	<script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
-	<script type="text/javascript" src="scripts/main.js"></script>
-	<script src="http://code,jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-		crossorigin="anonymous"></script>
-	<script>
-		$(function () {
-			$("#footer").load("footer.html");
-		});
-	</script>
+
+	<meta name="description" content="Legal Design Summit blog: stories, testimonials and behind-the-scenes.">
+
+
+	<meta property="og:site_name" content="Legal Design Summit">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Legal Design Summit">
+	<meta property="og:image" content="images/meta.png">
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+	<link href="css/vendor/formstone/carousel.css" rel="stylesheet">
+	<link href="css/vendor/formstone/lightbox.css" rel="stylesheet">
+	<link href="css/vendor/formstone/themes/light.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+
 
 	<style>
+		:root {
+			--focus-ring: 3px solid var(--brand-turquoise);
+			--focus-offset: 3px;
+		}
+
+		:where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+			outline: var(--focus-ring);
+			outline-offset: var(--focus-offset);
+			border-radius: .5rem;
+		}
+
+		.wrapper.menu .lds-nav :where(a, .more>button):focus-visible {
+			outline: 3px solid #fff;
+			outline-offset: 3px;
+		}
+
+		@supports selector(:focus-visible) {
+			:focus {
+				outline: none;
+			}
+		}
+
+		@media (forced-colors: active) {
+			:where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+				outline: 2px solid CanvasText;
+			}
+		}
+
 		:root {
 			--brand-turquoise: #8bd8d6;
 			--tag-bg: #AEECE9;
@@ -448,7 +471,6 @@
 			padding: .55rem .9rem;
 		}
 
-		/* Blog subnav also sticky, below the header */
 		main {
 			--sticky-offset: var(--header-height);
 		}
@@ -457,31 +479,21 @@
 			position: sticky;
 			top: var(--sticky-offset);
 			z-index: 900;
-			transition: transform var(--reveal-ease), top .2s ease;
-			transition: opacity .2s ease;
+			transition: transform var(--reveal-ease), top .2s ease, opacity .2s ease;
 			margin: 2rem 0 2.5rem;
 			border-left: 4px solid var(--brand-turquoise);
-			padding-left: 1.25rem;
-			z-index: 10;
 			background: #fff;
 			padding: .75rem 0 1rem 1.25rem;
-
 		}
+
 
 		.blog-nav.is-hidden {
 			transform: translateY(calc(-100% - .5rem));
 		}
 
-
 		.wrapper.menu.is-compact~main {
 			--sticky-offset: var(--header-height-compact);
 		}
-
-
-		:where(article h2, article h3) {
-			scroll-margin-top: calc(var(--sticky-offset) + 12px);
-		}
-
 
 		@media (prefers-reduced-motion: reduce) {
 
@@ -514,13 +526,25 @@
 		}
 	</style>
 
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="scripts/vendor/jquery/jquery.min.js" defer></script>
+	<script src="scripts/vendor/formstone/core.js" defer></script>
+	<script src="scripts/vendor/formstone/mediaquery.js" defer></script>
+	<script src="scripts/vendor/formstone/touch.js" defer></script>
+	<script src="scripts/vendor/formstone/transition.js" defer></script>
+	<script src="scripts/vendor/formstone/equalize.js" defer></script>
+	<script src="scripts/vendor/formstone/carousel.js" defer></script>
+	<script src="scripts/vendor/formstone/lightbox.js" defer></script>
+	<script src="scripts/vendor/formstone/viewer.js" defer></script>
+	<script src="scripts/main.js" defer></script>
+</head>
 
 <body>
 	<title>Legal Design Summit</title>
 	<div class="wrapper menu fluid">
 		<div class="container">
-			<div id="menu">
+			<nav id="menu" aria-label="Primary">
+
+
 				<div class="content-main">
 					<div class="block menu-main">
 						<div class="content">
@@ -548,7 +572,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
 	</div>
 
@@ -559,7 +583,8 @@
 
 		<nav class="blog-nav" aria-label="Blog post list">
 			<ul>
-				<li><a href="#lds-post-4">Speaker Testimonial Series: Peegi Kaibald - How Legal Design is Transforming
+				<li><a href="#lds-post-4">Speaker Testimonial Series: Peegi Kaibald - How Legal Design is
+						Transforming
 						Citizen Experience in the Public Sector</a></li>
 				<li><a href="#lds-post-3">Speaker Testimonial Series: Natalia Grant - How UX Research
 						Naturally Evolved Into Creating Access to Justice</a></li>
@@ -577,13 +602,14 @@
 				<span class="tag">#Speaker Testimonials</span>
 			</div>
 			<footer class="author">
-				<img src="images/speakers/2025/Peegi Kaibald.jpg" alt="Peegi Kailbald" />
+				<img src="images/speakers/2025/Peegi Kaibald.jpg"
+					alt="Peegi Kaibald — service designer improving public-sector services in Estonia">
 				<p>
-					Peegi will be on Day 2 of the 2025 Summit presenting 'Mission Impossible: Designing the Mindset
-					of
-					Public Officials.' with Outi Nokkonen. See the full program <a href="program.html">
-						here</a>
+					Peegi will be on Day 2 of the 2025 Summit presenting “Mission Impossible: Designing the Mindset
+					of Public Officials” with Outi Nokkonen. See the full program <a href="program.html">here</a>.
+				</p>
 			</footer>
+
 			<br>
 			<p>
 				We asked Peegi Kaibald to share her Legal Design story, and discovered inspiring examples of how
@@ -674,7 +700,7 @@
 				<img src="images/team/team-2025/Aysenur.png" alt="Portrait of Ayşenur Kölgesiz" />
 				<p>
 					The introduction to this blog post was written by <strong>Ayşenur Kölgesiz</strong>, part of the
-					Legal Design Summit 2025 and Communication and Social Media Team
+					Legal Design Summit 2025 and Communication and Social Media Team.
 				</p>
 			</footer>
 
@@ -693,7 +719,8 @@
 					Natalia will be on Day 2 of the 2025 Summit presenting 'Unlocking Clarity: UX Research Insights
 					from
 					Real Legal Experiences.' with Outi Nokkonen. See the full program <a href="program.html">
-						here</a>
+						here</a>.
+				</p>
 			</footer>
 
 			<br>
@@ -758,7 +785,7 @@
 				<img src="images/team/team-2025/Aysenur.png" alt="Portrait of Ayşenur Kölgesiz" />
 				<p>
 					The introduction to this blog post was written by <strong>Ayşenur Kölgesiz</strong>, part of the
-					Legal Design Summit 2025 and Communication and Social Media Team
+					Legal Design Summit 2025 and Communication and Social Media Team.
 				</p>
 			</footer>
 
@@ -776,16 +803,13 @@
 				<img src="images/team/team-2025/Humzah Khan Speakers Team.jpeg" alt="Portrait of Humzah Khan" />
 				<p>
 					This post was written by <strong>Humzah Khan</strong>, part of the Legal Design Summit Program
-					and Speakers Team
+					and Speakers Team.
 				</p>
 			</footer>
 			<br>
 			<p>
-				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the
-				curtain
-				and
-				share how we
-				created the program - from our approach to what we learned along the way.
+				<a href="program.html"> Legal Design Summit program </a> is live! In this blog we pull back the curtain
+				and share how we created the program - from our approach to what we learned along the way.
 			</p>
 
 			<figure class="blog-graphic">
@@ -793,8 +817,7 @@
 					alt="Illustrated flow from speaker proposals to the final Legal Design Summit 2025 program, featuring colourful sticky‑notes, the Finnish flag and a unicorn."
 					loading="lazy">
 				<figcaption>
-					From ideas on sticky‑notes to a polished two‑day experience – a snapshot of
-					our journey.
+					From ideas on sticky‑notes to a polished two‑day experience – a snapshot of our journey.
 				</figcaption>
 			</figure>
 
@@ -1106,19 +1129,22 @@
 				if (moreLi && header.classList.contains('is-hidden')) {
 					moreLi.classList.remove('open');
 					moreBtn?.setAttribute('aria-expanded', 'false');
+					moreLi.querySelector('.submenu')?.setAttribute('hidden', '');
+
 				}
 			}, { passive: true });
 		})();
 	</script>
+	<div id="footer"></div>
+	<script>
+		$(function () {
+			$("#footer").load("footer.html");
+		});
+	</script>
+
 
 </body>
 </head>
-
-
-
-<div id="footer"></div>
-
-
 
 <script>
 	(() => {
@@ -1158,10 +1184,7 @@
 				}
 			});
 		}
-		moreBtn.addEventListener('click', () => {
-			const isOpen = moreLi.classList.toggle('open');
-			moreBtn.setAttribute('aria-expanded', isOpen);
-		});
+
 
 		window.addEventListener('load', redistribute);
 		window.addEventListener('resize', redistribute);
@@ -1170,15 +1193,28 @@
 	const btn = more?.querySelector('button');
 	const menu = more?.querySelector('.submenu');
 
+	if (menu) menu.hidden = true;
+
+	const setMenuOpen = (open) => {
+		if (!more || !btn || !menu) return;
+		more.classList.toggle('open', open);
+		btn.setAttribute('aria-expanded', String(open));
+		menu.hidden = !open;
+	};
+
+	btn?.addEventListener('click', () => setMenuOpen(!more.classList.contains('open')));
+
 	btn?.addEventListener('keydown', e => {
-		if (e.key === 'ArrowDown') { more.classList.add('open'); menu?.querySelector('a')?.focus(); }
-		if (e.key === 'Escape') { more.classList.remove('open'); btn.focus(); }
+		if (e.key === 'ArrowDown') { setMenuOpen(true); menu.querySelector('a')?.focus(); }
+		if (e.key === 'Escape') { setMenuOpen(false); btn.focus(); }
 	});
+
 	menu?.addEventListener('keydown', e => {
-		if (e.key === 'Escape') { more.classList.remove('open'); btn.focus(); }
+		if (e.key === 'Escape') { setMenuOpen(false); btn.focus(); }
 	});
+
 	document.addEventListener('click', e => {
-		if (!more.contains(e.target)) more.classList.remove('open');
+		if (more && !more.contains(e.target)) setMenuOpen(false);
 	});
 
 	const sections = [...document.querySelectorAll('article[id]')];
