@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta property="og:site_name" content="Legal Design Summit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Legal Design Summit" />
+  <meta property="og:image" content="images/meta.png" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="css/vendor/formstone/carousel.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/vendor/formstone/lightbox.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/vendor/formstone/themes/light.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+
+  <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/mediaquery.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/touch.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/transition.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/equalize.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
+  <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <title>Travel &amp; Accommodation – Legal Design Summit</title>
+
+  <style>
+    :root {
+      --lds-primary: #aeece9;
+      --lds-primary-dark: #0e9d98;
+      --lds-bg-light: #eaf7fc;
+      --lds-text: #232323;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--lds-text);
+    }
+
+    .hero {
+      padding: 5rem 1rem;
+      text-align: center;
+      background: linear-gradient(to bottom, #ffffff 0%, var(--lds-bg-light) 100%);
+      border-bottom: 4px solid var(--lds-primary);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--lds-primary-dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .venue-badge {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      background-color: var(--lds-primary);
+      color: var(--lds-text);
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--lds-primary-dark);
+      justify-self: center;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--lds-primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--lds-primary-dark);
+    }
+
+    .card p {
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background-color: var(--lds-primary);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tips-list {
+      list-style: disc inside;
+      margin-left: 1rem;
+    }
+
+    .tips-list li {
+      margin-bottom: 0.5rem;
+    }
+
+
+    :root {
+      --lds-bar-bg: rgba(125, 218, 208, 0.83);
+
+      --nav-font-size: 1.125rem;
+
+    }
+
+
+    .wrapper.menu {
+      background: var(--lds-bar-bg);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    }
+
+    .wrapper.menu .menu-container {
+      text-align: center;
+    }
+
+    .lds-nav {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: transparent;
+
+      max-width: 100%;
+
+
+    }
+
+    .lds-nav li {
+      white-space: nowrap;
+    }
+
+    .lds-nav>li>a,
+    .lds-nav .more>button {
+      display: block;
+      padding: 0.9rem 1.4rem;
+      font: var(--nav-font-size)/1.35 'Oswald', sans-serif;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .lds-nav .more>button::after {
+      content: " ▾";
+    }
+
+    .lds-nav .more>button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ---------- drop-down panel --------------------------------------- */
+    .lds-nav .more {
+      position: relative;
+    }
+
+    .lds-nav .submenu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      min-width: 180px;
+      margin: 0;
+      padding: 0.5rem 0;
+      list-style: none;
+      background: var(--lds-bar-bg);
+      z-index: 1000;
+    }
+
+    .lds-nav .more.open .submenu {
+      display: block;
+    }
+
+    .lds-nav .submenu li a {
+      padding: 0.9rem 1.4rem;
+      font: inherit;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    .lds-nav a:hover,
+    .lds-nav .more>button:hover,
+    .lds-nav .submenu li a:hover {
+      background: rgba(255, 255, 255, .10);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .lds-nav {
+        flex-direction: column;
+      }
+
+      .lds-nav .more.hidden {
+        display: none;
+      }
+    }
+
+    :root {
+      --lds-bar-bg: rgba(125, 218, 208, 0.83);
+
+      --nav-font-size: 1.125rem;
+
+    }
+
+
+    .wrapper.menu {
+      background: var(--lds-bar-bg);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    }
+
+    .wrapper.menu .menu-container {
+      text-align: center;
+    }
+
+    .lds-nav {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: transparent;
+
+      max-width: 100%;
+
+    }
+
+    .lds-nav li {
+      white-space: nowrap;
+    }
+
+    .lds-nav>li>a,
+    .lds-nav .more>button {
+      display: block;
+      padding: 0.9rem 1.4rem;
+      font: var(--nav-font-size)/1.35 'Oswald', sans-serif;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .lds-nav .more>button::after {
+      content: " ▾";
+    }
+
+    .lds-nav .more>button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ---------- drop-down panel --------------------------------------- */
+    .lds-nav .more {
+      position: relative;
+    }
+
+    .lds-nav .submenu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      min-width: 180px;
+      margin: 0;
+      padding: 0.5rem 0;
+      list-style: none;
+      background: var(--lds-bar-bg);
+      z-index: 1000;
+    }
+
+    .lds-nav .more.open .submenu {
+      display: block;
+    }
+
+    .lds-nav .submenu li a {
+      padding: 0.9rem 1.4rem;
+      font: inherit;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    .lds-nav a:hover,
+    .lds-nav .more>button:hover,
+    .lds-nav .submenu li a:hover {
+      background: rgba(255, 255, 255, .10);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .lds-nav {
+        flex-direction: column;
+      }
+
+      .lds-nav .more.hidden {
+        display: none;
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      cursor: pointer;
+      transition: opacity 0.3s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-item:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper menu fluid">
+    <div class="container">
+      <div id="menu">
+        <div class="content-main">
+          <div class="block menu-main">
+            <div class="content">
+              <div class="menu-toggler">Menu<span class="icon"></span></div>
+              <div class="menu-container">
+                <ul class="lds-nav" id="ldsNav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="brainfactory.html">BrainFactory</a></li>
+                  <li><a href="program.html">Program</a></li>
+                  <li><a href="tickets.html">Tickets</a></li>
+                  <li><a href="speakers.html">Speakers</a></li>
+                  <li><a href="previous-participants.html">Who is attending?</a></li>
+                  <li><a href="about-us.html">Meet the Team</a></li>
+                  <li><a href="travel.html">Travel</a></li>
+                  <li><a href="values.html">Values</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="the-gallery.html">[Beta] The Gallery</a></li>
+                  <li class="more hidden">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">More</button>
+                    <ul class="submenu"></ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="hero">
+    <h1>Travel &amp; Accommodation</h1>
+    <p>Plan your trip to Helsinki for the Legal Design Summit 2025</p>
+    <div class="venue-badge">Summit venue: 5 Aleksanterinkatu, Helsinki</div>
+  </section>
+
+  <main id="travel-content">
+    <!-- Summit Venue Section -->
+    <section id="venue" class="section">
+      <h2 class="section-title">Summit Venue</h2>
+      <p>The Legal Design Summit 2025 will take place at the University of Helsinki’s main building at
+        <strong>5 Aleksanterinkatu, 00100 Helsinki, Finland</strong>. The venue is in the heart of the city centre, next
+        to Senate Square and the Helsinki Cathedral. You’ll find a fully accessible entrance on Aleksanterinkatu and the
+        beautiful Great Hall inside.
+      </p>
+      <p>Use tram 2, 4 or 7 to get to the venue – the <em>Senaatintori</em> stop is right around the corner. Helsinki
+        Central Station is a short 7‑minute walk away.</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=5+Aleksanterinkatu%2C+Helsinki" target="_blank"
+          rel="noopener">View in Google Maps</a></p>
+    </section>
+
+    <!-- Getting There Section -->
+    <section id="getting-there" class="section">
+      <h2 class="section-title">Getting There</h2>
+      <p><strong>From the airport:</strong> Helsinki Airport (HEL) is about 30 minutes from the city centre. Take the I
+        or P train directly from the airport to Helsinki Central Station, then walk or hop on tram 2, 4 or 7 to reach
+        the venue. Taxis and airport buses are also available outside the terminal.</p>
+      <p><strong>By train:</strong> Long‑distance trains arrive at Helsinki Central Station. From there, it’s a short
+        walk along Keskuskatu to Aleksanterinkatu, or you can take the trams mentioned above.</p>
+      <p><strong>By bus/tram:</strong> The HSL network covers the entire Helsinki region. You can purchase day tickets
+        via the HSL app. Tram lines 2 and 4 stop at Senate Square near the venue, and numerous buses serve nearby stops.
+      </p>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section id="accommodation" class="section">
+      <h2 class="section-title">Accommodation</h2>
+      <p>We recommend booking your stay early. Here are a few options within walking distance of the Summit venue:</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="badge">Mid‑range</div>
+          <h3>Hotel Haven</h3>
+          <p>Unioninkatu 17 (5 min walk)</p>
+          <p>Elegant boutique hotel overlooking the harbour; breakfast included.</p>
+          <p><a href="https://www.hotelhaven.fi/en" target="_blank" rel="noopener">Website</a></p>
+        </div>
+        <div class="card">
+          <div class="badge">Mid‑range</div>
+          <h3>Scandic Kaisaniemi</h3>
+          <p>Kaisaniemenkatu 7 (8 min walk)</p>
+          <p>Comfortable rooms and sauna, close to the central station and metro.</p>
+          <p><a href="https://www.scandichotels.com/hotels/finland/helsinki/scandic-kaisaniemi" target="_blank"
+              rel="noopener">Website</a></p>
+        </div>
+        <div class="card">
+          <div class="badge">Premium</div>
+          <h3>Hotel Fabian</h3>
+          <p>Fabianinkatu 7 (6 min walk)</p>
+          <p>Stylish, eco‑friendly hotel with spacious rooms and a quiet courtyard.</p>
+          <p><a href="https://www.hotelfabian.com/" target="_blank" rel="noopener">Website</a></p>
+        </div>
+        <div class="card">
+          <div class="badge">Budget</div>
+          <h3>Omena Hotel Yrjönkatu</h3>
+          <p>Yrjönkatu 30 (10 min walk)</p>
+          <p>Self‑service budget hotel with basic amenities in the city centre.</p>
+          <p><a href="https://www.omenahotels.com/en/helsinki/yrjonkatu/" target="_blank" rel="noopener">Website</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Helsinki Section -->
+    <section id="explore" class="section">
+      <h2 class="section-title">Explore Helsinki</h2>
+      <p>While you’re here, make time to discover the city’s highlights:</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Helsinki Cathedral &amp; Senate Square</h3>
+          <p>The neoclassical cathedral is one of Finland’s most photographed landmarks and sits right next to the
+            summit venue.</p>
+        </div>
+        <div class="card">
+          <h3>Suomenlinna Sea Fortress</h3>
+          <p>A UNESCO World Heritage site just a 15‑minute ferry ride from the Market Square. Explore historic
+            fortifications and enjoy seaside views.</p>
+        </div>
+        <div class="card">
+          <h3>Oodi Central Library</h3>
+          <p>A modern architectural gem opposite the Parliament House. Grab a coffee, browse the library or simply
+            admire the wooden wave‑like design.</p>
+        </div>
+        <div class="card">
+          <h3>Design District &amp; Market Square</h3>
+          <p>Wander through boutique shops and galleries in the Design District, then sample local delicacies at the
+            Market Square.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips" class="section">
+      <h2 class="section-title">Travel Tips</h2>
+      <ul class="tips-list">
+        <li><strong>Weather:</strong> Late autumn in Helsinki can be chilly (0–5 °C) with occasional rain or snow. Bring
+          warm layers and waterproof shoes.</li>
+        <li><strong>Currency:</strong> Finland uses the Euro (€). Credit and debit cards are widely accepted, and
+          contactless payment is common.</li>
+        <li><strong>Language:</strong> Finnish and Swedish are the official languages, but English is widely spoken,
+          especially in the city centre.</li>
+        <li><strong>Emergency number:</strong> Dial <strong>112</strong> for police, fire or medical emergencies.</li>
+        <li><strong>Public transport:</strong> <a href="https://www.hsl.fi/en">the HSL app</a> for real‑time tram, bus
+          and metro timetables and to
+          purchase tickets on the go.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch('regions/meta.html')
+      .then(res => res.text())
+      .then(html => {
+        const meta = document.getElementById('meta');
+        if (meta) meta.outerHTML = html;
+      });
+    fetch('regions/styles.html')
+      .then(res => res.text())
+      .then(html => {
+        const styles = document.getElementById('styles');
+        if (styles) styles.outerHTML = html;
+      });
+    fetch('regions/scripts.html')
+      .then(res => res.text())
+      .then(html => {
+        const scripts = document.getElementById('scripts');
+        if (scripts) scripts.outerHTML = html;
+      });
+    // Load menu
+    fetch('regions/menu.html')
+      .then(res => res.text())
+      .then(html => {
+        const menu = document.getElementById('menu');
+        if (menu) menu.innerHTML = html;
+      });
+    // Load content actions (tickets / contact etc.)
+    fetch('regions/content-actions.html')
+      .then(res => res.text())
+      .then(html => {
+        const actions = document.getElementById('content-actions');
+        if (actions) actions.innerHTML = html;
+      });
+    (() => {
+      const MAX_VISIBLE = 4;
+      const nav = document.getElementById('ldsNav');
+      const moreLi = nav.querySelector('.more');
+      const moreBtn = moreLi.querySelector('button');
+      const subMenu = moreLi.querySelector('.submenu');
+
+      function redistribute() {
+
+        while (subMenu.firstChild) {
+          nav.insertBefore(subMenu.firstChild, moreLi);
+        }
+        moreLi.classList.add('hidden');
+
+
+        if (window.innerWidth <= 640) return;
+
+
+        const available = nav.parentElement.getBoundingClientRect().width;
+        let used = moreLi.offsetWidth;
+        let shown = 0;
+
+        [...nav.children].forEach(li => {
+          if (li === moreLi) return;
+
+          const fits = used + li.offsetWidth <= available;
+          const underCap = shown < MAX_VISIBLE;
+
+          if (fits && underCap) {
+            used += li.offsetWidth;
+            shown += 1;
+          } else {
+            subMenu.appendChild(li);
+            moreLi.classList.remove('hidden');
+          }
+        });
+      }
+      moreBtn.addEventListener('click', () => {
+        const isOpen = moreLi.classList.toggle('open');
+        moreBtn.setAttribute('aria-expanded', isOpen);
+      });
+
+      window.addEventListener('load', redistribute);
+      window.addEventListener('resize', redistribute);
+    })();
+
+  </script>
+</body>
+
+</html>
