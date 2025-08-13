@@ -646,6 +646,109 @@
 		.lds-nav .submenu {
 			z-index: 1000;
 		}
+
+		.linkedin-microfeed {
+			background: linear-gradient(to right, #fff 0%, var(--lds-bg-light) 100%);
+			border-top: 1px solid var(--lds-primary);
+			border-bottom: 1px solid var(--lds-primary);
+			padding: 28px 0 32px;
+		}
+
+		.microfeed-header {
+			display: flex;
+			align-items: center;
+			gap: .75rem;
+			margin-bottom: 16px;
+		}
+
+		.microfeed-title {
+			margin: 0;
+			font-weight: 700;
+			font-size: 1.1rem;
+			color: var(--lds-text);
+		}
+
+		.live-dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: var(--lds-primary-dark);
+			box-shadow: 0 0 0 0 rgba(14, 157, 152, .5);
+			animation: pulse 2.4s infinite;
+		}
+
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 0 0 0 rgba(14, 157, 152, .45);
+			}
+
+			70% {
+				box-shadow: 0 0 0 10px rgba(14, 157, 152, 0);
+			}
+
+			100% {
+				box-shadow: 0 0 0 0 rgba(14, 157, 152, 0);
+			}
+		}
+
+		.microfeed-cta {
+			margin-left: auto;
+			font-size: .95rem;
+			text-decoration: none;
+			color: var(--lds-primary-dark);
+			border: 1px solid rgba(14, 157, 152, .25);
+			padding: .35rem .6rem;
+			border-radius: 999px;
+			transition: background .2s ease, transform .2s ease;
+		}
+
+		.microfeed-cta:hover {
+			background: rgba(14, 157, 152, .06);
+			transform: translateY(-1px);
+		}
+
+		.linkedin-carousel {
+			overflow: visible;
+		}
+
+		.microcard {
+			width: 360px;
+			max-width: 92vw;
+			background: #fff;
+			border-radius: 16px;
+			border-left: 4px solid var(--lds-primary-dark);
+			box-shadow: 0 10px 24px -14px rgba(0, 0, 0, .25);
+			overflow: hidden;
+			margin: 6px 8px;
+			transition: transform .25s ease, box-shadow .25s ease;
+		}
+
+		.microcard:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .28);
+		}
+
+		.microcard iframe {
+			display: block;
+			width: 100%;
+			height: 280px;
+			border: 0;
+			background: #fff;
+		}
+
+		/* Subtle peek of next card on small screens */
+		@media (max-width: 640px) {
+			.microcard iframe {
+				height: 240px;
+			}
+		}
+
+		/* Respect reduced motion: stop autoplay if user prefers */
+		@media (prefers-reduced-motion: reduce) {
+			.linkedin-carousel {
+				--autoplay: 0;
+			}
+		}
 	</style>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -1014,6 +1117,54 @@
 
 		</div>
 	</div>
+	<!-- LinkedIn Micro-Feed 
+	<section class="linkedin-microfeed" aria-labelledby="linkedinHeading">
+		<div class="container">
+			<div class="microfeed-header">
+				<span class="live-dot" aria-hidden="true"></span>
+				<h3 id="linkedinHeading" class="microfeed-title">From our LinkedIn</h3>
+				<a class="microfeed-cta" href="https://www.linkedin.com/company/legaldesignsummit/" target="_blank"
+					rel="noopener">
+					Follow us
+				</a>
+			</div>
+
+			<div class="linkedin-carousel fs-carousel"
+				data-carousel='{"show":1.6,"slideBy":1,"infinite":true,"controls":false,"pagination":false,"autoplay":true,"advance":4200,"lazyLoad":true,"labels":{"next":"","previous":""}}'>
+
+			
+				<div class="microcard">
+					<iframe
+						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361370359054450689?collapsed=1"
+						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+				</div>
+
+			
+				<div class="microcard">
+					<iframe
+						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361369881587388417?collapsed=1"
+						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+				</div>
+
+			
+				<div class="microcard">
+					<iframe
+						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361368548167905281?collapsed=1"
+						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+				</div>
+			</div>
+
+			<noscript>
+				<p style="text-align:center;margin-top:.75rem;">
+					See our latest on <a href="https://www.linkedin.com/company/legaldesignsummit/" target="_blank"
+						rel="noopener">LinkedIn</a>.
+				</p>
+			</noscript>
+		</div>
+	</section>
+	-->
+
 	<div class="wrapper actions" style="background-color: white; padding-bottom: 0px;">
 		<div class="container">
 			<div id="content-actions">
