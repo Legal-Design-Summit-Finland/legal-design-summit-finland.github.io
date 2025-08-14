@@ -371,6 +371,9 @@
 		.wrapper.menu {
 			background: rgba(125, 218, 208, 0.83);
 			box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
 
 		}
 
@@ -383,11 +386,106 @@
 			text-align: center;
 		}
 
-		.menu-toggler,
-		.menu-toggler .icon {
+		.menu-toggler {
+			display: none;
+			background: transparent;
+			border: 0;
+			font: inherit;
+			padding: .75rem 1rem;
 			color: #fff;
+			cursor: pointer;
 		}
 
+		.menu-toggler:focus-visible {
+			outline: 2px solid #fff;
+			outline-offset: 2px;
+		}
+
+		.menu-toggler .icon::before {
+			content: "☰";
+			margin-left: .5rem;
+		}
+
+		@media (max-width: 768px) {
+			.menu-toggler {
+				display: inline-flex;
+				align-items: center;
+				gap: .5rem;
+			}
+
+			.menu-container {
+				position: relative;
+			}
+
+			.menu-container .lds-nav {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				flex-direction: column;
+				align-items: stretch;
+				background: var(--lds-bar-bg);
+				max-height: 0;
+				overflow: hidden;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: max-height .25s ease, opacity .2s ease, visibility .2s ease;
+				box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .25);
+				justify-content: flex-start;
+			}
+
+			/* Open state toggled via JS */
+			.menu-container.open .lds-nav {
+				max-height: 80vh;
+
+				overflow: auto;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+
+			@media (max-width: 640px) {
+				.lds-nav {
+					flex-direction: column;
+				}
+			}
+
+			.lds-nav .more {
+				order: 999;
+			}
+
+			.lds-nav .more.hidden {
+				display: none;
+			}
+		}
+
+
+		/* Submenu (desktop) tidy-ups */
+		.lds-nav .submenu {
+			/* already has background + z-index from your CSS */
+			min-width: 220px;
+			border-radius: 8px;
+			box-shadow: 0 10px 22px -12px rgba(0, 0, 0, .25);
+		}
+
+		/* Improve hover/focus affordances */
+		.lds-nav a:focus-visible,
+		.lds-nav .more>button:focus-visible,
+		.lds-nav .submenu a:focus-visible {
+			outline: 2px solid #fff;
+			outline-offset: 2px;
+		}
+
+		/* OPTIONAL: Slight spacing between items on large screens */
+		@media (min-width: 992px) {
+
+			.lds-nav>li>a,
+			.lds-nav .more>button {
+				padding-left: 1.1rem;
+				padding-right: 1.1rem;
+			}
+		}
 
 		.wrapper.menu .content-main {
 			padding: 12px 0;
@@ -403,18 +501,20 @@
 			display: none !important;
 		}
 
-		.lds-header {
-			background: rgba(125, 218, 208, 0.83);
-			box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-		}
+
 
 		.lds-nav {
 			max-width: 100%;
-			overflow: hidden;
-			overflow: visible;
 			display: inline-flex;
 			font-family: 'Helvetica Neue', sans-serif;
 			background: transparent !important;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			gap: 0;
+			display: flex;
+
+			justify-content: center;
 		}
 
 		.lds-nav ul {
@@ -428,6 +528,10 @@
 			white-space: nowrap;
 		}
 
+		.lds-nav>li {
+			flex: 0 0 auto;
+		}
+
 		.lds-nav a,
 		.lds-nav .more>button {
 			display: block;
@@ -438,6 +542,7 @@
 			cursor: pointer;
 			position: relative;
 			font-family: 'Helvetica Neue', sans-serif;
+			text-align: center;
 		}
 
 		.lds-nav .more>button::after {
@@ -853,13 +958,13 @@
 			font-size: 1.05rem;
 			/* bump size */
 			padding: .9rem 1.25rem;
-			/* pill thickness */
+
 			border-radius: 999px;
-			/* full pill */
+
 			box-shadow: 0 6px 18px -8px rgba(0, 0, 0, .28);
 		}
 
-		/* Mobile spacing */
+
 		@media (max-width:640px) {
 			.microfeed-actions {
 				margin-top: 10px;
@@ -886,29 +991,31 @@
 					<div class="block menu-main">
 						<div class="content">
 
-							<div class="menu-toggler" aria-label="Open navigation">Menu<span class="icon"></span></div>
-
-							<div class="menu-container">
+							<button class="menu-toggler" id="menuToggle" aria-label="Open navigation"
+								aria-controls="ldsNav" aria-expanded="false">
+								Menu <span class="icon" aria-hidden="true"></span>
+							</button>
+							<div class="menu-container" role="navigation" aria-label="Primary">
 								<ul class="lds-nav" id="ldsNav">
 									<li><a href="index.html">Home</a></li>
 									<li><a href="brainfactory.html">BrainFactory</a></li>
 									<li><a href="program.html">Program</a></li>
 									<li><a href="tickets.html">Tickets</a></li>
 									<li><a href="speakers.html">Speakers</a></li>
-									<li><a href="previous-participants.html">Who is attending?</a></li>
 									<li><a href="travel.html">Travel & Venue</a></li>
+									<li><a href="previous-participants.html">Who is attending?</a></li>
+
 									<li><a href="about-us.html">Meet the Team</a></li>
 									<li><a href="values.html">Values</a></li>
 									<li><a href="blog.html">Blog</a></li>
 									<li><a href="the-gallery.html">[Beta] The Gallery</a></li>
 
 									<li class="more hidden">
-										<button type="button" aria-haspopup="true" aria-expanded="false">More</button>
-										<ul class="submenu"></ul>
+										<button type="button" aria-haspopup="true" aria-expanded="false"
+											aria-controls="moreMenu">More</button>
+										<ul class="submenu" id="moreMenu"></ul>
 									</li>
 								</ul>
-
-
 							</div>
 
 						</div>
@@ -1332,30 +1439,40 @@
 	</div>
 	<script>
 		(() => {
-			const MAX_VISIBLE = 4;
+			const MAX_VISIBLE = 6;                   // show up to 6 before "More" on wide screens
 			const nav = document.getElementById('ldsNav');
 			const moreLi = nav.querySelector('.more');
 			const moreBtn = moreLi.querySelector('button');
 			const subMenu = moreLi.querySelector('.submenu');
 
-			function redistribute() {
+			const toggleBtn = document.getElementById('menuToggle');
+			const menuContainer = toggleBtn ? toggleBtn.closest('.menu-container') : null;
 
+			function closeMobileNav() {
+				if (!menuContainer) return;
+				menuContainer.classList.remove('open');
+				toggleBtn.setAttribute('aria-expanded', 'false');
+			}
+
+			function redistribute() {
+				// Put everything back before measuring
 				while (subMenu.firstChild) {
 					nav.insertBefore(subMenu.firstChild, moreLi);
 				}
 				moreLi.classList.add('hidden');
+				moreLi.classList.remove('open');
+				moreBtn.setAttribute('aria-expanded', 'false');
 
+				// On mobile: show everything in a column; no "More"
+				if (window.innerWidth <= 768) return;
 
-				if (window.innerWidth <= 640) return;
-
-
-				const available = nav.parentElement.getBoundingClientRect().width;
-				let used = moreLi.offsetWidth;
+				// Desktop/tablet: measure available space and bucket overflow into "More"
+				const available = nav.parentElement.clientWidth; // container width
+				let used = moreLi.offsetWidth;                   // reserve space for "More"
 				let shown = 0;
 
 				[...nav.children].forEach(li => {
 					if (li === moreLi) return;
-
 					const fits = used + li.offsetWidth <= available;
 					const underCap = shown < MAX_VISIBLE;
 
@@ -1364,19 +1481,57 @@
 						shown += 1;
 					} else {
 						subMenu.appendChild(li);
-						moreLi.classList.remove('hidden');
+					}
+				});
+
+				if (subMenu.children.length) {
+					moreLi.classList.remove('hidden');
+				}
+			}
+
+			// Hamburger toggle
+			if (toggleBtn && menuContainer) {
+				toggleBtn.addEventListener('click', () => {
+					const isOpen = menuContainer.classList.toggle('open');
+					toggleBtn.setAttribute('aria-expanded', String(isOpen));
+					if (!isOpen) {
+						moreLi.classList.remove('open');
+						moreBtn.setAttribute('aria-expanded', 'false');
 					}
 				});
 			}
-			moreBtn.addEventListener('click', () => {
+
+			// "More" dropdown (desktop)
+			moreBtn.addEventListener('click', (e) => {
+				e.stopPropagation();
 				const isOpen = moreLi.classList.toggle('open');
-				moreBtn.setAttribute('aria-expanded', isOpen);
+				moreBtn.setAttribute('aria-expanded', String(isOpen));
 			});
 
+			// Close on outside click / Esc
+			document.addEventListener('click', (e) => {
+				if (menuContainer && !menuContainer.contains(e.target)) {
+					moreLi.classList.remove('open');
+					moreBtn.setAttribute('aria-expanded', 'false');
+					closeMobileNav();
+				}
+			});
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') {
+					moreLi.classList.remove('open');
+					moreBtn.setAttribute('aria-expanded', 'false');
+					closeMobileNav();
+				}
+			});
+
+			// Recalc on load/resize and whenever the container resizes
 			window.addEventListener('load', redistribute);
 			window.addEventListener('resize', redistribute);
+			if ('ResizeObserver' in window) {
+				const ro = new ResizeObserver(redistribute);
+				ro.observe(nav.parentElement);
+			}
 		})();
-
 
 	</script>
 
