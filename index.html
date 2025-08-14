@@ -461,15 +461,15 @@
 		}
 
 
-		/* Submenu (desktop) tidy-ups */
+
 		.lds-nav .submenu {
-			/* already has background + z-index from your CSS */
+
 			min-width: 220px;
 			border-radius: 8px;
 			box-shadow: 0 10px 22px -12px rgba(0, 0, 0, .25);
 		}
 
-		/* Improve hover/focus affordances */
+
 		.lds-nav a:focus-visible,
 		.lds-nav .more>button:focus-visible,
 		.lds-nav .submenu a:focus-visible {
@@ -477,7 +477,7 @@
 			outline-offset: 2px;
 		}
 
-		/* OPTIONAL: Slight spacing between items on large screens */
+
 		@media (min-width: 992px) {
 
 			.lds-nav>li>a,
@@ -507,7 +507,7 @@
 			max-width: 100%;
 			display: inline-flex;
 			font-family: 'Helvetica Neue', sans-serif;
-			background: transparent !important;
+			background: transparent;
 			display: flex;
 			flex-wrap: nowrap;
 			align-items: center;
@@ -603,6 +603,12 @@
 		.lds-nav,
 		.lds-nav .submenu {
 			background: var(--lds-bar-bg);
+		}
+
+		@media (min-width: 769px) {
+			.lds-nav {
+				background: transparent !important;
+			}
 		}
 
 		.lds-nav a:hover,
@@ -841,21 +847,21 @@
 			background: #fff;
 		}
 
-		/* Subtle peek of next card on small screens */
+
 		@media (max-width: 640px) {
 			.microcard iframe {
 				height: 240px;
 			}
 		}
 
-		/* Respect reduced motion: stop autoplay if user prefers */
+
 		@media (prefers-reduced-motion: reduce) {
 			.linkedin-carousel {
 				--autoplay: 0;
 			}
 		}
 
-		/* Horizontal scroll strip */
+
 		.li-scroll {
 			display: flex;
 			gap: 12px;
@@ -889,16 +895,16 @@
 			scrollbar-color: rgba(14, 157, 152, .45) transparent;
 		}
 
-		/* Cards inside the horizontal track */
+
 		.li-scroll .microcard {
 			flex: 0 0 360px;
-			/* fixed card width in the track */
+
 			margin: 0;
-			/* use 'gap' instead */
+
 			scroll-snap-align: start;
 		}
 
-		/* Keep your existing microcard look */
+
 		.microcard {
 			background: #fff;
 			border-radius: 16px;
@@ -913,12 +919,12 @@
 			box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .28);
 		}
 
-		/* Tame the embed size so all cards match */
+
 		.microcard iframe {
 			display: block;
 			width: 100%;
 			height: 280px;
-			/* adjust if you want taller/shorter cards */
+
 			border: 0;
 			background: #fff;
 		}
@@ -928,35 +934,34 @@
 				flex-basis: 82vw;
 			}
 
-			/* wider cards on phones */
+
 			.microcard iframe {
 				height: 240px;
 			}
 		}
 
-		/* Respect reduced motion – no snapping if user prefers less movement */
+
 		@media (prefers-reduced-motion: reduce) {
 			.li-scroll {
 				scroll-snap-type: none;
 			}
 		}
 
-		/* Hide the old header CTA (since we're centering it below) */
 		.microfeed-header .microfeed-cta {
 			display: none;
 		}
 
-		/* Centered button under the posts */
+
 		.microfeed-actions {
 			display: flex;
 			justify-content: center;
 			margin-top: 12px;
 		}
 
-		/* Match site buttons, slightly larger */
+
 		.notify-btn.li-follow-btn {
 			font-size: 1.05rem;
-			/* bump size */
+
 			padding: .9rem 1.25rem;
 
 			border-radius: 999px;
@@ -1439,14 +1444,15 @@
 	</div>
 	<script>
 		(() => {
-			const MAX_VISIBLE = 6;                   // show up to 6 before "More" on wide screens
+			const MAX_VISIBLE = 6;
 			const nav = document.getElementById('ldsNav');
 			const moreLi = nav.querySelector('.more');
 			const moreBtn = moreLi.querySelector('button');
 			const subMenu = moreLi.querySelector('.submenu');
 
 			const toggleBtn = document.getElementById('menuToggle');
-			const menuContainer = toggleBtn ? toggleBtn.closest('.menu-container') : null;
+
+			const menuContainer = toggleBtn ? toggleBtn.nextElementSibling : null;
 
 			function closeMobileNav() {
 				if (!menuContainer) return;
@@ -1455,7 +1461,7 @@
 			}
 
 			function redistribute() {
-				// Put everything back before measuring
+
 				while (subMenu.firstChild) {
 					nav.insertBefore(subMenu.firstChild, moreLi);
 				}
@@ -1463,12 +1469,12 @@
 				moreLi.classList.remove('open');
 				moreBtn.setAttribute('aria-expanded', 'false');
 
-				// On mobile: show everything in a column; no "More"
+
 				if (window.innerWidth <= 768) return;
 
-				// Desktop/tablet: measure available space and bucket overflow into "More"
-				const available = nav.parentElement.clientWidth; // container width
-				let used = moreLi.offsetWidth;                   // reserve space for "More"
+
+				const available = nav.parentElement.clientWidth;
+				let used = moreLi.offsetWidth;
 				let shown = 0;
 
 				[...nav.children].forEach(li => {
@@ -1489,9 +1495,9 @@
 				}
 			}
 
-			// Hamburger toggle
 			if (toggleBtn && menuContainer) {
-				toggleBtn.addEventListener('click', () => {
+				toggleBtn.addEventListener('click', (e) => {
+					e.stopPropagation();
 					const isOpen = menuContainer.classList.toggle('open');
 					toggleBtn.setAttribute('aria-expanded', String(isOpen));
 					if (!isOpen) {
@@ -1500,8 +1506,15 @@
 					}
 				});
 			}
+			document.addEventListener('click', (e) => {
+				const clickedToggle = toggleBtn && (e.target === toggleBtn || toggleBtn.closest('#menuToggle'));
+				if (menuContainer && !menuContainer.contains(e.target) && !clickedToggle) {
+					moreLi.classList.remove('open');
+					moreBtn.setAttribute('aria-expanded', 'false');
+					closeMobileNav();
+				}
+			});
 
-			// "More" dropdown (desktop)
 			moreBtn.addEventListener('click', (e) => {
 				e.stopPropagation();
 				const isOpen = moreLi.classList.toggle('open');
