@@ -749,6 +749,126 @@
 				--autoplay: 0;
 			}
 		}
+
+		/* Horizontal scroll strip */
+		.li-scroll {
+			display: flex;
+			gap: 12px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			padding: 4px 2px 12px;
+			scroll-snap-type: x proximity;
+			-webkit-overflow-scrolling: touch;
+			touch-action: pan-x;
+			/* soft edge fade */
+			mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+			-webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+		}
+
+		/* Nice, discreet scrollbar */
+		.li-scroll::-webkit-scrollbar {
+			height: 10px;
+		}
+
+		.li-scroll::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		.li-scroll::-webkit-scrollbar-thumb {
+			background: rgba(14, 157, 152, .35);
+			border-radius: 999px;
+		}
+
+		.li-scroll {
+			scrollbar-width: thin;
+			scrollbar-color: rgba(14, 157, 152, .45) transparent;
+		}
+
+		/* Cards inside the horizontal track */
+		.li-scroll .microcard {
+			flex: 0 0 360px;
+			/* fixed card width in the track */
+			margin: 0;
+			/* use 'gap' instead */
+			scroll-snap-align: start;
+		}
+
+		/* Keep your existing microcard look */
+		.microcard {
+			background: #fff;
+			border-radius: 16px;
+			border-left: 4px solid var(--lds-primary-dark);
+			box-shadow: 0 10px 24px -14px rgba(0, 0, 0, .25);
+			overflow: hidden;
+			transition: transform .25s ease, box-shadow .25s ease;
+		}
+
+		.microcard:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .28);
+		}
+
+		/* Tame the embed size so all cards match */
+		.microcard iframe {
+			display: block;
+			width: 100%;
+			height: 280px;
+			/* adjust if you want taller/shorter cards */
+			border: 0;
+			background: #fff;
+		}
+
+		@media (max-width: 640px) {
+			.li-scroll .microcard {
+				flex-basis: 82vw;
+			}
+
+			/* wider cards on phones */
+			.microcard iframe {
+				height: 240px;
+			}
+		}
+
+		/* Respect reduced motion – no snapping if user prefers less movement */
+		@media (prefers-reduced-motion: reduce) {
+			.li-scroll {
+				scroll-snap-type: none;
+			}
+		}
+
+		/* Hide the old header CTA (since we're centering it below) */
+		.microfeed-header .microfeed-cta {
+			display: none;
+		}
+
+		/* Centered button under the posts */
+		.microfeed-actions {
+			display: flex;
+			justify-content: center;
+			margin-top: 12px;
+		}
+
+		/* Match site buttons, slightly larger */
+		.notify-btn.li-follow-btn {
+			font-size: 1.05rem;
+			/* bump size */
+			padding: .9rem 1.25rem;
+			/* pill thickness */
+			border-radius: 999px;
+			/* full pill */
+			box-shadow: 0 6px 18px -8px rgba(0, 0, 0, .28);
+		}
+
+		/* Mobile spacing */
+		@media (max-width:640px) {
+			.microfeed-actions {
+				margin-top: 10px;
+			}
+
+			.notify-btn.li-follow-btn {
+				width: auto;
+			}
+		}
 	</style>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -1117,42 +1237,51 @@
 
 		</div>
 	</div>
-	<!-- LinkedIn Micro-Feed 
+
 	<section class="linkedin-microfeed" aria-labelledby="linkedinHeading">
 		<div class="container">
 			<div class="microfeed-header">
 				<span class="live-dot" aria-hidden="true"></span>
 				<h3 id="linkedinHeading" class="microfeed-title">From our LinkedIn</h3>
-				<a class="microfeed-cta" href="https://www.linkedin.com/company/legaldesignsummit/" target="_blank"
-					rel="noopener">
-					Follow us
-				</a>
 			</div>
 
-			<div class="linkedin-carousel fs-carousel"
-				data-carousel='{"show":1.6,"slideBy":1,"infinite":true,"controls":false,"pagination":false,"autoplay":true,"advance":4200,"lazyLoad":true,"labels":{"next":"","previous":""}}'>
+			<!-- Horizontal scroll track -->
+			<div class="li-scroll" role="region" aria-label="LinkedIn posts" tabindex="0">
 
-			
+				<div class="microcard">
+					<iframe
+						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361700308256808962?collapsed=1"
+						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+				</div>
+
 				<div class="microcard">
 					<iframe
 						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361370359054450689?collapsed=1"
-						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-
+						height="670" width="504" frameborder="0" allowfullscreen title="Embedded post"></iframe>
 				</div>
 
-			
 				<div class="microcard">
 					<iframe
 						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361369881587388417?collapsed=1"
-						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+						height="670" width="504" frameborder="0" allowfullscreen title="Embedded post"></iframe>
 				</div>
 
-			
 				<div class="microcard">
 					<iframe
 						src="https://www.linkedin.com/embed/feed/update/urn:li:share:7361368548167905281?collapsed=1"
-						height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+						height="670" width="504" frameborder="0" allowfullscreen title="Embedded post"></iframe>
 				</div>
+				<div class="microcard">
+					<iframe
+						src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7359562440252022784?collapsed=1"
+						height="567" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+				</div>
+			</div>
+			<div class="microfeed-actions">
+				<a class="notify-btn li-follow-btn" href="https://www.linkedin.com/company/legaldesignsummit/"
+					target="_blank" rel="noopener">
+					Follow us on LinkedIn
+				</a>
 			</div>
 
 			<noscript>
@@ -1163,7 +1292,7 @@
 			</noscript>
 		</div>
 	</section>
-	-->
+
 
 	<div class="wrapper actions" style="background-color: white; padding-bottom: 0px;">
 		<div class="container">
@@ -1247,7 +1376,11 @@
 			window.addEventListener('load', redistribute);
 			window.addEventListener('resize', redistribute);
 		})();
+
+
 	</script>
+
+
 
 
 </body>
