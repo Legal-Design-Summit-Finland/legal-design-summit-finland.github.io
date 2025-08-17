@@ -42,10 +42,7 @@
 			border-radius: .5rem;
 		}
 
-		.wrapper.menu .lds-nav :where(a, .more>button):focus-visible {
-			outline: 3px solid #fff;
-			outline-offset: 3px;
-		}
+
 
 		@supports selector(:focus-visible) {
 			:focus {
@@ -282,14 +279,7 @@
 		}
 
 
-		.wrapper.menu {
-			background: var(--lds-bar-bg);
-			box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-		}
 
-		.wrapper.menu .menu-container {
-			text-align: center;
-		}
 
 		/* === Theme tokens (fallbacks if not already defined) === */
 		:root {
@@ -406,11 +396,6 @@
 			border-radius: 8px;
 			box-shadow: 0 10px 22px -12px rgba(0, 0, 0, .25);
 			z-index: 1000;
-		}
-
-		.lds-menu .lds-nav .submenu li a {
-			padding: .65rem 1rem;
-			display: block;
 		}
 
 		.lds-menu .lds-nav .more.open .submenu {
@@ -599,24 +584,7 @@
 			--reveal-ease: .25s ease;
 		}
 
-		/* Sticky header that can slide away */
-		.wrapper.menu {
-			position: sticky;
-			top: 0;
-			z-index: 1000;
-			transition: transform var(--reveal-ease), padding .2s ease;
-			will-change: transform;
-		}
 
-		.wrapper.menu.is-hidden {
-			transform: translateY(-100%);
-		}
-
-		/* Compact mode: tighter paddings when scrolled a bit */
-		.wrapper.menu.is-compact .lds-nav>li>a,
-		.wrapper.menu.is-compact .lds-nav .more>button {
-			padding: .55rem .9rem;
-		}
 
 		main {
 			--sticky-offset: var(--header-height);
@@ -638,9 +606,43 @@
 			transform: translateY(calc(-100% - .5rem));
 		}
 
-		.wrapper.menu.is-compact~main {
+		:root {
+			--header-height: 64px;
+			--header-height-compact: 44px;
+			--reveal-ease: .25s ease;
+		}
+
+		.lds-menu {
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			transition: transform var(--reveal-ease), padding .2s ease;
+			will-change: transform;
+		}
+
+		.lds-menu.is-hidden {
+			transform: translateY(-100%);
+		}
+
+		.lds-menu.is-compact .lds-nav>li>a,
+		.lds-menu.is-compact .lds-nav .more>button {
+			padding: .55rem .9rem;
+		}
+
+		.lds-menu.is-compact~main {
 			--sticky-offset: var(--header-height-compact);
 		}
+
+		.lds-menu .lds-nav :where(a, .more>button):focus-visible {
+			outline: 3px solid #fff;
+			outline-offset: 3px;
+		}
+
+		.lds-menu .menu-container {
+			flex: 1;
+			min-width: 0;
+		}
+
 
 		@media (prefers-reduced-motion: reduce) {
 
@@ -686,8 +688,6 @@
 </head>
 
 <body>
-	<title>Legal Design Summit</title>
-	<!-- LDS Global Navigation -->
 	<div class="lds-menu">
 		<div class="menu-inner">
 			<button class="menu-toggler" id="menuToggle" aria-label="Open navigation" aria-controls="ldsNav"
@@ -727,6 +727,8 @@
 
 		<nav class="blog-nav" aria-label="Blog post list">
 			<ul>
+				<li><a href="#lds-post-5">Speaker Testimonial Series: Outi Nokkonen - Reimagining Public Procurement</a>
+				</li>
 				<li><a href="#lds-post-4">Speaker Testimonial Series: Peegi Kaibald - How Legal Design is
 						Transforming
 						Citizen Experience in the Public Sector</a></li>
@@ -736,6 +738,84 @@
 				<li><a href="#lds-post-1">The Legal Design Summit: What we stand for by Sade Mäntylä</a></li>
 			</ul>
 		</nav>
+
+		<article id="lds-post-5" data-tags="Speaker Testimonials">
+
+			<h2>LDS Blog #5: Speaker Testimonial Series: Outi Nokkonen - Reimagining Public Procurement
+			</h2>
+			<div class="tags">
+				<span class="tag">#Speaker Testimonials</span>
+			</div>
+			<footer class="author">
+				<img src="images/speakers/2025/Outi Nokkonen.jpg"
+					alt="Peegi Kaibald — service designer improving public-sector services in Estonia">
+				<p>
+					Outi will be on Day 2 of the 2025 Summit presenting 'Mission Impossible: Designing the Mindset of
+					Public Officials.' with Peegi Kaibald. See the full program <a href="program.html">here</a>.
+				</p>
+			</footer>
+
+			<br>
+			<p>
+				We asked Outi Nokkonen to share her Legal Design story, and uncovered fascinating insights about
+				bringing creativity to traditionally rigid systems! In this ongoing series featuring Legal Design Summit
+				2025 Speaker Testimonials, we're thrilled to spotlight professionals who are reshaping how we think
+				about law, design, and human experience.
+			</p>
+			<br>
+			<p>
+				Meet Outi Nokkonen, who is a Finnish service designer with over 12 years transforming public sector
+				services through design thinking. Her mission is making public procurement more accessible, human, and
+				less intimidating. With her background in social sciences and political science, she brings a unique
+				societal lens to design work. Currently deepening her expertise by studying procurement and law, she's
+				proving that regulation can enable innovation rather than block it. Her upcoming LDS presentation with
+				Peegi Kaibald explores how design shifts not just processes, but the entire mindset of public officials.
+			</p>
+			<p>
+				Through three key questions, we explored our Legal Design Summit 2025 speakers' journeys, and their
+				responses are truly inspiring! You'll find Outi's thoughts below.
+			</p>
+
+
+			<h3>Tell us your legal design story - what brought you here?</h3>
+			<p>
+				For me, legal design is a promising and much needed approach to making the public sector and especially
+				public procurement more accessible, human and less intimidating.
+
+			</p>
+			<p>
+				I’ve spent the past 12 years working both inside and alongside the Finnish public sector, and throughout
+				that time, my mission has been to make design thinking a natural part of developing public services and
+				systems. In recent years, I’ve become increasingly focused on public procurement. It’s a space that’s
+				often seen as too technical or too regulated for creativity, which is exactly why it needs legal design.
+				There’s enormous potential to reimagine procurement as a tool for collaboration, clarity and meaningful
+				impact.
+
+			</p>
+
+			<h3>What are you most looking forward to about the LDS?</h3>
+			<p>
+				I’m looking forward to discovering new ideas and perspectives. I hope to get inspired by what legal
+				design could enable in the context of public procurement — and what new possibilities we might uncover.
+
+			</p>
+
+			<h3>What key message do you hope to convey? (a teaser on your presentation)</h3>
+			<p>
+				In collaboration with Peegi Kaibald and drawing from Estonia’s pioneering work in legal design, we will
+				explore how even the most regulated parts of public administration (like public procurement) can be
+				reimagined through design. Our aim is to show how design can shift not just processes and documents, but
+				the mindset of public officials.
+			</p>
+			<footer class="author">
+				<img src="images/team/team-2025/Aysenur.png" alt="Portrait of Ayşenur Kölgesiz" />
+				<p>
+					The introduction to this blog post was written by <strong>Ayşenur Kölgesiz</strong>, part of the
+					Legal Design Summit 2025 and Communication and Social Media Team.
+				</p>
+			</footer>
+
+		</article>
 
 
 		<article id="lds-post-4" data-tags="Speaker Testimonials">
@@ -1211,40 +1291,103 @@
 	</main>
 	<script>
 		(() => {
-			const header = document.querySelector('.wrapper.menu');
+			document.documentElement.classList.add('js');
+			const header = document.querySelector('.lds-menu');
+			const inner = header.querySelector('.menu-inner');
+			const nav = header.querySelector('#ldsNav');
+			const moreLi = nav.querySelector('.more');
+			const moreBtn = moreLi.querySelector('button');
+			const subMenu = moreLi.querySelector('.submenu');
+			const toggleBtn = header.querySelector('#menuToggle');
+			const menuContainer = header.querySelector('.menu-container');
 			const blogNav = document.querySelector('.blog-nav');
-			const moreLi = header?.querySelector('.more');
-			const moreBtn = moreLi?.querySelector('button');
 
-			if (!header) return;
+			const MOBILE_BP = 768;
+			const MAX_VISIBLE = 6;
+
+			function closeMore() {
+				moreLi.classList.remove('open');
+				moreBtn.setAttribute('aria-expanded', 'false');
+			}
+			function closeMobileNav() {
+				menuContainer.classList.remove('open');
+				toggleBtn.setAttribute('aria-expanded', 'false');
+			}
+
+			function redistribute() {
+				while (subMenu.firstChild) nav.insertBefore(subMenu.firstChild, moreLi);
+				moreLi.classList.add('hidden');
+				closeMore();
+
+				if (window.innerWidth <= MOBILE_BP) return;
+
+				const items = [...nav.children].filter(li => li !== moreLi);
+				for (let i = MAX_VISIBLE; i < items.length; i++) {
+					subMenu.appendChild(items[i]);
+				}
+
+				if (subMenu.children.length) moreLi.classList.remove('hidden');
+
+				const fits = () => nav.scrollWidth <= inner.clientWidth;
+				while (!fits()) {
+					const last = nav.querySelector('li:not(.more):last-of-type');
+					if (!last) break;
+					subMenu.insertBefore(last, subMenu.firstChild);
+					moreLi.classList.remove('hidden');
+				}
+
+
+				if (!subMenu.children.length) moreLi.classList.add('hidden');
+			}
+
+
+			toggleBtn.addEventListener('click', () => {
+				const isOpen = menuContainer.classList.toggle('open');
+				toggleBtn.setAttribute('aria-expanded', String(isOpen));
+				if (!isOpen) closeMore();
+			});
+
+
+			moreBtn.addEventListener('click', (e) => {
+				e.stopPropagation();
+				const open = !moreLi.classList.contains('open');
+				moreLi.classList.toggle('open', open);
+				moreBtn.setAttribute('aria-expanded', String(open));
+			});
+
+
+			document.addEventListener('click', (e) => {
+				if (!header.contains(e.target)) { closeMore(); closeMobileNav(); }
+			});
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') { closeMore(); closeMobileNav(); }
+			});
+
+
+			['load', 'resize'].forEach(evt => window.addEventListener(evt, redistribute));
+			if ('ResizeObserver' in window) new ResizeObserver(redistribute).observe(inner);
+
 
 			let lastY = window.scrollY;
 			let ticking = false;
-
-			const MIN_DELTA = 8;     // ignore tiny scrolls
-			const REVEAL_TOP = 80;   // always show near the top
-			const COMPACT_AT = 120;  // when to switch to compact header
+			const MIN_DELTA = 8;
+			const REVEAL_TOP = 80;
+			const COMPACT_AT = 120;
 
 			const setHidden = (hide) => {
 				header.classList.toggle('is-hidden', hide);
 				blogNav?.classList.toggle('is-hidden', hide);
 			};
 
-			const isMenuOpen = () => moreLi?.classList.contains('open');
-			const focusInHeader = () => header.contains(document.activeElement);
-
 			const update = () => {
 				const y = window.scrollY;
 				const dy = y - lastY;
 
-				// Compact mode after small scroll
 				header.classList.toggle('is-compact', y > COMPACT_AT);
 
-				// Don’t hide near the very top, when menu open, or while keyboard focusing inside
-				if (y < REVEAL_TOP || isMenuOpen() || focusInHeader()) {
+				if (y < REVEAL_TOP || moreLi.classList.contains('open') || header.contains(document.activeElement)) {
 					setHidden(false);
 				} else if (Math.abs(dy) > MIN_DELTA) {
-					// Hide on scroll down, show on scroll up
 					setHidden(dy > 0);
 				}
 
@@ -1253,240 +1396,24 @@
 			};
 
 			window.addEventListener('scroll', () => {
-				if (!ticking) {
-					requestAnimationFrame(update);
-					ticking = true;
-				}
+				if (!ticking) { requestAnimationFrame(update); ticking = true; }
 			}, { passive: true });
 
-			// Reveal when pointer hits the top edge (nice on desktop)
-			window.addEventListener('mousemove', (e) => {
-				if (e.clientY <= 8) setHidden(false);
-			});
 
-			// Always reveal while interacting with the nav
+			window.addEventListener('mousemove', (e) => { if (e.clientY <= 8) setHidden(false); });
+
+
 			header.addEventListener('focusin', () => setHidden(false));
 			header.addEventListener('click', () => setHidden(false), true);
-
-
 		})();
-
-		(function () {
-
-			document.documentElement.classList.add('js');
-
-			// Config
-			const MAX_VISIBLE = 6; // number of top-level items to show before "More" on desktop
-
-
-			const root = document.querySelector('.lds-menu');
-			const nav = root.querySelector('#ldsNav');
-			const moreLi = nav.querySelector('.more');
-			const moreBtn = moreLi.querySelector('button');
-			const subMenu = moreLi.querySelector('.submenu');
-			const toggleBtn = root.querySelector('#menuToggle');
-			const menuContainer = root.querySelector('.menu-container');
-
-			function closeMobileNav() {
-				menuContainer.classList.remove('open');
-				toggleBtn.setAttribute('aria-expanded', 'false');
-			}
-
-			function redistribute() {
-				// Put everything back in the main row
-				while (subMenu.firstChild) {
-					nav.insertBefore(subMenu.firstChild, moreLi);
-				}
-				moreLi.classList.add('hidden');
-				moreLi.classList.remove('open');
-				moreBtn.setAttribute('aria-expanded', 'false');
-
-				// Mobile: show everything; no "More"
-				if (window.innerWidth <= 768) return;
-
-				// Desktop: measure available width and bucket overflow into "More"
-				const available = nav.parentElement.clientWidth; // container width
-				let used = moreLi.offsetWidth;                  // reserve space for "More"
-				let shown = 0;
-
-				[...nav.children].forEach(li => {
-					if (li === moreLi) return;
-					const fits = used + li.offsetWidth <= available;
-					const underCap = shown < MAX_VISIBLE;
-
-					if (fits && underCap) {
-						used += li.offsetWidth;
-						shown += 1;
-					} else {
-						subMenu.appendChild(li);
-					}
-				});
-
-				if (subMenu.children.length) {
-					moreLi.classList.remove('hidden');
-				}
-			}
-
-			// Hamburger toggle
-			toggleBtn.addEventListener('click', () => {
-				const isOpen = menuContainer.classList.toggle('open');
-				toggleBtn.setAttribute('aria-expanded', String(isOpen));
-				if (!isOpen) {
-					moreLi.classList.remove('open');
-					moreBtn.setAttribute('aria-expanded', 'false');
-				}
-			});
-
-			// "More" dropdown (desktop)
-			moreBtn.addEventListener('click', (e) => {
-				e.stopPropagation();
-				const isOpen = moreLi.classList.toggle('open');
-				moreBtn.setAttribute('aria-expanded', String(isOpen));
-			});
-
-			// Close on outside click / Esc
-			document.addEventListener('click', (e) => {
-				if (!root.contains(e.target)) {
-					moreLi.classList.remove('open');
-					moreBtn.setAttribute('aria-expanded', 'false');
-					closeMobileNav();
-				}
-			});
-			document.addEventListener('keydown', (e) => {
-				if (e.key === 'Escape') {
-					moreLi.classList.remove('open');
-					moreBtn.setAttribute('aria-expanded', 'false');
-					closeMobileNav();
-				}
-			});
-
-			// Recalc when layout changes
-			window.addEventListener('load', redistribute);
-			window.addEventListener('resize', redistribute);
-			if ('ResizeObserver' in window) {
-				const ro = new ResizeObserver(redistribute);
-				ro.observe(nav.parentElement);
-			}
-		})();
-
-
 	</script>
+
 	<div id="footer"></div>
 	<script>
 		$(function () {
 			$("#footer").load("footer.html");
 		});
 	</script>
-
-
-</body>
-</head>
-
-<script>
-	(() => {
-		const MAX_VISIBLE = 4;
-		const nav = document.getElementById('ldsNav');
-		const moreLi = nav.querySelector('.more');
-		const moreBtn = moreLi.querySelector('button');
-		const subMenu = moreLi.querySelector('.submenu');
-
-		function redistribute() {
-
-			while (subMenu.firstChild) {
-				nav.insertBefore(subMenu.firstChild, moreLi);
-			}
-			moreLi.classList.add('hidden');
-
-
-			if (window.innerWidth <= 640) return;
-
-
-			const available = nav.parentElement.getBoundingClientRect().width;
-			let used = moreLi.offsetWidth;
-			let shown = 0;
-
-			[...nav.children].forEach(li => {
-				if (li === moreLi) return;
-
-				const fits = used + li.offsetWidth <= available;
-				const underCap = shown < MAX_VISIBLE;
-
-				if (fits && underCap) {
-					used += li.offsetWidth;
-					shown += 1;
-				} else {
-					subMenu.appendChild(li);
-					moreLi.classList.remove('hidden');
-				}
-			});
-		}
-
-
-		window.addEventListener('load', redistribute);
-		window.addEventListener('resize', redistribute);
-	})();
-	const more = document.querySelector('.lds-nav .more');
-	const btn = more?.querySelector('button');
-	const menu = more?.querySelector('.submenu');
-
-	if (menu) menu.hidden = true;
-
-	const setMenuOpen = (open) => {
-		if (!more || !btn || !menu) return;
-		more.classList.toggle('open', open);
-		btn.setAttribute('aria-expanded', String(open));
-		menu.hidden = !open;
-	};
-
-	btn?.addEventListener('click', () => setMenuOpen(!more.classList.contains('open')));
-
-	btn?.addEventListener('keydown', e => {
-		if (e.key === 'ArrowDown') { setMenuOpen(true); menu.querySelector('a')?.focus(); }
-		if (e.key === 'Escape') { setMenuOpen(false); btn.focus(); }
-	});
-
-	menu?.addEventListener('keydown', e => {
-		if (e.key === 'Escape') { setMenuOpen(false); btn.focus(); }
-	});
-
-	document.addEventListener('click', e => {
-		if (more && !more.contains(e.target)) setMenuOpen(false);
-	});
-
-	const sections = [...document.querySelectorAll('article[id]')];
-	const links = new Map(sections.map(s => [s.id, document.querySelector(`.blog-nav a[href="#${s.id}"]`)]));
-	const obs = new IntersectionObserver(entries => {
-		entries.forEach(e => {
-			const link = links.get(e.target.id);
-			if (!link) return;
-			if (e.isIntersecting) link.classList.add('is-active'); else link.classList.remove('is-active');
-		});
-	}, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-
-	sections.forEach(s => obs.observe(s));
-
-	document.querySelectorAll('article h2, article h3').forEach(h => {
-		if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
-		const a = document.createElement('a');
-		a.href = `#${h.id}`;
-		a.className = 'anchor-link';
-		a.setAttribute('aria-label', 'Copy link to section');
-		a.textContent = '§';
-		h.appendChild(a);
-	});
-
-	const filter = document.querySelector('#tagFilter');
-	filter?.addEventListener('change', e => {
-		const val = e.target.value;
-		document.querySelectorAll('article[id^="lds-post-"]').forEach(a => {
-			const tags = (a.dataset.tags || '').split(',');
-			a.style.display = !val || tags.includes(val) ? '' : 'none';
-		});
-	});
-
-
-</script>
-
 </body>
 
 </html>
