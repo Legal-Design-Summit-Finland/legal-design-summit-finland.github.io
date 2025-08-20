@@ -16,7 +16,7 @@
     <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 
     <script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
-    <script type="text/javascript" src="scripts/vendor/jquery/jquery.min.js"></script>
+
     <script type="text/javascript" src="scripts/vendor/jquery/jquery.once.min.js"></script>
     <script type="text/javascript" src="scripts/vendor/formstone/core.js"></script>
     <script type="text/javascript" src="scripts/vendor/formstone/carousel.js"></script>
@@ -396,51 +396,6 @@
         }
 
 
-        .wrapper.menu {
-            background: var(--lds-bar-bg);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-        }
-
-        .wrapper.menu .menu-container {
-            text-align: center;
-        }
-
-        .lds-nav {
-            display: inline-flex;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            background: transparent;
-
-            max-width: 100%;
-
-
-        }
-
-        .lds-nav li {
-            white-space: nowrap;
-        }
-
-        .lds-nav>li>a,
-        .lds-nav .more>button {
-            display: block;
-            padding: 0.9rem 1.4rem;
-            font: var(--nav-font-size)/1.35 'Oswald', sans-serif;
-            color: #fff;
-            background: transparent;
-            border: 0;
-            cursor: pointer;
-        }
-
-        .lds-nav .more>button::after {
-            content: " ▾";
-        }
-
-        .lds-nav .more>button:focus-visible {
-            outline: 2px solid #fff;
-            outline-offset: 2px;
-        }
-
         article li {
             position: relative;
             margin: 0 0 .6rem;
@@ -465,42 +420,7 @@
             background: var(--brand-turquoise);
         }
 
-        .lds-nav .more {
-            position: relative;
-        }
 
-        .lds-nav .submenu {
-            display: none;
-            position: absolute;
-            left: 50%;
-            top: 100%;
-            transform: translateX(-50%);
-            min-width: 180px;
-            margin: 0;
-            padding: 0.5rem 0;
-            list-style: none;
-            background: var(--lds-bar-bg);
-            z-index: 1000;
-        }
-
-        .lds-nav .more.open .submenu {
-            display: block;
-        }
-
-        .lds-nav .submenu li a {
-            padding: 0.9rem 1.4rem;
-            font: inherit;
-            color: #fff;
-            background: transparent;
-            border: 0;
-            white-space: nowrap;
-        }
-
-        .lds-nav a:hover,
-        .lds-nav .more>button:hover,
-        .lds-nav .submenu li a:hover {
-            background: rgba(255, 255, 255, .10);
-        }
 
         .hidden {
             display: none !important;
@@ -515,41 +435,259 @@
                 display: none;
             }
         }
+
+        :root {
+            --header-height: 64px;
+            --header-height-compact: 44px;
+            --reveal-ease: .25s ease;
+            --lds-bar-bg: rgba(125, 218, 208, 0.83);
+            --lds-nav-text: #fff;
+        }
+
+        .lds-menu {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: transform var(--reveal-ease), padding .2s ease;
+            will-change: transform;
+            background: var(--lds-bar-bg);
+            z-index: 2000;
+        }
+
+        .lds-menu.is-hidden {
+            transform: translateY(-100%);
+        }
+
+
+        .lds-menu.is-compact .lds-nav>li>a,
+        .lds-menu.is-compact .lds-nav .more>button {
+            padding: .55rem .9rem;
+        }
+
+
+        .lds-menu.is-compact~main {
+            --sticky-offset: var(--header-height-compact);
+        }
+
+
+        .lds-menu .lds-nav :where(a, .more>button):focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .lds-menu .menu-container {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Container that the JS measures against */
+        .lds-menu .menu-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 .75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* center bar on desktop */
+        }
+
+        /* Toggler (hidden on desktop, shown on mobile when .js on) */
+        .lds-menu .menu-toggler {
+            display: none;
+            background: transparent;
+            border: 0;
+            font: inherit;
+            padding: .8rem 1rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .lds-menu .menu-toggler .icon::before {
+            content: "☰";
+            margin-left: .5rem;
+        }
+
+        .lds-menu .menu-toggler:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        /* Primary list */
+        .lds-menu .lds-nav {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .lds-menu .lds-nav>li {
+            position: relative;
+            white-space: nowrap;
+            flex: 0 0 auto;
+        }
+
+        .lds-menu .lds-nav a,
+        .lds-menu .lds-nav .more>button {
+            display: block;
+            padding: .9rem 1.1rem;
+            color: #fff;
+            text-decoration: none;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.35;
+            letter-spacing: .01em;
+            text-align: center;
+        }
+
+        .lds-menu .lds-nav a:hover,
+        .lds-menu .lds-nav .more>button:hover {
+            background: rgba(255, 255, 255, .10);
+        }
+
+        .lds-menu .lds-nav .more>button::after {
+            content: " ▾";
+        }
+
+        /* Submenu */
+        .lds-menu .lds-nav .submenu {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            min-width: 220px;
+            margin: 0;
+            padding: .5rem 0;
+            list-style: none;
+            background: var(--lds-bar-bg, rgba(125, 218, 208, .83));
+            border-radius: 8px;
+            box-shadow: 0 10px 22px -12px rgba(0, 0, 0, .25);
+            z-index: 1000;
+        }
+
+        .lds-menu .lds-nav .submenu li a {
+            padding: .65rem 1rem;
+            display: block;
+            color: #fff;
+        }
+
+        .lds-menu .lds-nav .more.open .submenu {
+            display: block;
+        }
+
+        /* Mobile panel (progressive enhancement) */
+        @media (max-width:768px) {
+            .js .lds-menu .menu-inner {
+                justify-content: space-between;
+            }
+
+            .js .lds-menu .menu-toggler {
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+            }
+
+            .js .lds-menu .menu-container {
+                position: relative;
+                width: 100%;
+            }
+
+            .js .lds-menu .menu-container .lds-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                background: var(--lds-bar-bg, rgba(125, 218, 208, .83));
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: max-height .25s ease, opacity .2s ease, visibility .2s ease;
+                box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .25);
+            }
+
+            .js .lds-menu .menu-container.open .lds-nav {
+                max-height: 80vh;
+                overflow: auto;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            /* "More" is not used on mobile */
+            .lds-menu .lds-nav .more {
+                order: 999;
+            }
+
+            .lds-menu .lds-nav .more.hidden {
+                display: none;
+            }
+        }
+
+        .lds-menu .lds-nav a,
+        .lds-menu .lds-nav .more>button {
+            color: var(--lds-nav-text, #fff);
+
+        }
+
+        @media (max-width: 768px) {
+            .js .lds-menu .menu-container .lds-nav {
+                max-height: 0;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .js .lds-menu .menu-container.open .lds-nav {
+                max-height: 80vh;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper menu fluid">
-        <div class="container">
-            <div id="menu">
-                <div class="content-main">
-                    <div class="block menu-main">
-                        <div class="content">
-                            <div class="menu-toggler">Menu<span class="icon"></span></div>
-                            <div class="menu-container">
-                                <ul class="lds-nav" id="ldsNav">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="brainfactory.html">BrainFactory</a></li>
-                                    <li><a href="program.html">Program</a></li>
-                                    <li><a href="tickets.html">Tickets</a></li>
-                                    <li><a href="speakers.html">Speakers</a></li>
-                                    <li><a href="previous-participants.html">Who is attending?</a></li>
-                                    <li><a href="travel.html">Travel & Venue</a></li>
-                                    <li><a href="about-us.html">Meet the Team</a></li>
-                                    <li><a href="values.html">Values</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="the-gallery.html">[Beta] The Gallery</a></li>
-                                    <li class="more hidden">
-                                        <button type="button" aria-haspopup="true" aria-expanded="false">More</button>
-                                        <ul class="submenu"></ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="lds-menu">
+        <div class="menu-inner">
+            <button class="menu-toggler" id="menuToggle" aria-label="Open navigation" aria-controls="ldsNav"
+                aria-expanded="false">
+                Menu <span class="icon" aria-hidden="true"></span>
+            </button>
+
+            <nav class="menu-container" role="navigation" aria-label="Primary">
+                <ul class="lds-nav" id="ldsNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="brainfactory.html">BrainFactory</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="previous-participants.html">Who is attending?</a></li>
+                    <li><a href="travel.html">Travel & Venue</a></li>
+                    <li><a href="about-us.html">Meet the Team</a></li>
+                    <li><a href="values.html">Values</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="the-gallery.html">[Beta] The Gallery</a></li>
+
+                    <li class="more hidden">
+                        <button type="button" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="moreMenu">More</button>
+                        <ul class="submenu" id="moreMenu"></ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
     <div class="container">
@@ -2118,53 +2256,133 @@
     </script>
     <script>
         (() => {
-            const MAX_VISIBLE = 4;
-            const nav = document.getElementById('ldsNav');
+            document.documentElement.classList.add('js');
+
+            // Elements
+            const header = document.querySelector('.lds-menu');
+            const inner = header.querySelector('.menu-inner');
+            const nav = header.querySelector('#ldsNav');
             const moreLi = nav.querySelector('.more');
             const moreBtn = moreLi.querySelector('button');
             const subMenu = moreLi.querySelector('.submenu');
+            const toggleBtn = header.querySelector('#menuToggle');
+            const menuContainer = header.querySelector('.menu-container');
+            const blogNav = document.querySelector('.blog-nav');
 
-            function redistribute() {
+            const MOBILE_BP = 768;
+            const MAX_VISIBLE = 6;
 
-                while (subMenu.firstChild) {
-                    nav.insertBefore(subMenu.firstChild, moreLi);
-                }
-                moreLi.classList.add('hidden');
-
-
-                if (window.innerWidth <= 640) return;
-
-
-                const available = nav.parentElement.getBoundingClientRect().width;
-                let used = moreLi.offsetWidth;
-                let shown = 0;
-
-                [...nav.children].forEach(li => {
-                    if (li === moreLi) return;
-
-                    const fits = used + li.offsetWidth <= available;
-                    const underCap = shown < MAX_VISIBLE;
-
-                    if (fits && underCap) {
-                        used += li.offsetWidth;
-                        shown += 1;
-                    } else {
-                        subMenu.appendChild(li);
-                        moreLi.classList.remove('hidden');
-                    }
-                });
+            // ------- Helpers
+            function closeMore() {
+                moreLi.classList.remove('open');
+                moreBtn.setAttribute('aria-expanded', 'false');
             }
-            moreBtn.addEventListener('click', () => {
-                const isOpen = moreLi.classList.toggle('open');
-                moreBtn.setAttribute('aria-expanded', isOpen);
+            function closeMobileNav() {
+                menuContainer.classList.remove('open');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            // ------- Overflow bucketing
+            function redistribute() {
+                // Put everything back
+                while (subMenu.firstChild) nav.insertBefore(subMenu.firstChild, moreLi);
+                moreLi.classList.add('hidden');
+                closeMore();
+
+                // Mobile: show full list; no "More"
+                if (window.innerWidth <= MOBILE_BP) return;
+
+                // Enforce a soft cap first
+                const items = [...nav.children].filter(li => li !== moreLi);
+                for (let i = MAX_VISIBLE; i < items.length; i++) {
+                    subMenu.appendChild(items[i]);
+                }
+
+                // If we actually have anything in the bucket, show the "More" button
+                if (subMenu.children.length) moreLi.classList.remove('hidden');
+
+                // If still overflowing the row, move items (from end) into the bucket until it fits
+                const fits = () => nav.scrollWidth <= inner.clientWidth;
+                while (!fits()) {
+                    const last = nav.querySelector('li:not(.more):last-of-type');
+                    if (!last) break;
+                    subMenu.insertBefore(last, subMenu.firstChild);
+                    moreLi.classList.remove('hidden');
+                }
+
+                // If nothing ended up in the submenu, hide "More" again
+                if (!subMenu.children.length) moreLi.classList.add('hidden');
+            }
+
+            // ------- Hamburger toggle
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = menuContainer.classList.toggle('open');
+                toggleBtn.setAttribute('aria-expanded', String(isOpen));
+                if (!isOpen) closeMore();
             });
 
-            window.addEventListener('load', redistribute);
-            window.addEventListener('resize', redistribute);
+            // ------- "More" dropdown (desktop)
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const open = !moreLi.classList.contains('open');
+                moreLi.classList.toggle('open', open);
+                moreBtn.setAttribute('aria-expanded', String(open));
+            });
+
+            // Close on outside click / Esc
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target)) { closeMore(); closeMobileNav(); }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') { closeMore(); closeMobileNav(); }
+            });
+
+            // Recalc when layout changes
+            ['load', 'resize'].forEach(evt => window.addEventListener(evt, redistribute));
+            if ('ResizeObserver' in window) new ResizeObserver(redistribute).observe(inner);
+
+            // ------- Shrink & reveal-on-scroll (targets .lds-menu)
+            let lastY = window.scrollY;
+            let ticking = false;
+            const MIN_DELTA = 8;
+            const REVEAL_TOP = 80;
+            const COMPACT_AT = 120;
+
+            const setHidden = (hide) => {
+                header.classList.toggle('is-hidden', hide);
+                blogNav?.classList.toggle('is-hidden', hide);
+            };
+
+            const update = () => {
+                const y = window.scrollY;
+                const dy = y - lastY;
+
+                header.classList.toggle('is-compact', y > COMPACT_AT);
+
+                if (y < REVEAL_TOP || moreLi.classList.contains('open') || header.contains(document.activeElement)) {
+                    setHidden(false);
+                } else if (Math.abs(dy) > MIN_DELTA) {
+                    setHidden(dy > 0); // hide on scroll down, show on scroll up
+                }
+
+                lastY = y;
+                ticking = false;
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) { requestAnimationFrame(update); ticking = true; }
+            }, { passive: true });
+
+            // Reveal when pointer hits the top edge (nice on desktop)
+            window.addEventListener('mousemove', (e) => { if (e.clientY <= 8) setHidden(false); });
+
+            // Always reveal while interacting with the nav
+            header.addEventListener('focusin', () => setHidden(false));
+            header.addEventListener('click', () => setHidden(false), true);
         })();
     </script>
-
+    <div id="footer"></div>
+    <script>$("#footer").load("footer.html");</script>
 </body>
-<div id="footer"></div>
 
 </html>
