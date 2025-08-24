@@ -279,9 +279,6 @@
 		}
 
 
-
-
-		/* === Theme tokens (fallbacks if not already defined) === */
 		:root {
 			--lds-bar-bg: rgba(125, 218, 208, 0.83);
 			--lds-nav-text: #fff;
@@ -289,7 +286,6 @@
 			--lds-max-width: 1200px;
 		}
 
-		/* === Bar container === */
 		.lds-menu {
 			position: sticky;
 			top: 0;
@@ -308,7 +304,7 @@
 			/* center the whole bar on desktop */
 		}
 
-		/* === Toggler (hidden on desktop) === */
+
 		.lds-menu .menu-toggler {
 			display: none;
 			background: transparent;
@@ -329,7 +325,6 @@
 			outline-offset: 2px;
 		}
 
-		/* === Primary list (desktop) === */
 		.lds-menu .lds-nav {
 			display: flex;
 			flex-wrap: nowrap;
@@ -673,6 +668,46 @@
 				display: none;
 			}
 		}
+
+		/* --- Author block: mobile/tablet fixes --- */
+		@media (max-width: 640px) {
+			.author {
+				flex-wrap: wrap;
+				/* allow a second line */
+				align-items: stretch;
+				gap: 12px;
+			}
+
+			.author img {
+				width: calc(50% - 6px);
+				/* two portraits per row */
+				aspect-ratio: 1 / 1;
+				/* keep them square */
+				height: auto;
+				object-fit: cover;
+				display: block;
+			}
+
+			.author p {
+				order: 3;
+				/* put text under the images */
+				flex-basis: 100%;
+				margin-top: .25rem;
+				text-align: left;
+				/* avoid “rivers” from justify on mobile */
+				hyphens: auto;
+				overflow-wrap: anywhere;
+			}
+		}
+
+
+		@media (min-width: 641px) and (max-width: 959px) {
+			.author img {
+				width: 160px;
+
+				aspect-ratio: 1 / 1;
+			}
+		}
 	</style>
 
 	<script src="scripts/vendor/jquery/jquery.min.js" defer></script>
@@ -809,13 +844,15 @@
 			</p>
 			<footer class="author">
 				<img src="images/team/team-2025/Laura_Hartnett_Director of Operations.jpg"
-					alt="Portrait of Laura Hartnett" />
-				<img src="images/team/team-2025/Mia_Ihamuotila.jpg" alt="Portrait of Mia Ihamuotila" />
+					alt="Portrait of Laura Hartnett" width="640" height="640" loading="lazy" decoding="async" />
+				<img src="images/team/team-2025/Mia_Ihamuotila.jpg" alt="Portrait of Mia Ihamuotila" width="640"
+					height="640" loading="lazy" decoding="async" />
 				<p>
 					This blog post was written by <strong>Laura Hartnett</strong> and <strong>Mia Ihamuotila</strong>.
 					Laura is Head of Operations and BrainFactory and Mia is the Chair of the Legal Design Summit.
 				</p>
 			</footer>
+
 
 		</article>
 
