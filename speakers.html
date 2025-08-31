@@ -419,108 +419,189 @@
       font-size: 1.5rem;
     }
 
+    /* === Theme tokens (fallbacks if not already defined) === */
     :root {
       --lds-bar-bg: rgba(125, 218, 208, 0.83);
-
-      --nav-font-size: 1.125rem;
-
+      --lds-nav-text: #fff;
+      --lds-nav-font-size: 1.125rem;
+      --lds-max-width: 1200px;
     }
 
-
-    .wrapper.menu {
+    /* === Bar container === */
+    .lds-menu {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: var(--lds-bar-bg);
       box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
     }
 
-    .wrapper.menu .menu-container {
-      text-align: center;
+    .lds-menu .menu-inner {
+      max-width: var(--lds-max-width);
+      margin: 0 auto;
+      padding: 0 .75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* center the whole bar on desktop */
     }
 
-    .lds-nav {
-      display: inline-flex;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      background: transparent;
-
-      max-width: 100%;
-
-
-    }
-
-    .lds-nav li {
-      white-space: nowrap;
-    }
-
-    .lds-nav>li>a,
-    .lds-nav .more>button {
-      display: block;
-      padding: 0.9rem 1.4rem;
-      font: var(--nav-font-size)/1.35 'Oswald', sans-serif;
-      color: #fff;
+    /* === Toggler (hidden on desktop) === */
+    .lds-menu .menu-toggler {
+      display: none;
       background: transparent;
       border: 0;
+      font: inherit;
+      padding: .8rem 1rem;
+      color: var(--lds-nav-text);
       cursor: pointer;
     }
 
-    .lds-nav .more>button::after {
-      content: " ▾";
+    .lds-menu .menu-toggler .icon::before {
+      content: "☰";
+      margin-left: .5rem;
     }
 
-    .lds-nav .more>button:focus-visible {
+    .lds-menu .menu-toggler:focus-visible {
       outline: 2px solid #fff;
       outline-offset: 2px;
     }
 
-    /* ---------- drop-down panel --------------------------------------- */
-    .lds-nav .more {
-      position: relative;
+    /* === Primary list (desktop) === */
+    .lds-menu .lds-nav {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      /* centered on desktop */
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: "Helvetica Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
 
-    .lds-nav .submenu {
+    .lds-menu .lds-nav>li {
+      position: relative;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .lds-menu .lds-nav a,
+    .lds-menu .lds-nav .more>button {
+      display: block;
+      padding: .9rem 1.1rem;
+      color: var(--lds-nav-text);
+      text-decoration: none;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: var(--lds-nav-font-size);
+      line-height: 1.35;
+      letter-spacing: .01em;
+      text-align: center;
+    }
+
+    .lds-menu .lds-nav a:hover,
+    .lds-menu .lds-nav .more>button:hover {
+      background: rgba(255, 255, 255, .10);
+    }
+
+    .lds-menu .lds-nav a:focus-visible,
+    .lds-menu .lds-nav .more>button:focus-visible,
+    .lds-menu .lds-nav .submenu a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .lds-menu .lds-nav .more>button::after {
+      content: " ▾";
+    }
+
+    /* === Submenu (desktop) === */
+    .lds-menu .lds-nav .submenu {
       display: none;
       position: absolute;
       left: 50%;
       top: 100%;
       transform: translateX(-50%);
-      min-width: 180px;
+      min-width: 220px;
       margin: 0;
-      padding: 0.5rem 0;
+      padding: .5rem 0;
       list-style: none;
       background: var(--lds-bar-bg);
+      border-radius: 8px;
+      box-shadow: 0 10px 22px -12px rgba(0, 0, 0, .25);
       z-index: 1000;
     }
 
-    .lds-nav .more.open .submenu {
+    .lds-menu .lds-nav .submenu li a {
+      padding: .65rem 1rem;
       display: block;
     }
 
-    .lds-nav .submenu li a {
-      padding: 0.9rem 1.4rem;
-      font: inherit;
-      color: #fff;
-      background: transparent;
-      border: 0;
-      white-space: nowrap;
+    .lds-menu .lds-nav .more.open .submenu {
+      display: block;
     }
 
-    .lds-nav a:hover,
-    .lds-nav .more>button:hover,
-    .lds-nav .submenu li a:hover {
-      background: rgba(255, 255, 255, .10);
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 640px) {
-      .lds-nav {
-        flex-direction: column;
+    /* === Mobile panel === */
+    @media (max-width: 768px) {
+      .lds-menu .menu-inner {
+        justify-content: space-between;
       }
 
-      .lds-nav .more.hidden {
+      /* Only collapse if JS is active (progressive enhancement) */
+      .js .lds-menu .menu-toggler {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .js .lds-menu .menu-container {
+        position: relative;
+        width: 100%;
+      }
+
+      .js .lds-menu .menu-container .lds-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: var(--lds-bar-bg);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: max-height .25s ease, opacity .2s ease, visibility .2s ease;
+        box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .25);
+      }
+
+      .js .lds-menu .menu-container.open .lds-nav {
+        max-height: 80vh;
+        overflow: auto;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      /* No overflow bucket on mobile */
+      .lds-menu .lds-nav .more {
+        order: 999;
+      }
+
+      .lds-menu .lds-nav .more.hidden {
         display: none;
+      }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .lds-menu .menu-container .lds-nav {
+        transition: none;
       }
     }
   </style>
@@ -528,39 +609,37 @@
 </head>
 
 <body>
-  <div class="wrapper menu fluid">
-    <div class="container">
-      <div id="menu">
-        <div class="content-main">
-          <div class="block menu-main">
-            <div class="content">
-              <div class="menu-toggler">Menu<span class="icon"></span></div>
-              <div class="menu-container">
-                <ul class="lds-nav" id="ldsNav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="brainfactory.html">BrainFactory</a></li>
-                  <li><a href="program.html">Program</a></li>
-                  <li><a href="tickets.html">Tickets</a></li>
-                  <li><a href="speakers.html">Speakers</a></li>
-                  <li><a href="previous-participants.html">Who is attending?</a></li>
-                  <li><a href="travel.html">Travel & Venue</a></li>
-                  <li><a href="about-us.html">Meet the Team</a></li>
-                  <li><a href="values.html">Values</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="the-gallery.html">[Beta] The Gallery</a></li>
+  <!-- LDS Global Navigation -->
+  <div class="lds-menu">
+    <div class="menu-inner">
+      <button class="menu-toggler" id="menuToggle" aria-label="Open navigation" aria-controls="ldsNav"
+        aria-expanded="false">
+        Menu <span class="icon" aria-hidden="true"></span>
+      </button>
 
-                  <li class="more hidden">
-                    <button type="button" aria-haspopup="true" aria-expanded="false">More</button>
-                    <ul class="submenu"></ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <nav class="menu-container" role="navigation" aria-label="Primary">
+        <ul class="lds-nav" id="ldsNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brainfactory.html">BrainFactory</a></li>
+          <li><a href="program.html">Program</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="previous-participants.html">Who is attending?</a></li>
+          <li><a href="travel.html">Travel & Venue</a></li>
+          <li><a href="about-us.html">Meet the Team</a></li>
+          <li><a href="values.html">Values</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="the-gallery.html">[Beta] The Gallery</a></li>
+
+          <li class="more hidden">
+            <button type="button" aria-haspopup="true" aria-expanded="false" aria-controls="moreMenu">More</button>
+            <ul class="submenu" id="moreMenu"></ul>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
+
   <div class="container">
     <header class="header">
       <h1 class="main-title">Meet this year's Speakers</h1>
@@ -1256,7 +1335,6 @@
       currentActiveRowGroup = null;
     }
 
-    // Close bio when clicking outside
     document.addEventListener('click', function (event) {
       if (currentActiveIndex !== null &&
         !event.target.closest('.speaker-card') &&
@@ -1265,48 +1343,55 @@
       }
     });
 
-    // Close bio with Escape key
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && currentActiveIndex !== null) {
         closeAllBios();
       }
     });
 
-    // Initialize when page loads
+
     document.addEventListener('DOMContentLoaded', initializeSpeakers);
     function slugify(str) {
       return str
         .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')   // spaces & punctuation → -
-        .replace(/^-+|-+$/g, '');      // trim leading/trailing -
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
     }
-  </script>
-  <script>
-    (() => {
-      const MAX_VISIBLE = 4;
-      const nav = document.getElementById('ldsNav');
+    (function () {
+      document.documentElement.classList.add('js');
+      const MAX_VISIBLE = 6;
+      const root = document.querySelector('.lds-menu');
+      const nav = root.querySelector('#ldsNav');
       const moreLi = nav.querySelector('.more');
       const moreBtn = moreLi.querySelector('button');
       const subMenu = moreLi.querySelector('.submenu');
+      const toggleBtn = root.querySelector('#menuToggle');
+      const menuContainer = root.querySelector('.menu-container');
+
+      function closeMobileNav() {
+        menuContainer.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
 
       function redistribute() {
-
+        // Put everything back in the main row
         while (subMenu.firstChild) {
           nav.insertBefore(subMenu.firstChild, moreLi);
         }
         moreLi.classList.add('hidden');
+        moreLi.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
 
+        // Mobile: show everything; no "More"
+        if (window.innerWidth <= 768) return;
 
-        if (window.innerWidth <= 640) return;
-
-
-        const available = nav.parentElement.getBoundingClientRect().width;
-        let used = moreLi.offsetWidth;
+        // Desktop: measure available width and bucket overflow into "More"
+        const available = nav.parentElement.clientWidth; // container width
+        let used = moreLi.offsetWidth;                  // reserve space for "More"
         let shown = 0;
 
         [...nav.children].forEach(li => {
           if (li === moreLi) return;
-
           const fits = used + li.offsetWidth <= available;
           const underCap = shown < MAX_VISIBLE;
 
@@ -1315,19 +1400,59 @@
             shown += 1;
           } else {
             subMenu.appendChild(li);
-            moreLi.classList.remove('hidden');
           }
         });
+
+        if (subMenu.children.length) {
+          moreLi.classList.remove('hidden');
+        }
       }
-      moreBtn.addEventListener('click', () => {
-        const isOpen = moreLi.classList.toggle('open');
-        moreBtn.setAttribute('aria-expanded', isOpen);
+
+      // Hamburger toggle
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = menuContainer.classList.toggle('open');
+        toggleBtn.setAttribute('aria-expanded', String(isOpen));
+        if (!isOpen) {
+          moreLi.classList.remove('open');
+          moreBtn.setAttribute('aria-expanded', 'false');
+        }
       });
 
+      // "More" dropdown (desktop)
+      moreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = moreLi.classList.toggle('open');
+        moreBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Close on outside click / Esc
+      document.addEventListener('click', (e) => {
+        if (!root.contains(e.target)) {
+          moreLi.classList.remove('open');
+          moreBtn.setAttribute('aria-expanded', 'false');
+          closeMobileNav();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          moreLi.classList.remove('open');
+          moreBtn.setAttribute('aria-expanded', 'false');
+          closeMobileNav();
+        }
+      });
+
+      // Recalc when layout changes
       window.addEventListener('load', redistribute);
       window.addEventListener('resize', redistribute);
+      if ('ResizeObserver' in window) {
+        const ro = new ResizeObserver(redistribute);
+        ro.observe(nav.parentElement);
+      }
     })();
+
+
   </script>
+
 </body>
 
 </html>
