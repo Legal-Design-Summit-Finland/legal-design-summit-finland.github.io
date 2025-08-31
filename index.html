@@ -979,6 +979,91 @@
 				width: auto;
 			}
 		}
+
+		/* --- Sponsors --- */
+		.sponsors {
+			padding: 2rem 0;
+		}
+
+		.sponsors h3 {
+			text-align: center;
+			margin-bottom: 1.5rem;
+		}
+
+		/* rows become responsive grids */
+		.sponsor-row {
+			display: grid;
+			gap: clamp(12px, 2vw, 24px);
+			align-items: center;
+			/* center the boxes on the row */
+			justify-items: center;
+			/* center the content in each box */
+		}
+
+		/* # of columns on desktop */
+		.sponsor-row.primary {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.sponsor-row.secondary {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		/* each link is the “logo box” */
+		.sponsor-row a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: var(--cell-h, 120px);
+			/* default cell height */
+			padding: clamp(8px, 1.5vw, 16px);
+			/* breathing room so tall logos don’t touch edges */
+		}
+
+		/* different box heights per tier (optional) */
+		.sponsor-row.primary {
+			--cell-h: 140px;
+		}
+
+		.sponsor-row.secondary {
+			--cell-h: 110px;
+		}
+
+		/* images scale to fit box, never distort */
+		.sponsor-row img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			object-fit: contain;
+			/* keeps aspect ratio, no cropping */
+		}
+
+		/* --- Mobile / small tablets --- */
+		@media (max-width: 768px) {
+
+			.sponsor-row.primary,
+			.sponsor-row.secondary {
+				grid-template-columns: repeat(2, 1fr);
+				/* 2-across on mobile */
+			}
+
+			.sponsor-row.primary {
+				--cell-h: 96px;
+			}
+
+			.sponsor-row.secondary {
+				--cell-h: 84px;
+			}
+		}
+
+		@media (max-width: 420px) {
+
+			.sponsor-row.primary,
+			.sponsor-row.secondary {
+				grid-template-columns: 1fr;
+			}
+		}
 	</style>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -1118,30 +1203,27 @@
 		<!-- 1st-tier sponsors (row of 4) -->
 		<div class="sponsor-row primary">
 			<a href="https://www.helsinki.fi/en/faculty-law" target="_blank">
-				<img loading="lazy" src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University"
-					style="height:200px;">
+				<img loading="lazy" src="images/collabs/Helsingin-yliopisto-oikis.PNG" alt="Helsinki University">
 			</a>
 			<a href="https://newcode.ai/" target="_blank">
-				<img loading="lazy" src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai" style="height: 85px;">
+				<img loading="lazy" src="images/collabs/-Newcode.ai.svg" alt="Newcode.ai">
 			</a>
 			<a href="https://www.dlapiper.com/en/about-us/law-and" target="_blank">
-				<img loading="lazy" src="images/collabs/DLA Piper.jpg" alt="DLA Piper" style="height: 80px;">
+				<img loading="lazy" src="images/collabs/DLA Piper.jpg" alt="DLA Piper">
 			</a>
 			<a href="https://www.legora.com" target="_blank">
-				<img loading="lazy" src="images/collabs/Legora (word logo).png" alt="Legora" style="height: 70px;">
+				<img loading="lazy" src="images/collabs/Legora (word logo).png" alt="Legora">
 			</a>
 		</div>
 		<div class="sponsor-row secondary">
 			<a href="https://ey.com" target="_blank">
-				<img loading="lazy" src="images/collabs/EY_Law_ Black.png" alt="EY Law"
-					style="height: 80px !important;">
+				<img loading="lazy" src="images/collabs/EY_Law_ Black.png" alt="EY Law">
 			</a>
 			<a href="https://www.almainsights.fi/" target="_blank">
-				<img loading="lazy" src="images/collabs/Alma Insights__black.png" alt="Alma Insights"
-					style="height: 70px;">
+				<img loading="lazy" src="images/collabs/Alma Insights__black.png" alt="Alma Insights">
 			</a>
 			<a href="https://www.ilvessolutions.fi/en/" target="_blank">
-				<img loading="lazy" src="images/collabs/ilves logo.png" alt="Ilves Solutions" style="height: 70px;">
+				<img loading="lazy" src="images/collabs/ilves logo.png" alt="Ilves Solutions">
 			</a>
 		</div>
 	</section>
