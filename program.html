@@ -27,7 +27,7 @@
   <script type="text/javascript" src="scripts/vendor/formstone/lightbox.js"></script>
   <script type="text/javascript" src="scripts/vendor/formstone/viewer.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.0/html2pdf.bundle.min.js"></script>
+
 
 
   <script>
@@ -775,6 +775,153 @@
         transition: none;
       }
     }
+
+    /* === Download button (screen) === */
+    .download-toolbar {
+      max-width: 1200px;
+      margin: -10px auto 20px auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .download-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: #AEECE9;
+      color: #000;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(174, 236, 233, 0.4);
+      transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+      opacity: .9;
+    }
+
+    .download-btn:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+
+    .download-hint {
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* Utility to hide in print */
+    .print-hide {}
+
+    /* === Print styles === */
+    @media print {
+
+      /* Page setup */
+      @page {
+        size: A4;
+        margin: 16mm;
+      }
+
+      html,
+      body {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Hide navigation and decorative bits */
+      .lds-menu,
+      .floating-shapes,
+      .day-progress,
+      .party-section,
+      .print-hide,
+      .session-icon,
+      .speaker-icon {
+        display: none !important;
+      }
+
+      /* Keep core content readable */
+      #program-content {
+        max-width: 100% !important;
+      }
+
+      .agenda-section {
+        box-shadow: none !important;
+        border: 0;
+      }
+
+      /* Typography for print */
+      body {
+        font: 12pt/1.45 "Helvetica Neue", Arial, sans-serif;
+        color: #000;
+      }
+
+      h1.main-title {
+        margin-bottom: 6mm;
+        font-size: 22pt;
+      }
+
+      .agenda-subtitle {
+        color: #222;
+      }
+
+      /* Prevent awkward page breaks */
+      h1,
+      h2,
+      h3,
+      .day-header {
+        page-break-after: avoid;
+      }
+
+      .session-row,
+      .session-divider,
+      .day-header,
+      .party-header,
+      .session-details,
+      .session-details-content {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      /* Tidy up borders/accents for print */
+      .session-row {
+        border-bottom: 1px solid #ddd !important;
+        background: transparent !important;
+      }
+
+      .session-divider {
+        background: #eee !important;
+        color: #000 !important;
+      }
+
+      /* Expand any collapsed descriptions, if you add them later */
+      .session-details {
+        max-height: none !important;
+      }
+
+      /* Show link URLs after text (useful in PDFs) */
+      a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #444;
+      }
+
+      /* Remove animations/transforms in print */
+      * {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+      }
+    }
   </style>
 
   <title>Legal Design Summit</title>
@@ -818,6 +965,8 @@
 
     <div class="container">
       <h1 class="main-title">Program</h1>
+
+
       <p class="agenda-subtitle">
         Get ready to: <br><br>
         ✨ Be inspired by legal design leaders from all over the globe<br>
@@ -928,7 +1077,7 @@
               </div>
             </div>
             <div class="lunch-divider session-divider">
-              Full brain, hungry stomach – time for lunch! (Self-paid at local venues)
+              12:40–13:35 Full brain, hungry stomach – time for lunch! (Self-paid at local venues)
             </div>
           </div>
 
@@ -1227,6 +1376,13 @@
             <span class="party-emoji">🌟✨🎊</span>
           </div>
         </div>
+
+      </div>
+      <div class="download-toolbar print-hide" role="region" aria-label="Download">
+        <button id="downloadPdf" class="download-btn" aria-label="Download this program as PDF">
+          ⬇️ Download Program as PDF
+        </button>
+        <div class="download-hint">Opens your browser’s print dialog → choose “Save as PDF”.</div>
       </div>
     </div>
 
@@ -1391,6 +1547,10 @@
         ro.observe(nav.parentElement);
       }
     })();
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('downloadPdf');
+      if (btn) btn.addEventListener('click', function () { window.print(); });
+    });
   </script>
 
 </body>
