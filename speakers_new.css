@@ -1,0 +1,1139 @@
+< !DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Legal Design Summit Speakers</title><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /><meta property="og:site_name" content="Legal Design Summit" /><meta property="og:type" content="website" /><meta property="og:title" content="Legal Design Summit" /><meta property="og:image" content="images/meta.png" /><link rel="icon" type="image/png" href="images/favicon.png" /><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --teal: #AEECE9;
+    --ink: #333;
+    --muted: #666;
+    --bg: #fff;
+    --soft: #f8fffe;
+    --max: 1200px;
+    --radius: 12px;
+    --gap: 28px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.main-title {
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    padding: 24px 0 8px;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--muted);
+}
+
+/* ---------- Global Nav ---------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(125, 218, 208, .83);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+
+.nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 56px;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: #fff;
+}
+
+.nav-toggle {
+    margin-left: auto;
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.nav-toggle .icon {
+    margin-left: 8px;
+}
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow: hidden;
+    /* prevents wobble */
+}
+
+.nav-links a {
+    padding: 12px 14px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, .12);
+}
+
+/* Desktop overflow handling: becomes scrollable row if too tight */
+.nav-row {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: x proximity;
+    padding: 4px 0;
+    mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+
+.nav-row a {
+    scroll-snap-align: center;
+}
+
+/* Mobile menu */
+@media (max-width: 991px) {
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .nav-links {
+        position: absolute;
+        inset: auto 0 0 0;
+        top: 56px;
+        background: rgba(125, 218, 208, .97);
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height .25s ease, opacity .2s ease;
+    }
+
+    .nav-links.open {
+        max-height: 70vh;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-row {
+        display: grid;
+        gap: 2px;
+        padding: 8px;
+        overflow: visible;
+    }
+
+    .nav-row a {
+        padding: 14px 12px;
+        border-radius: 10px;
+    }
+}
+
+/* ---------- Sections ---------- */
+.section-title {
+    background: #e0f7f6;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    margin: 28px 0 18px;
+}
+
+/* ---------- Speakers Grid ---------- */
+.grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ---------- Card ---------- */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 16px;
+    border-radius: var(--radius);
+    background: #fff;
+    border: 2px solid transparent;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+}
+
+.card.active {
+    border-color: var(--teal);
+    background: var(--soft);
+    box-shadow: 0 8px 25px rgba(174, 236, 233, .25);
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--teal);
+    overflow: hidden;
+    margin-bottom: 16px;
+    flex: 0 0 auto;
+    transition: border-color .2s ease;
+}
+
+.card.active .avatar {
+    border-color: var(--ink);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter .25s ease;
+}
+
+.card.active .avatar img {
+    filter: grayscale(0%);
+}
+
+.name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.role {
+    font-size: .98rem;
+    color: var(--muted);
+    text-align: center;
+    margin: 6px 0 10px;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--teal);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.social a:hover {
+    background: #333;
+}
+
+.social .in::before {
+    content: "in";
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* ---------- Bio (shared logic mobile+desktop) ---------- */
+.bio {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: .0;
+    transition: max-height .35s ease, opacity .25s ease;
+    margin-top: 14px;
+    border: 2px solid var(--teal);
+    border-radius: var(--radius);
+    background: var(--soft);
+    padding: 0 0;
+    /* gets added when open */
+}
+
+.bio.open {
+    opacity: 1;
+    padding: 22px;
+}
+
+.bio-inner {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+.bio-col {
+    flex: 1 1 auto;
+}
+
+.bio h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.bio .bio-role {
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.bio .text {
+    color: #555;
+    font-size: .96rem;
+}
+
+.sessions {
+    margin-top: 18px;
+    background: var(--teal);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.sessions h4 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.sess {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 8px 0 0;
+}
+
+.sess .d {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.sess .t {
+    font-style: italic;
+    font-size: .92rem;
+    color: #555;
+}
+
+/* Expanded card layout on desktop */
+@media (min-width: 992px) {
+    .card.expanded {
+        grid-column: span 2;
+    }
+
+    .card.expanded .bio-inner {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 22px;
+        align-items: start;
+    }
+
+    .card.expanded .bio-inner .bio-col:first-child {
+        grid-column: 2;
+    }
+
+    /* we only render right column, but keeps rule simple */
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 768px) {
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bio.open {
+        padding: 18px;
+    }
+
+    .bio-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 1.05rem;
+    }
+
+    .role {
+        font-size: .9rem;
+    }
+}
+
+/* ---------- Focus ring for keyboard users ---------- */
+:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+}
+
+</style></head><body>< !-- Global Nav --><header class="nav" role="banner"><div class="nav-inner"><div class="brand" aria-label="Legal Design Summit">LDS</div><button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu <span class="icon" aria-hidden="true">☰</span></button><nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary"><div class="nav-row" id="navRow"><a href="index.html">Home</a><a href="brainfactory.html">BrainFactory</a><a href="program.html">Program</a><a href="tickets.html">Tickets</a><a href="speakers.html" aria-current="page">Speakers</a><a href="previous-participants.html">Who is attending?</a><a href="travel.html">Travel &amp;
+
+Venue</a><a href="about-us.html">Meet the Team</a><a href="values.html">Values</a><a href="blog.html">Blog</a><a href="the-gallery.html">[Beta] The Gallery</a></div></nav></div></header><main class="container"><header class="header"><h1 class="main-title">Meet this year's Speakers</h1>
+ <p class="subtitle">✨Shaping the next chapter in Legal Design✨</p></header><div id="speakers"></div></main><script>const speakersData=[ {
+    section: "The New Normal - Generative AI in Law",
+    name: "Antti Innanen",
+    position: "CEO of Dot., Co-founder of Legal Design Summit",
+
+    image: "images/speakers/2025/Antti Innanen_crop.jpg",
+    linkedin: "https://www.linkedin.com/in/anttiinnanen/",
+
+    bio: "Antti is the CEO of Dot. and co-founder of the Legal Design Summit. A true Legal Design OG, he is one of the most widely recognized voices in the field and has played a key role in shaping the global movement toward more human-centered law. Lately, Antti has been exploring the frontiers of AI and agentic systems. His upcoming book, Prompted: How to Create and Communicate with AI, will be published by Routledge in 2025. For the first time since 2016, Antti is back on the Summit stage, and this time with a bang.",
+    sessions: [ {
+        day: "Wednesday - BrainFactory Day", title: "BrainFactory: Can AI Agents Master Legal Design?"
+    }
+
+    ,
+    {
+    day: "DAY 1 - Thursday", title: "Opening keynote: Legal Design in the Age of AI"
+}
+
+]
+}
+
+,
+{
+section: "The New Normal - Generative AI in Law",
+name: "Ilona van de Kooi",
+position: "Researcher at the Convergence Center for Law, Design & AI (The Delft University of Technology & Erasmus School of Law)",
+
+image: "images/speakers/2025/Ilona van de Kooi.jpg",
+linkedin: "https://www.linkedin.com/in/ilona-van-de-kooi/",
+bio: "Ilona recognized early on that technology would reshape the legal field. With over 15 years of experience in legal higher education, she strongly advocates for integrating design thinking and visual communication into law curricula. She sees design as a critical lens—one that helps future legal professionals assess, question, and shape how technology is adopted. She believes meaningful legal innovation requires interdisciplinary collaboration within multidisciplinary teams. Her current research explores how legal professionals in the Netherlands understand and apply AI in their daily practice.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "The Art of Breaking down Silos Using the Power of Design and AI"
+}
+
+,
+]
+}
+
+,
+{
+section: "The New Normal - Generative AI in Law",
+name: "Kim Raad",
+position: "Senior information designer at Stibbe",
+
+image: "images/speakers/2025/Kim Raad.png",
+linkedin: "#",
+bio: "With over 20 years of experience and a background in visual journalism, Kim has worked across sectors including healthcare, finance, and law. Since 2019, she has been the lead designer and legal design adviser at the law firm Stibbe. She is passionate about clarifying complex expert information with visualisation, human-centred design and is a strong advocate for Legal Design in multidisciplinary teams. Kim uncovers the deeper layers—the human logic, the hidden assumptions, the untold stories with design thinking methods. She asks the questions lawyers often don’t think to ask—or don’t dare to.",
+
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "The Art of Breaking down Silos Using the Power of Design and AI"
+}
+
+,
+
+]
+}
+
+,
+{
+section: "The New Normal - Generative AI in Law",
+name: "Prof. Dr. Christian Djeffal",
+position: "Tenured Professor, Technical University of Munich (TUM)",
+
+image: "images/speakers/2025/Christian_Djeffal.jpg",
+linkedin: "#",
+bio: "Christian is a Tenured Professor for Professor for Law, Innovation and Legal Design at the Technical University of Munich (TUM) and a certified design thinking coach. His overarching research explores societal stability and change, with a focus on the ability to steer these dynamics. To study this in practice, Christian examines the interplay between law and technology, particularly in relation to emerging fields like artificial intelligence and the Internet of Things. He champions integrative and transdisciplinary legal approaches and founded the Constitutional Design Lab, which emphasizes normative participatory design, designerly knowledge creation, and creative methods to address complexity.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Activate AI in Legal Design: The Art of Legal Prompt Engineering"
+}
+
+]
+}
+
+,
+{
+section: "Design Thinking in Government and Law-making",
+name: "Eeva Attila",
+position: "Senior Ministerial Adviser, LL.M., PhD, Ministry of Justice",
+
+image: "images/speakers/2025/Eeva_Attila.jpg",
+linkedin: "",
+bio: "Eeva is a lawyer and linguist with a particular interest in legal language, especially legislative language. She works as Senior Ministerial Adviser in Legal Revision at the Finnish Ministry of Justice, focusing on law drafting and legislative texts. Previously, she worked in the application of law, including in various courts. For a long time, her free-time hobby was studying the Finnish language at university, until last spring she defended her PhD with a dissertation on Finnish legislative language.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Law Drafting Meets Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "Design Thinking in Government and Law-making",
+name: "Saija Suominen",
+position: "Senior Specialist, LL.B., M.A.",
+
+image: "images/speakers/2025/Saija Suominen.jpg",
+linkedin: "#",
+bio: "Saija works as a Senior Specialist in Legal Revision at the Finnish Ministry of Justice. Her journey into legal design started from a slightly different angle — through language. She worked for many years as a legal translator in both the banking sector and a law firm, where she also had the chance to participate in legal design projects. Saija holds a Master’s degree in Translation Studies and a Bachelor of Laws, and she is especially interested in how language, structure, and user experience intersect in legal texts. She is excited to be part of the Legal Design Summit and to share ideas on how we can rethink legal communication together.",
+
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Law Drafting Meets Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "Design Thinking in Government and Law-making",
+name: "Jenni Hakkarainen",
+position: "Postdoctoral Researcher, Institute of Criminology and Legal Policy, University of Helsinki",
+
+image: "images/speakers/2025/Jenni Hakkarainen.jpg",
+linkedin: "https://www.linkedin.com/in/jenni-hakkarainen-759107162/",
+bio: "Jenni is a postdoctoral researcher at the University of Helsinki. Currently she works at the faculty of Social sciences, Institute of criminology and legal policy. She is also a researcher at the Legal Tech Lab. Her teaching and research focuses on socio-legal approach on technology, access to justice and technology regulation.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Lawmaker as Designer"
+}
+
+]
+}
+
+,
+{
+
+section: "Design Thinking in Government and Law-making",
+name: "Mirza Chiragov",
+position: "Academic Director at the Digital Law Lab Azerbaijan, CEO of Dejured, ELTA Ambassador in Azerbaijan",
+image: "images/speakers/2025/Mirza Chiragov_crop.jpeg",
+linkedin: "#",
+bio: "Mirza has extensive experience in corporate law, bankruptcy, and litigation. Having witnessed firsthand the internal complexities and barriers within the legal profession, he realized that law must be dynamic, adaptable, and accessible. Driven by this vision, Mirza actively promotes the concept of 'plan law' (clear and understandable law) across Azerbaijan, Uzbekistan, Kazakhstan, and beyond. As Academic Director of the Digital Law Lab, he leads research projects, hosts podcasts, and frequently delivers public lectures. Mirza is also building a platform in Azerbaijan to provide ordinary citizens with user-friendly legal documents, applying Legal Design principles. He holds two LL.M. degrees, is currently pursuing his PhD, and teaches law courses at several universities. Additionally, Mirza was honored as the Lifetime Contribution to Innovation Winner at the 2025 European Legal Innovation & Technology Awards.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Driving Systemic Change – A Regional Perspective"
+}
+
+]
+}
+
+,
+{
+section: "Design Thinking in Government and Law-making",
+name: "Sophie Ranaivoharisoa",
+position: "PhD Candidate in Law, University of Antananarivo",
+
+image: "images/speakers/2025/Sophie Ranaivoharisoa_crop.jpg",
+linkedin: "https://www.linkedin.com/in/sophiernh/",
+bio: "Sophie is a PhD candidate in Law, holding a master’s in business law from the University of Antananarivo. Her doctoral research focuses on the protection of consumer data privacy in Madagascar through Corporate Digital Responsibility, proposing Legal Design as a practical approach to address this challenge. With the accelerated growth of digital technology, she is committed to inclusive legal innovation, aiming to improve access to legal information in Madagascar by accounting for systemic and cultural realities. As a Mandela Washington Fellow under the Young African Leaders Initiative, she advocates for the integration of Southern perspectives in global legal conversations.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Driving Systemic Change – A Regional Perspective"
+}
+
+]
+}
+
+,
+{
+section: "Design Thinking in Government and Law-making",
+name: "Suparat Fern Sawetamal",
+position: "Global Engagement Lead",
+
+image: "images/speakers/2025/Suparat Fern Sawetamal_Photo.jpg",
+linkedin: "https://www.linkedin.com/in/suparat-fern-sawetamal-7b1505a5/",
+bio: "Fern has over four years of experience in the justice sector, specializing in building and managing international partnerships to advance rule of law reform and people-centered justice initiatives domestically and regionally. Her work centers on showcasing local innovations, facilitating knowledge exchange, and designing evidence-based projects. She established strategic partnerships with the World Justice Project and OECD to strengthen Thailand’s justice system through data-driven reforms, and continues to manage these collaborations while expanding global outreach and fostering innovation. Fern holds a B.A. in Business and Psychology from Brandeis University, USA, and an LL.B. from Chulalongkorn University, Thailand.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Driving Systemic Change – A Regional Perspective"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Dr. Naji Shah",
+position: "",
+
+image: "images/speakers/2025/Naji Shah Mohammadi_crop.jpeg",
+linkedin: "#",
+bio: "Naji is a legal scholar and strategist working at the intersection of law and business. His work explores how legal thinking can drive alignment, clarity, and strategic value. Drawing on principles of proactive law, legal design, and systems thinking, he focuses on transforming legal tools into frameworks that support collaboration, decision-making, and long-term impact. His approach integrates legal insight with business strategy to address complex challenges, foster innovation, and create value. Naji is committed to advancing legal thinking that is adaptive, intelligent, and deeply connected to the evolving needs of organizations and society.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "The Power and Value of Design in Law"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Peter Hornsby",
+position: "Designer",
+
+image: "images/speakers/2025/Peter Hornsby_crop.jpg",
+linkedin: "https://www.linkedin.com/in/drpeterhornsby/",
+bio: "Peter originally studied human factors, learning about the science behind design, then did a computer science PhD in low-code programming. He has worked in UX since 2001, tackling complex design problems in defence, telecoms, and fintech. Since 2020 he has used research, design, and testing to improve legal documents for organisations ranging from startups to multinationals, and helped legal tech companies create better experiences. ",
+sessions: [ {
+    day: "Wednesday - BrainFactory Day", title: "BrainFactory Workshop: Legal Design from First Principles"
+}
+
+,
+{
+day: "DAY 1 - Thursday", title: "How to Stop Dumb Design Confusing Smart People"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Dr. Ade Mabogunje",
+position: "",
+
+image: "images/speakers/2025/Ade Mabogunje_crop.jpg",
+linkedin: "https://www.linkedin.com/in/ade-mabogunje-579a2/",
+bio: "Ade is a scientist at Stanford University, where he explores the intersection of designing, learning, engineering, innovation, and capital formation. He has done field research studies on innovation ecosystems in California, Nigeria, and India. Before that, he was associate director of Stanford’s Center for Design Research (CDR), and lead of the Real-time Venture Design Lab (ReVeL). His industry experience includes engineering positions at the oil company Elf (now Total) in Nigeria, and research collaboration with Artificial Intelligence Scientists at NASA Ames. He has published papers on design theory and methodology, knowledge management, emotions in engineering, design protocol analysis, and engineering-design education.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Opening up Possibilities for Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Abdul Rehman Kahn",
+position: "Professor",
+
+image: "images/speakers/2025/Abdul Rehman Kahn.jpg",
+linkedin: "https://www.linkedin.com/in/abdul-rehman-khan/",
+bio: "Abdul is a Professor at Seton Hall Law School’s Center for Social Justice, where he directs the Housing & Legal Design Clinic and founded the New Jersey Legal Design Lab—a social change laboratory where tenants, organizers, and students co-create legal tools, strategies, and governance structures to build tenant-led housing futures beyond the crisis of eviction. His work brings together movement lawyering, participatory design, and experiential learning to advance democratic civic infrastructure. He focuses on the processes by which communities define problems, set agendas, and build solutions as outcomes of collective power.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Opening up Possibilities for Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Joaquín Santuber",
+position: "Research Group Lead, Metaverse Lab, LIFT_C, Johannes Kepler University Linz, Austria",
+
+image: "images/speakers/2025/Joaquin Santuber.jpg",
+linkedin: "https://www.linkedin.com/in/joaquinsantuber/",
+bio: "Joaquín is a lawyer and obtained his PhD in Design and IT-Systems from the Hasso-Plattner-Institute, Potsdam, Germany on the topic of designing for digital justice. As the lead of Metaverse Lab research at the Linz Institute for Transformative Change (LIFT_C), Johannes Kepler University Linz, he works with art-based and design approaches to legality in digital environments, as well as critical approaches to public and judicial innovation. He has been Assistant Professor at Universidad de Los Andes, Colombia, fellow of the GovTech LATAM Lab, research fellow at the HIIG, Berlin, and visiting researcher at the Center for Social Studies, University of Coimbra. Currently Joaquín serves as editor of the Legal Design Journal.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Opening up Possibilities for Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Jules Rochielle Sievert",
+position: "Academic, Design Researcher, Educator",
+
+image: "images/speakers/2025/Jules Sievert.jpeg",
+linkedin: "https://www.linkedin.com/in/julesrochielle/",
+bio: "The Creative Director of NuLawLab since 2013, they are a Ph.D. candidate in the Interdisciplinary Doctoral Program at Northeastern University’s College of Art, Media, and Design, where their dissertation develops a transformative and transdisciplinary framework for legal design. Jules was the Primary Investigator of NuLawLab’s National Endowment for the Arts Research Lab on Spatial Justice in East Boston and a Co-Principal Investigator on a special initiative funded by the Mellon Foundation. In the past, Jules has held positions such as Ambassador for Health Equity at PolicyLink and Creative Placemaking Policy Fellow at Arizona State University through the Herberger Institute for Design and the Arts.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Opening up Possibilities for Legal Desig"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Siddharth Peter de Souza",
+position: "Assistant Professor at Centre for Interdisciplinary Methods, Warwick University",
+
+image: "images/speakers/2025/Siddharth De Souza.png",
+linkedin: "https://www.linkedin.com/in/siddharth-peter-de-souza/",
+bio: "Siddharth’s work explores how data is governed globally in contested, and plural settings. He has recently published a monograph titled Designing Indicators for a Plural Legal World which discusses how rule of law indicators needs to be reimagined in contexts and countries in the Global Majority. Siddharth is the founder of Justice Adda, a law and design social venture which seeks to build legal literacy and awareness in India.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: Opening up Possibilities for Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Jovita Morta Gabne",
+position: "Attorney-at-law, Managing Partner",
+
+image: "images/speakers/2025/Jovita Morta Gabne_crop.jpg",
+linkedin: "#",
+bio: "Jovita is a Managing Partner, Attorney-at-law at Gabné.Gabnys Entertainment, Dispute Resolution and Tech Law Boutique. She has 20 years of practice, including 11 years at Ellex (Top tier Baltic Law Firm) where she led the litigation and investigations team. She successfully represents clients in commercial, intellectual property, professional liability, and corporate disputes. Jovita has extensive experience handling complex, high-value cases that have garnered media attention and shaped judicial practice. Jovita is a charismatic expert in dispute resolution and intellectual property, a pioneer of fashion law in Lithuania, and an advocate for creative industries.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "A Life-Changing Merger: When My Passion for Design Met the Practice of Law"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Christine Inkinen",
+position: "Legal Counsel, Neste",
+
+image: "images/speakers/2025/Christine Inkinen_crop.jpg",
+linkedin: "https://www.linkedin.com/in/christine-inkinen/",
+bio: "Christine is a legal counsel at Neste, a major chemical manufacturing company, and a former partner at Dot. Legal Design Agency. As a one-time-consultant turned in-house counsel, Christine has a unique perspective on demand and implementation of legal design in a large corporation. Her legal design journey dates back to 2017, when she first volunteered at Legal Design Summit and became an immediate advocate.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: The ROI of Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Hannele Korhonen",
+position: "Business Design & Innovation Coach, PhD Intuition Researcher",
+
+image: "images/speakers/2025/Hannele Korhonen.jpg",
+linkedin: "https://www.linkedin.com/in/hannelekorhonen/",
+bio: "Hannele is a Business Design & Innovation Coach and PhD researcher exploring intuition in law and design. She’s the founder of Lawyers Design School, a global learning-first legal design platform for legal innovators. With over 25 years of experience, she’s an ex-corporate lawyer, founder of her own law firm, and co-founder of a legal tech startup. Her work blends practical experience with research, helping professionals reimagine law through legal design and intuition. Her coaching, programs, and workshops support purpose-driven innovators in building human-centered services and businesses that are both impactful and aligned.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Fireside chat: The ROI of Legal Design"
+}
+
+]
+}
+
+,
+{
+
+section: "The Power and Value of Design in Law",
+name: "Piia Madissoo",
+position: "Legal Transform & Operate Lead (EY Finland)",
+
+image: "images/speakers/2025/Piia Madissoo.JPG",
+linkedin: "https://www.linkedin.com/in/piia-madissoo-legal-operations/",
+bio: "Piia leads the development of EY’s Legal Transform & Operate business in Finland. Prior to this role Piia was one of the first full-time in-house legal operations professionals in Finland. Before immersing herself fully into the world of legal operations she worked with several IT projects, both in a legal role, as well as a Steering Manager. By education Piia has a master’s degree both in economics and business administration, as well as in law. Piia is truly passionate about legal operations and everything falling under its umbrella, legal design included.",
+sessions: [ {
+    day: "Wednesday - BrainFactory Day", title: "BrainFactory Workshop: Enabling Digital Transformation Through Legal Design"
+}
+
+,
+{
+day: "DAY 1 - Thursday", title: "Fireside chat: The ROI of Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "The Power and Value of Design in Law",
+name: "Karma Dabaghi",
+position: "Assistant Professor",
+
+image: "images/speakers/2025/Karma Dabaghi_crop.jpg",
+linkedin: "https://www.linkedin.com/in/karmadabaghi/",
+bio: "Karma is an architect, product designer, and university professor whose work blends societal critique with innovative design. Her research explores two primary areas: the role of technological advancements in design education, and the intersection of political activism, legal design, and dissensual practices in urban environments. Within the field of Legal Design, she investigates how architects and graphic designers can use design methodologies to represent facts, create evidence, and foster accountability, with a focus on preventing future disasters and enhancing societal justice.",
+sessions: [ {
+    day: "DAY 1 - Thursday", title: "Closing keynote: Merging Law and Design"
+}
+
+]
+}
+
+,
+{
+section: "Designing Sustainable Societies",
+name: "Ebru Metin",
+position: "Doctoral Researcher at TalTech, Coordinator of TalTech Legal Lab",
+
+image: "images/speakers/2025/Ebru_Metin 1.jpeg",
+linkedin: "https://www.linkedin.com/in/ebrumetin/",
+bio: "Ebru is a Doctoral Researcher at Tallinn University of Technology and Coordinator of the TalTech Legal Lab, as part of TalTech Law School. Her interdisciplinary research explores how legal design can reduce regulatory complexity, making corporate sustainability frameworks more accessible, actionable, and effective for businesses, policymakers, and stakeholders. She is also the Founder of award-winning social enterprise, Legal Design Turkey, that had successfully carried out two legal information design projects with UNDP Turkey (2021) and UN Women (2024). Her work has been recognized internationally, including awards/honours from the UNDP Social Innovation Support Programme (2021), the British Council (2022), Euclid Network (2022), International Legal Technology Association (2022) and US Department of State/Vital Voices (2022).",
+sessions: [ {
+    day: "Wednesday - BrainFactory Day!", title: "Legal Design for Sustainability"
+}
+
+,
+{
+day: "DAY 2 - Friday", title: "Opening keynote: Dear Business: You Can’t Spell Sustainability Without Human Rights and Legal Design"
+}
+
+]
+}
+
+,
+{
+section: "Designing Sustainable Societies",
+name: "Anne Ketola",
+position: " PhD, Senior Researcher",
+
+image: "images/speakers/2025/Anne Ketola_crop.jpg",
+linkedin: "https://www.linkedin.com/in/anne-ketola-02629a2b6/",
+bio: "Anne is a linguist who specializes in cognitive accessibility and plain language. Her recent research has focused on the accessibility of contract language and design methods that support the comprehension of contracts. Ketola is the Principal Investigator in the Contract Language research project, conducted by the JARGONFREE research group at Tampere University, Finland. The project examines how complex and vague language used in supply chain contracts obscures the contract parties’ sustainability commitments.",
+sessions: [ {
+    day: "Wednesday - BrainFactory Day", title: "Legal Design for Sustainability"
+}
+
+,
+{
+day: "DAY 2 - Friday", title: "Can Contracts Save the World?"
+}
+
+]
+}
+
+,
+
+{
+section: "Designing Sustainable Societies",
+name: "Anna Hurmerinta-Haanpää",
+position: "LL.D., University Lecturer",
+
+image: "images/speakers/2025/Anna Hurmerinta-Haanpää_crop.jpg",
+linkedin: "https://www.linkedin.com/in/annahurmerinta/",
+bio: "Anna is a university lecturer at Aalto University Business School. She teaches a range of subjects to prospective business leaders, including corporate sustainability, sustainable contracting, proactive contracting, and contract design. Her current research interests include corporate sustainability regulation, sustainable contracting practices, and contract language. She has a strong preference for working in multiprofessional and multidisciplinary teams. In addition to her teaching and research activities, Hurmerinta-Haanpää serves as the Editor-in-Chief of the Finnish academic journal, Oikeus, and provides training on her areas of expertise to a range of organizations and professionals.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Can Contracts Save the World?"
+}
+
+]
+}
+
+,
+{
+section: "Designing Sustainable Societies",
+name: "Nina Toivonen",
+position: "Doctoral Researcher, University of Helsinki",
+
+image: "images/speakers/2025/Nina Toivonen.jpeg",
+linkedin: "https://www.linkedin.com/in/nina-toivonen-85300b20/",
+bio: "Nina is a doctoral researcher in law at the University of Helsinki, Finland. Her doctoral research (“Law as Developing”) explores the theoretical foundations of systemic design of law, drawing particularly on insights from systems sciences and critical design research to address regulatory challenges related to sustainability. Toivonen holds a master’s degree in legal design and legal expertise from Laurea University of Applied Sciences. She has previously worked as a legal designer and legal counsel and co-hosted Legal Design Podcast.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "What if Birds Could Tell Us What is Right? A Curious Visit to the World of Designing with the More-than-human"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+    name: "Laura Márquez Martínez",
+    position: "Justice Innovator",
+
+    image: "images/speakers/2025/Laura Marquez_crop.jpeg",
+    linkedin: "#",
+    bio: "Laura is Director and co-founder of ÏO Justice. After 13 years of judicial experience across Latin America, Europe, and the US, she has advised on legal technology for 7 years, focusing on access to justice through digital solutions. She holds an LL.M. from NYU, and Master's in Human Rights from ITAM, and in Legal Argumentation from the University of Alicante; she serves as a fellow of UNAM's LIDIA Artificial Intelligence Research Group and as co-leader at the Center for Innovation and Access to Justice. She led the development of IALucIA—an AI legal assistant advancing Ibero American open justice ecosystem.",
+    sessions: [ {
+    day: "DAY 2 - Friday", title: "Artificial Intelligence  for Open Justice: Conscious, Community-driven Solutions"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Dorra Harrar",
+position: "Legal Design Expert Practitioner",
+
+image: "images/speakers/2025/Dorra_Harrar.jpg",
+linkedin: "https://www.linkedin.com/in/dorra-harrar-15b427137/",
+bio: "Dorra  is an expert practitioner in legal design and founder of Legal.D, the first legal design firm in Tunisia and the MENA region. Driven by a conviction that law must serve people, not systems, she uses creativity and  human-centered solutions to complex legal challenges. Her leadership earned her the WorldCC Excellence & Innovation Award (2022) for revolutionary contract design and a dual shortlist for the African Legal Innovation Awards (2025). Her practice encompasses contract design, access to justice , and privacy by design.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Beyond Brochures: Legal Design as a Powerful Driver for Systemic Justice Reform in Tunisia"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Natalia Grant",
+position: "Sr. UX Researcher",
+
+image: "images/speakers/2025/NataliaGrant_crop.jpeg",
+linkedin: "https://www.linkedin.com/in/nataliavgrant/",
+bio: "Legal Design enthusiast with over 20 years in UX, Natalia pioneered usability studies in Colombia and served as Practitioners Vice-Chair for SIGCHI Latam. Formerly founder and co-director of Usaria, she led global research projects across varied contexts and technologies. Her work spans startups to Fortune 500s, optimizing digital content, AI tools, wearables, and physical products, always with a user-centered focus. She holds an MA in Applied Imagination from the University of the Arts London and specializes in human-centered innovation. Currently, she evolves Legal Design at Jaramillo Villamizar making complex experiences clearer while honoring legal rigor.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Unlocking Clarity: UX Research Insights from Real Legal Experiences"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Angélica Flechas",
+position: "CEO and founder at Háptica",
+
+image: "images/speakers/2025/Angelica_Flechas.jpeg",
+linkedin: "https://www.linkedin.com/in/angélica-flechas-0867532b/",
+bio: "Angélica is a lawyer with a minor in Commercial Law, a designer from Universidad de los Andes, and holds an MBA from Hult Business School in Boston. She is also the founder and general manager of Háptica, the first consulting firm in Colombia dedicated to designing services and implementing Legal Service Design methodologies. Through this work, she has collaborated with banks, insurance companies, and consumer and technology companies in Chile, Colombia, Mexico, Peru, and Ecuador. Thanks to her methodological perspective, she has been a speaker at the Service Design Network Global Conference in Toronto and the Legal Design Summit in Helsinki",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Legal Service Design: A Tool for Rethinking Reproduction"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Aaron Leakey",
+position: "Professor",
+
+image: "images/speakers/2025/Aaron_Leakey.png",
+
+bio: "Aaron is a research fellow at the BC access to Justice Center for Excellence and instructs in law and dispute resolution at the University of Victoria (UVic). Aaron has a long history in dispute resolution education and practice, including as an instructor (Family Justice) at the Justice Institute of BC. He holds an MA in theology (Regent College) and an MA in Dispute Resolution (UVic), in addition to certifications in mediation from Mediate BC and Family Mediation Canada. Currently, Aaron is completing a PhD at UVic where he studies the intersection of legal design and intimate partner violence.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: Designing with, not for: Revisioning Justice as Trauma-Informed and Person-Centered"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Emily Oliver",
+position: "BeyondText Founder",
+
+image: "images/speakers/2025/emilyoliver_photo.jpeg",
+
+bio: "Emily continues to develop trauma-informed approaches to legal co-design for systemic change while working with top law firms in the UK and, more recently, Australia. Emily is the Founder of BeyondText, a creative co-production agency for people-powered systems change, not for profit. BeyondText works with collaborators ranging from the legal and education sectors to refugee camps and hospitals, together with partners including the UN, the UK’s National Health Service (NHS), and the Lebanese National Mental Health Programme. Emily’s expertise spans purpose-driven tech, arts, and social innovation, having founded the UK’s largest crowdfunding website.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: Designing with, not for: Revisioning Justice as Trauma-Informed and Person-Centered"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Jeremie Quiohilag",
+position: "Principal Project Manager, NSW Department of Communities and Justice",
+
+image: "images/speakers/2025/Jeremie Quiohilag.jpg",
+linkedin: "https://www.linkedin.com/in/jeremie-quiohilag-004356234/",
+bio: "Jeremie is a Principal Project Manager with the NSW Department of Communities and Justice in Australia. A lawyer with 25 years’ experience working in social justice, she has dedicated her career to improving access to justice for people excluded by the legal system. During her years as a practising lawyer, Jeremie founded a number of local and state-wide specialist legal services and now leads groundbreaking work at the intersection of law, design, and technology. Jeremie is currently spearheading the development of an Australia-first digital service that helps domestic and family violence victim-survivors stay safe - using trauma-informed, victim-centred design to deliver real-world impact where it matters most.",
+
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: Designing with, not for: Revisioning Justice as Trauma-Informed and Person-Centered"
+}
+
+]
+}
+
+,
+{
+section: "Designing Access to Justice",
+name: "Scott Young",
+position: "Service Designer | Australia",
+
+image: "images/speakers/2025/Scott Young 1 500-500.png",
+linkedin: "https://www.linkedin.com/in/scottyoungau/",
+bio: "Scott is a multidisciplinary service designer with over a decade of experience working across government, science, environment, and now justice. He brings a strong foundation in human-centred design and systems thinking to tackle complex public challenges - especially those that affect people at their most vulnerable. Currently leading design on initiatives within Australia's justice system, Scott works at the intersection of trauma-informed practice, technology, and policy reform. He believes that when we deeply understand the lived experiences of people and design from multiple perspectives, we improve systems and restore trust. Scott’s practice blends creative problem-solving, theoretical rigour, and a commitment to impact. His focus is always on making the world better, one double diamond at a time.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: Designing with, not for: Revisioning Justice as Trauma-Informed and Person-Centered"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Barbora Obracajova",
+position: "Lawyer, Attorney-at-Code",
+
+image: "images/speakers/2025/Barbora_Obracajova.png",
+linkedin: "https://www.linkedin.com/in/barboraobracajova/",
+bio: "Barbora is a lawyer, legal designer, and educator. As Head of Project Management at Dentons Europe, she leads the project management lab supporting legal service excellence in complex matters. At Charles University in Prague, her course Modern Lawyers: Innovation, Technology, and Design gives space to the next generation of legal innovators to rethink the future of law. Barbora shares her notes on legal design and innovation on her blog, Attorney-at-Code.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: From Primary School to University: How Legal Design can Redesign Legal Literacy and Education"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Michael Doherty",
+position: "Professor of Legal Design",
+
+image: "images/speakers/2025/Michael Doherty.jpg",
+linkedin: "https://www.linkedin.com/in/michaeldoherty1968/",
+bio: "Biography: Michael Doherty is Faculty Director of Undergraduate Education, Lancaster University, UK. He is co-author of Transforming Higher Education Through Human-Centred Design (Routledge 2024), co-founder of the Connecting Legal Education online community and a former Chair of the Association of Law Teachers. He is the founding editor-in-chief of the Legal Design Journal, and has published on legal design education, design theory, disciplinarity and cultural norms.",
+sessions: [ {
+    day: "Wednesday - BrainFactory Day", title: "BrainFactory Workshop: Legal Design Writing - Telling the World and Getting Heard"
+}
+
+,
+{
+day: "DAY 2 - Friday", title: "Fireside chat: From Primary School to University: How Legal Design can Redesign Legal Literacy and Education"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Ruy Coppola Jr",
+position: "Founder, LawInova",
+
+image: "images/speakers/2025/Ruy Coppola Jnr.JPG",
+linkedin: "https://www.linkedin.com/in/ruycoppolajr/",
+bio: "Ruy is a lawyer, professor, and legal designer with over 23 years of experience in legal education. He holds a Ph.D. in Law and is the founder of LawInova, a Brazilian consultancy focused on innovation in the legal field. Since 2018, he has been redesigning how law is taught and practiced — combining design, creativity, and human-centered approaches to build more accessible, engaging, and future-oriented legal experiences.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: From Primary School to University: How Legal Design can Redesign Legal Literacy and Education"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Tiago Guerreiro",
+position: "Lawyer, PLMJ",
+
+image: "images/speakers/2025/Tiago Guerreiro_crop.jpg",
+linkedin: "https://www.linkedin.com/in/tflguerreiro/",
+bio: "Tiago is lawyer specialized in litigation and social economy. A few years ago, Tiago boldly wrote on a résumé: “designer of legal solutions.” It sounded odd, but he was a litigation lawyer who had just launched a design company – so why not? Law in Portugal was still black-and-white, and design wasn’t even on its radar. Then Tiago came across legal design, and everything clicked. Now, he tries to add that pinch of salt to law, making the legal system better for its users – everyone.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Fireside chat: From Primary School to University: How Legal Design can Redesign Legal Literacy and Education"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Peegi Kaibald",
+position: "Service Designer, State Shared Service Centre of Estonia (RTK)",
+
+image: "images/speakers/2025/Peegi Kaibald.jpg",
+linkedin: "https://www.linkedin.com/in/peegi-kaibald/",
+bio: "Peegi is a service designer and business analyst in the Estonian public sector. She leads legal design projects in grant measure, information, process, and information system design. Passionate about legal design and co-creation, she holds master’s degrees in service innovation and design, information systems analysis and design, and translation. Drawing on experience in EU regulations, institutions, and public sector initiatives, she drives innovation by creating practical, user-friendly solutions that break silos and benefit both end users and government. In 2024, she and her colleagues at the Estonian State Shared Service Centre received the prestigious Estonian Design Award in the “Game Changer” category for transformative legal design work.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Mission Impossible: Designing the Mindset of Public Officials"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Outi Nokkonen",
+position: "Service Designer, Kolmas Persoona",
+
+image: "images/speakers/2025/Outi Nokkonen.jpg",
+linkedin: "https://www.linkedin.com/in/nokkonen/",
+bio: "Outi is a Finnish service designer with over a decade of experience in the public sector. She has worked both in-house at the City of Tampere and as an entrepreneur at Kolmas Persoona, a design agency working with municipalities across Finland. With a degree in social sciences and a background in political science, Outi brings a societal lens to her design work. She is passionate about making public procurement more collaborative, strategic, and user-centered. She is currently deepening her expertise by studying procurement and law, exploring how regulation can become an enabler of innovation rather than a barrier. ",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Mission Impossible: Designing the Mindset of Public Officials"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Astrid Kohlmeier",
+position: "Founder of AK LEGAL DESIGN (Let's Do Legal Design), co-founder of the Liquid Legal Institute and co-author of The Legal Design Book",
+
+image: "images/speakers/2025/Astrid Kohlmeier_crop.jpg",
+linkedin: "https://www.linkedin.com/in/astridkohlmeier/",
+bio: "Based near Munich, Astrid is a lawyer, designer and pioneer of the Legal Design innovation method. She advises legal departments, law firms in addition to justice and legislative institutions, helping them to develop user-centred solutions. Her work focuses on innovation, digital transformation, and the fair and ethical embedding of AI in legal systems. Astrid is a member and lecturer of the Executive Faculty of the Bucerius Center on the Legal Profession, co-founder of the Liquid Legal Institute, member of the editorial team of the Legal Design Journal and keynote speaker at conferences worldwide.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Closing keynote: Shaping the Future of Law – 5 Myths We Must Leave Behind"
+}
+
+]
+}
+
+,
+{
+section: "Challenging Tradition through Innovation",
+name: "Lina Keßler (née Krawietz)",
+position: "Co-Founder and Managing Director of This is Legal Design (TiLD)",
+
+image: "images/speakers/2025/Lina Keßler (Krawietz).jpg",
+linkedin: "https://www.linkedin.com/in/linakrawietz/",
+bio: "Lina is a co-founder of TiLD, a leading innovation consultancy reshaping the legal sector through a design-driven, human-centered approach. She is also a Member of the Management Board at the Liquid Legal Institute e.V., a global non-profit think tank advancing collaboration and innovation in the legal ecosystem. With a distinctive background at the intersection of law, design, and innovation consulting, Lina is a pioneer in legal design and a passionate advocate for systemic change in the legal profession. Her work empowers legal departments, law firms, and institutions to embrace meaningful (digital) transformation – prioritizing usability, strategic clarity, and client-centricity. A frequent speaker, facilitator, and thought leader, Lina inspires legal professionals to reimagine how legal services are designed, delivered, and experienced. In recognition of her impact, she received the European Women of Legal Tech Award 2020.",
+sessions: [ {
+    day: "DAY 2 - Friday", title: "Closing keynote: Shaping the Future of Law – 5 Myths We Must Leave Behind"
+}
+
+]
+}
+
+,
+];
+</script>
